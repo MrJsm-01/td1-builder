@@ -1,0 +1,158 @@
+{
+	"[javascript]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "never",
+			"source.fixAll.eslint": "always"
+		},
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": false,
+		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
+		"editor.tabSize": 2
+	},
+	"[json][jsonc]": {
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[liquid]": {
+		"editor.defaultFormatter": null,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+		"editor.insertSpaces": true,
+		"editor.quickSuggestions": {
+			"other": "off"
+		},
+		"editor.tabSize": 2,
+		"files.trimTrailingWhitespace": false
+	},
+	"[ruby]": {
+		"editor.defaultFormatter": "Shopify.ruby-lsp",
+		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
+		"editor.tabSize": 2,
+		"files.eol": "\n"
+	},
+	"[scminput]": {
+		"editor.rulers": [
+			70
+		]
+	},
+	"[scss]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "never",
+			"source.fixAll.stylelint": "always"
+		},
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": false,
+		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
+		"editor.tabSize": 2
+	},
+	"[shellscript]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"files.eol": "\n"
+	},
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[xml]": {
+		"editor.defaultFormatter": null,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"editor.defaultFormatter": null,
+	"editor.detectIndentation": false,
+	"editor.rulers": [],
+	"eslint.enable": true,
+	"eslint.format.enable": true,
+	"eslint.validate": [
+		"javascript"
+	],
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		".stylelintrc.yml": ".stylelintignore,.stylelintcache",
+		"Gemfile": "Gemfile.lock",
+		"package.json": "package-lock.json"
+	},
+	"files.associations": {
+		"*.html": "liquid"
+	},
+	"files.exclude": {
+		"**/.git-metadata": true,
+		"**/.jekyll-cache": true,
+		"**/.ruby-lsp": true,
+		"**/_site*": true,
+		"**/node_modules": true,
+		"*.swp": true
+	},
+	"files.insertFinalNewline": true,
+	"files.readonlyInclude": {
+		"**/.ruby-lsp": true,
+		"**/.stylelintcache": true,
+		"**/_site*": true,
+		"**/node_modules": true,
+		"**/Gemfile.lock": true,
+		"**/LICENSE*": true,
+		"**/package-lock.json": true
+	},
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"git.inputValidation": true,
+	"git.inputValidationLength": 70,
+	"git.inputValidationSubjectLength": 70,
+	"js/ts.format.enabled": false,
+	"js/ts.validate.enabled": false,
+	"liquid.config.method": "workspace",
+	"liquid.engine": "jekyll",
+	"markdown.validate.enabled": false,
+	"rubyLsp.formatter": "rubocop",
+	"scss.validate": false,
+	"search.exclude": {
+		"**/.jekyll-cache": true,
+		"**/.ruby-lsp": true,
+		"**/_site*": true,
+		"**/node_modules": true,
+		"*.swp": true
+	},
+	"stylelint.snippet": [
+		"scss"
+	],
+	"stylelint.validate": [
+		"scss"
+	],
+	"svg.preview.background": "transparent",
+	"terminal.integrated.defaultProfile.windows": "WSL",
+	"terminal.integrated.profiles.windows": {
+		"WSL": {
+			"icon": "terminal-linux",
+			"path": "${env:windir}\\system32\\wsl.exe"
+		}
+	},
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml",
+		"https://json.schemastore.org/jekyll.json": ".jekyll.yml"
+	}
+}

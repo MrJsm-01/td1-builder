@@ -1,0 +1,266 @@
+# Contribution Guidelines
+
+By participating, you agree to abide by the [Code of Conduct](https://github.com/Strappazzon/.github/blob/-/CODE_OF_CONDUCT.md).  
+When submitting changes to this repository, you agree that the content you contribute may be provided under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## I Have a Question
+
+Before you ask a question, search for existing [Discussions](https://github.com/Strappazzon/td1-builder/discussions/categories/questions) that might help you.  
+In case you have found a suitable discussion and still need clarification, you can write your question in that discussion. It is also advisable to search the internet for answers first.
+
+If you then still need to ask a question and need clarification you can [create a discussion](https://github.com/Strappazzon/td1-builder/discussions/new?category=questions).
+
+## Issue Reporting and Feature Requests
+
+> [!CAUTION]
+> If you found a security issue, **DO NOT** report it in the issue tracker or elsewhere in public.  
+> See: [Security Policy](https://github.com/Strappazzon/.github/blob/-/SECURITY.md).
+
+- Take a look at the [issues](https://github.com/Strappazzon/td1-builder/issues) first to make sure your issue/feature hasn't been reported/requested before.  
+  If so, engage in the already existing discussion.
+- Check whether your issue/feature is already fixed/implemented.
+- Issues in languages other than English will be closed and ignored.
+- If you are familiar with the languages used in this repo, you are always welcome to fix/implement an issue/feature yourself.
+- Add one issue at a time. Do not put multiple issues into one thread.
+- When reporting a bug please describe the steps which reproduce the problem.
+- When reporting an error include the message(s) from your browser's console (<kbd>CTRL</kbd> + <kbd>LShift</kbd> + <kbd>I</kbd>, **Console** tab).  
+  Wrap the message(s) in a [code block](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code)
+  or put it in a [PrivateBin](https://privatebin.net/) ([PasteBin](https://pastebin.com/) is fine too) and provide the link to that paste.
+- All issues must be properly formatted with Markdown.  
+  If you don't know what that is, read [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before submitting an issue.
+
+### DO NOT Post "+1" comments
+
+If you don't have any additional info/context to add but would like to indicate that you're affected by the issue, upvote the original issue.  
+See: [Add Reactions](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/)
+
+## Getting Started
+
+Before you can start contributing, you'll need to set up your environment first.
+
+### Dependencies
+
+This website is built with [Jekyll](https://jekyllrb.com/) so you will need [Ruby](https://www.ruby-lang.org) installed.  
+I recommend you install it using [asdf](https://github.com/asdf-vm/asdf) or [rbenv](https://github.com/rbenv/rbenv) before attempting to install the dependencies.
+
+[Node](https://nodejs.org/en) is also required to run [Stylelint](https://stylelint.io/) and [ESLint](https://eslint.org/).  
+I recommend you install it using [asdf](https://github.com/asdf-vm/asdf) or [nvm](https://github.com/nvm-sh/nvm).
+
+Clone the repo and run `bin/bootstrap` to install the required dependencies.
+
+```sh
+git clone https://github.com/Strappazzon/td1-builder.git
+cd td1-builder/
+bin/bootstrap
+```
+
+### Local Previews
+
+To view your changes locally use the following command:
+
+```sh
+bundle exec jekyll serve --config .jekyll.yml --force_polling --livereload
+```
+
+Then navigate to <http://localhost:4000> in your web browser.
+
+Press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the web server.
+
+## Code Style and Conventions
+
+### Liquid
+
+Website components and some pages are written in the Jekyll [Liquid](https://shopify.github.io/liquid/basics/variations/#jekyll) templating language.
+
+#### Syntax
+
+- Indent using tabs.
+- Use "double quotation marks" except when a filter or expression is inside an HTML attribute.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} bad {% endcomment %}
+<head>
+	<meta property="og:url" content='{{ site.url }}{{ page.url | replace: "index.html", ""}}'>
+</head>
+
+{% comment %} good {% endcomment %}
+<head>
+	<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', ''}}">
+</head>
+```
+
+<!-- markdownlint-enable MD010 -->
+
+#### Comments
+
+Indent multiline comments.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %}
+bad
+  this comment block is not indented correctly.
+{% endcomment %}
+
+{% comment %}
+	good
+	this comment block is indented correctly.
+{% endcomment %}
+
+{% comment %} No need to indent brief comments. {% endcomment %}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+#### Filters
+
+- Do not wrap filters.
+- Put a space before the filter value.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} Bad {% endcomment %}
+{{ object.prop
+  | downcase
+  | prepend:"value"
+}}
+
+{% comment %} Good {% endcomment %}
+{{ object.prop | downcase | prepend: "value" }}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+### Markdown
+
+Documentation is written in [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github).
+
+[markdownlint](https://github.com/DavidAnson/markdownlint) is used to enforce style rules for Markdown files.
+
+### Ruby
+
+Website plugins are written in Ruby. [Rubocop](https://docs.rubocop.org/) is used to enforce code style rules for Ruby files.  
+To fix any problems that can be fixed automatically, you can use a Rubocop plugin for your IDE or run `bin/ruby_fmt` from a terminal.
+
+#### Methods
+
+- Don't use `p` or `puts` to print things. Use `Jekyll.logger` instead.
+
+```rb
+# bad
+p 'Example.'
+
+# good
+Jekyll.logger.info 'Example.'
+```
+
+#### Modules
+
+- Define a plugin inside a `Jekyll` module.
+
+```rb
+module Jekyll
+  class CustomPlugin
+    # ...
+  end
+end
+```
+
+### SCSS
+
+[Stylelint](https://stylelint.io/) is used to enforce code style rules for SCSS files.  
+To find problems that can be fixed automatically, you can use a Stylelint plugin for your IDE or run `bin/scss_fmt` from a terminal.
+
+#### Format
+
+Rules that are not covered by Stylelint.
+
+- Put a leading zero for fractional numbers less than 1.
+- Limit the length of a line to 160 characters.
+  - Except dollar variables (*e.g.* list of font families).
+  - Except unicode range in `@font-face` at-rules.
+- Don't use trailing zeroes in numbers.
+- Use single quotes.
+- Use one selector per line in multi-selector rulesets.
+- Include a single space before the opening brace of a ruleset.
+- Use one level of indentation for each declaration.
+- Include a single space after the colon of a declaration.
+- Include a semi-colon at the end of the last declaration in a declaration block.
+- Include a space after each comma in comma-separated property or function values.
+- Place `@extend` statements on the first line of a declaration block.
+- Place `@include` statements after any `@extend` statements.
+- Place the closing brace of a ruleset in the same column as the first character of the ruleset.
+
+#### Imports
+
+- Don't include the file extension when importing stylesheets.
+
+### JavaScript
+
+[ESLint](https://eslint.org/) is used to enforce code style rules for JS files.  
+To find problems that can be fixed automatically, you can use an ESLint plugin for your IDE or run `bin/js_fmt` from a terminal.
+
+## Submitting Changes
+
+- Make changes on a separate branch, not on the master branch, then send your changes as a
+  [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+- When submitting changes, you confirm that your code is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+- Please test your code before you submit changes. Untested code will **not** be merged!
+- Make sure your Pull Request is up-to-date with the rest of the codebase.
+
+## Git Commit Messages
+
+- Use the present tense ("Add feature" not "Added feature").
+- Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+- Wrap all lines at 70 columns (except for long URLs).
+- Writing a detailed description is not mandatory.
+- Reference issues and Pull Requests after the description, if any.  
+  Use `Closes:` or `Fixes:`.
+
+### Sample Complete Commit Message
+
+```plaintext
+explain the commit in one line
+
+The body of the commit message should explain things in more detail.
+Please word-wrap to keep columns to 70 characters or less.
+
+Fixes: https://github.com/Strappazzon/td1-builder/issues/513
+```
+
+## Branching
+
+`dev` and `test` is where all changes that are not ready for production yet go.
+
+From dev and test, there are multiple branches related to what is being developed inside each branch.
+
+A branch name must be short and descriptive, all lowercase. For branches with multiple words use hyphens.
+
+## Repository Structure
+
+This is a brief description on how the repository files and folders are structured and what each one contains.  
+It only contains the most relevant files and folders as some of them are self-explanatory.
+
+```sh
+.
+├── _components    # Website components like header or footer
+├── _data          # Website data in JSON format
+├── _plugins       # Jekyll plugins written in Ruby
+├── _root          # Files that will be in the root directory of the website
+├── _sass          # SCSS Stylesheets ...
+│   ├── abstracts  # ... with functions, mixins, variables and so on
+│   ├── base       # ... with global styles
+│   ├── components # ... for website components
+│   ├── layout     # ... for layout elements (header, footer, ...)
+│   └── pages      # ... for Jekyll templates
+├── _templates     # Jekyll templates for web pages
+├── bin            # Scripts
+├── pages          # Website pages
+├── static         # Website assets
+├── .tool-versions # Version of tools asdf should use
+└── SUPPORT.md     # Support resources
+```

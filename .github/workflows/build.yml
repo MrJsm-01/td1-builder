@@ -1,0 +1,48 @@
+name: Build Website
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - ".*/**"
+      - ".*"
+      - "!.well-known/**"
+      - "!.jekyll.yml"
+      - "!.tool-versions"
+      - "bin/**"
+      - "LICENSE*"
+      - "SUPPORT.md"
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - ".*/**"
+      - ".*"
+      - "!.well-known/**"
+      - "!.jekyll.yml"
+      - "!.tool-versions"
+      - "bin/**"
+      - "LICENSE*"
+      - "SUPPORT.md"
+  workflow_dispatch: {}
+
+jobs:
+  main:
+    name: Build Website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7.0.0
+
+      - name: Setup Ruby
+        env:
+          BUNDLE_SPECIFIC_PLATFORM: 1
+        uses: ruby/setup-ruby@v1.316.0
+        with:
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --config .jekyll.yml

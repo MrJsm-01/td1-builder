@@ -1,0 +1,61 @@
+# Website
+url: https://td1builder.strappazzon.xyz
+baseurl: /
+
+# Git
+repo_url: https://github.com/Strappazzon/td1-builder
+
+# Website metadata
+meta:
+  title: TD1 Builder
+  description: Unofficial fanmade website for creating and sharing The Division builds.
+  keywords:
+    - td1
+    - td1 build
+    - the division
+    - the division 1
+    - the division 1 build
+    - the division build
+  theme: "#cecece"
+  author: Alberto Strappazzon
+
+# Custom directories
+includes_dir: _components
+layouts_dir: _templates
+
+# Excluded files, folders
+exclude:
+  - bin
+  - node_modules
+  - eslint.config.mjs
+  - Gemfile
+  - LICENSE*
+  - package*.json
+  - SUPPORT.md
+
+# Included files, folders
+include:
+  - .well-known
+
+# CSS
+sass:
+  sourcemap: development
+  style: compressed
+
+# jekyll-autoprefixer-v2 plugin
+autoprefixer:
+  browsers:
+    - last 2 versions
+    - not dead
+    - firefox esr
+  only_production: true
+
+# jekyll-terser plugin
+jekyll-terser:
+  only_production: true
+
+collections:
+  # Files that will be on the root
+  root:
+    output: true
+    permalink: /:path:output_ext

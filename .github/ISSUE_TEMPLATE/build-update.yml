@@ -1,0 +1,44 @@
+name: Build Update
+description: Submit an update for your The Division build.
+
+labels:
+  - "build"
+
+assignees:
+  - Strappazzon
+
+body:
+  - type: markdown
+    attributes:
+      value: >2
+        **NOTE:** If you are reporting a security issue, read the
+        [Security Policy](https://github.com/Strappazzon/.github/blob/-/SECURITY.md) instead of opening a public ticket.
+
+  - type: markdown
+    attributes:
+      value: Read the [Contributing Guidelines](https://github.com/Strappazzon/td1-builder/blob/-/.github/CONTRIBUTING.md) before opening a ticket.
+
+  - type: textarea
+    id: oldlink
+    attributes:
+      label: Old Link
+      description: Link to the OLD build.
+    validations:
+      required: true
+
+  - type: textarea
+    id: newlink
+    attributes:
+      label: Updated Link
+      description: Link to the UPDATED build with the new changes.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: coc
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to the [Code of Conduct](https://github.com/Strappazzon/.github/blob/-/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow the Code of Conduct.
+          required: true

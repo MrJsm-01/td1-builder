@@ -1,0 +1,19 @@
+* text=auto
+
+Gemfile* text eol=lf
+*.json   text eol=lf
+*.yml    text eol=lf
+
+*.avif  binary
+*.ico   binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.webp  binary
+
+# GitHub language statistics
+# See: https://github.com/github/linguist/blob/master/docs/overrides.md
+**/bin/**            linguist-detectable=false
+eslint.config.*      linguist-detectable=false
+*.html               linguist-language=Liquid
+static/js/**/data.js linguist-language=Liquid

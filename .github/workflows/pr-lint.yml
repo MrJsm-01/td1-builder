@@ -1,0 +1,135 @@
+name: Lint Code
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "_plugins/**.rb"
+      - "_sass/**.scss"
+      - "static/js/**.js"
+      - "**/*.md"
+
+jobs:
+  lint-ruby:
+    name: Lint Ruby Code
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7.0.0
+
+      - name: Detect changes in Ruby files
+        id: check_changes
+        shell: bash
+        run: ::set-output name=changed_rb::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.rb$')
+
+      - name: Setup Ruby
+        if: steps.check_changes.outputs.changed_rb != ''
+        env:
+          BUNDLE_SPECIFIC_PLATFORM: 1
+        uses: ruby/setup-ruby@v1.316.0
+        with:
+          bundler-cache: true
+
+      - name: Run RuboCop
+        if: steps.check_changes.outputs.changed_rb != ''
+        uses: reviewdog/action-rubocop@v2.22.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          use_bundler: true
+          workdir: "./_plugins"
+          rubocop_version: gemfile
+          rubocop_flags: -D -E -S
+          reporter: github-pr-review
+          fail_on_error: true
+
+  lint-scss:
+    name: Lint SCSS Stylesheets
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7.0.0
+
+      - name: Detect changes in SCSS files
+        id: check_changes
+        shell: bash
+        run: ::set-output name=changed_scss::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.scss$')
+
+      - name: Setup NodeJS
+        if: steps.check_changes.outputs.changed_scss != ''
+        uses: actions/setup-node@v6.4.0
+        with:
+          cache: npm
+          node-version-file: ".tool-versions"
+
+      - name: Setup Stylelint
+        if: steps.check_changes.outputs.changed_scss != ''
+        run: |
+          npm install --save-dev stylelint@17.11.x
+          npm install --save-dev stylelint-config-recess-order@7.7.x
+          npm install --save-dev stylelint-config-standard-scss@17.0.x
+          npm install --save-dev stylelint-plugin-defensive-css@2.9.x
+          npm install --save-dev @double-great/stylelint-a11y@3.4.x
+
+      - name: Run Stylelint
+        if: steps.check_changes.outputs.changed_scss != ''
+        shell: bash
+        run: npx stylelint "_sass" --cache --cache-strategy "content" --quiet-deprecation-warnings
+
+  lint-js:
+    name: Lint JS Files
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7.0.0
+
+      - name: Detect changes in JS files
+        id: check_changes
+        shell: bash
+        run: ::set-output name=changed_js::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.js$')
+
+      - name: Setup NodeJS
+        if: steps.check_changes.outputs.changed_js != ''
+        uses: actions/setup-node@v6.4.0
+        with:
+          cache: npm
+          node-version-file: ".tool-versions"
+
+      - name: Setup ESLint
+        if: steps.check_changes.outputs.changed_js != ''
+        run: |
+          npm install --save-dev eslint@10.4.x
+          npm install --save-dev globals@17.6.x
+          npm install --save-dev @eslint/js@10.0.x
+          npm install --save-dev @stylistic/eslint-plugin@5.10.x
+
+      - name: Run ESLint
+        if: steps.check_changes.outputs.changed_js != ''
+        shell: bash
+        run: npx eslint "static/js/**"
+
+  lint-mdown:
+    name: Lint Markdown Documents
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7.0.0
+
+      - name: Detect changes in MD files
+        id: check_changes
+        shell: bash
+        run: ::set-output name=changed_md::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$')
+
+      - name: markdownlint-cli2-action
+        if: steps.check_changes.outputs.changed_md != ''
+        uses: DavidAnson/markdownlint-cli2-action@v24.0.0
+        with:
+          config: ".markdownlint.yml"

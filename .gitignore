@@ -1,0 +1,29 @@
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Jekyll
+/_site*/
+/.jekyll-cache/
+/.jekyll-metadata
+
+# Bundler
+/.bundle/
+/vendor/
+
+# Node
+/node_modules/
+
+# Stylelint
+.stylelintcache
+
+# Git
+**/.git-metadata
+
+# Junk files (Linux)
+**/*.swp
+
+# Junk files (Windows)
+**/Thumbs.db
+**/[Dd]esktop.ini
