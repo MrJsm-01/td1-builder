@@ -231,6 +231,32 @@ body {
         opacity: 0.3;
       }
     }
+    .bonus-container {
+      [class^='bonus'] {
+        padding: 0.25em 0.5em;
+        margin-bottom: px2rem(4px);
+        // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+        background:
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+        ;
+        background-color: var(--default-bg-color--lightest);
+        background-size: 2px 2px;
+        opacity: 0.9;
+        &.highlight {
+          opacity: 1;
+        }
+        .name {
+          margin-bottom: px2rem(4px);
+          font-weight: 700;
+        }
+        .desc {
+          font-size: 0.9em;
+        }
+      }
+    }
     hr {
       margin: 0.2em 0;
       border: 0;
@@ -331,6 +357,16 @@ body {
         &.valkyria      { background-position: -672px -576px; }
         &.vicious       { background-position: -0 -672px; }
       }
+    }
+    .bonus-container {
+      [class^='bonus'] {
+        &.highlight {
+          background-color: var(--quality-exotic--lighter);
+        }
+      }
+    }
+    .bonus-separator {
+      border-top: 1px solid var(--quality-exotic--light);
     }
     .mod-container {
       display: grid;
@@ -498,28 +534,8 @@ body {
     }
     .bonus-container {
       [class^='bonus'] {
-        padding: 0.25em 0.5em;
-        margin-bottom: px2rem(4px);
-        // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
-        background:
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-        ;
-        background-color: var(--default-bg-color--lightest);
-        background-size: 2px 2px;
-        opacity: 0.9;
         &.highlight {
           background-color: var(--quality-gset--lighter);
-          opacity: 1;
-        }
-        .name {
-          margin-bottom: px2rem(4px);
-          font-weight: 700;
-        }
-        .desc {
-          font-size: 0.9em;
         }
       }
     }

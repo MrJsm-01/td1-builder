@@ -10,6 +10,7 @@ export const GAME_DATA = {
   weapon_talents  : {{ site.data.weapon_talents | jsonify }},
   weapon_mods     : {{ site.data.weapon_mods | jsonify }},
   weapons         : {{ site.data.weapons | jsonify }},
+  weapon_bonus    : {{ site.data.weapon_bonus | jsonify }},
   gear_talents    : {{ site.data.gear_talents | jsonify }},
   gear_attr       : {{ site.data.gear_attr | jsonify }},
   gear_mods       : {{ site.data.gear_mods | jsonify }},

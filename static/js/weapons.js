@@ -21,6 +21,13 @@ const WP_SLOT_TYPES = {
   handgun   : 'handgun'
 };
 
+// Weapon set bonuses
+const BONUS_SLOTS = [
+  'primary',
+  'secondary',
+  'handgun'
+];
+
 export function openWeaponPicker(slot) {
   STATE.activeSlot = slot;
   STATE.activeMode = 'weapon';
@@ -79,6 +86,7 @@ export function selectWeapon(slot, weaponId) {
   renderWeaponSlot(slot);
   renderWeaponTalentSlots(slot);
   renderWeaponModSlots(slot);
+  renderWeaponBonuses();
 }
 
 function openWeaponTalentPicker(slot, index) {
@@ -157,6 +165,44 @@ function renderWeaponTalentSlots(slot) {
     CONTAINER.classList.toggle('locked', IS_LOCKED);
     CONTAINER.onclick = IS_LOCKED ? null : () => openWeaponTalentPicker(slot, i);
   }
+}
+
+function computeEquippedWeapons() {
+  return BONUS_SLOTS
+    .filter(slot => BUILD[slot] !== null)
+    .map(slot => BUILD[slot].weaponId);
+}
+
+function renderWeaponBonuses() {
+  const EQUIPPED_WPS = computeEquippedWeapons();
+
+  BONUS_SLOTS.forEach(slot => {
+    const CONTAINER       = document.getElementById(`wp-${slot}`);
+    const BONUS_CONTAINER = CONTAINER.querySelector('.bonus-container');
+    const BONUS_EL        = BONUS_CONTAINER.querySelector('.bonus');
+    const SEPARATOR       = CONTAINER.querySelector('.bonus-separator');
+
+    if (BUILD[slot] === null) {
+      BONUS_CONTAINER.hidden = true;
+      SEPARATOR.hidden = true;
+
+      return;
+    }
+
+    const WEAPON_ID = BUILD[slot].weaponId;
+    const BONUS     = GAME_DATA.weapon_bonus.find(b => b.weapons.includes(WEAPON_ID));
+
+    BONUS_CONTAINER.hidden = !BONUS;
+    SEPARATOR.hidden = !BONUS;
+
+    if (!BONUS) return;
+
+    const IS_COMPLETE = BONUS.weapons.every(id => EQUIPPED_WPS.includes(id));
+
+    BONUS_EL.querySelector('.name').textContent = BONUS.name;
+    BONUS_EL.querySelector('.desc').innerHTML = BONUS.desc;
+    BONUS_EL.classList.toggle('highlight', IS_COMPLETE);
+  });
 }
 
 export function selectWeaponTalent(slot, index, talentId) {
