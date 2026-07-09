@@ -381,7 +381,7 @@
 		"id": "gsc-chest-ls",
 		"name": "Lone Star Vest",
 		"quality": "classy",
-		"setId": "",
+		"setId": "ls",
 		"slot": "chest"
 	},
 	{

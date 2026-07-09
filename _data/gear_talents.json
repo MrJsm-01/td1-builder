@@ -114,7 +114,7 @@
 	{
 		"id": "relentless",
 		"name": "Relentless",
-		"desc": "3% of the damage dealt by your skills is returned to you as healing",
+		"desc": "5% of the damage dealt by your skills is returned to you as healing",
 		"compat": {
 			"slot": "backpack"
 		}

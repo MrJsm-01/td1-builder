@@ -56,7 +56,7 @@
 	{
 		"id": "brutal",
 		"name": "Brutal",
-		"desc": "+12% Headshot Damage with this weapon",
+		"desc": "Headshot damage is increased by 12% when using this weapon",
 		"compat": {
 			"type": [
 				"ar",
@@ -147,7 +147,7 @@
 	{
 		"id": "disciplined",
 		"name": "Disciplined",
-		"desc": "Killing a target will make your next shot with the weapon be an automatic critical hit",
+		"desc": "Killing a target makes your next shot with the weapon be an automatic critical hit",
 		"compat": {
 			"type": [
 				"mmr"
@@ -189,7 +189,7 @@
 	{
 		"id": "dominant",
 		"name": "Dominant",
-		"desc": "Every kill while your signature skill is active reduces the cooldown of your other skills by 10%",
+		"desc": "Every kill while your Signature Skill is active reduces the cooldown of your other skills by 10%",
 		"compat": {
 			"type": [
 				"ar",
@@ -269,7 +269,7 @@
 	{
 		"id": "harmful",
 		"name": "Harmful",
-		"desc": "Each hit has a 15% chance to apply the 'bleed' status effect",
+		"desc": "Each hit has a 15% chance to apply the Bleed status effect",
 		"compat": {
 			"type": [
 				"mmr",
@@ -357,7 +357,7 @@
 	{
 		"id": "responsive",
 		"name": "Responsive",
-		"desc": "When closer than 10 meters from your target, your damage is increased by 10%",
+		"desc": "Damage is increased when closer than 10 meters to the target",
 		"compat": {
 			"type": [
 				"ar",
@@ -431,7 +431,7 @@
 	{
 		"id": "talented",
 		"name": "Talented",
-		"desc": "Killing a target with this weapon increases your Skill Power by 15% for 20 seconds",
+		"desc": "Killing a target with this weapon increases your Skill Power by 15% for 20 seconds. The effect does not stack. Killing a new target refreshes the timer.",
 		"compat": {
 			"type": [
 				"ar",
@@ -471,7 +471,7 @@
 	{
 		"id": "unforgiving",
 		"name": "Unforgiving",
-		"desc": "Damage increases based on your missing health: 1 missing segment +10%. 2 missing segments +25%.",
+		"desc": "Missing health segments increase your damage: 1 missing segment +10%, 2 missing segments +25%",
 		"compat": {
 			"type": [
 				"ar",
@@ -564,7 +564,7 @@
 	{
 		"id": "distracted",
 		"name": "Distracted",
-		"desc": "Your damage is increased by 10% against targets with status effects",
+		"desc": "Your damage is increased by 18% against targets with status effects",
 		"compat": {
 			"weapon": [
 				"mdr"
@@ -594,7 +594,7 @@
 	{
 		"id": "glutton",
 		"name": "Glutton",
-		"desc": "Killing a target increases your damage dealt 10% until you stop firing. Multiple kills stack this bonus up to 5 times.",
+		"desc": "Killing a target increases your Damage dealt 10% until you stop firing. Multiple kills stack this bonus up to 5 times.",
 		"compat": {
 			"weapon": [
 				"hog"
@@ -614,7 +614,7 @@
 	{
 		"id": "history",
 		"name": "History Repeats",
-		"desc": "Each bullet embeds itself in the target and detonates 1 second later for 700% of your Firearms total",
+		"desc": "Each Bullet embeds itself in the target and detonates 1 second later for 700% of your Firearms total",
 		"compat": {
 			"weapon": [
 				"historian"
@@ -624,7 +624,7 @@
 	{
 		"id": "lights-out",
 		"name": "Lights Out",
-		"desc": "Destroying an enemy weak point resets skill cooldowns for you and your nearby groupmembers. Can happen once every 10 seconds.",
+		"desc": "Destroying an enemy weak point resets skill cooldowns for you and your nearby group members. Can happen once every 10 seconds.",
 		"compat": {
 			"weapon": [
 				"tenebrae"
@@ -634,7 +634,7 @@
 	{
 		"id": "midas",
 		"name": "Midas",
-		"desc": "Each bullet you hit with reduces your damage by 1% and your target's damage by 1% to a max of 20%. The effect is reduced by 5% per second.",
+		"desc": "Each Bullet you hit with reduces your damage by 1% and your target's damage by 1% to a max of 20%. The effect is reduced by 5% per second.",
 		"compat": {
 			"weapon": [
 				"midas"
@@ -653,7 +653,7 @@
 	},
 	{
 		"id": "quickdraw",
-		"name": "Quick Draw",
+		"name": "Quickdraw",
 		"desc": "When drawn weapon damage is increased by 20% for 2 seconds. After that weapon damage is decreased by 20%.",
 		"compat": {
 			"weapon": [
