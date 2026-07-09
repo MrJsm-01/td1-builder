@@ -1,7 +1,9 @@
 import { GAME_DATA } from './data.js';
 import { QUALITY_ORDER } from './constants.js';
 import { BUILD, STATE } from './state.js';
+import { DOM } from './dom.js';
 import { openModal } from './modal.js';
+import { updateAddressBar } from './share.js';
 
 // Order of weapon types
 const WP_TYPE_ORDER = [
@@ -12,6 +14,11 @@ const WP_TYPE_ORDER = [
   'mmr',
   'hdg',
   'hdgstg'
+];
+
+export const GEAR_SCORE = [
+  256,
+  204
 ];
 
 // Weapon slots
@@ -63,6 +70,7 @@ function renderWeaponSlot(slot) {
   const WEAPON    = GAME_DATA.weapons.find(w => w.id === WP_STATE.weaponId);
   const CONTAINER = document.getElementById(`wp-${slot}`);
   const SPRITE    = CONTAINER.querySelector('.type-container .sprite');
+  const SCORE     = DOM.score[slot];
 
   CONTAINER.querySelector('.meta-container .name').textContent = WEAPON.name;
   CONTAINER.querySelector('.meta-container .quality').textContent = GAME_DATA.qualities[WEAPON.quality];
@@ -71,6 +79,8 @@ function renderWeaponSlot(slot) {
   SPRITE.classList.add(WEAPON.type);
   CONTAINER.querySelector('.type-container .type').textContent = GAME_DATA.weapon_types[WEAPON.type].label;
   CONTAINER.querySelector('.type-container .bonus').textContent = GAME_DATA.weapon_types[WEAPON.type].bonus ?? '';
+  SCORE.hidden = WEAPON.quality !== 'highend';
+  SCORE.textContent = WP_STATE.gs;
 }
 
 export function selectWeapon(slot, weaponId) {
@@ -78,6 +88,7 @@ export function selectWeapon(slot, weaponId) {
 
   BUILD[slot] = {
     weaponId : WEAPON.id,
+    gs       : GEAR_SCORE[0],
     talents  : WEAPON.talents.slice(),
     // eslint-disable-next-line @stylistic/array-bracket-spacing
     mods     : Object.fromEntries(WEAPON.slots.map(s => [s, [null, null, null]]))
@@ -263,3 +274,27 @@ export function selectWeaponMod(slot, modSlot, index, modId) {
   BUILD[slot].mods[modSlot][index] = Number(modId);
   renderWeaponModSlots(slot);
 }
+
+export function setWeaponScore(slot, gs) {
+  BUILD[slot].gs = gs;
+  renderWeaponSlot(slot);
+}
+
+function toggleWeaponScore(slot) {
+  const WP_STATE = BUILD[slot];
+  if (WP_STATE === null) return;
+
+  const WEAPON = GAME_DATA.weapons.find(w => w.id === WP_STATE.weaponId);
+  if (WEAPON.quality !== 'highend') return;
+
+  setWeaponScore(slot, WP_STATE.gs === GEAR_SCORE[0] ? GEAR_SCORE[1] : GEAR_SCORE[0]);
+  updateAddressBar();
+}
+
+document.querySelectorAll('.score').forEach(e => {
+  e.addEventListener('click', () => {
+    const SLOT = e.id.replace('wp-', '').replace('-gs', '');
+
+    toggleWeaponScore(SLOT);
+  });
+});

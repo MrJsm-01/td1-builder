@@ -3,7 +3,7 @@
 import { BUILD_VERSION } from './constants.js';
 import { BUILD } from './state.js';
 import { openModal } from './modal.js';
-import { selectWeapon, selectWeaponTalent, selectWeaponMod } from './weapons.js';
+import { selectWeapon, selectWeaponTalent, selectWeaponMod, setWeaponScore, GEAR_SCORE } from './weapons.js';
 import { selectGear, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { selectSkill } from './skills.js';
 import { selectPlayerTalent } from './talents.js';
@@ -57,11 +57,15 @@ function serializeWeaponSlot(slot) {
     if (PAIRS.length) MOD_ENTRIES[modSlot] = PAIRS;
   });
 
-  return {
+  const PAYLOAD = {
     id : WEAPON_STATE.weaponId,
     t  : compactArray(WEAPON_STATE.talents),
     m  : MOD_ENTRIES
   };
+
+  if (WEAPON_STATE.gs !== GEAR_SCORE[0]) PAYLOAD.gs = WEAPON_STATE.gs;
+
+  return PAYLOAD;
 }
 
 function serializeGearSlot(slot) {
@@ -157,6 +161,8 @@ function applyWeaponSlot(slot, data) {
       selectWeaponMod(slot, modSlot, index, modId);
     });
   });
+
+  if (data.gs) setWeaponScore(slot, data.gs);
 }
 
 function applyGearSlot(slot, data) {

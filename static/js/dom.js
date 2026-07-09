@@ -12,6 +12,11 @@ export const DOM = {
     secondary : document.querySelector('#wp-secondary-select'),
     handgun   : document.querySelector('#wp-handgun-select')
   },
+  score : {
+    primary   : document.querySelector('#wp-primary-gs'),
+    secondary : document.querySelector('#wp-secondary-gs'),
+    handgun   : document.querySelector('#wp-handgun-gs')
+  },
   gear : {
     chest    : document.querySelector('#gp-chest'),
     mask     : document.querySelector('#gp-mask'),

@@ -152,7 +152,6 @@ body {
     .mod-container {
       padding: 0.25em 0.5em;
     }
-    .meta-container,
     .talent-container {
       cursor: pointer;
     }
@@ -282,6 +281,49 @@ body {
       &.secondary .talent-container:not(:has(~ .talent-container)) .name,
       &.handgun .talent-container:not(:has(~ .talent-container)) .name {
         color: var(--quality-worn);
+      }
+    }
+    .meta-container {
+      display: flex;
+      flex-flow: row wrap;
+      gap: px2rem(8px);
+      justify-content: space-between;
+      .weapon-select,
+      .score {
+        cursor: pointer;
+      }
+      .weapon-select {
+        flex: 1;
+      }
+      .score {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        font-size: 1.33em;
+        &[hidden] {
+          display: none;
+        }
+        &::before {
+          position: absolute;
+          top: 3px;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-size: 0.675rem;
+          content: 'SCORE';
+        }
+        &::after {
+          position: absolute;
+          inset: 0;
+          content: '';
+          background-image: url('#{$base-url}img/sprites/w_score.png');
+          background-repeat: no-repeat;
+          background-size: 100%;
+          opacity: 0.3;
+        }
       }
     }
     .type-container {
@@ -429,6 +471,9 @@ body {
       .meta-container .name {
         color: var(--quality-gset);
       }
+    }
+    .meta-container {
+      cursor: pointer;
     }
     .stats-container {
       display: flex;
