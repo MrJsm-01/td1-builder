@@ -1,0 +1,270 @@
+{
+	"major": [
+		{
+			"id": 1,
+			"name": "Critical Hit Chance",
+			"compat": {
+				"slot": [
+					"mask",
+					"gloves",
+					"holster"
+				]
+			}
+		},
+		{
+			"id": 2,
+			"name": "Critical Hit Damage",
+			"compat": {
+				"slot": [
+					"backpack",
+					"gloves",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 3,
+			"name": "SMG Damage",
+			"compat": {
+				"slot": [
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 4,
+			"name": "Assault Rifle Damage",
+			"compat": {
+				"slot": [
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 5,
+			"name": "Shotgun Damage",
+			"compat": {
+				"slot": [
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 6,
+			"name": "LMG Damage",
+			"compat": {
+				"slot": [
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 7,
+			"name": "Pistol Damage",
+			"compat": {
+				"slot": [
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 8,
+			"name": "Sniper Rifle Damage",
+			"compat": {
+				"slot": [
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 9,
+			"name": "Enemy Armor Damage",
+			"compat": {
+				"slot": [
+					"mask",
+					"chest",
+					"gloves",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 10,
+			"name": "All Resistance",
+			"compat": {
+				"slot": [
+					"mask",
+					"chest",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 11,
+			"name": "Health",
+			"compat": {
+				"slot": [
+					"chest",
+					"backpack",
+					"kneepads",
+					"holster"
+				]
+			}
+		},
+		{
+			"id": 12,
+			"name": "Health on Kill",
+			"compat": {
+				"slot": [
+					"mask",
+					"chest",
+					"gloves"
+				]
+			}
+		},
+		{
+			"id": 13,
+			"name": "Exotic Damage Resilience",
+			"compat": {
+				"slot": [
+					"mask",
+					"chest",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 14,
+			"name": "Skill Haste",
+			"compat": {
+				"slot": [
+					"chest",
+					"gloves",
+					"holster"
+				]
+			}
+		},
+		{
+			"id": 15,
+			"name": "Skill Power",
+			"compat": {
+				"slot": [
+					"mask",
+					"backpack",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 16,
+			"name": "Stability",
+			"compat": {
+				"slot": [
+					"backpack"
+				]
+			}
+		},
+		{
+			"id": 17,
+			"name": "Reload Speed",
+			"compat": {
+				"slot": [
+					"holster"
+				]
+			}
+		}
+	],
+	"minor": [
+		{
+			"id": 18,
+			"name": "Damage to Elites",
+			"compat": {
+				"slot": [
+					"mask",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 19,
+			"name": "Shock Resistance",
+			"compat": {
+				"slot": [
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 20,
+			"name": "Burn Resistance",
+			"compat": {
+				"slot": [
+					"mask",
+					"backpack",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 21,
+			"name": "Disorient Resistance",
+			"compat": {
+				"slot": [
+					"mask",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 22,
+			"name": "Blind/Deaf Resistance",
+			"compat": {
+				"slot": [
+					"mask",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 23,
+			"name": "Disrupt Resistance",
+			"compat": {
+				"slot": [
+					"backpack",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 24,
+			"name": "Bleed Resistance",
+			"compat": {
+				"slot": [
+					"backpack",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 25,
+			"name": "Kill XP",
+			"compat": {
+				"slot": [
+					"mask",
+					"chest",
+					"kneepads"
+				]
+			}
+		},
+		{
+			"id": 26,
+			"name": "Ammo Capacity",
+			"compat": {
+				"slot": [
+					"chest",
+					"backpack"
+				]
+			}
+		}
+	]
+}

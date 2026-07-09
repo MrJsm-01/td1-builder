@@ -1,0 +1,196 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+body::before {
+  background-image: url('#{$base-url}img/bg/pages.jpg');
+  // stylelint-disable-next-line defensive-css/require-background-repeat
+  background-image: image-set(
+    url('#{$base-url}img/bg/pages.avif') type("image/avif") 1x,
+    url('#{$base-url}img/bg/pages.webp') type("image/webp") 1x,
+    url('#{$base-url}img/bg/pages.jpg') type("image/jpeg") 1x
+  );
+}
+
+a {
+  position: relative;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    content: '';
+    border-top: 2px solid var(--brand-color);
+    transform: scaleX(0);
+    transition: transform 0.15s ease;
+  }
+  @include hocus {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+section {
+  padding: 0.5rem;
+  // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+  background:
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+  ;
+  background-color: var(--default-bg-color--clearest);
+  background-size: 2px 2px;
+  backdrop-filter: blur(5px);
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+    text-shadow:
+      0 0 3px var(--default-bg-color--lightest),
+      3px 3px 0 var(--default-bg-color--clearest)
+    ;
+  }
+  p:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  p,
+  li {
+    line-height: 1.4;
+  }
+  ul {
+    margin: 0 0 1em;
+    li {
+      margin: 0 0 0 2em;
+      list-style-type: square;
+    }
+  }
+}
+
+section,
+.cards {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.cards,
+.search-container {
+  margin-top: 2rem;
+}
+
+.search {
+  width: px2rem(150px);
+  padding: px2rem(6px);
+  font-family: inherit;
+  font-size: 0.725rem;
+  color: var(--default-text-color);
+  background-color: var(--default-bg-color--clearest);
+  border: 0;
+  @include hocus {
+    outline: 0;
+    background-color: var(--default-bg-color--clearer);
+  }
+  &-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  place-items: center start;
+  @include respond-to('larger') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include respond-to('medium') {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .card {
+    width: 100%;
+    color: var(--default-text-color);
+    background-color: transparent;
+    transition: background-color 0.15s ease-in-out;
+    @include hocus {
+      background-color: var(--default-bg-color--clearest);
+    }
+    &-container {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.5em;
+      align-items: flex-start;
+      padding: 1rem;
+      ul {
+        margin: 0;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+    &::before {
+      content: unset;
+    }
+    &.build {
+      .build-title {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: px2rem(8px);
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        &__name,
+        .icon {
+          opacity: 0.9;
+        }
+        &__name {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .icon {
+          --icon-size: 1.125em;
+          display: inline-flex;
+          flex-shrink: 0;
+          flex-flow: row wrap;
+          height: var(--icon-size);
+          vertical-align: text-top;
+          svg {
+            width: var(--icon-size);
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+            fill: currentColor;
+          }
+        }
+      }
+      .build-author,
+      .build-tags {
+        font-size: 0.875em;
+      }
+      .build-author {
+        &__text {
+          color: var(--default-text-color--light);
+        }
+        &__name {
+          opacity: 0.9;
+        }
+      }
+      .build-tags {
+        display: flex;
+        flex-flow: row wrap;
+        gap: px2rem(4px);
+        .build-tag {
+          padding: px2rem(3px) px2rem(6px);
+          color: var(--default-text-color--light);
+          background-color: var(--default-bg-color--clearest);
+        }
+      }
+    }
+  }
+}

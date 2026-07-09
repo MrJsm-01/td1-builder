@@ -1,0 +1,694 @@
+[
+	{
+		"id": "accurate",
+		"name": "Accurate",
+		"desc": "Accuracy is increased by 25%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "adept",
+		"name": "Adept",
+		"desc": "Using a skill increases your critical hits chance by 7.5% for 15 seconds",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "ambusher",
+		"name": "Ambusher",
+		"desc": "Increase your damage by 10% against targets in cover",
+		"compat": {
+			"weapon": [
+				"ump-police",
+				"ump-tac",
+				"usc"
+			]
+		}
+	},
+	{
+		"id": "balanced",
+		"name": "Balanced",
+		"desc": "Weapon acquires maximum accuracy faster when shouldered",
+		"compat": {
+			"type": [
+				"mmr"
+			]
+		}
+	},
+	{
+		"id": "brutal",
+		"name": "Brutal",
+		"desc": "+12% Headshot Damage with this weapon",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "capable",
+		"name": "Capable",
+		"desc": "Using a skill improves the handling of your weapon for 15 seconds",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "commanding",
+		"name": "Commanding",
+		"desc": "Every kill performed while the signature skill is active extends its duration by 20%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "competent",
+		"name": "Competent",
+		"desc": "Weapon damage is increased by 10% for 15 seconds after using a skill",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "coolheaded",
+		"name": "Coolheaded",
+		"desc": "Performing a headshot reduces all skill cooldowns by 5%",
+		"compat": {
+			"type": [
+				"mmr",
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "deadly",
+		"name": "Deadly",
+		"desc": "Critical hit damage is increased by 15%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "disciplined",
+		"name": "Disciplined",
+		"desc": "Killing a target will make your next shot with the weapon be an automatic critical hit",
+		"compat": {
+			"type": [
+				"mmr"
+			]
+		}
+	},
+	{
+		"id": "destructive",
+		"name": "Destructive",
+		"desc": "Armor destruction value is increased by 15% when using this weapon",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "determined",
+		"name": "Determined",
+		"desc": "Killing a target reduces skill cooldowns by 7.5%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "dominant",
+		"name": "Dominant",
+		"desc": "Every kill while your signature skill is active reduces the cooldown of your other skills by 10%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "elevated",
+		"name": "Elevated",
+		"desc": "Increase your damage by 10% when elevated more than 1.2 meters above your target",
+		"compat": {
+			"weapon": [
+				"m700",
+				"m700-carbon",
+				"m700-tac"
+			]
+		}
+	},
+	{
+		"id": "expert",
+		"name": "Expert",
+		"desc": "This weapon deals 100% more damage when the target is below 30% health",
+		"compat": {
+			"type": [
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "ferocious",
+		"name": "Ferocious",
+		"desc": "Damage against elite and named enemies is increased by 10%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "fierce",
+		"name": "Fierce",
+		"desc": "Critical hit chance is increased by 5% when using this weapon",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "focused",
+		"name": "Focused",
+		"desc": "When no skills are on cooldown, your weapon damage is increased by 10%",
+		"compat": {
+			"type": [
+				"ar"
+			]
+		}
+	},
+	{
+		"id": "harmful",
+		"name": "Harmful",
+		"desc": "Each hit has a 15% chance to apply the 'bleed' status effect",
+		"compat": {
+			"type": [
+				"mmr",
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "hurried",
+		"name": "Hurried",
+		"desc": "Critical hits increase reload speed by 10% to a minimum of 1 seconds reload time",
+		"compat": {
+			"type": [
+				"smg"
+			]
+		}
+	},
+	{
+		"id": "intense",
+		"name": "Intense",
+		"desc": "The first bullet of a magazine has a 25% chance to apply the On Fire status effect to the target",
+		"compat": {
+			"type": [
+				"ar",
+				"mmr",
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "meticulous",
+		"name": "Meticulous",
+		"desc": "Killing a target has a 25% chance to instantly refill the magazine",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "predatory",
+		"name": "Predatory",
+		"desc": "Killing a target regenerates 35% health over 20 seconds",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "prepared",
+		"name": "Prepared",
+		"desc": "Damage is increased by 15% when more than 30 meters from the target",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"mmr"
+			]
+		}
+	},
+	{
+		"id": "proficient",
+		"name": "Proficient",
+		"desc": "The first bullet shot when out of combat has a 50% bonus chance to result in a critical hit",
+		"compat": {
+			"type": [
+				"mmr",
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "responsive",
+		"name": "Responsive",
+		"desc": "When closer than 10 meters from your target, your damage is increased by 10%",
+		"compat": {
+			"type": [
+				"ar",
+				"smg",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "preserved",
+		"name": "Self-Preserved",
+		"desc": "Critical hits with this weapon heal the user for 3% of damage dealt",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "skilled",
+		"name": "Skilled",
+		"desc": "Headshot kills with this weapon increase signature skill resources by 5%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "sustained",
+		"name": "Sustained",
+		"desc": "Killing a target increases your health by 6%",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"stg",
+				"mmr",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "swift",
+		"name": "Swift",
+		"desc": "Reloading is 25% faster",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "talented",
+		"name": "Talented",
+		"desc": "Killing a target with this weapon increases your Skill Power by 15% for 20 seconds",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "toxic",
+		"name": "Toxic",
+		"desc": "Headshots with this weapon have a 15% chance to apply the Blind status effect",
+		"compat": {
+			"type": [
+				"mmr",
+				"hdg"
+			]
+		}
+	},
+	{
+		"id": "trained",
+		"name": "Trained",
+		"desc": "Critical hits increase signature skill resources by 0.10%",
+		"compat": {
+			"type": [
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "unforgiving",
+		"name": "Unforgiving",
+		"desc": "Damage increases based on your missing health: 1 missing segment +10%. 2 missing segments +25%.",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "vicious",
+		"name": "Vicious",
+		"desc": "Critical hit chance is increased by 10% while having more than two segments of health",
+		"compat": {
+			"type": [
+				"ar",
+				"lmg",
+				"smg",
+				"mmr",
+				"stg",
+				"hdg",
+				"hdgstg"
+			]
+		}
+	},
+	{
+		"id": "cover-shooter",
+		"name": "Cover Shooter",
+		"desc": "Every bullet fired at an enemy from cover increases weapon damage by 0.5% up to 50%. The bonus lasts for 10 seconds. Getting a kill with this weapon while in cover resets the duration. The bonus damage is cancelled by reloading, swapping weapons, or exiting combat.",
+		"compat": {
+			"weapon": [
+				"alejandro"
+			]
+		}
+	},
+	{
+		"id": "boomstick",
+		"name": "Boomstick",
+		"desc": "Double trigger fires off both barrels in short succession",
+		"compat": {
+			"weapon": [
+				"cassidy"
+			]
+		}
+	},
+	{
+		"id": "caduceus",
+		"name": "Caduceus",
+		"desc": "Each Critical hit heals you and your group for 1% of your Skill Power. Can only heal each player once every 0.2 seconds.",
+		"compat": {
+			"weapon": [
+				"caduceus"
+			]
+		}
+	},
+	{
+		"id": "card-counter",
+		"name": "Card Counter",
+		"desc": "One half of the magazine does 20% increased damage. The half which deals increased damage flips after 15 seconds or when the magazine is empty.",
+		"compat": {
+			"weapon": [
+				"mpx"
+			]
+		}
+	},
+	{
+		"id": "carefree",
+		"name": "Carefree",
+		"desc": "Hipfire damage is increased by 11%",
+		"compat": {
+			"weapon": [
+				"thompson",
+				"tommy"
+			]
+		}
+	},
+	{
+		"id": "centermass",
+		"name": "Center Mass",
+		"desc": "Shoots heavy slugs instead of buckshot",
+		"compat": {
+			"weapon": [
+				"medved"
+			]
+		}
+	},
+	{
+		"id": "distracted",
+		"name": "Distracted",
+		"desc": "Your damage is increased by 10% against targets with status effects",
+		"compat": {
+			"weapon": [
+				"mdr"
+			]
+		}
+	},
+	{
+		"id": "fire",
+		"name": "Fire",
+		"desc": "Headshots increase stability by 30% for 15 seconds. Body shots increase headshot damage by 30% for 15 seconds.",
+		"compat": {
+			"weapon": [
+				"devil"
+			]
+		}
+	},
+	{
+		"id": "fury",
+		"name": "Fury",
+		"desc": "Hitting weak points increases weapon damage by 15% for 15 seconds. Hitting skill proxies increase critical hit damage by 30% for 15 seconds.",
+		"compat": {
+			"weapon": [
+				"heel"
+			]
+		}
+	},
+	{
+		"id": "glutton",
+		"name": "Glutton",
+		"desc": "Killing a target increases your damage dealt 10% until you stop firing. Multiple kills stack this bonus up to 5 times.",
+		"compat": {
+			"weapon": [
+				"hog"
+			]
+		}
+	},
+	{
+		"id": "golden-rhino",
+		"name": "Golden Rhino",
+		"desc": "Increase stagger by 200%",
+		"compat": {
+			"weapon": [
+				"rhino-gold"
+			]
+		}
+	},
+	{
+		"id": "history",
+		"name": "History Repeats",
+		"desc": "Each bullet embeds itself in the target and detonates 1 second later for 700% of your Firearms total",
+		"compat": {
+			"weapon": [
+				"historian"
+			]
+		}
+	},
+	{
+		"id": "lights-out",
+		"name": "Lights Out",
+		"desc": "Destroying an enemy weak point resets skill cooldowns for you and your nearby groupmembers. Can happen once every 10 seconds.",
+		"compat": {
+			"weapon": [
+				"tenebrae"
+			]
+		}
+	},
+	{
+		"id": "midas",
+		"name": "Midas",
+		"desc": "Each bullet you hit with reduces your damage by 1% and your target's damage by 1% to a max of 20%. The effect is reduced by 5% per second.",
+		"compat": {
+			"weapon": [
+				"midas"
+			]
+		}
+	},
+	{
+		"id": "pakhan",
+		"name": "Pakhan",
+		"desc": "Each kill makes the next reload have 20% extra bullets compared to its base",
+		"compat": {
+			"weapon": [
+				"pakhan"
+			]
+		}
+	},
+	{
+		"id": "quickdraw",
+		"name": "Quick Draw",
+		"desc": "When drawn weapon damage is increased by 20% for 2 seconds. After that weapon damage is decreased by 20%.",
+		"compat": {
+			"weapon": [
+				"damascus"
+			]
+		}
+	},
+	{
+		"id": "showstopper",
+		"name": "Showstopper",
+		"desc": "Your accuracy with this weapon is increased the fewer shells you have left in the magazine",
+		"compat": {
+			"weapon": [
+				"acs"
+			]
+		}
+	},
+	{
+		"id": "uncomplicated",
+		"name": "Uncomplicated",
+		"desc": "Damage is increased by 15%, accuracy and stability mods reduce this bonus.",
+		"compat": {
+			"weapon": [
+				"famas"
+			]
+		}
+	},
+	{
+		"id": "rough",
+		"name": "Play Rough",
+		"desc": "Damage taken is reduced by 20% while firing. The taken damage is applied when you stop firing.",
+		"compat": {
+			"weapon": [
+				"warlord"
+			]
+		}
+	}
+]

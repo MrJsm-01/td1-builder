@@ -1,0 +1,789 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+body {
+  h2 {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-shadow:
+      0 0 3px var(--default-bg-color--lightest),
+      3px 3px 0 var(--default-bg-color--clearest)
+    ;
+    &::after {
+      flex: 1;
+      margin-left: px2rem(8px);
+      content: '';
+      border-top: 1px solid var(--default-text-color);
+      opacity: 0.4;
+    }
+  }
+  &::before {
+    background-image: url('#{$base-url}img/bg/build.jpg');
+    // stylelint-disable-next-line defensive-css/require-background-repeat
+    background-image: image-set(
+      url('#{$base-url}img/bg/build.avif') type("image/avif") 1x,
+      url('#{$base-url}img/bg/build.webp') type("image/webp") 1x,
+      url('#{$base-url}img/bg/build.jpg') type("image/jpeg") 1x
+    );
+  }
+}
+
+.loading {
+  &-container {
+    position: fixed;
+    inset: 0;
+    z-index: z('loading');
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--default-bg-color);
+    // Adapted from: https://cssloaders.github.io
+    .spinner {
+      // stylelint-disable-next-line unit-disallowed-list
+      --size: 3px;
+      position: relative;
+      box-sizing: border-box;
+      display: inline-block;
+      width: calc(48 * var(--size));
+      height: calc(48 * var(--size));
+      border: calc(3 * var(--size)) solid var(--brand-color--light);
+      border-radius: 50%;
+      animation: loading 8s infinite;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        width: calc(56 * var(--size));
+        height: calc(56 * var(--size));
+        content: '';
+        border: calc(2 * var(--size)) solid transparent;
+        border-top-color: var(--brand-color);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &-text {
+    font-size: 1.75rem;
+    cursor: default;
+  }
+}
+
+.build {
+  --margin: 2rem;
+  margin-bottom: var(--margin);
+  .weapon,
+  .gear {
+    &::-webkit-scrollbar {
+      width: auto;
+      &-corner {
+        background-color: transparent;
+      }
+      // Bar
+      &-thumb {
+        background:
+          linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 33%,
+            var(--default-text-color) 33%,
+            var(--default-text-color) 66%,
+            transparent 66%,
+            transparent 100%
+          );
+        ;
+        // stylelint-disable-next-line a11y/selector-pseudo-class-focus
+        &:hover {
+          background:
+            linear-gradient(
+              90deg,
+              transparent 0%,
+              transparent 25%,
+              var(--brand-color) 25%,
+              var(--brand-color) 75%,
+              transparent 75%,
+              transparent 100%
+            );
+          ;
+        }
+      }
+      // Background
+      &-track {
+        background: transparent;
+      }
+    }
+    &[data-quality='exotic'] {
+      .quality,
+      .meta-container .name {
+        color: var(--quality-exotic);
+      }
+    }
+    &[data-quality='highend'] {
+      .quality {
+        color: var(--quality-highend);
+      }
+    }
+    &[data-quality='worn'] {
+      .quality {
+        color: var(--quality-worn);
+      }
+    }
+    max-height: px2rem(500px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+    background:
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+    ;
+    background-color: var(--default-bg-color--clearest);
+    background-size: 2px 2px;
+    backdrop-filter: blur(5px);
+    .meta-container,
+    .talent-container,
+    .mod-container {
+      padding: 0.25em 0.5em;
+    }
+    .meta-container,
+    .talent-container {
+      cursor: pointer;
+    }
+    .type-container {
+      display: grid;
+      grid-template-areas:
+        'sprite type'
+        'sprite bonus'
+      ;
+      grid-template-rows: auto 1fr;
+      justify-content: start;
+      .sprite {
+        position: relative;
+        grid-area: sprite;
+        align-self: center;
+        // stylelint-disable unit-disallowed-list
+        width: 32px;
+        height: 32px;
+        // stylelint-enable unit-disallowed-list
+        margin-right: 0.5em;
+        // stylelint-disable-next-line defensive-css/require-background-repeat
+        background-image: url('#{$base-url}img/sprites/w_type.png');
+        background-position: -0 -64px;
+        &.ar     { background-position: -0 -0; }
+        &.hdg    { background-position: -32px -0; }
+        &.hdgstg { background-position: -64px -32px; }
+        &.lmg    { background-position: -0 -32px; }
+        &.mmr    { background-position: -32px -32px; }
+        &.smg    { background-position: -64px -0; }
+        &.stg    { background-position: -64px -32px; }
+        &::before {
+          position: absolute;
+          inset: -4px;
+          z-index: z('sprite');
+          content: '';
+          background-color: var(--default-bg-color--lightest);
+        }
+      }
+      .type {
+        grid-area: type;
+      }
+      .bonus {
+        grid-area: bonus;
+      }
+    }
+    .talent-container,
+    .mod-container,
+    .stats-container {
+      margin-bottom: px2rem(4px);
+    }
+    .talent-container,
+    .type-container,
+    .mod-container,
+    .stats-container {
+      .sprite {
+        background-repeat: no-repeat;
+      }
+    }
+    .talent-container,
+    .stats-container .sprite-container {
+      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+      background:
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+      ;
+      background-color: var(--default-bg-color--clearest);
+      background-size: 2px 2px;
+    }
+    .talent-container {
+      &.locked {
+        cursor: not-allowed;
+      }
+      .separator {
+        opacity: 0.3;
+      }
+    }
+    hr {
+      margin: 0.2em 0;
+      border: 0;
+      border-top: 1px solid var(--default-bg-color--clearest);
+    }
+  }
+  .weapon {
+    &[data-quality='exotic'] {
+      &.primary .talent-container:not(:has(~ .talent-container)) .name,
+      &.secondary .talent-container:not(:has(~ .talent-container)) .name {
+        color: var(--quality-exotic);
+      }
+    }
+    &[data-quality='highend'] {
+      &.primary .talent-container:not(:has(~ .talent-container)) .name,
+      &.secondary .talent-container:not(:has(~ .talent-container)) .name,
+      &.handgun .talent-container:not(:has(~ .talent-container)) .name {
+        color: var(--quality-highend);
+      }
+    }
+    &[data-quality='worn'] {
+      &.primary .talent-container:not(:has(~ .talent-container)) .name,
+      &.secondary .talent-container:not(:has(~ .talent-container)) .name,
+      &.handgun .talent-container:not(:has(~ .talent-container)) .name {
+        color: var(--quality-worn);
+      }
+    }
+    .type-container {
+      padding: 0.25em 0.5em;
+    }
+    .talent-container {
+      .sprite {
+        // stylelint-disable unit-disallowed-list
+        width: 96px;
+        height: 96px;
+        // stylelint-enable unit-disallowed-list
+        margin: px2rem(8px) auto;
+        // stylelint-disable-next-line defensive-css/require-background-repeat
+        background-image: url('#{$base-url}img/sprites/w_talents.png');
+        background-position: -576px -576px;
+        filter: drop-shadow(-12px -4px 0 var(--default-bg-color--clearest));
+        &.accurate      { background-position: -0 -0; }
+        &.adept         { background-position: -192px -0; }
+        &.ambusher      { background-position: -384px -0; }
+        &.balanced      { background-position: -480px -0; }
+        &.boomstick     { background-position: -576px -0; }
+        &.brutal        { background-position: -672px -0; }
+        &.caduceus      { background-position: -0 -96px; }
+        &.capable       { background-position: -96px -96px; }
+        &.card-counter  { background-position: -672px -288px; }
+        &.carefree      { background-position: -192px -576px; }
+        &.centermass    { background-position: -192px -384px; }
+        &.commanding    { background-position: -192px -96px; }
+        &.competent     { background-position: -288px -96px; }
+        &.cover-shooter { background-position: -288px -0; }
+        &.coolheaded    { background-position: -384px -96px; }
+        &.deadly        { background-position: -480px -96px; }
+        &.destructive   { background-position: -576px -96px; }
+        &.determined    { background-position: -672px -96px; }
+        &.devil         { background-position: -384px -288px; }
+        &.disciplined   { background-position: -0 -192px; }
+        &.distracted    { background-position: -96px -192px; }
+        &.dominant      { background-position: -192px -192px; }
+        &.elevated      { background-position: -288px -192px; }
+        &.expert        { background-position: -384px -192px; }
+        &.ferocious     { background-position: -576px -192px; }
+        &.fierce        { background-position: -672px -192px; }
+        &.fire          { background-position: -0 -288px; }
+        &.focused       { background-position: -96px -288px; }
+        &.fury          { background-position: -192px -288px; }
+        &.glutton       { background-position: -576px -288px; }
+        &.harmful       { background-position: -288px -288px; }
+        &.history       { background-position: -480px -288px; }
+        &.hurried       { background-position: -0 -384px; }
+        &.intense       { background-position: -96px -384px; }
+        &.lights-out    { background-position: -96px -576px; }
+        &.meticulous    { background-position: -288px -384px; }
+        &.midas         { background-position: -384px -384px; }
+        &.pakhan        { background-position: -480px -384px; }
+        &.predatory     { background-position: -576px -384px; }
+        &.prepared      { background-position: -672px -384px; }
+        &.preserved     { background-position: -0 -480px; }
+        &.proficient    { background-position: -96px -480px; }
+        &.quickdraw     { background-position: -192px -672px; }
+        &.republic      { background-position: -192px -480px; }
+        &.responsive    { background-position: -288px -480px; }
+        &.golden-rhino  { background-position: -384px -480px; }
+        &.rough         { background-position: -96px -672px; }
+        &.showstopper   { background-position: -96px -0; }
+        &.skilled       { background-position: -480px -480px; }
+        &.sustained     { background-position: -576px -480px; }
+        &.swift         { background-position: -672px -480px; }
+        &.talented      { background-position: -0 -576px; }
+        &.toxic         { background-position: -288px -576px; }
+        &.trained       { background-position: -384px -576px; }
+        &.uncomplicated { background-position: -480px -192px; }
+        &.unforgiving   { background-position: -480px -576px; }
+        &.valkyria      { background-position: -672px -576px; }
+        &.vicious       { background-position: -0 -672px; }
+      }
+    }
+    .mod-container {
+      display: grid;
+      grid-template-areas:
+        'sprite slot'
+        'sprite bonus1'
+        'sprite bonus2'
+        'sprite bonus3'
+      ;
+      grid-template-rows: auto 1fr;
+      justify-content: start;
+      background-color: var(--default-bg-color--clearest);
+      &[hidden] {
+        display: none;
+      }
+      .sprite {
+        position: relative;
+        grid-area: sprite;
+        align-self: start;
+        // stylelint-disable unit-disallowed-list
+        width: 32px;
+        height: 32px;
+        margin-right: 0.5em;
+        // stylelint-disable-next-line defensive-css/require-background-repeat
+        background-image: url('#{$base-url}img/sprites/w_mod.png');
+        // stylelint-enable unit-disallowed-list
+        &.magazine    { background-position: -0 -0; }
+        &.muzzle      { background-position: -32px -0; }
+        &.optics      { background-position: -0 -32px; }
+        &.underbarrel { background-position: -32px -32px; }
+        &::before {
+          position: absolute;
+          inset: -2px;
+          z-index: z('sprite');
+          content: '';
+          background-color: var(--quality-highend--light);
+        }
+      }
+      .slot {
+        grid-area: slot;
+      }
+      .bonus {
+        cursor: pointer;
+        &1 {
+          grid-area: bonus1;
+        }
+        &2 {
+          grid-area: bonus2;
+        }
+        &3 {
+          grid-area: bonus3;
+        }
+      }
+    }
+  }
+  .gear {
+    &[data-quality='classy'],
+    &[data-quality='gearset'] {
+      .quality,
+      .meta-container .name {
+        color: var(--quality-gset);
+      }
+    }
+    .stats-container {
+      display: flex;
+      flex-flow: row wrap;
+      gap: px2rem(4px);
+      .sprite-container {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: px2rem(8px);
+        cursor: pointer;
+        background-color: var(--default-bg-color--clearest);
+        @include hocus {
+          background-color: var(--default-bg-color--clearer);
+          .sprite {
+            opacity: 1;
+          }
+        }
+        &.selected {
+          background-color: var(--default-bg-color--clearer);
+          .sprite {
+            opacity: 1;
+          }
+        }
+        .stat-radio {
+          position: absolute;
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        &:has(.stat-radio:checked) {
+          background-color: var(--default-bg-color--clearer);
+          .sprite {
+            opacity: 1;
+          }
+        }
+        .sprite {
+          // stylelint-disable unit-disallowed-list
+          width: 64px;
+          height: 64px;
+          // stylelint-enable unit-disallowed-list
+          margin: 0 auto;
+          // stylelint-disable-next-line defensive-css/require-background-repeat
+          background-image: url('#{$base-url}img/sprites/g_stats.png');
+          opacity: 0.7;
+          filter: drop-shadow(-2px -6px 0 var(--default-bg-color--clearest));
+          &.ele { background-position: -0 -0; }
+          &.fa  { background-position: -64px -0; }
+          &.sta { background-position: -128px -0; }
+        }
+      }
+    }
+    .attributes-container,
+    .mod-container {
+      display: flex;
+      flex-flow: column wrap;
+      padding: 0.25em 0.5em;
+      .title {
+        margin-top: px2rem(8px);
+      }
+      .title[id$='-type'],
+      .attribute {
+        cursor: pointer;
+      }
+    }
+    .mod-container {
+      .title {
+        display: flex;
+        flex-flow: row wrap;
+        gap: px2rem(6px);
+        align-items: center;
+        margin-bottom: px2rem(4px);
+        .sprite {
+          // stylelint-disable unit-disallowed-list
+          width: 22px;
+          height: 22px;
+          // stylelint-enable unit-disallowed-list
+          // stylelint-disable-next-line defensive-css/require-background-repeat
+          background-image: url('#{$base-url}img/sprites/g_mod.png');
+          &.stat { background-position: -0 -0; }
+          &.perf { background-position: -22px -0; }
+        }
+        &::before {
+          // stylelint-disable unit-disallowed-list
+          width: 22px;
+          height: 6px;
+          // stylelint-enable unit-disallowed-list
+          content: '';
+        }
+        &[data-quality='superior'] {
+          &::before {
+            background-color: var(--quality-superior);
+          }
+        }
+        &[data-quality='highend'] {
+          &::before {
+            background-color: var(--quality-highend);
+          }
+        }
+      }
+      .attribute {
+        margin-left: calc(px2rem(22px) + px2rem(6px));
+      }
+    }
+    .bonus-container {
+      [class^='bonus'] {
+        padding: 0.25em 0.5em;
+        margin-bottom: px2rem(4px);
+        // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+        background:
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+        ;
+        background-color: var(--default-bg-color--lightest);
+        background-size: 2px 2px;
+        opacity: 0.9;
+        &.highlight {
+          background-color: var(--quality-gset--lighter);
+          opacity: 1;
+        }
+        .name {
+          margin-bottom: px2rem(4px);
+          font-weight: 700;
+        }
+        .desc {
+          font-size: 0.9em;
+        }
+      }
+    }
+    .bonus-separator {
+      border-top: 1px solid var(--quality-gset--light);
+    }
+    &.holster {
+      .stats-container {
+        .sprite-container {
+          cursor: default;
+          background-color: var(--default-bg-color--clearer);
+        }
+        .sprite {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// BUILD GRID
+
+.build {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  .weapon.primary {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  .weapon.secondary {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  .weapon.handgun {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+  }
+  .gear.chest {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  .gear.mask {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  .gear.kneepads {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+  .gear.backpack {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+  .gear.gloves {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+  .gear.holster {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+}
+
+@include respond-to('large') {
+  .build {
+    grid-template-rows: repeat(5, minmax(px2rem(60px), auto));
+    grid-template-columns: repeat(2, 1fr);
+    .weapon.primary {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+    .weapon.secondary {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+    .weapon.handgun {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+    .gear.chest {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+    .gear.mask {
+      grid-row: 3 / 4;
+      grid-column: 2 / 3;
+    }
+    .gear.kneepads {
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+    }
+    .gear.backpack {
+      grid-row: 4 / 5;
+      grid-column: 2 / 3;
+    }
+    .gear.gloves {
+      grid-row: 5 / 6;
+      grid-column: 1 / 2;
+    }
+    .gear.holster {
+      grid-row: 5 / 6;
+      grid-column: 2 / 3;
+    }
+  }
+}
+
+@include respond-to('medium') {
+  .build {
+    grid-template-rows: repeat(9, minmax(px2rem(60px), auto));
+    grid-template-columns: repeat(1, 1fr);
+    .weapon.primary {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+    .weapon.secondary {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+    .weapon.handgun {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+    .gear.chest {
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+    }
+    .gear.mask {
+      grid-row: 5 / 6;
+      grid-column: 1 / 2;
+    }
+    .gear.kneepads {
+      grid-row: 6 / 7;
+      grid-column: 1 / 2;
+    }
+    .gear.backpack {
+      grid-row: 7 / 8;
+      grid-column: 1 / 2;
+    }
+    .gear.gloves {
+      grid-row: 8 / 9;
+      grid-column: 1 / 2;
+    }
+    .gear.holster {
+      grid-row: 9 / 10;
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  .skills-container,
+  .talents-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: px2rem(12px);
+    .sprite-container {
+      padding: px2rem(8px);
+      cursor: pointer;
+      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+      background:
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+      ;
+      background-color: var(--default-bg-color--clearest);
+      background-size: 2px 2px;
+      backdrop-filter: blur(5px);
+      .sprite {
+        // stylelint-disable unit-disallowed-list
+        width: 64px;
+        height: 64px;
+        // stylelint-enable unit-disallowed-list
+        filter: drop-shadow(-4px -6px 0 var(--default-bg-color--clearest));
+      }
+    }
+  }
+  .skills-container {
+    .sprite-container {
+      &.ult {
+        padding: px2rem(8px) px2rem(40px);
+      }
+      .sprite {
+        // stylelint-disable-next-line defensive-css/require-background-repeat
+        background-image: url('#{$base-url}img/sprites/p_skills.png');
+        background-position: -192px -384px;
+        &.aid            { background-position: -0 -0; }
+        &.aid-boost      { background-position: -64px -0; }
+        &.aid-defib      { background-position: -128px -0; }
+        &.aid-overdose   { background-position: -192px -0; }
+        &.cover          { background-position: -256px -0; }
+        &.cover-conceal  { background-position: -320px -0; }
+        &.cover-recharge { background-position: -0 -64px; }
+        &.cover-trapper  { background-position: -64px -64px; }
+        &.mcover         { background-position: -128px -64px; }
+        &.mcover-blast   { background-position: -192px -64px; }
+        &.mcover-counter { background-position: -256px -64px; }
+        &.mcover-ext     { background-position: -320px -64px; }
+        &.pulse          { background-position: -0 -128px; }
+        &.pulse-conceal  { background-position: -64px -128px; }
+        &.pulse-recon    { background-position: -128px -128px; }
+        &.pulse-tac      { background-position: -192px -128px; }
+        &.seeker         { background-position: -256px -128px; }
+        &.seeker-burst   { background-position: -320px -128px; }
+        &.seeker-cluster { background-position: -0 -192px; }
+        &.seeker-gas     { background-position: -64px -192px; }
+        &.shield         { background-position: -128px -192px; }
+        &.shield-ass     { background-position: -192px -192px; }
+        &.shield-kinetic { background-position: -256px -192px; }
+        &.shield-react   { background-position: -320px -192px; }
+        &.station        { background-position: -0 -256px; }
+        &.station-ammo   { background-position: -64px -256px; }
+        &.station-immune { background-position: -128px -256px; }
+        &.station-life   { background-position: -192px -256px; }
+        &.sticky         { background-position: -256px -256px; }
+        &.sticky-bfb     { background-position: -320px -256px; }
+        &.sticky-flash   { background-position: -0 -320px; }
+        &.sticky-disrupt { background-position: -64px -320px; }
+        &.turret         { background-position: -128px -320px; }
+        &.turret-fire    { background-position: -192px -320px; }
+        &.turret-sensor  { background-position: -256px -320px; }
+        &.turret-zap     { background-position: -320px -320px; }
+        &.ult-def        { background-position: -0 -384px; }
+        &.ult-med        { background-position: -64px -384px; }
+        &.ult-tac        { background-position: -128px -384px; }
+      }
+    }
+  }
+  .talents-container {
+    .sprite {
+      // stylelint-disable-next-line defensive-css/require-background-repeat
+      background-image: url('#{$base-url}img/sprites/p_talents.png');
+      background-position: -192px -256px;
+      &.adrenaline { background-position: -0 -0; }
+      &.awe        { background-position: -64px -0; }
+      &.buddy      { background-position: -128px -0; }
+      &.chain      { background-position: -192px -0; }
+      &.critsave   { background-position: -256px -0; }
+      &.demo       { background-position: -0 -64px; }
+      &.desperate  { background-position: -64px -64px; }
+      &.evasive    { background-position: -128px -64px; }
+      &.fear       { background-position: -192px -64px; }
+      &.medic      { background-position: -256px -64px; }
+      &.move       { background-position: -0 -128px; }
+      &.onenone    { background-position: -64px -128px; }
+      &.police     { background-position: -128px -128px; }
+      &.power      { background-position: -192px -128px; }
+      &.precision  { background-position: -256px -128px; }
+      &.proxy      { background-position: -0 -192px; }
+      &.reaper     { background-position: -64px -192px; }
+      &.shrapnel   { background-position: -128px -192px; }
+      &.steady     { background-position: -192px -192px; }
+      &.strike     { background-position: -256px -192px; }
+      &.tacadv     { background-position: -0 -256px; }
+      &.techsupp   { background-position: -64px -256px; }
+      &.triage     { background-position: -128px -256px; }
+      &.wildfire   { background-position: -256px -256px; }
+    }
+  }
+}

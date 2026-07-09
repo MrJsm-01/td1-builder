@@ -1,0 +1,27 @@
+<header itemscope itemtype="http://schema.org/WPHeader">
+	<nav aria-label="Main navigation">
+		<h1 class="title">
+			<a href="{{ site.url }}" translate="no">
+				{%- assign title = site.meta.title | split: " " -%}
+				<strong class="title__emphasis">{{ title[0] }}</strong>
+				{{ title[1] }}
+			</a>
+		</h1>
+		{% if page.layout == "page" -%}
+			<a href="{{ site.url }}" translate="no">Home</a>
+		{% endif %}
+		{% unless page.url == "/builds/" -%}
+			<a href="/builds/">Builds</a>
+		{% endunless %}
+	</nav>
+	{% if page.layout == "builder" -%}
+		<div class="actions">
+			<button class="share" id="share-build">
+				<div class="icon">
+					{% include icons/share.svg %}
+				</div>
+				Share
+			</button>
+		</div>
+	{% endif %}
+</header>

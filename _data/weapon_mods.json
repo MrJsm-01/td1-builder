@@ -1,0 +1,78 @@
+[
+	{
+		"id": 1,
+		"label": "Critical Hit Chance",
+		"slot": [
+			"optics",
+			"magazine",
+			"muzzle"
+		]
+	},
+	{
+		"id": 2,
+		"label": "Critical Hit Damage",
+		"slot": [
+			"optics",
+			"magazine",
+			"muzzle",
+			"underbarrel"
+		]
+	},
+	{
+		"id": 3,
+		"label": "Headshot Damage",
+		"slot": [
+			"optics",
+			"muzzle"
+		]
+	},
+	{
+		"id": 4,
+		"label": "Accuracy",
+		"slot": [
+			"optics",
+			"underbarrel",
+			"muzzle"
+		]
+	},
+	{
+		"id": 5,
+		"label": "Stability",
+		"slot": [
+			"optics",
+			"muzzle",
+			"underbarrel"
+		]
+	},
+	{
+		"id": 6,
+		"label": "Reload Speed",
+		"slot": [
+			"underbarrel",
+			"magazine"
+		]
+	},
+	{
+		"id": 7,
+		"label": "Rate of Fire",
+		"slot": [
+			"magazine"
+		]
+	},
+	{
+		"id": 8,
+		"label": "Optimal Range",
+		"slot": [
+			"optics",
+			"muzzle",
+			"underbarrel"
+		]
+	},
+	{
+		"id": 9,
+		"label": "Magazine Size",
+		"slot": [
+			"magazine"
+		]
+	}
+]

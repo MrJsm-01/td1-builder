@@ -1,0 +1,1262 @@
+[
+	{
+		"id": "chest",
+		"name": "Chest",
+		"quality": "highend",
+		"slot": "chest",
+		"talent": null
+	},
+	{
+		"id": "mask",
+		"name": "Mask",
+		"quality": "highend",
+		"slot": "mask",
+		"talent": null
+	},
+	{
+		"id": "kneepads",
+		"name": "Kneepads",
+		"quality": "highend",
+		"slot": "kneepads",
+		"talent": null
+	},
+	{
+		"id": "backpack",
+		"name": "Backpack",
+		"quality": "highend",
+		"slot": "backpack",
+		"talent": null
+	},
+	{
+		"id": "gloves",
+		"name": "Gloves",
+		"quality": "highend",
+		"slot": "gloves",
+		"talent": null
+	},
+	{
+		"id": "holster",
+		"name": "Holster",
+		"quality": "highend",
+		"slot": "holster",
+		"talent": null
+	},
+	{
+		"id": "barrett",
+		"name": "Barrett's Bulletproof Vest",
+		"quality": "exotic",
+		"slot": "chest",
+		"talent": "barrett"
+	},
+	{
+		"id": "ferro",
+		"name": "Ferro's Oxygen Mask",
+		"quality": "exotic",
+		"slot": "mask",
+		"talent": "ferro"
+	},
+	{
+		"id": "shortbow",
+		"name": "Shortbow Championship Pads",
+		"quality": "exotic",
+		"slot": "kneepads",
+		"talent": "shortbow"
+	},
+	{
+		"id": "ninja",
+		"name": "NinjaBike Messenger Bag",
+		"quality": "exotic",
+		"slot": "backpack",
+		"talent": "ninja"
+	},
+	{
+		"id": "skulls",
+		"name": "Skulls MC Gloves",
+		"quality": "exotic",
+		"slot": "gloves",
+		"talent": "skulls"
+	},
+	{
+		"id": "bliss",
+		"name": "Colonel Bliss's Holster",
+		"quality": "exotic",
+		"slot": "holster",
+		"talent": "bliss"
+	},
+	{
+		"id": "gsc-chest-ab",
+		"name": "AlphaBridge Chest",
+		"quality": "classy",
+		"setId": "ab",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-ab",
+		"name": "AlphaBridge Mask",
+		"quality": "classy",
+		"setId": "ab",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-ab",
+		"name": "AlphaBridge Knee Pads",
+		"quality": "classy",
+		"setId": "ab",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-ab",
+		"name": "AlphaBridge Rucksack",
+		"quality": "classy",
+		"setId": "ab",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-ab",
+		"name": "AlphaBridge Gloves",
+		"quality": "classy",
+		"setId": "ab",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-ab",
+		"name": "AlphaBridge Holster",
+		"quality": "classy",
+		"setId": "ab",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-banshee",
+		"name": "Banshee's Shadow Chest",
+		"quality": "classy",
+		"setId": "banshee",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-banshee",
+		"name": "Banshee's Shadow Mask",
+		"quality": "classy",
+		"setId": "banshee",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-banshee",
+		"name": "Banshee's Shadow Kneepads",
+		"quality": "classy",
+		"setId": "banshee",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-banshee",
+		"name": "Banshee's Shadow Backpack",
+		"quality": "classy",
+		"setId": "banshee",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-banshee",
+		"name": "Banshee's Shadow Gloves",
+		"quality": "classy",
+		"setId": "banshee",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-banshee",
+		"name": "Banshee's Shadow Holster",
+		"quality": "classy",
+		"setId": "banshee",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-d3",
+		"name": "D3-FNC Vest",
+		"quality": "classy",
+		"setId": "d3",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-d3",
+		"name": "D3-FNC Mask",
+		"quality": "classy",
+		"setId": "d3",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-d3",
+		"name": "D3-FNC Knee Pads",
+		"quality": "classy",
+		"setId": "d3",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-d3",
+		"name": "D3-FNC Backpack",
+		"quality": "classy",
+		"setId": "d3",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-d3",
+		"name": "D3-FNC Gloves",
+		"quality": "classy",
+		"setId": "d3",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-d3",
+		"name": "D3-FNC Holster",
+		"quality": "classy",
+		"setId": "d3",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-eye",
+		"name": "DeadEYE Chestplate",
+		"quality": "classy",
+		"setId": "eye",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-eye",
+		"name": "DeadEYE Acquisition System",
+		"quality": "classy",
+		"setId": "eye",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-eye",
+		"name": "DeadEYE Positioning Braces",
+		"quality": "classy",
+		"setId": "eye",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-eye",
+		"name": "DeadEYE Go Bag",
+		"quality": "classy",
+		"setId": "eye",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-eye",
+		"name": "DeadEYE Trigger Gloves",
+		"quality": "classy",
+		"setId": "eye",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-eye",
+		"name": "DeadEYE Quick Draw Holster",
+		"quality": "classy",
+		"setId": "eye",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-fm",
+		"name": "Final Measure Vest",
+		"quality": "classy",
+		"setId": "fm",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-fm",
+		"name": "Final Measure Mask",
+		"quality": "classy",
+		"setId": "fm",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-fm",
+		"name": "Final Measure Knee Pads",
+		"quality": "classy",
+		"setId": "fm",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-fm",
+		"name": "Final Measure Backpack",
+		"quality": "classy",
+		"setId": "fm",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-fm",
+		"name": "Final Measure Gloves",
+		"quality": "classy",
+		"setId": "fm",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-fm",
+		"name": "Final Measure Holster",
+		"quality": "classy",
+		"setId": "fm",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-fc",
+		"name": "FireCrest acquisition vest",
+		"quality": "classy",
+		"setId": "fc",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-fc",
+		"name": "FireCrest ammo tracking mask",
+		"quality": "classy",
+		"setId": "fc",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-fc",
+		"name": "FireCrest knee pads",
+		"quality": "classy",
+		"setId": "fc",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-fc",
+		"name": "FireCrest microshuttle pack",
+		"quality": "classy",
+		"setId": "fc",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-fc",
+		"name": "FireCrest gloves",
+		"quality": "classy",
+		"setId": "fc",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-fc",
+		"name": "FireCrest distribution holster",
+		"quality": "classy",
+		"setId": "fc",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-hf",
+		"name": "Hunter's Faith Vest",
+		"quality": "classy",
+		"setId": "hf",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-hf",
+		"name": "Hunter's Faith Mask",
+		"quality": "classy",
+		"setId": "hf",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-hf",
+		"name": "Hunter's Faith Knee Pads",
+		"quality": "classy",
+		"setId": "hf",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-hf",
+		"name": "Hunter's Faith Backpack",
+		"quality": "classy",
+		"setId": "hf",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-hf",
+		"name": "Hunter's Faith Gloves",
+		"quality": "classy",
+		"setId": "hf",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-hf",
+		"name": "Hunter's Faith Holster",
+		"quality": "classy",
+		"setId": "hf",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-ls",
+		"name": "Lone Star Vest",
+		"quality": "classy",
+		"setId": "",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-ls",
+		"name": "Lone Star Mask",
+		"quality": "classy",
+		"setId": "ls",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-ls",
+		"name": "Lone Star Knee pads",
+		"quality": "classy",
+		"setId": "ls",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-ls",
+		"name": "Lone Star Backpack",
+		"quality": "classy",
+		"setId": "ls",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-ls",
+		"name": "Lone Star Gloves",
+		"quality": "classy",
+		"setId": "ls",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-ls",
+		"name": "Lone Star Holster",
+		"quality": "classy",
+		"setId": "ls",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-nomad",
+		"name": "Vest of the Nomad",
+		"quality": "classy",
+		"setId": "nomad",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-nomad",
+		"name": "Mask of the Nomad",
+		"quality": "classy",
+		"setId": "nomad",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-nomad",
+		"name": "Knee Pads of the Nomad",
+		"quality": "classy",
+		"setId": "nomad",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-nomad",
+		"name": "Backpack of the Nomad",
+		"quality": "classy",
+		"setId": "nomad",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-nomad",
+		"name": "Gloves of the Nomad",
+		"quality": "classy",
+		"setId": "nomad",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-nomad",
+		"name": "Holster of the Nomad",
+		"quality": "classy",
+		"setId": "nomad",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-pred",
+		"name": "Predator's Mark Vest",
+		"quality": "classy",
+		"setId": "pred",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-pred",
+		"name": "Predator's Mark Mask",
+		"quality": "classy",
+		"setId": "pred",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-pred",
+		"name": "Predator's Mark Kneepads",
+		"quality": "classy",
+		"setId": "pred",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-pred",
+		"name": "Predator's Mark Backpack",
+		"quality": "classy",
+		"setId": "pred",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-pred",
+		"name": "Predator's Mark Gloves",
+		"quality": "classy",
+		"setId": "pred",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-pred",
+		"name": "Predator's Mark Holster",
+		"quality": "classy",
+		"setId": "pred",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-reclaimer",
+		"name": "Reclaimer Vest",
+		"quality": "classy",
+		"setId": "reclaimer",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-reclaimer",
+		"name": "Reclaimer Ventilator",
+		"quality": "classy",
+		"setId": "reclaimer",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-reclaimer",
+		"name": "Reclaimer Braces",
+		"quality": "classy",
+		"setId": "reclaimer",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-reclaimer",
+		"name": "Reclaimer Support Pack",
+		"quality": "classy",
+		"setId": "reclaimer",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-reclaimer",
+		"name": "Reclaimer Gloves",
+		"quality": "classy",
+		"setId": "reclaimer",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-reclaimer",
+		"name": "Reclaimer Holster",
+		"quality": "classy",
+		"setId": "reclaimer",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-sentry",
+		"name": "Sentry's Call Harness",
+		"quality": "classy",
+		"setId": "sentry",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-sentry",
+		"name": "Sentry's Call Mask",
+		"quality": "classy",
+		"setId": "sentry",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-sentry",
+		"name": "Sentry's Call Knee Pads",
+		"quality": "classy",
+		"setId": "sentry",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-sentry",
+		"name": "Sentry's Call Backpack",
+		"quality": "classy",
+		"setId": "sentry",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-sentry",
+		"name": "Sentry's Call Gloves",
+		"quality": "classy",
+		"setId": "sentry",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-sentry",
+		"name": "Sentry's Call Holster",
+		"quality": "classy",
+		"setId": "sentry",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-striker",
+		"name": "Striker's Harness",
+		"quality": "classy",
+		"setId": "striker",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-striker",
+		"name": "Striker's Mask",
+		"quality": "classy",
+		"setId": "striker",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-striker",
+		"name": "Striker's Knee Pads",
+		"quality": "classy",
+		"setId": "striker",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-striker",
+		"name": "Striker's Pack",
+		"quality": "classy",
+		"setId": "striker",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-striker",
+		"name": "Striker's Gloves",
+		"quality": "classy",
+		"setId": "striker",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-striker",
+		"name": "Striker's Holster",
+		"quality": "classy",
+		"setId": "striker",
+		"slot": "holster"
+	},
+	{
+		"id": "gsc-chest-tac",
+		"name": "Tactician's Authority Vest",
+		"quality": "classy",
+		"setId": "tac",
+		"slot": "chest"
+	},
+	{
+		"id": "gsc-mask-tac",
+		"name": "Tactician's Authority Mask",
+		"quality": "classy",
+		"setId": "tac",
+		"slot": "mask"
+	},
+	{
+		"id": "gsc-kneepads-tac",
+		"name": "Tactician's Authority Knee Pads",
+		"quality": "classy",
+		"setId": "tac",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gsc-backpack-tac",
+		"name": "Tactician's Authority Pack",
+		"quality": "classy",
+		"setId": "tac",
+		"slot": "backpack"
+	},
+	{
+		"id": "gsc-gloves-tac",
+		"name": "Tactician's Authority Gloves",
+		"quality": "classy",
+		"setId": "tac",
+		"slot": "gloves"
+	},
+	{
+		"id": "gsc-holster-tac",
+		"name": "Tactician's Authority Holster",
+		"quality": "classy",
+		"setId": "tac",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-ab",
+		"name": "AlphaBridge Chest",
+		"quality": "gearset",
+		"setId": "ab",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-ab",
+		"name": "AlphaBridge Mask",
+		"quality": "gearset",
+		"setId": "ab",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-ab",
+		"name": "AlphaBridge Knee Pads",
+		"quality": "gearset",
+		"setId": "ab",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-ab",
+		"name": "AlphaBridge Rucksack",
+		"quality": "gearset",
+		"setId": "ab",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-ab",
+		"name": "AlphaBridge Gloves",
+		"quality": "gearset",
+		"setId": "ab",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-ab",
+		"name": "AlphaBridge Holster",
+		"quality": "gearset",
+		"setId": "ab",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-banshee",
+		"name": "Banshee's Shadow Chest",
+		"quality": "gearset",
+		"setId": "banshee",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-banshee",
+		"name": "Banshee's Shadow Mask",
+		"quality": "gearset",
+		"setId": "banshee",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-banshee",
+		"name": "Banshee's Shadow Kneepads",
+		"quality": "gearset",
+		"setId": "banshee",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-banshee",
+		"name": "Banshee's Shadow Backpack",
+		"quality": "gearset",
+		"setId": "banshee",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-banshee",
+		"name": "Banshee's Shadow Gloves",
+		"quality": "gearset",
+		"setId": "banshee",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-banshee",
+		"name": "Banshee's Shadow Holster",
+		"quality": "gearset",
+		"setId": "banshee",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-d3",
+		"name": "D3-FNC Vest",
+		"quality": "gearset",
+		"setId": "d3",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-d3",
+		"name": "D3-FNC Mask",
+		"quality": "gearset",
+		"setId": "d3",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-d3",
+		"name": "D3-FNC Knee Pads",
+		"quality": "gearset",
+		"setId": "d3",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-d3",
+		"name": "D3-FNC Backpack",
+		"quality": "gearset",
+		"setId": "d3",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-d3",
+		"name": "D3-FNC Gloves",
+		"quality": "gearset",
+		"setId": "d3",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-d3",
+		"name": "D3-FNC Holster",
+		"quality": "gearset",
+		"setId": "d3",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-eye",
+		"name": "DeadEYE Chestplate",
+		"quality": "gearset",
+		"setId": "eye",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-eye",
+		"name": "DeadEYE Acquisition System",
+		"quality": "gearset",
+		"setId": "eye",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-eye",
+		"name": "DeadEYE Positioning Braces",
+		"quality": "gearset",
+		"setId": "eye",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-eye",
+		"name": "DeadEYE Go Bag",
+		"quality": "gearset",
+		"setId": "eye",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-eye",
+		"name": "DeadEYE Trigger Gloves",
+		"quality": "gearset",
+		"setId": "eye",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-eye",
+		"name": "DeadEYE Quick Draw Holster",
+		"quality": "gearset",
+		"setId": "eye",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-fm",
+		"name": "Final Measure Vest",
+		"quality": "gearset",
+		"setId": "fm",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-fm",
+		"name": "Final Measure Mask",
+		"quality": "gearset",
+		"setId": "fm",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-fm",
+		"name": "Final Measure Knee Pads",
+		"quality": "gearset",
+		"setId": "fm",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-fm",
+		"name": "Final Measure Backpack",
+		"quality": "gearset",
+		"setId": "fm",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-fm",
+		"name": "Final Measure Gloves",
+		"quality": "gearset",
+		"setId": "fm",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-fm",
+		"name": "Final Measure Holster",
+		"quality": "gearset",
+		"setId": "fm",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-fc",
+		"name": "FireCrest acquisition vest",
+		"quality": "gearset",
+		"setId": "fc",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-fc",
+		"name": "FireCrest ammo tracking mask",
+		"quality": "gearset",
+		"setId": "fc",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-fc",
+		"name": "FireCrest knee pads",
+		"quality": "gearset",
+		"setId": "fc",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-fc",
+		"name": "FireCrest microshuttle pack",
+		"quality": "gearset",
+		"setId": "fc",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-fc",
+		"name": "FireCrest gloves",
+		"quality": "gearset",
+		"setId": "fc",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-fc",
+		"name": "FireCrest distribution holster",
+		"quality": "gearset",
+		"setId": "fc",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-hf",
+		"name": "Hunter's Faith Vest",
+		"quality": "gearset",
+		"setId": "hf",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-hf",
+		"name": "Hunter's Faith Mask",
+		"quality": "gearset",
+		"setId": "hf",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-hf",
+		"name": "Hunter's Faith Knee Pads",
+		"quality": "gearset",
+		"setId": "hf",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-hf",
+		"name": "Hunter's Faith Backpack",
+		"quality": "gearset",
+		"setId": "hf",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-hf",
+		"name": "Hunter's Faith Gloves",
+		"quality": "gearset",
+		"setId": "hf",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-hf",
+		"name": "Hunter's Faith Holster",
+		"quality": "gearset",
+		"setId": "hf",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-ls",
+		"name": "Lone Star Vest",
+		"quality": "gearset",
+		"setId": "ls",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-ls",
+		"name": "Lone Star Mask",
+		"quality": "gearset",
+		"setId": "ls",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-ls",
+		"name": "Lone Star Knee pads",
+		"quality": "gearset",
+		"setId": "ls",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-ls",
+		"name": "Lone Star Backpack",
+		"quality": "gearset",
+		"setId": "ls",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-ls",
+		"name": "Lone Star Gloves",
+		"quality": "gearset",
+		"setId": "ls",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-ls",
+		"name": "Lone Star Holster",
+		"quality": "gearset",
+		"setId": "ls",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-nomad",
+		"name": "Vest of the Nomad",
+		"quality": "gearset",
+		"setId": "nomad",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-nomad",
+		"name": "Mask of the Nomad",
+		"quality": "gearset",
+		"setId": "nomad",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-nomad",
+		"name": "Knee Pads of the Nomad",
+		"quality": "gearset",
+		"setId": "nomad",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-nomad",
+		"name": "Backpack of the Nomad",
+		"quality": "gearset",
+		"setId": "nomad",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-nomad",
+		"name": "Gloves of the Nomad",
+		"quality": "gearset",
+		"setId": "nomad",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-nomad",
+		"name": "Holster of the Nomad",
+		"quality": "gearset",
+		"setId": "nomad",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-pred",
+		"name": "Predator's Mark Vest",
+		"quality": "gearset",
+		"setId": "pred",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-pred",
+		"name": "Predator's Mark Mask",
+		"quality": "gearset",
+		"setId": "pred",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-pred",
+		"name": "Predator's Mark Kneepads",
+		"quality": "gearset",
+		"setId": "pred",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-pred",
+		"name": "Predator's Mark Backpack",
+		"quality": "gearset",
+		"setId": "pred",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-pred",
+		"name": "Predator's Mark Gloves",
+		"quality": "gearset",
+		"setId": "pred",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-pred",
+		"name": "Predator's Mark Holster",
+		"quality": "gearset",
+		"setId": "pred",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-reclaimer",
+		"name": "Reclaimer Vest",
+		"quality": "gearset",
+		"setId": "reclaimer",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-reclaimer",
+		"name": "Reclaimer Ventilator",
+		"quality": "gearset",
+		"setId": "reclaimer",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-reclaimer",
+		"name": "Reclaimer Braces",
+		"quality": "gearset",
+		"setId": "reclaimer",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-reclaimer",
+		"name": "Reclaimer Support Pack",
+		"quality": "gearset",
+		"setId": "reclaimer",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-reclaimer",
+		"name": "Reclaimer Gloves",
+		"quality": "gearset",
+		"setId": "reclaimer",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-reclaimer",
+		"name": "Reclaimer Holster",
+		"quality": "gearset",
+		"setId": "reclaimer",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-sentry",
+		"name": "Sentry's Call Harness",
+		"quality": "gearset",
+		"setId": "sentry",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-sentry",
+		"name": "Sentry's Call Mask",
+		"quality": "gearset",
+		"setId": "sentry",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-sentry",
+		"name": "Sentry's Call Knee Pads",
+		"quality": "gearset",
+		"setId": "sentry",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-sentry",
+		"name": "Sentry's Call Backpack",
+		"quality": "gearset",
+		"setId": "sentry",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-sentry",
+		"name": "Sentry's Call Gloves",
+		"quality": "gearset",
+		"setId": "sentry",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-sentry",
+		"name": "Sentry's Call Holster",
+		"quality": "gearset",
+		"setId": "sentry",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-striker",
+		"name": "Striker's Harness",
+		"quality": "gearset",
+		"setId": "striker",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-striker",
+		"name": "Striker's Mask",
+		"quality": "gearset",
+		"setId": "striker",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-striker",
+		"name": "Striker's Knee Pads",
+		"quality": "gearset",
+		"setId": "striker",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-striker",
+		"name": "Striker's Pack",
+		"quality": "gearset",
+		"setId": "striker",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-striker",
+		"name": "Striker's Gloves",
+		"quality": "gearset",
+		"setId": "striker",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-striker",
+		"name": "Striker's Holster",
+		"quality": "gearset",
+		"setId": "striker",
+		"slot": "holster"
+	},
+	{
+		"id": "gs-chest-tac",
+		"name": "Tactician's Authority Vest",
+		"quality": "gearset",
+		"setId": "tac",
+		"slot": "chest"
+	},
+	{
+		"id": "gs-mask-tac",
+		"name": "Tactician's Authority Mask",
+		"quality": "gearset",
+		"setId": "tac",
+		"slot": "mask"
+	},
+	{
+		"id": "gs-kneepads-tac",
+		"name": "Tactician's Authority Knee Pads",
+		"quality": "gearset",
+		"setId": "tac",
+		"slot": "kneepads"
+	},
+	{
+		"id": "gs-backpack-tac",
+		"name": "Tactician's Authority Pack",
+		"quality": "gearset",
+		"setId": "tac",
+		"slot": "backpack"
+	},
+	{
+		"id": "gs-gloves-tac",
+		"name": "Tactician's Authority Gloves",
+		"quality": "gearset",
+		"setId": "tac",
+		"slot": "gloves"
+	},
+	{
+		"id": "gs-holster-tac",
+		"name": "Tactician's Authority Holster",
+		"quality": "gearset",
+		"setId": "tac",
+		"slot": "holster"
+	}
+]

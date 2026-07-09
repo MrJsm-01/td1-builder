@@ -1,0 +1,49 @@
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  12.5% {
+    transform: rotate(45deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  25% {
+    transform: rotate(90deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  37.5% {
+    transform: rotate(135deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  62.5% {
+    transform: rotate(225deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  75% {
+    transform: rotate(270deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  87.5% {
+    transform: rotate(315deg);
+    animation-timing-function: steps(1, jump-end);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes unfold-in {
+  0%   { transform: scaleY(0.005) scaleX(0); }
+  50%  { transform: scaleY(0.005) scaleX(1); }
+  100% { transform: scaleY(1) scaleX(1); }
+}
+
+@keyframes unfold-out {
+  0%   { transform: scaleY(1) scaleX(1); }
+  50%  { transform: scaleY(0.005) scaleX(1); }
+  100% { transform: scaleY(0.005) scaleX(0); }
+}

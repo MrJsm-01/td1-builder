@@ -1,0 +1,37 @@
+{
+	"ar": {
+		"label": "Assault Rifle",
+		"bonus": "Enemy Armor Damage",
+		"slot": "primary_secondary"
+	},
+	"hdg": {
+		"label": "Pistol",
+		"bonus": null,
+		"slot": "handgun"
+	},
+	"hdgstg": {
+		"label": "Shotgun",
+		"bonus": "Stagger",
+		"slot": "handgun"
+	},
+	"lmg": {
+		"label": "Light Machine Gun",
+		"bonus": "DMG to Target Out of Cover",
+		"slot": "primary_secondary"
+	},
+	"mmr": {
+		"label": "Marksman Rifle",
+		"bonus": "Headshot Damage",
+		"slot": "primary_secondary"
+	},
+	"smg": {
+		"label": "Submachine Gun",
+		"bonus": "Critical Hit Chance",
+		"slot": "primary_secondary"
+	},
+	"stg": {
+		"label": "Shotgun",
+		"bonus": "Stagger",
+		"slot": "primary_secondary"
+	}
+}

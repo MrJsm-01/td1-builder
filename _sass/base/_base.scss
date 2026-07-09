@@ -1,0 +1,80 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+@use '../abstracts/variables' as *;
+
+html {
+  font-family: $font-stack-text;
+  font-size: 112.5%;
+  @include respond-to('large') {
+    font-size: 100%;
+  }
+}
+
+body {
+  --margin: 2rem;
+  // Header height + Desired margin
+  margin-top: calc(px2rem(64px) + var(--margin));
+  // Footer height + Desired margin
+  margin-bottom: calc(px2rem(32px) + var(--margin));
+  color: var(--default-text-color);
+  background-color: var(--default-bg-color);
+  &::before {
+    position: fixed;
+    inset: -20px;
+    z-index: z('background');
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter:
+      blur(5px)
+      brightness(35%)
+    ;
+  }
+}
+
+h1 {
+  @extend %h1;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+
+[type='button'],
+button {
+  padding: px2rem(6px) px2rem(12px);
+  font-family: $font-stack-text;
+  font-size: px2rem(16px);
+  color: var(--default-text-color);
+  touch-action: manipulation;
+  cursor: pointer;
+  // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+  background:
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+  ;
+  background-color: var(--default-bg-color--clearest);
+  background-size: 2px 2px;
+  border: 0;
+  // Don't use hocus mixin because when clicking the button
+  // it will not return to the default state
+  // stylelint-disable-next-line a11y/selector-pseudo-class-focus
+  &:hover {
+    background-color: var(--default-bg-color--clearer);
+  }
+}
+
+.no-overflow { overflow: hidden; }

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	{% include head.html %}
+	<body itemscope="" itemtype="http://schema.org/WebPage">
+		{% include header.html %}
+		<main class="container-md" tabindex="-1" itemscope="" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement">
+			{{ content }}
+		</main>
+		{% include footer.html %}
+	</body>
+</html>

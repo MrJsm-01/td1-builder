@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"type": "fa",
+		"name": "Firearms Mod",
+		"quality": "highend"
+	},
+	{
+		"id": 2,
+		"type": "sta",
+		"name": "Stamina Mod",
+		"quality": "highend"
+	},
+	{
+		"id": 3,
+		"type": "ele",
+		"name": "Electronics Mod",
+		"quality": "highend"
+	},
+	{
+		"id": 4,
+		"type": "fa",
+		"name": "Firearms Mod",
+		"quality": "superior"
+	},
+	{
+		"id": 5,
+		"type": "sta",
+		"name": "Stamina Mod",
+		"quality": "superior"
+	},
+	{
+		"id": 6,
+		"type": "ele",
+		"name": "Electronics Mod",
+		"quality": "superior"
+	}
+]

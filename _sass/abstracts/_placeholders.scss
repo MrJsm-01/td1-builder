@@ -1,0 +1,22 @@
+@use '../abstracts/functions' as *;
+
+/// Headings
+/// @param {Int} $i - Heading
+@for $i from 1 through 3 {
+  %h#{$i} {
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+%h1 {
+  font-size: h(1);
+}
+
+%h2 {
+  font-size: h(2);
+}
+
+%h3 {
+  font-size: h(3);
+}

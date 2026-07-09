@@ -1,0 +1,188 @@
+{
+	"med": [
+		{
+			"id": "pulse",
+			"name": "Pulse",
+			"desc": "Sends out a recon pulse that marks hostiles and allies through walls and covers"
+		},
+		{
+			"id": "pulse-recon",
+			"name": "Recon Pack",
+			"desc": "The pulse has an increased range and is capable of locating nearby loot containers"
+		},
+		{
+			"id": "pulse-conceal",
+			"name": "Scrambler",
+			"desc": "The pulse protects the user and all allies from hostile pulse scans"
+		},
+		{
+			"id": "pulse-tac",
+			"name": "Tactical Scanner",
+			"desc": "Damage is increased when attacking any hostile targets identified by the pulse scan"
+		},
+		{
+			"id": "aid",
+			"name": "First Aid",
+			"desc": "Heals all allies within a small radius. The device can be used on location or launched to a distant target."
+		},
+		{
+			"id": "aid-defib",
+			"name": "Defibrillator",
+			"desc": "Applies instant healing followed by a heal over time. The device can revive downed allies with a portion of their normal health."
+		},
+		{
+			"id": "aid-overdose",
+			"name": "Overdose",
+			"desc": "The device heals targets more efficiently, and may even extend the target's health beyond its normal rating. "
+		},
+		{
+			"id": "aid-boost",
+			"name": "Booster Shot",
+			"desc": "Temporarily increases damage and resistance for the affected targets in addition to the normal healing effect"
+		},
+		{
+			"id": "station",
+			"name": "Support Station",
+			"desc": "Drops a support station that heals allies and can be used to revive downed allies"
+		},
+		{
+			"id": "station-life",
+			"name": "Life Support",
+			"desc": "Drops a revival station that automatically revives any allies who are downed within the affected area"
+		},
+		{
+			"id": "station-immune",
+			"name": "Immunizer",
+			"desc": "Drops a recovery station that removes Status Effects and makes allies immune while within the affected area"
+		},
+		{
+			"id": "station-ammo",
+			"name": "Ammo Cache",
+			"desc": "While close to the device, allies regain their ammo as they reload, and skill cooldown recovery is faster."
+		}
+	],
+	"tech": [
+		{
+			"id": "sticky",
+			"name": "Sticky Bomb",
+			"desc": "Fires a bomb that sticks to most surfaces and explodes when detonated remotely"
+		},
+		{
+			"id": "sticky-bfb",
+			"name": "BFB",
+			"desc": "Increases the damage and radius of the explosion and may cause targets to bleed"
+		},
+		{
+			"id": "sticky-flash",
+			"name": "Flashbang",
+			"desc": "The bomb explodes with a non-lethal effect that blinds all targets in range"
+		},
+		{
+			"id": "sticky-disrupt",
+			"name": "Disruptor",
+			"desc": "The explosive is replaced with an EMP alternative, causing Disrupt effects to all targets in an area."
+		},
+		{
+			"id": "turret",
+			"name": "Turret",
+			"desc": "Deploys a stationary turret that attacks nearby hostiles until it is destroyed or its battery runs out"
+		},
+		{
+			"id": "turret-sensor",
+			"name": "Active Sensor",
+			"desc": "Increases the turret's damage and pulses attacked targets, making them visible to all allies."
+		},
+		{
+			"id": "turret-fire",
+			"name": "Dragonbreath",
+			"desc": "The turret has a reduced range but shoots a column of fire"
+		},
+		{
+			"id": "turret-zap",
+			"name": "Zapper",
+			"desc": "The turret shoots electrical darts that shock the target"
+		},
+		{
+			"id": "seeker",
+			"name": "Seeker Mine",
+			"desc": "Releases an automated mine that seeks out hostile targets before exploding on proximity"
+		},
+		{
+			"id": "seeker-burst",
+			"name": "Airburst",
+			"desc": "Upon impact, the mine is launched in the air and releases a cluster of small incendiary explosives. "
+		},
+		{
+			"id": "seeker-gas",
+			"name": "Gas Charge",
+			"desc": "Upon impact, the mine moves between multiple targets and releases a cloud of gas."
+		},
+		{
+			"id": "seeker-cluster",
+			"name": "Cluster",
+			"desc": "The mine separates into smaller mines that seek out multiple targets simultaneously"
+		}
+	],
+	"def": [
+		{
+			"id": "shield",
+			"name": "Ballistic Shield",
+			"desc": "Equips a portable Ballistic Shield that absorbs damage. The user can only use their sidearm while the shield is active."
+		},
+		{
+			"id": "shield-react",
+			"name": "Reactive Targeting",
+			"desc": "Equips a stronger and lighter shield that pulses hostiles who shoot at it"
+		},
+		{
+			"id": "shield-ass",
+			"name": "Assault Shield",
+			"desc": "Equips a shield that grants the user's weapon increased damage, knockback, accuracy, and faster reload speed."
+		},
+		{
+			"id": "shield-kinetic",
+			"name": "Kinetic Breaker",
+			"desc": "Grants the user a small portion of incoming damage as healing"
+		},
+		{
+			"id": "cover",
+			"name": "Smart Cover",
+			"desc": "Reinforces a cover, increasing weapon performance and damage mitigation for allies behind it."
+		},
+		{
+			"id": "cover-trapper",
+			"name": "Trapper",
+			"desc": "Allies in the area of effect are buffed, while enemies are debuffed for the same amounts."
+		},
+		{
+			"id": "cover-recharge",
+			"name": "Recharger",
+			"desc": "Allies using a reinforced cover slowly recover their health and get their skill cooldowns decreased"
+		},
+		{
+			"id": "cover-conceal",
+			"name": "Concealment",
+			"desc": "Allies using a reinforced cover are hidden from hostile pulses and have reduced threat. Hostiles shot by allies from behind the cover are pulsed."
+		},
+		{
+			"id": "mcover",
+			"name": "Mobile Cover",
+			"desc": "Creates a temporary cover for one person, which provides standard cover protection until destroyed."
+		},
+		{
+			"id": "mcover-ext",
+			"name": "Extension",
+			"desc": "The cover provides more protection and extends to protect two persons"
+		},
+		{
+			"id": "mcover-blast",
+			"name": "Blast Shield",
+			"desc": "The cover is fitted with remote explosives that damage and blind hostiles in front of it when the shield is disabled"
+		},
+		{
+			"id": "mcover-counter",
+			"name": "Countermeasures",
+			"desc": "While using the cover, the user deals increased damage and becomes immune to pulses."
+		}
+	]
+}

@@ -1,0 +1,26 @@
+:root {
+  --default-text-color         : rgba(255, 255, 255, 1);
+  --default-text-color--light  : rgba(255, 255, 255, 0.7);
+  --default-bg-color           : rgba(0, 0, 0, 1);
+  --default-bg-color--clearest : rgba(255, 255, 255, 0.1);
+  --default-bg-color--clearer  : rgba(255, 255, 255, 0.3);
+  --default-bg-color--light    : rgba(0, 0, 0, 0.7);
+  --default-bg-color--lighter  : rgba(0, 0, 0, 0.5);
+  --default-bg-color--lightest : rgba(0, 0, 0, 0.2);
+  --brand-color                : rgba(255, 128, 0, 1);
+  --brand-color--light         : rgba(255, 128, 0, 0.7);
+  --brand-color--lighter       : rgba(255, 128, 0, 0.4);
+  --quality-exotic             : rgba(237, 98, 74, 1);
+  --quality-exotic--light      : rgba(237, 98, 74, 0.4);
+  --quality-gset               : rgba(4, 197, 112, 1);
+  --quality-gset--light        : rgba(4, 197, 112, 0.4);
+  --quality-gset--lighter      : rgba(4, 197, 112, 0.2);
+  --quality-highend            : rgba(222, 153, 15, 1);
+  --quality-highend--light     : rgba(222, 153, 15, 0.4);
+  --quality-superior           : rgba(177, 66, 152, 1);
+  --quality-superior--light    : rgba(177, 66, 152, 0.4);
+  --quality-worn               : rgba(204, 204, 204, 1);
+  --wing-medical               : rgba(139, 235, 83, 1);
+  --wing-tech                  : rgba(255, 182, 64, 1);
+  --wing-security              : rgba(70, 159, 254, 1);
+}

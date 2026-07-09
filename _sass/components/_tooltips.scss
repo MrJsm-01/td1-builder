@@ -1,0 +1,30 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+
+[data-tooltip] {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    z-index: z('tooltip');
+    width: max-content;
+    max-width: px2rem(250px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    color: var(--default-text-color);
+    white-space: pre-line;
+    pointer-events: none;
+    content: attr(data-tooltip);
+    background-color: var(--default-bg-color);
+    border-left: 4px solid var(--brand-color);
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.15s ease;
+  }
+  @include hocus {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

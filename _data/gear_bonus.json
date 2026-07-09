@@ -1,0 +1,366 @@
+{
+	"ab": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 100% Health Regen"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 5% Weapon Damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "If your Primary and Secondary Weapon is of the same category, they share the free talent. All talent requirements are ignored for all weapon talents."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 25% Health Regen<br>+ 10 % Weapon Damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "Inactive personal versions of all Signature Skills are rotating every 6 seconds and can be activated by killing enemy agents or Veteran/Elite NPCs. The Signature Skills that is up on rotation when an enemy is killed is activated for 10 seconds when all primary Stats are balanced between each other. These times are shortened depending on the difference in the ranges of your Primary Attributes. You can no longer activate Signature Skills or be affected by Ally Signature Skills."
+			}
+		]
+	},
+	"banshee": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 20% Looted DZ Funds"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 10% DMG to target out of cover"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "While Rogue, all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue, Damage to Rogue players is increased by 10%. This bonus is increased by 20% for 10 minutes after being killed by a rogue."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 20% Looted DZ Funds<br>+ 5% DMG to target out of cover"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "While Rogue, the time to clear Manhunt status is decreased by 5% for every group member within 15 meters. All Rogue status actions that result in a rank up are doubled. Rewards for clearing Manhunt status are improved.<br><br>While Not Rogue, damage to Manhunt status agents is increased by 2% for each Manhunt level the agent has, Rewards for killing a Manhunt players are improved"
+			}
+		]
+	},
+	"d3": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 15% Protection from Elites"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 10% Ballistic Shield damage resilience"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Allows using an SMG if one is equipped when Ballistic Shield is deployed. Only Master Rank shield mod is active. Ballistic Shield health is increased by 57% for every 3000 Stamina."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 15% Protection for Elites<br>+ 5% ballistic Shield damage resilience"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "When Ballistic Shield is deployed, melee damage is increased by 2000% and all overhealing the agent receives is applied to the Ballistic Shield as healing. After receiving a damage threshold from receiving Physical or Exotic damage, the Ballistic Shield grants a buff to the agent and all group members within 15 meters for 6 seconds. The duration of the buff is increased by 2 seconds for every 3000 Stamina the agent has.<br>Physical Damage: Armor is increased by 30%<br>Exotic Damage: Weapon Damage is increased by 30%."
+			}
+		]
+	},
+	"eye": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 40% Initial Bullet Stability"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 20% marksman Rifle Critical hit damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "When zoomed, Marksman rifles lose headshot bonus but gain 50% critical strike chance when out of cover and 100% critical strike chance when in cover."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 40% Initial Bullet Stability<br>+ 20% Marksman Rifle Critical hit damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "When Zoomed, getting a headshot kill with Marksman rifles will increase critical hit damage by 20% every second to a maximum of 100%, and will increase stability by 100%. Lasts for 10 seconds or until no longer zoomed."
+			}
+		]
+	},
+	"fm": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 25% Exotic Damage Resilience"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 15% Protection from Elites"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "When in range of hostile grenades or mortars, defuses them and adds grenades to your inventory. Can only happen once every 8 seconds"
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 15% Exotic Damage Resilience<br>+ 15% Protection from Elites"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "When a grenade is defused the player and all group members within 30 meters gain a buff based on the grenade type that was defused.<br>- EMP/Shock: Skill Power increased By 40% for 8 seconds<br>- Fragmentation/Incendiary: Weapon Damage increased by 40% for 8 seconds<br>- Flashbang/Tear Gas: Armor is increased by 40% for 8 seconds"
+			}
+		]
+	},
+	"fc": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 3 Incendiary Grenade Capacity"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 50% Flame Turret range<br>+ 30% Flame Turret damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Your Weapon damage is increased by 15% against burning targets."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 1 Incendiary Grenade Capacity<br>+ 5% Flame Turret range<br>+ 20% Flame Turret damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "Bullets have 2% chance to cause an enemy to burn, burning targets can cause a fiery explosion when killed once every 10 seconds. NPCs set on fire by your flame turret will burn 25% longer for every 2000 Electronics."
+			}
+		]
+	},
+	"hf": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 20% Optimal Range"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 10% Headshot Damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Each Consecutive shot with a bolt action marksman rifle that hits an enemy deals 3% more damage. The damage bonus is increased by 4% for every 3000 Firearms. The Bonus damage is removed once a shot misses a target, upon weapon swap or realoded, or after 10 seconds."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 20% Optimal Range<br>+ 10% Headshot Damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "Headshots double the gained increased damage bonus. 2 consecutive missed shots are needed to lose the bonus damage."
+			}
+		]
+	},
+	"ls": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 100% Ammo Capacity"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 8% LMG Damage<br>+ 8% Shotgun Damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "When the weapon is holstered, it is instantly reloaded."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 50% Ammo Capacity<br>+ 12% LMG Damage<br>+ 12% Shotgun Damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "When a weapon has 50% of its magazine remaining in combat, there is a 75% chance to receive a bonus that activates when the final bullet is fired from the current magazine. Once activated, the magazine is instantly refilled, weapon damage and fire rate is increased by 30%. The bonus is cancelled by reloading, swapping weapons or exiting combat."
+			}
+		]
+	},
+	"nomad": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 15% Health on Kill"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "Grants a constant small amount of healing, allowing the user to regenerate all segments of the health bar during combat."
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "When receiving fatal damage, you are instead healed to full health. Can only occur once every 4 minutes."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 10% Health on Kill<br><br>Increases the amount of healing from Nomad's Resolve. Nomad's Resolve will now overheal."
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "50% chance to have no cooldown for Path of the Nomad. Take 60% less damage for 10 seconds after Path of the Nomad is triggered."
+			}
+		]
+	},
+	"pred": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 10% Reload Speed"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 8% Assault Rifle Damage<br>+ 8% SMG Damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Hit 10 shots without switching target to make the target bleed for 50% of damage already done by those bullets."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 10% Reload Speed<br>+ 8% Assault Rifle Damage<br>+ 8% SMG Damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "Hitting 10 shots without switching targets now applies The Predator's Mark which makes the target bleed for 50% of the damage already done by those bullets, The Predator's Mark ignores the target's Bleed Resistance. The Damage over time to the target is increased by 15% for every 3000 Stamina and can critically hit the target. When at 9000 Stamina the damage over time bonus is increased by an additional 120%."
+			}
+		]
+	},
+	"reclaimer": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 30% Support Station range"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 50% Support Station duration"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Support station gains the benefit of the Life Support, Immunizer and Ammo Cache mods at the same time"
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 15% Support Station range<br>+ 25% Support Station duration"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "+ 50% Support Station health<br>+ 100% Support Station healing Speed<br><br>Support Station gains a 40% chance to have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 20% every 3000 Electronics."
+			}
+		]
+	},
+	"sentry": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 30% Accuracy"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 10% Headshot Damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Headshots using semi-automatic weapons mark the enemy, increasing the damage inflicted on the target by 5% for a duration of 30 seconds each. A target can receive up to three marks."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 15% Accuracy<br>+ 15% Headshot Damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "NPC Targets can now receive up to six marks. After one mark, every headshot on the target has a 50% chance to spread a single mark to additional target within 25 meters. At six marks, your headshot damage on the target is increased by 100%."
+			}
+		]
+	},
+	"striker": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 20% Stability"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 10% Enemy Armor Damage"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Every consecutive hit deals 1% more damage. Stacks up to 100%. missing shots drop the bonus by 2%. Bonus is reduced by 1% every second. It is not possible to gain stacks and bonus damage is not applied while under the effects of EMP. Bonus is lost when exiting combat."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 10% Stability<br>+ 5% Enemy Armor Damage"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "Every hit adds 2 stacks of a self healing bonus; each stack is worth 0.01% of max health per second. Stacks up to 100 hits. This bonus is increased by 0.05% per stack for every 3000 Stamina. Missing shots drop the bonus by 1 stack and the bonus is reduced by 2 stacks every second. It is not possible to gain stacks and the self-healing bonus is not applied while under the effects of EMP. Bonus is lost when exiting combat. While in the Dark Zone, Last Stand. or Skirmish, each hit only adds 1 stack instead of 2 and the healing rate is reduced.<br><br>Every hit increases the bonus damage from Striker's Battlegear by an additional 1%. Missing shots drop the bonus damage from Striker's Battlegear by 1% and the bonus is reduced by 2% every second. While in the Dark Zone, Last Stand, or Skirmish, the additional 1% bonus damage is not applied."
+			}
+		]
+	},
+	"tac": {
+		"gearset": [
+			{
+				"name": "Set Bonus (2)",
+				"desc": "+ 15% Skill Haste"
+			},
+			{
+				"name": "Set Bonus (3)",
+				"desc": "+ 10% Skill Power"
+			},
+			{
+				"name": "Set Bonus (4)",
+				"desc": "Every Bullet you hit enemies with adds 1% bonus skill power. Every Bullet your deployed skills hit enemies with adds 0.2% bonus skill power. Skill power bonus max is 30%. Bonus is consumed on skill use."
+			}
+		],
+		"classy": [
+			{
+				"name": "Set Bonus (5)",
+				"desc": "+ 5% Skill Haste<br>+ 5% Skill Power"
+			},
+			{
+				"name": "Set Bonus (6)",
+				"desc": "Using a skill while at the max bonus will reset the skill power buff but will raise the cap to 60%. Using a different skill at 60% has a 40% chance to set the buff power back to 30% while keeping the cap at 60%. This chance is increased by 20% for every 3000 Electronics."
+			}
+		]
+	}
+}

@@ -1,0 +1,66 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: z('header');
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: px2rem(64px);
+  padding: 0.5em 1em;
+  background-color: var(--default-bg-color--clearest);
+  backdrop-filter: blur(5px);
+  nav,
+  a {
+    color: inherit;
+    &::before {
+      content: unset;
+    }
+  }
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    gap: px2rem(14px);
+    align-items: center;
+    a {
+      opacity: 0.9;
+      @include hocus {
+        opacity: 1;
+      }
+    }
+    .title {
+      a {
+        font-size: px2rem(32px);
+        opacity: 1;
+      }
+      &__emphasis {
+        color: var(--brand-color);
+      }
+    }
+  }
+  .actions {
+    display: flex;
+    flex-flow: row wrap;
+    gap: px2rem(8px);
+    .icon {
+      --icon-size: 1.125em;
+      display: inline-flex;
+      flex-flow: row wrap;
+      height: var(--icon-size);
+      vertical-align: text-top;
+      svg {
+        width: var(--icon-size);
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        fill: currentColor;
+      }
+    }
+  }
+}

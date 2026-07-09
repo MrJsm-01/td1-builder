@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"name": "All Resistance",
+		"quality": "highend"
+	},
+	{
+		"id": 2,
+		"name": "Critical Hit Chance",
+		"quality": "highend"
+	},
+	{
+		"id": 3,
+		"name": "Exotic Damage Resilience",
+		"quality": "highend"
+	},
+	{
+		"id": 4,
+		"name": "Health",
+		"quality": "highend"
+	},
+	{
+		"id": 5,
+		"name": "Signature Resource Gain",
+		"quality": "highend"
+	},
+	{
+		"id": 6,
+		"name": "Skill Haste",
+		"quality": "highend"
+	},
+	{
+		"id": 7,
+		"name": "Skill Power",
+		"quality": "highend"
+	},
+	{
+		"id": 8,
+		"name": "Ammo Capacity",
+		"quality": "superior"
+	},
+	{
+		"id": 9,
+		"name": "Bleed Resistance",
+		"quality": "superior"
+	},
+	{
+		"id": 10,
+		"name": "Blind/Deaf Resitance",
+		"quality": "superior"
+	},
+	{
+		"id": 11,
+		"name": "Burn Resistance",
+		"quality": "superior"
+	},
+	{
+		"id": 12,
+		"name": "Damage to Elites",
+		"quality": "superior"
+	},
+	{
+		"id": 13,
+		"name": "Disorient Resistance",
+		"quality": "superior"
+	},
+	{
+		"id": 14,
+		"name": "Disrupt Resistance",
+		"quality": "superior"
+	},
+	{
+		"id": 15,
+		"name": "Kill XP",
+		"quality": "superior"
+	},
+	{
+		"id": 16,
+		"name": "Shock Resistance",
+		"quality": "superior"
+	}
+]

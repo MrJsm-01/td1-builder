@@ -1,0 +1,73 @@
+<head>
+	{%- comment -%} Meta Data {%- endcomment -%}
+	<meta charset="utf-8">
+	{% if page.layout == "page" %}
+		<title>{{ page.title }} | {{ site.meta.title }}</title>
+		<meta name="description" content="{{ page.description }}">
+	{% else %}
+		<title>{{ site.meta.title }}</title>
+		<meta name="description" content="{{ site.meta.description }}">
+	{% endif %}
+	{%- assign k = site.meta.keywords | uniq | join: "," -%}
+	<meta name="keywords" content="{{ k }}">
+	<meta name="author" content="{{ site.meta.author }}">
+	<meta name="robots" content="index,nofollow">
+	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="{{ site.meta.theme }}">
+	{%- comment -%} Open Graph Data {%- endcomment -%}
+	{% if page.layout == "page" %}
+		<meta property="og:description" content="{{ page.description }}">
+		<meta property="og:title" content="{{ page.title }} | {{ site.meta.title }}">
+	{% else %}
+		<meta property="og:description" content="{{ site.meta.description }}">
+		<meta property="og:title" content="{{ site.meta.title }}">
+	{% endif %}
+	<meta property="og:site_name" content="{{ site.meta.title }}">
+	<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ site.url }}/static/img/meta/og.jpg">
+	<meta property="og:image:alt" content="{{ site.meta.title }}">
+	<meta property="og:image:width" content="1280">
+	<meta property="og:image:height" content="640">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:locale" content="en_US">
+	{%- comment -%} Twitter Cards Data {%- endcomment -%}
+	<meta name="twitter:card" content="summary_large_image">
+	{% if page.layout == "page" %}
+		<meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:title" content="{{ page.title }} | {{ site.meta.title }}">
+	{% else %}
+		<meta name="twitter:description" content="{{ site.meta.description }}">
+		<meta name="twitter:title" content="{{ site.meta.title }}">
+	{% endif %}
+	<meta name="twitter:image" content="{{ site.url }}/static/img/meta/og.jpg">
+	<meta name="twitter:image:alt" content="{{ site.meta.title }}">
+	{%- comment -%} Link Relationships {%- endcomment -%}
+	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+	{%- comment -%} Favicons {%- endcomment -%}
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" type="image/svg+xml" href="/static/img/meta/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" href="/static/img/meta/favicon-180.png">
+	{%- comment -%} Fonts {%- endcomment -%}
+	<link rel="preconnect" href="https://fonts.bunny.net">
+	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=chakra-petch:400,400i,700,700i&display=swap">
+	{%- comment -%} Stylesheets {%- endcomment -%}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gardevoir@1.0.0/dist/index.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/static/css/common.css?{{ site.time | date: '%s%N' }}">
+	{% if page.layout == "builder" %}
+		<link rel="stylesheet" href="/static/css/builder.css?{{ site.time | date: '%s%N' }}">
+	{% endif %}
+	{% if page.layout == "page" %}
+		<link rel="stylesheet" href="/static/css/pages.css?{{ site.time | date: '%s%N' }}">
+	{% endif %}
+	{%- comment -%} Scripts {%- endcomment -%}
+	{% if page.layout == "builder" %}
+		<script defer src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+		<script defer type="module" src="/static/js/main.js?{{ site.time | date: '%s%N' }}"></script>
+	{% endif %}
+	{% if page.url == "/builds/" %}
+		<script defer src="/static/js/search.js?{{ site.time | date: '%s%N' }}"></script>
+	{% endif %}
+</head>

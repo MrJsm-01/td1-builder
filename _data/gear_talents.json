@@ -1,0 +1,250 @@
+[
+	{
+		"id": "reckless",
+		"name": "Reckless",
+		"desc": "Increase damage by 8% and increase incoming damage by 10%",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
+		"id": "robust",
+		"name": "Robust",
+		"desc": "Increase armor while in cover by 10%",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
+		"id": "rapid",
+		"name": "Rapid",
+		"desc": "Decrease cooldown for healing skills by 15%",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
+		"id": "vigorous",
+		"name": "Vigorous",
+		"desc": "Grants overheal to all healing skills",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
+		"id": "forceful",
+		"name": "Forceful",
+		"desc": "Increase Armor by 15% while the user's signature skill is active",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
+		"id": "enduring",
+		"name": "Enduring",
+		"desc": "While in your last segment, your health continuously regenerates to fill up the segment.",
+		"compat": {
+			"slot": "mask"
+		}
+	},
+	{
+		"id": "refreshed",
+		"name": "Refreshed",
+		"desc": "All healing is improved by 30% when in the last segment of Health",
+		"compat": {
+			"slot": "mask"
+		}
+	},
+	{
+		"id": "rehabilitated",
+		"name": "Rehabilitated",
+		"desc": "Heals 2% every second during status effects",
+		"compat": {
+			"slot": "mask"
+		}
+	},
+	{
+		"id": "rejuvenated",
+		"name": "Rejuvenated",
+		"desc": "Consuming a medkit increases all resistances by 40% for 10 seconds",
+		"compat": {
+			"slot": "mask"
+		}
+	},
+	{
+		"id": "tenacious",
+		"name": "Tenacious",
+		"desc": "Increase damage by 10% for 10 seconds when using a Medkit",
+		"compat": {
+			"slot": "mask"
+		}
+	},
+	{
+		"id": "accomplished",
+		"name": "Accomplished",
+		"desc": "Rewards from Accolades are tripled",
+		"compat": {
+			"slot": "kneepads"
+		}
+	},
+	{
+		"id": "prosperous",
+		"name": "Prosperous",
+		"desc": "Headshot kills grant you Credits",
+		"compat": {
+			"slot": "kneepads"
+		}
+	},
+	{
+		"id": "technical",
+		"name": "Technical",
+		"desc": "While your signature skill is active, your Skill Power is increased by 15%",
+		"compat": {
+			"slot": "backpack"
+		}
+	},
+	{
+		"id": "inventive",
+		"name": "Inventive",
+		"desc": "Your Skill Power is increased by 15% while you are at full health",
+		"compat": {
+			"slot": "backpack"
+		}
+	},
+	{
+		"id": "relentless",
+		"name": "Relentless",
+		"desc": "3% of the damage dealt by your skills is returned to you as healing",
+		"compat": {
+			"slot": "backpack"
+		}
+	},
+	{
+		"id": "resourceful",
+		"name": "Resourceful",
+		"desc": "All healing applied to you is also applied to your skill objects",
+		"compat": {
+			"slot": "backpack"
+		}
+	},
+	{
+		"id": "specialized",
+		"name": "Specialized",
+		"desc": "Adds 200% of Firearms and Stamina to Skill Power",
+		"compat": {
+			"slot": "backpack"
+		}
+	},
+	{
+		"id": "savage",
+		"name": "Savage",
+		"desc": "Your Critical hit chance is increased by 7% against targets out of cover",
+		"compat": {
+			"slot": "gloves"
+		}
+	},
+	{
+		"id": "cunning",
+		"name": "Cunning",
+		"desc": "After reloading, your next shot with this weapon has a 10% higher critical hit chance",
+		"compat": {
+			"slot": "gloves"
+		}
+	},
+	{
+		"id": "decisive",
+		"name": "Decisive",
+		"desc": "Headshots with the sidearm deal 35% more damage",
+		"compat": {
+			"slot": "gloves"
+		}
+	},
+	{
+		"id": "astute",
+		"name": "Astute",
+		"desc": "The first 3 bullets of your magazine have a 5% higher chance to do a Critical Hit",
+		"compat": {
+			"slot": "gloves"
+		}
+	},
+	{
+		"id": "nimble",
+		"name": "Nimble",
+		"desc": "After completing a cover to cover move in combat, you heal 2% of your max health over 4 seconds for every 1m run.",
+		"compat": {
+			"slot": "holster"
+		}
+	},
+	{
+		"id": "recovered",
+		"name": "Recovered",
+		"desc": "Damage taken while doing a cover to cover maneuver is regenerated over 5 seconds upon reaching your destination",
+		"compat": {
+			"slot": "holster"
+		}
+	},
+	{
+		"id": "steadfast",
+		"name": "Steadfast",
+		"desc": "While in cover, health regeneration kicks in twice as fast.",
+		"compat": {
+			"slot": "holster"
+		}
+	},
+	{
+		"id": "sturdy",
+		"name": "Sturdy",
+		"desc": "Increase armor by 15% when staying more than 4 seconds in the same cover",
+		"compat": {
+			"slot": "holster"
+		}
+	},
+	{
+		"id": "barrett",
+		"name": "Barrett's Bulletproof Vest",
+		"desc": "No skills on cooldown increases skill power by 10%<br>One skill on cooldown increases damage by 5%<br>Two skills on cooldown increases armour by 10%",
+		"compat": {
+			"item": "barrett"
+		}
+	},
+	{
+		"id": "ferro",
+		"name": "Ferro's Oxygen Mask",
+		"desc": "Allows you to fire your weapon while under the \"On fire\" status effect",
+		"compat": {
+			"item": "ferro"
+		}
+	},
+	{
+		"id": "shortbow",
+		"name": "Shortbow Championship Pads",
+		"desc": "The fuse time on grenades is reduced to 0.20 seconds",
+		"compat": {
+			"item": "shortbow"
+		}
+	},
+	{
+		"id": "ninja",
+		"name": "NinjaBike Messenger Bag",
+		"desc": "Slots in with any equipped Gear Set item to fulfill a requirement towards unlocking a Gear Sets bonus. Can unlock bonuses from multiple sets simultaneously. Cannot unlock Classified Gear Set bonuses",
+		"compat": {
+			"item": "ninja"
+		}
+	},
+	{
+		"id": "skulls",
+		"name": "Skulls MC Gloves",
+		"desc": "Damage increased by 16% when no gear set or weapon set bonuses are active",
+		"compat": {
+			"item": "skulls"
+		}
+	},
+	{
+		"id": "bliss",
+		"name": "Colonel Bliss's Holster",
+		"desc": "Hitting a target consecutively with a sidearm increases your weapon damage by 2% for 20 seconds.<br>This effect stacks until 10 shots, after which the stack is consumed and triggers an EMP effect.",
+		"compat": {
+			"item": "bliss"
+		}
+	}
+]

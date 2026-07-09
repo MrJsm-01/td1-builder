@@ -1,0 +1,112 @@
+[
+	{
+		"id": 1,
+		"name": "First Aid Ally Heal",
+		"quality": "highend"
+	},
+	{
+		"id": 2,
+		"name": "First Aid Self Heal",
+		"quality": "highend"
+	},
+	{
+		"id": 3,
+		"name": "Mobile Cover Blast Resilience",
+		"quality": "highend"
+	},
+	{
+		"id": 4,
+		"name": "Mobile Cover Health",
+		"quality": "highend"
+	},
+	{
+		"id": 5,
+		"name": "Pulse Critical Hit Chance",
+		"quality": "highend"
+	},
+	{
+		"id": 6,
+		"name": "Pulse Critical Hit Damage",
+		"quality": "highend"
+	},
+	{
+		"id": 7,
+		"name": "Pulse Duration",
+		"quality": "highend"
+	},
+	{
+		"id": 8,
+		"name": "Seeker Mine Explosion Damage",
+		"quality": "highend"
+	},
+	{
+		"id": 9,
+		"name": "Seeker Mine Explosion Range",
+		"quality": "highend"
+	},
+	{
+		"id": 10,
+		"name": "Shield Damage",
+		"quality": "highend"
+	},
+	{
+		"id": 11,
+		"name": "Shield Damage Resist",
+		"quality": "highend"
+	},
+	{
+		"id": 12,
+		"name": "Shield Health",
+		"quality": "highend"
+	},
+	{
+		"id": 13,
+		"name": "Smart Cover Damage Resistance",
+		"quality": "highend"
+	},
+	{
+		"id": 14,
+		"name": "Smart Cover Duration",
+		"quality": "highend"
+	},
+	{
+		"id": 15,
+		"name": "Sticky Bomb Explosion Damage",
+		"quality": "highend"
+	},
+	{
+		"id": 16,
+		"name": "Sticky Bomb Explosion Range",
+		"quality": "highend"
+	},
+	{
+		"id": 17,
+		"name": "Support Station Healing Rate",
+		"quality": "highend"
+	},
+	{
+		"id": 18,
+		"name": "Support Station Duration",
+		"quality": "highend"
+	},
+	{
+		"id": 19,
+		"name": "Support Station Range",
+		"quality": "highend"
+	},
+	{
+		"id": 20,
+		"name": "Turret Damage",
+		"quality": "highend"
+	},
+	{
+		"id": 21,
+		"name": "Turret Duration",
+		"quality": "highend"
+	},
+	{
+		"id": 22,
+		"name": "Turret Health",
+		"quality": "highend"
+	}
+]

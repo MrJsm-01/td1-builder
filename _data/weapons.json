@@ -1,0 +1,1903 @@
+[
+	{
+		"id": "aug-para",
+		"name": "AUG A3 Para XS",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "aug-enhanced",
+		"name": "Enhanced AUG A3P",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "aug-tac",
+		"name": "Tactical AUG A3P",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mp5-burst",
+		"name": "Burst Fire MP-5 A4",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mp5-navy",
+		"name": "Navy MP5 N",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mp5-st",
+		"name": "MP-5 ST",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mp7",
+		"name": "MP7",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "t821-blackmarket",
+		"name": "Black Market T821",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "t821-police",
+		"name": "Police T821",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "midas",
+		"name": "Midas",
+		"quality": "exotic",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"midas"
+		]
+	},
+	{
+		"id": "tec9",
+		"name": "Converted SMG-9",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "tec9-converted",
+		"name": "Converted SMG-9 A2",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "hildr",
+		"name": "Hildr",
+		"quality": "exotic",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "eir",
+		"name": "Eir",
+		"quality": "exotic",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "vector-tac",
+		"name": "Tactical Vector 45 ACP",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "vector",
+		"name": "Vector 45 ACP",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "vector-firstwave",
+		"name": "First Wave Vector 45 ACP",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "pp-enhanced",
+		"name": "Enhanced PP-19",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "pp",
+		"name": "PP-19",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "usc",
+		"name": "Converted USC",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "ump-police",
+		"name": "Police UMP-45",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "ump-tac",
+		"name": "Tactical UMP-45",
+		"quality": "highend",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mpx",
+		"name": "The House",
+		"quality": "exotic",
+		"type": "smg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"card-counter"
+		]
+	},
+	{
+		"id": "thompson",
+		"name": "Thompson M1928",
+		"quality": "exotic",
+		"type": "smg",
+		"slots": [
+			"magazine"
+		],
+		"talents": [
+			null,
+			null,
+			"carefree"
+		]
+	},
+	{
+		"id": "tommy",
+		"name": "Tommy Gun",
+		"quality": "exotic",
+		"type": "smg",
+		"slots": [
+			"magazine"
+		],
+		"talents": [
+			null,
+			null,
+			"carefree"
+		]
+	},
+	{
+		"id": "m1a-classic",
+		"name": "Classic M1A",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m1a-socom",
+		"name": "SOCOM M1A",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m1a-firstwave",
+		"name": "First Wave M1A",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "historian",
+		"name": "Historian",
+		"quality": "exotic",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			"history"
+		]
+	},
+	{
+		"id": "m44-classic",
+		"name": "Classic M44 Carbine",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m44-hunt",
+		"name": "Hunting M44",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m44-custom",
+		"name": "Custom M44",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "scarh-military",
+		"name": "Military SCAR-H",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mk17-police",
+		"name": "Police Mk17",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mk20-socom",
+		"name": "SOCOM Mk20 SSR",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "tenebrae",
+		"name": "Tenebrae",
+		"quality": "exotic",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"lights-out"
+		]
+	},
+	{
+		"id": "srs-covert",
+		"name": "Covert SRS",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "srs-a1",
+		"name": "SRS A1",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "svd-para",
+		"name": "Paratrooper SVD",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "svd-surplus",
+		"name": "Surplus SVD",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m700",
+		"name": "Model 700",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m700-tac",
+		"name": "M700 Tactical",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m700-carbon",
+		"name": "M700 Carbon",
+		"quality": "highend",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "devil",
+		"name": "Devil",
+		"quality": "exotic",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"fire"
+		]
+	},
+	{
+		"id": "heel",
+		"name": "Heel",
+		"quality": "exotic",
+		"type": "mmr",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"fury"
+		]
+	},
+	{
+		"id": "acr",
+		"name": "ACR",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "acr-enhanced",
+		"name": "Enhanced ACR-E",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "acr-tac",
+		"name": "Tactical ACR",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "ak47-classic",
+		"name": "Classic AK-47",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "ak47m-military",
+		"name": "Military AK-47M",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "ak74",
+		"name": "Black Market AK-74",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "warlord",
+		"name": "Warlord",
+		"quality": "exotic",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"rough"
+		]
+	},
+	{
+		"id": "fal-classic",
+		"name": "Classic FAL",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "sa58-military",
+		"name": "Military SA-58",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "sa58-tac",
+		"name": "Tactical SA-58",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m4-police",
+		"name": "Police M4",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "lwm4",
+		"name": "Lightweight M4",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "lvoac",
+		"name": "LVOA-C",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "liberator",
+		"name": "Liberator",
+		"quality": "exotic",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "p416-military",
+		"name": "Military P416",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "p416-custom",
+		"name": "Custom P416 G3",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "scarl",
+		"name": "SCAR-L",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "scarl-socom",
+		"name": "SOCOM SCAR-L",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mk16-tac",
+		"name": "Tactical Mk16",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "caduceus",
+		"name": "Caduceus",
+		"quality": "exotic",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"caduceus"
+		]
+	},
+	{
+		"id": "g36c",
+		"name": "G36 C",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "g36-enhanced",
+		"name": "G36 Enhanced",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "g36-military",
+		"name": "Military G36",
+		"quality": "highend",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "famas",
+		"name": "Bullfrog",
+		"quality": "exotic",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"uncomplicated"
+		]
+	},
+	{
+		"id": "mdr",
+		"name": "Urban MDR",
+		"quality": "exotic",
+		"type": "ar",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"distracted"
+		]
+	},
+	{
+		"id": "mg5",
+		"name": "MG5",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mg5-infantry",
+		"name": "MG5 Infantry",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "l86-military",
+		"name": "Military L86 LSW",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "l86-custom",
+		"name": "Custom L86 A2",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m249",
+		"name": "M249 B",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m249-tac",
+		"name": "Tactical M249 Para",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "mk46-military",
+		"name": "Military MK46",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m60-classic",
+		"name": "Classic M60",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m60-military",
+		"name": "Military M60 E4",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m60-blackmarket",
+		"name": "Black Market M60 E6",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "hog",
+		"name": "Hungry Hog",
+		"quality": "exotic",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"glutton"
+		]
+	},
+	{
+		"id": "rpk74-classic",
+		"name": "Classic RPK-74",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "rpk74-military",
+		"name": "Military RPK-74 M",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "rpk74-blackmarket",
+		"name": "Black Market RPK-74 E",
+		"quality": "highend",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "pakhan",
+		"name": "Pakhan",
+		"quality": "exotic",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			"pakhan"
+		]
+	},
+	{
+		"id": "alejandro",
+		"name": "Big Alejandro",
+		"quality": "exotic",
+		"type": "lmg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			"cover-shooter"
+		]
+	},
+	{
+		"id": "doublebarrel",
+		"name": "Double Barrel Shotgun",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "cassidy",
+		"name": "Cassidy",
+		"quality": "exotic",
+		"type": "stg",
+		"slots": [],
+		"talents": [
+			null,
+			null,
+			"boomstick"
+		]
+	},
+	{
+		"id": "m870-express",
+		"name": "M870 Express",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m870-military",
+		"name": "Military M870",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m870-custom",
+		"name": "Custom M870 MCS",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "saiga",
+		"name": "SASG-12",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "saiga-tac",
+		"name": "Tactical SASG-12 K",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "saiga-blackmarket",
+		"name": "Black Market SASG-12 S",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "medved",
+		"name": "Medved",
+		"quality": "exotic",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"centermass"
+		]
+	},
+	{
+		"id": "acs",
+		"name": "Showstopper",
+		"quality": "exotic",
+		"type": "stg",
+		"slots": [
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			"showstopper"
+		]
+	},
+	{
+		"id": "benelli",
+		"name": "Super 90",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "benelli-marine",
+		"name": "Marine Super 90",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "benelli-tac",
+		"name": "Tactical Super 90 SBS",
+		"quality": "highend",
+		"type": "stg",
+		"slots": [
+			"magazine",
+			"optics",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"id": "m1911",
+		"name": "M1911",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "m1911-tac",
+		"name": "Tactical M1911",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "m45a1",
+		"name": "M45A1",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "centurion",
+		"name": "Centurion",
+		"quality": "exotic",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "military-m9",
+		"name": "Military M9",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "officers-m9a1",
+		"name": "Officer's M9 A1",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "damascus",
+		"name": "Damascus",
+		"quality": "exotic",
+		"type": "hdg",
+		"slots": [
+			"muzzle"
+		],
+		"talents": [
+			null,
+			"quickdraw"
+		]
+	},
+	{
+		"id": "firstwave-pf45",
+		"name": "First Wave PF45",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "custom-pf45",
+		"name": "Custom PF45",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "type-f",
+		"name": "Px4 Storm Type F",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "type-t",
+		"name": "Px4 Storm Type T",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "firstwave-x45",
+		"name": "First Wave X-45",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "x45",
+		"name": "X-45",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "rhino",
+		"name": "Rhino",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "rhino-gold",
+		"name": "Golden Rhino",
+		"quality": "exotic",
+		"type": "hdg",
+		"slots": [
+			"optics"
+		],
+		"talents": [
+			null,
+			"golden-rhino"
+		]
+	},
+	{
+		"id": "rhino-snub",
+		"name": "Snubnosed Rhino",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "rhino-spec",
+		"name": "Special Rhino",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"optics"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "magnum-586",
+		"name": "586 Magnum",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "magnum-686",
+		"name": "Police 686 Magnum",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
+		"id": "sawedoff",
+		"name": "Double Barrel Sawed Off",
+		"quality": "highend",
+		"type": "hdgstg",
+		"slots": [],
+		"talents": [
+			null,
+			null,
+			null
+		]
+	}
+]

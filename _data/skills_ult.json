@@ -1,0 +1,23 @@
+{
+	"med": [
+		{
+			"id": "ult-med",
+			"name": "Recovery Link",
+			"desc": "Heals and cures the user and nearby allies. Revives allies in range. Automatically triggers on lethal damage when not in a group."
+		}
+	],
+	"tech": [
+		{
+			"id": "ult-tac",
+			"name": "Tactical Link",
+			"desc": "Weapon enhancement system which provides temporarily increased damage and weapon performance to the user and all nearby allies"
+		}
+	],
+	"def": [
+		{
+			"id": "ult-def",
+			"name": "Survivor Link",
+			"desc": "Increases damage resistance and speed for group members. Grants an emergency health boost to group members when taking lethal damage."
+		}
+	]
+}

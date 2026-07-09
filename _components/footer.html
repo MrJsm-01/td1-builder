@@ -1,0 +1,20 @@
+<footer itemscope itemtype="http://schema.org/WPFooter">
+	<div class="version">
+		{% if jekyll.environment == "development" %}
+			<span title="Built on {{ site.time | date: "%B %d, %Y" }} at {{ site.time | date: "%H:%M:%S" }}">
+				DEV
+			</span>
+		{% else %}
+			<span title="Built on {{ site.git.commit_date | date: "%B %d, %Y" }} at {{ site.git.commit_date | date: "%H:%M:%S" }}">
+				{{ site.git.short_commit }}
+			</span>
+		{% endif %}
+	</div>
+	<nav aria-label="Links">
+		<a href="{{ site.repo_url }}">Contribute</a>
+		{% unless page.url == "/about/" %}
+			<span class="separator">|</span>
+			<a href="/about/">About</a>
+		{% endunless %}
+	</nav>
+</footer>
