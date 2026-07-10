@@ -1,0 +1,39 @@
+---
+layout: page
+permalink: /database/gear-sets/
+title: Gear Sets
+description: All Gear Sets and their bonuses currently in the game.
+---
+
+<section class="database-gsets">
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.description }}</p>
+</section>
+
+<section class="gear-sets">
+	{%- assign gear_sets = site.data.gear_bonus -%}
+	{% for gs in gear_sets %}
+		{%- assign key = gs[0] -%}
+		{%- assign item = gs[1] -%}
+		<div class="item-container">
+			<div class="info-container">
+				<div class="name">{{ item.name }}</div>
+				<div class="sprite {{ key }}" role="presentation"></div>
+			</div>
+			<div class="bonus-container">
+				{% for bonus in item.gearset %}
+					<div class="bonus">
+						<div class="number">{{ forloop.index | plus: 1 }}</div>
+						<div class="desc">{{ bonus.desc }}</div>
+					</div>
+				{% endfor %}
+				{% for bonus in item.classy %}
+					<div class="bonus">
+						<div class="number">{{ forloop.index | plus: 4 }}</div>
+						<div class="desc">{{ bonus.desc }}</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</section>

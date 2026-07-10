@@ -1,0 +1,32 @@
+---
+layout: page
+permalink: /database/gear-talents/
+title: Gear Talents
+description: All Exotic and High-Endgear gear talents currently in the game.
+---
+
+<section class="database-gtalents">
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.description }}</p>
+</section>
+
+<section class="gear-talents">
+	{%- assign gear_talents = site.data.gear_talents -%}
+	{%- assign gear_talents_he = gear_talents | where_exp: "gear_talents", "gear_talents.compat.slot != nil" -%}
+	{%- assign gear_talents_exotic = gear_talents | where_exp: "gear_talents", "gear_talents.compat.item != nil" -%}
+	{%- assign sorted_gear_talents = gear_talents_exotic | concat: gear_talents_he -%}
+	{% for gt in sorted_gear_talents %}
+		<div class="item-container">
+			<div class="sprite {{ gt.compat.item | default: gt.compat.slot }}" role="presentation"></div>
+			<div class="info-container">
+				{% if gt.compat contains "slot" %}
+					{%- assign quality = "highend" -%}
+				{% else %}
+					{%- assign quality = "exotic" -%}
+				{% endif %}
+				<div class="name {{ quality }}">{{ gt.name }} {{ gt.compat.slot | capitalize }}</div>
+				<div class="desc">{{ gt.desc }}</div>
+			</div>
+		</div>
+	{% endfor %}
+</section>

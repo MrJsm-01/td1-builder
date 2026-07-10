@@ -1,0 +1,32 @@
+---
+layout: page
+permalink: /database/
+title: Database
+description: Weapon talents, Gear talents and Gear Sets information.
+---
+
+<section class="database">
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.description }}</p>
+</section>
+
+<div class="cards" role="list">
+	<a href="{{ '/database/weapon-talents/' | relative_url }}" class="card" role="listitem">
+		<article class="card-container" aria-labelledby="card-title__1">
+			<h2 class="card-title" id="card-title__1">Weapon Talents</h2>
+			<div class="card-description">All weapon talents</div>
+		</article>
+	</a>
+	<a href="{{ '/database/gear-talents/' | relative_url }}" class="card" role="listitem">
+		<article class="card-container" aria-labelledby="card-title__2">
+			<h2 class="card-title" id="card-title__2">Gear Talents</h2>
+			<div class="card-description">All gear talents</div>
+		</article>
+	</a>
+	<a href="{{ '/database/gear-sets/' | relative_url }}" class="card" role="listitem">
+		<article class="card-container" aria-labelledby="card-title__3">
+			<h2 class="card-title" id="card-title__3">Gear Sets</h2>
+			<div class="card-description">All gear sets and their bonuses</div>
+		</article>
+	</a>
+</div>

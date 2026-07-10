@@ -13,6 +13,9 @@
 		{% unless page.url == "/builds/" -%}
 			<a href="/builds/">Builds</a>
 		{% endunless %}
+		{% unless page.url == "/database/" -%}
+			<a href="/database/">Database</a>
+		{% endunless %}
 	</nav>
 	{% if page.layout == "builder" -%}
 		<div class="actions">

@@ -64,6 +64,244 @@ section {
     margin: 0 0 0 2em;
     list-style-type: square;
   }
+  &.gear-talents,
+  &.weapon-talents,
+  &.gear-sets {
+    padding: 1em;
+    // mix-blend-mode won't work with blur
+    backdrop-filter: unset;
+  }
+  &.gear-talents,
+  &.gear-sets {
+    .item-container {
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
+      .info-container {
+        .name {
+          margin-bottom: 0.25em;
+          font-size: h(3);
+        }
+      }
+      .sprite {
+        // stylelint-disable unit-disallowed-list
+        width: 128px;
+        height: 64px;
+        // stylelint-enable unit-disallowed-list
+        background-image: url('#{$base-url}img/sprites/g_items.png');
+        background-repeat: no-repeat;
+        mix-blend-mode: screen;
+      }
+    }
+  }
+  &.gear-talents,
+  &.weapon-talents,
+  &.gear-sets {
+    .item-container {
+      // stylelint-disable-next-line defensive-css/require-flex-wrap
+      display: flex;
+      padding: 1em;
+      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+      background:
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+      ;
+      background-color: var(--default-bg-color--clearest);
+      background-size: 3px 3px;
+    }
+  }
+  &.weapon-talents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include respond-to('large') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond-to('medium') {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    gap: 1em;
+    .item-container {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.5em;
+      justify-content: space-between;
+      .info-container,
+      .compat-info {
+        .prefix,
+        .text {
+          color: var(--brand-color);
+          &.exotic { color: var(--quality-exotic); }
+        }
+        .desc,
+        .weapons {
+          font-size: 0.875em;
+          opacity: 0.9;
+        }
+      }
+      .info-container {
+        .name {
+          margin-bottom: 0.25em;
+          .prefix {
+            font-weight: 700;
+          }
+        }
+      }
+      .sprite {
+        align-self: center;
+        // stylelint-disable unit-disallowed-list
+        width: 96px;
+        height: 96px;
+        // stylelint-enable unit-disallowed-list
+        background-image: url('#{$base-url}img/sprites/w_talents.png');
+        background-repeat: no-repeat;
+        background-position: -576px -576px;
+        &.accurate      { background-position: -0 -0; }
+        &.adept         { background-position: -192px -0; }
+        &.ambusher      { background-position: -384px -0; }
+        &.balanced      { background-position: -480px -0; }
+        &.boomstick     { background-position: -576px -0; }
+        &.brutal        { background-position: -672px -0; }
+        &.caduceus      { background-position: -0 -96px; }
+        &.capable       { background-position: -96px -96px; }
+        &.card-counter  { background-position: -672px -288px; }
+        &.carefree      { background-position: -192px -576px; }
+        &.centermass    { background-position: -192px -384px; }
+        &.commanding    { background-position: -192px -96px; }
+        &.competent     { background-position: -288px -96px; }
+        &.cover-shooter { background-position: -288px -0; }
+        &.coolheaded    { background-position: -384px -96px; }
+        &.deadly        { background-position: -480px -96px; }
+        &.destructive   { background-position: -576px -96px; }
+        &.determined    { background-position: -672px -96px; }
+        &.devil         { background-position: -384px -288px; }
+        &.disciplined   { background-position: -0 -192px; }
+        &.distracted    { background-position: -96px -192px; }
+        &.dominant      { background-position: -192px -192px; }
+        &.elevated      { background-position: -288px -192px; }
+        &.expert        { background-position: -384px -192px; }
+        &.ferocious     { background-position: -576px -192px; }
+        &.fierce        { background-position: -672px -192px; }
+        &.fire          { background-position: -0 -288px; }
+        &.focused       { background-position: -96px -288px; }
+        &.fury          { background-position: -192px -288px; }
+        &.glutton       { background-position: -576px -288px; }
+        &.harmful       { background-position: -288px -288px; }
+        &.history       { background-position: -480px -288px; }
+        &.hurried       { background-position: -0 -384px; }
+        &.intense       { background-position: -96px -384px; }
+        &.lights-out    { background-position: -96px -576px; }
+        &.meticulous    { background-position: -288px -384px; }
+        &.midas         { background-position: -384px -384px; }
+        &.pakhan        { background-position: -480px -384px; }
+        &.predatory     { background-position: -576px -384px; }
+        &.prepared      { background-position: -672px -384px; }
+        &.preserved     { background-position: -0 -480px; }
+        &.proficient    { background-position: -96px -480px; }
+        &.quickdraw     { background-position: -192px -672px; }
+        &.republic      { background-position: -192px -480px; }
+        &.responsive    { background-position: -288px -480px; }
+        &.golden-rhino  { background-position: -384px -480px; }
+        &.rough         { background-position: -96px -672px; }
+        &.showstopper   { background-position: -96px -0; }
+        &.skilled       { background-position: -480px -480px; }
+        &.sustained     { background-position: -576px -480px; }
+        &.swift         { background-position: -672px -480px; }
+        &.talented      { background-position: -0 -576px; }
+        &.toxic         { background-position: -288px -576px; }
+        &.trained       { background-position: -384px -576px; }
+        &.uncomplicated { background-position: -480px -192px; }
+        &.unforgiving   { background-position: -480px -576px; }
+        &.valkyria      { background-position: -672px -576px; }
+        &.vicious       { background-position: -0 -672px; }
+      }
+    }
+  }
+  &.gear-talents {
+    .item-container {
+      flex-flow: row wrap;
+      align-items: center;
+      .sprite {
+        &.barrett,
+        &.chest     { background-position: -0 -320px; }
+        &.ferro,
+        &.mask      { background-position: -128px -384px; }
+        &.shortbow,
+        &.kneepads  { background-position: -0 -384px; }
+        &.ninja,
+        &.backpack  { background-position: -256px -256px; }
+        &.skulls,
+        &.gloves    { background-position: -128px -320px; }
+        &.bliss,
+        &.holster   { background-position: -256px -320px; }
+      }
+      .info-container {
+        flex: 1;
+        .name {
+          &.exotic  { color: var(--quality-exotic); }
+          &.highend { color: var(--quality-highend); }
+        }
+      }
+    }
+  }
+  &.gear-sets {
+    flex-flow: column nowrap;
+    .item-container {
+      gap: 0.5em;
+    }
+    .info-container,
+    .bonus-container .number {
+      color: var(--quality-gset);
+    }
+    .info-container {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      width: 20%;
+      .name {
+        text-align: center;
+      }
+      .sprite {
+        &.ab        { background-position: -0 -0; }
+        &.banshee   { background-position: -128px -0; }
+        &.d3        { background-position: -256px -0; }
+        &.eye       { background-position: -0 -64px; }
+        &.fc        { background-position: -128px -64px; }
+        &.fm        { background-position: -256px -64px; }
+        &.hf        { background-position: -0 -128px; }
+        &.ls        { background-position: -128px -128px; }
+        &.nomad     { background-position: -256px -128px; }
+        &.pred      { background-position: -0 -192px; }
+        &.reclaimer { background-position: -128px -192px; }
+        &.sentry    { background-position: -256px -192px; }
+        &.striker   { background-position: -0 -256px; }
+        &.tac       { background-position: -128px -256px; }
+      }
+    }
+    .bonus-container {
+      width: 80%;
+      .bonus {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.25em 0.5em;
+        background-color: var(--default-bg-color--clearest);
+        &:not(:first-child) {
+          margin-top: 0.5em;
+        }
+        .number {
+          margin-right: 0.5em;
+          font-weight: 700;
+        }
+        .desc {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
 }
 
 section,

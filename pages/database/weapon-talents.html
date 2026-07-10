@@ -1,0 +1,94 @@
+---
+layout: page
+permalink: /database/weapon-talents/
+title: Weapon Talents
+description: All weapon talents currently in the game.
+---
+
+<section class="database-wtalents">
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.description }}</p>
+</section>
+
+<section class="weapon-talents">
+	{%- assign weapons = site.data.weapons -%}
+	{%- assign weapon_talents = site.data.weapon_talents -%}
+	{%- assign weapon_types = site.data.weapon_types -%}
+	{%- assign sortable = "" | split: "" -%}
+
+	{% for talent in weapon_talents %}
+		{% if talent.compat.weapon %}
+			{%- assign first_weapon_id = talent.compat.weapon[0] -%}
+			{%- assign weapon = weapons | where: "id", first_weapon_id | first -%}
+			{% case weapon.quality %}
+				{% when "exotic" %}
+					{%- assign rank = 0 -%}
+				{% when "highend" %}
+					{%- assign rank = 1 -%}
+				{% else %}
+					{%- assign rank = 2 -%}
+			{% endcase %}
+		{% else %}
+			{%- assign rank = 3 -%}
+		{% endif %}
+
+		{%- assign sortkey = rank | append: "|" | append: talent.id -%}
+		{%- assign sortable = sortable | push: sortkey -%}
+	{% endfor %}
+
+	{%- assign sortable = sortable | sort_natural -%}
+
+	{% for sortkey in sortable %}
+		{%- assign parts = sortkey | split: "|" -%}
+		{%- assign rank = parts[0] -%}
+		{%- assign talent_id = parts[1] -%}
+		{%- assign talent = weapon_talents | where: "id", talent_id | first -%}
+		<div class="item-container">
+			{% if talent.compat.weapon %}
+				{%- assign first_weapon_id = talent.compat.weapon[0] -%}
+				{%- assign weapon = weapons | where: "id", first_weapon_id | first -%}
+				<div class="info-container">
+					<div class="name">
+						<span class="prefix {{ weapon.quality }}">Talent |</span>
+						{{ talent.name }}
+					</div>
+					<div class="desc">{{ talent.desc }}</div>
+				</div>
+				<div class="sprite {{ talent.id }}" role="presentation"></div>
+				<div class="compat-info">
+					<div class="text {{ weapon.quality }}">Available on:</div>
+					{%- assign weapon_names = "" | split: "" -%}
+					{% for weapon_id in talent.compat.weapon %}
+						{%- assign wp = weapons | where: "id", weapon_id | first -%}
+						{%- assign weapon_names = weapon_names | push: wp.name -%}
+					{% endfor %}
+					{%- assign weapon_names = weapon_names | sort_natural -%}
+					{% for wp_name in weapon_names %}
+						<span class="weapons">{{ wp_name }}{% unless forloop.last %},{% endunless %}</span>
+					{% endfor %}
+				</div>
+			{% else %}
+				<div class="info-container">
+					<div class="name">
+						<span class="prefix">Talent |</span>
+						{{ talent.name }}
+					</div>
+					<div class="desc">{{ talent.desc }}</div>
+				</div>
+				<div class="sprite {{ talent.id }}" role="presentation"></div>
+				<div class="compat-info">
+					<div class="text">Available on:</div>
+					{%- assign types = "" | split: "" -%}
+					{% for type_id in talent.compat.type %}
+						{%- assign type = weapon_types[type_id] -%}
+						{%- assign types = types | push: type.label -%}
+					{% endfor %}
+					{%- assign types = types | uniq | sort_natural -%}
+					{% for wp_type in types %}
+						<span class="weapons">{{ wp_type }}{% unless forloop.last %},{% endunless %}</span>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	{% endfor %}
+</section>

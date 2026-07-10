@@ -1,5 +1,6 @@
 {
 	"ab": {
+		"name": "AlphaBridge",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -21,11 +22,12 @@
 			},
 			{
 				"name": "Set Bonus (6)",
-				"desc": "Inactive personal versions of all Signature Skills are rotating every 6 seconds and can be activated by killing enemy agents or Veteran/Elite NPCs. The Signature Skills that is up on rotation when an enemy is killed is activated for 10 seconds when all primary Stats are balanced between each other. These times are shortened depending on the difference in the ranges of your Primary Attributes. You can no longer activate Signature Skills or be affected by Ally Signature Skills."
+				"desc": "Inactive personal versions of all Signature Skills are rotating every 6 seconds and can be activated by killing enemy agents or Veteran/Elite NPCs. The Signature Skill that is up on rotation when an enemy is killed is activated for 10 seconds when all primary Stats are balanced between each other. These times are shortened depending on the difference in the ranges of your Primary Attributes. You can no longer activate Signature Skills or be affected by Ally Signature Skills."
 			}
 		]
 	},
 	"banshee": {
+		"name": "Banshee's Shadow",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -52,6 +54,7 @@
 		]
 	},
 	"d3": {
+		"name": "D3-FNC",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -78,6 +81,7 @@
 		]
 	},
 	"eye": {
+		"name": "DeadEYE",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -104,6 +108,7 @@
 		]
 	},
 	"fm": {
+		"name": "Final Measure",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -130,6 +135,7 @@
 		]
 	},
 	"fc": {
+		"name": "FireCrest",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -156,6 +162,7 @@
 		]
 	},
 	"hf": {
+		"name": "Hunter's Faith",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -182,6 +189,7 @@
 		]
 	},
 	"ls": {
+		"name": "Lone Star",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -208,6 +216,7 @@
 		]
 	},
 	"nomad": {
+		"name": "Path of the Nomad",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -234,6 +243,7 @@
 		]
 	},
 	"pred": {
+		"name": "Predator's Mark",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -260,6 +270,7 @@
 		]
 	},
 	"reclaimer": {
+		"name": "Reclaimer",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -286,6 +297,7 @@
 		]
 	},
 	"sentry": {
+		"name": "Sentry's Call",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -312,6 +324,7 @@
 		]
 	},
 	"striker": {
+		"name": "Striker's Battlegear",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
@@ -338,6 +351,7 @@
 		]
 	},
 	"tac": {
+		"name": "Tactician's Authority",
 		"gearset": [
 			{
 				"name": "Set Bonus (2)",
