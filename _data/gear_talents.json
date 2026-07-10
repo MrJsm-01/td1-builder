@@ -1,5 +1,21 @@
 [
 	{
+		"id": "forceful",
+		"name": "Forceful",
+		"desc": "Increase Armor by 15% while the user's signature skill is active",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
+		"id": "rapid",
+		"name": "Rapid",
+		"desc": "Decrease cooldown for healing skills by 15%",
+		"compat": {
+			"slot": "chest"
+		}
+	},
+	{
 		"id": "reckless",
 		"name": "Reckless",
 		"desc": "Increase damage by 8% and increase incoming damage by 10%",
@@ -16,25 +32,9 @@
 		}
 	},
 	{
-		"id": "rapid",
-		"name": "Rapid",
-		"desc": "Decrease cooldown for healing skills by 15%",
-		"compat": {
-			"slot": "chest"
-		}
-	},
-	{
 		"id": "vigorous",
 		"name": "Vigorous",
 		"desc": "Grants overheal to all healing skills",
-		"compat": {
-			"slot": "chest"
-		}
-	},
-	{
-		"id": "forceful",
-		"name": "Forceful",
-		"desc": "Increase Armor by 15% while the user's signature skill is active",
 		"compat": {
 			"slot": "chest"
 		}
@@ -96,14 +96,6 @@
 		}
 	},
 	{
-		"id": "technical",
-		"name": "Technical",
-		"desc": "While your signature skill is active, your Skill Power is increased by 15%",
-		"compat": {
-			"slot": "backpack"
-		}
-	},
-	{
 		"id": "inventive",
 		"name": "Inventive",
 		"desc": "Increase Skill Power by 15% while at full health",
@@ -136,9 +128,17 @@
 		}
 	},
 	{
-		"id": "savage",
-		"name": "Savage",
-		"desc": "Critical hit chance is increased by 7% against targets out of cover",
+		"id": "technical",
+		"name": "Technical",
+		"desc": "While your signature skill is active, your Skill Power is increased by 15%",
+		"compat": {
+			"slot": "backpack"
+		}
+	},
+	{
+		"id": "astute",
+		"name": "Astute",
+		"desc": "The first 3 bullets of your magazine have a 5% higher chance to do a Critical Hit",
 		"compat": {
 			"slot": "gloves"
 		}
@@ -160,9 +160,9 @@
 		}
 	},
 	{
-		"id": "astute",
-		"name": "Astute",
-		"desc": "The first 3 bullets of your magazine have a 5% higher chance to do a Critical Hit",
+		"id": "savage",
+		"name": "Savage",
+		"desc": "Critical hit chance is increased by 7% against targets out of cover",
 		"compat": {
 			"slot": "gloves"
 		}
