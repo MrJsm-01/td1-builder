@@ -50,7 +50,7 @@
 	{
 		"id": "refreshed",
 		"name": "Refreshed",
-		"desc": "All healing is improved by 30% when in the last segment of Health",
+		"desc": "All healing is improved by 30% when in the last health segment",
 		"compat": {
 			"slot": "mask"
 		}
@@ -58,7 +58,7 @@
 	{
 		"id": "rehabilitated",
 		"name": "Rehabilitated",
-		"desc": "Heals 2% every second during status effects",
+		"desc": "Heals 2% every second during Status Effects",
 		"compat": {
 			"slot": "mask"
 		}
@@ -90,7 +90,7 @@
 	{
 		"id": "prosperous",
 		"name": "Prosperous",
-		"desc": "Headshot kills grant you Credits",
+		"desc": "Headshot kills grant Credits",
 		"compat": {
 			"slot": "kneepads"
 		}
@@ -106,7 +106,7 @@
 	{
 		"id": "inventive",
 		"name": "Inventive",
-		"desc": "Your Skill Power is increased by 15% while you are at full health",
+		"desc": "Increase Skill Power by 15% while at full health",
 		"compat": {
 			"slot": "backpack"
 		}
@@ -114,7 +114,7 @@
 	{
 		"id": "relentless",
 		"name": "Relentless",
-		"desc": "5% of the damage dealt by your skills is returned to you as healing",
+		"desc": "5% of the damage dealt by skills is returned as healing",
 		"compat": {
 			"slot": "backpack"
 		}
@@ -138,7 +138,7 @@
 	{
 		"id": "savage",
 		"name": "Savage",
-		"desc": "Your Critical hit chance is increased by 7% against targets out of cover",
+		"desc": "Critical hit chance is increased by 7% against targets out of cover",
 		"compat": {
 			"slot": "gloves"
 		}
@@ -170,7 +170,7 @@
 	{
 		"id": "nimble",
 		"name": "Nimble",
-		"desc": "After completing a cover to cover move in combat, you heal 2% of your max health over 4 seconds for every 1m run.",
+		"desc": "After completing a cover to cover move in combat, you heal 2% of your max Health over 4 seconds for every 1 meter you run.",
 		"compat": {
 			"slot": "holster"
 		}
@@ -178,7 +178,7 @@
 	{
 		"id": "recovered",
 		"name": "Recovered",
-		"desc": "Damage taken while doing a cover to cover maneuver is regenerated over 5 seconds upon reaching your destination",
+		"desc": "Damage taken during cover-to-cover is regenerated over 5 seconds when reaching the destination",
 		"compat": {
 			"slot": "holster"
 		}
@@ -186,7 +186,7 @@
 	{
 		"id": "steadfast",
 		"name": "Steadfast",
-		"desc": "While in cover, health regeneration kicks in twice as fast.",
+		"desc": "Health regeneration kicks in twice as fast while in cover",
 		"compat": {
 			"slot": "holster"
 		}
@@ -202,7 +202,7 @@
 	{
 		"id": "barrett",
 		"name": "Barrett's Bulletproof Vest",
-		"desc": "No skills on cooldown increases skill power by 10%<br>One skill on cooldown increases damage by 5%<br>Two skills on cooldown increases armour by 10%",
+		"desc": "No skills on cooldown increases Skillpower by 10%<br>One skill on cooldown increases Damage by 5%<br>Two skills on cooldown increases Armor by 10%",
 		"compat": {
 			"item": "barrett"
 		}
@@ -210,7 +210,7 @@
 	{
 		"id": "ferro",
 		"name": "Ferro's Oxygen Mask",
-		"desc": "Allows you to fire your weapon while under the \"On fire\" status effect",
+		"desc": "User can run and shoot their weapon while burning",
 		"compat": {
 			"item": "ferro"
 		}
@@ -226,7 +226,7 @@
 	{
 		"id": "ninja",
 		"name": "NinjaBike Messenger Bag",
-		"desc": "Slots in with any equipped Gear Set item to fulfill a requirement towards unlocking a Gear Sets bonus. Can unlock bonuses from multiple sets simultaneously. Cannot unlock Classified Gear Set bonuses",
+		"desc": "Slots in with any equipped Gear Set item to fulfill a requirement towards unlocking a Gear Sets bonus. Can unlock bonuses from multiple Sets simultaneously. Cannot unlock Classified Gear Set bonuses.",
 		"compat": {
 			"item": "ninja"
 		}
@@ -234,7 +234,7 @@
 	{
 		"id": "skulls",
 		"name": "Skulls MC Gloves",
-		"desc": "Damage increased by 16% when no gear set or weapon set bonuses are active",
+		"desc": "Damage increased by 16% when no set bonuses are active",
 		"compat": {
 			"item": "skulls"
 		}
@@ -242,7 +242,7 @@
 	{
 		"id": "bliss",
 		"name": "Colonel Bliss's Holster",
-		"desc": "Hitting a target consecutively with a sidearm increases your weapon damage by 2% for 20 seconds.<br>This effect stacks until 10 shots, after which the stack is consumed and triggers an EMP effect.",
+		"desc": "Hitting a target consecutively with a sidearm increases your damage with all weapons by 2% for 20 seconds. This effect stacks until 10 shots, after which the stack is consumed and triggers an EMP effect.",
 		"compat": {
 			"item": "bliss"
 		}
