@@ -587,11 +587,14 @@
         width: 90vw;
       }
     }
+    &:has(> .share),
+    &:has(> .issues) {
+      height: max-content;
+    }
     &:has(> .share) {
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
-      height: max-content;
       .share,
       input {
         width: 100%;
@@ -613,6 +616,30 @@
       .help {
         font-size: 0.8em;
         color: var(--default-text-color--light);
+      }
+    }
+    &:has(> .issues) {
+      p {
+        text-align: center;
+        a {
+          position: relative;
+          &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            content: '';
+            border-top: 2px solid var(--brand-color);
+            transform: scaleX(0);
+            transition: transform 0.15s ease;
+          }
+          @include hocus {
+            &::before {
+              transform: scaleX(1);
+            }
+          }
+        }
       }
     }
     // https://codepen.io/designcouch/pen/obvKxm

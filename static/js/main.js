@@ -1,6 +1,6 @@
 import { DOM } from './dom.js';
 import { STATE } from './state.js';
-import { closeModal } from './modal.js';
+import { openModal, closeModal } from './modal.js';
 import { openWeaponPicker, selectWeapon, selectWeaponTalent, selectWeaponMod } from './weapons.js';
 import { openGearPicker, selectGear, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { openSkillPicker, selectSkill } from './skills.js';
@@ -37,6 +37,18 @@ DOM.player_talents.talent4.addEventListener('click', () => openPlayerTalentPicke
 
 // Share Build URL
 DOM.shareButton.addEventListener('click', () => openShareModal());
+
+// Issues button
+DOM.issueButton.addEventListener('click', () => openModal(`
+  <div class="issues">
+    <p>
+      If you're having an issue with the builder, please open a ticket
+      <a href="https://github.com/Strappazzon/td1-builder/issues/new?template=bug-report.yml">on GitHub</a>.
+      <br>
+      You can also <a href="https://strappazzon.xyz/contact/">contact me</a> directly if you don't have an account.
+    </p>
+  </div>
+`));
 
 // Modal
 DOM.modal.container.addEventListener('click', e => {

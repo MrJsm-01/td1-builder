@@ -2,6 +2,7 @@ export const DOM = {
   body        : document.body,
   loader      : document.querySelector('#loader'),
   shareButton : document.querySelector('#share-build'),
+  issueButton : document.querySelector('#app-issues'),
   modal       : {
     backdrop  : document.querySelector('.modal-backdrop'),
     container : document.querySelector('.modal-container'),

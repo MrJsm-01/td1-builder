@@ -48,6 +48,9 @@ header {
     display: flex;
     flex-flow: row wrap;
     gap: px2rem(8px);
+    .issue {
+      color: var(--wing-tech);
+    }
     .icon {
       --icon-size: 1.125em;
       display: inline-flex;
