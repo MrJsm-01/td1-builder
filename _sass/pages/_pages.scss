@@ -249,6 +249,13 @@ section {
     flex-flow: column nowrap;
     .item-container {
       gap: 0.5em;
+      @include respond-to('small') {
+        flex-flow: row wrap;
+        .info-container,
+        .bonus-container {
+          flex-basis: 100%;
+        }
+      }
     }
     .info-container,
     .bonus-container .number {
@@ -256,10 +263,10 @@ section {
     }
     .info-container {
       display: flex;
+      flex: 0 1 20%;
       flex-flow: column nowrap;
       align-items: center;
       justify-content: flex-start;
-      width: 20%;
       .name {
         text-align: center;
       }
@@ -281,7 +288,7 @@ section {
       }
     }
     .bonus-container {
-      width: 80%;
+      flex: 0 1 80%;
       .bonus {
         display: flex;
         flex-flow: row nowrap;
