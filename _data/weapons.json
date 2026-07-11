@@ -1724,6 +1724,19 @@
 		]
 	},
 	{
+		"id": "beretta-93r",
+		"name": "93R",
+		"quality": "highend",
+		"type": "hdg",
+		"slots": [
+			"muzzle"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
 		"id": "damascus",
 		"name": "Damascus",
 		"quality": "exotic",
