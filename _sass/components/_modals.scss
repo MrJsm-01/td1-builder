@@ -572,7 +572,12 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-start;
-      height: 25dvh;
+    }
+    &:has(> .mod),
+    &:has(> .attr),
+    &:has(> .share),
+    &:has(> .issues) {
+      height: max-content;
     }
     &:has(> .wing .skill[data-id^='ult']) {
       width: 90vw;
@@ -586,10 +591,6 @@
         grid-template-columns: repeat(1, 1fr);
         width: 90vw;
       }
-    }
-    &:has(> .share),
-    &:has(> .issues) {
-      height: max-content;
     }
     &:has(> .share) {
       display: flex;
