@@ -39,7 +39,7 @@ description: Browse builds for The Division made by the community.
 					</div>
 					<ul class="build-tags">
 						{%- assign sorted_tags = b.tags | sort_natural -%}
-						{% for t in sorted_tags limit:5 %}
+						{% for t in sorted_tags %}
 							<li class="build-tag">{{ t }}</li>
 						{% endfor %}
 					</ul>
