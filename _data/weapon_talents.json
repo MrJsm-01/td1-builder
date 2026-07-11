@@ -357,7 +357,7 @@
 	{
 		"id": "responsive",
 		"name": "Responsive",
-		"desc": "Damage is increased when closer than 10 meters to the target",
+		"desc": "Damage is increased by 10% when closer than 10 meters to the target",
 		"compat": {
 			"type": [
 				"ar",
