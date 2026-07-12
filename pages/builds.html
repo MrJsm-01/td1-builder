@@ -22,12 +22,12 @@ description: Browse builds for The Division made by the community.
 		{%- assign featured_builds = site.data.builds_ugc | where_exp: "builds", "builds.featured == true" -%}
 		{%- assign other_builds = site.data.builds_ugc | where_exp: "builds", "builds.featured == nil" -%}
 		{%- assign sorted_builds = featured_builds | concat: other_builds -%}
-		{% for b in sorted_builds %}
-			<a href="{{ b.url }}" class="card build" role="listitem">
+		{% for build in sorted_builds %}
+			<a href="{{ build.url }}" class="card build" role="listitem">
 				<article class="card-container" aria-labelledby="build-title__{{ forloop.index }}">
 					<hgroup class="build-title">
-						<h2 class="build-title__name" id="build-title__{{ forloop.index }}">{{ b.title }}</h2>
-						{% if b.featured == true %}
+						<h2 class="build-title__name" id="build-title__{{ forloop.index }}">{{ build.title }}</h2>
+						{% if build.featured == true %}
 							<div class="icon" role="presentation" aria-label="Featured">
 								{% include icons/trophy.svg %}
 							</div>
@@ -35,10 +35,10 @@ description: Browse builds for The Division made by the community.
 					</hgroup>
 					<div class="build-author">
 						<span class="build-author__text">Author:</span>
-						<span class="build-author__name">{{ b.author }}</span>
+						<span class="build-author__name">{{ build.author }}</span>
 					</div>
 					<ul class="build-tags">
-						{%- assign sorted_tags = b.tags | sort_natural -%}
+						{%- assign sorted_tags = build.tags | sort_natural -%}
 						{% for t in sorted_tags %}
 							<li class="build-tag">{{ t }}</li>
 						{% endfor %}
