@@ -247,7 +247,7 @@
 		},
 		{
 			"id": 25,
-			"name": "Kill XP",
+			"name": "Increased Kill XP",
 			"compat": {
 				"slot": [
 					"mask",
