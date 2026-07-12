@@ -59,7 +59,6 @@ button {
   color: var(--default-text-color);
   touch-action: manipulation;
   cursor: pointer;
-  // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
   background:
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -76,5 +75,3 @@ button {
     background-color: var(--default-bg-color--clearer);
   }
 }
-
-.no-overflow { overflow: hidden; }

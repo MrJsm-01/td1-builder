@@ -32,9 +32,10 @@ a {
   }
 }
 
-section {
-  padding: 0.5rem;
-  // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+section,
+.gear-talents .item-container,
+.weapon-talents .item-container,
+.gear-sets .item-container {
   background:
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -42,6 +43,10 @@ section {
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
   ;
   background-color: var(--default-bg-color--clearest);
+}
+
+section {
+  padding: 0.5rem;
   background-size: 2px 2px;
   backdrop-filter: blur(5px);
   h1,
@@ -70,6 +75,11 @@ section {
     padding: 1em;
     // mix-blend-mode won't work with blur
     backdrop-filter: unset;
+    .item-container {
+      .sprite {
+        background-repeat: no-repeat;
+      }
+    }
   }
   &.gear-talents,
   &.gear-sets {
@@ -88,8 +98,8 @@ section {
         width: 128px;
         height: 64px;
         // stylelint-enable unit-disallowed-list
+        // stylelint-disable-next-line defensive-css/require-background-repeat
         background-image: url('#{$base-url}img/sprites/g_items.png');
-        background-repeat: no-repeat;
         mix-blend-mode: screen;
       }
     }
@@ -101,14 +111,6 @@ section {
       // stylelint-disable-next-line defensive-css/require-flex-wrap
       display: flex;
       padding: 1em;
-      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
-      background:
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-      ;
-      background-color: var(--default-bg-color--clearest);
       background-size: 3px 3px;
     }
   }
@@ -154,8 +156,8 @@ section {
         width: 96px;
         height: 96px;
         // stylelint-enable unit-disallowed-list
+        // stylelint-disable-next-line defensive-css/require-background-repeat
         background-image: url('#{$base-url}img/sprites/w_talents.png');
-        background-repeat: no-repeat;
         background-position: -576px -576px;
         &.accurate      { background-position: -0 -0; }
         &.adept         { background-position: -192px -0; }

@@ -3,33 +3,16 @@
 @use '../abstracts/variables' as *;
 
 footer {
-  position: fixed;
-  right: 0;
   bottom: 0;
-  left: 0;
   z-index: z('footer');
-  display: flex;
-  flex-flow: row wrap;
   place-content: center space-between;
   height: px2rem(32px);
-  padding: 0.5em 1em;
   font-size: 0.875em;
-  background-color: var(--default-bg-color--clearest);
-  backdrop-filter: blur(5px);
   a,
   .version {
     opacity: 0.7;
   }
   nav {
-    a {
-      color: inherit;
-      &::before {
-        content: unset;
-      }
-      @include hocus {
-        opacity: 1;
-      }
-    }
     .separator {
       opacity: 0.3;
     }

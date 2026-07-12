@@ -1,0 +1,24 @@
+@use '../abstracts/mixins' as *;
+
+header,
+footer {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.5em 1em;
+  background-color: var(--default-bg-color--clearest);
+  backdrop-filter: blur(5px);
+  nav {
+    a {
+      color: inherit;
+      &::before {
+        content: unset;
+      }
+      @include hocus {
+        opacity: 1;
+      }
+    }
+  }
+}

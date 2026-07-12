@@ -19,7 +19,6 @@
     height: 90dvh;
     padding: 0.5rem;
     overflow-y: auto;
-    // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
     background:
       linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
       linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -240,7 +239,6 @@
     .talent,
     .mod,
     .attr {
-      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
       background:
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -416,7 +414,6 @@
       align-items: center;
       .sprite-container {
         padding: px2rem(8px);
-        // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
         background:
           linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
           linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,

@@ -31,6 +31,8 @@ body {
   }
 }
 
+.no-overflow { overflow: hidden; }
+
 .loading {
   &-container {
     position: fixed;
@@ -137,7 +139,6 @@ body {
     max-height: px2rem(500px);
     overflow-y: auto;
     overscroll-behavior: contain;
-    // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
     background:
       linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
       linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -212,7 +213,6 @@ body {
     }
     .talent-container,
     .stats-container .sprite-container {
-      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
       background:
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -234,7 +234,6 @@ body {
       [class^='bonus'] {
         padding: 0.25em 0.5em;
         margin-bottom: px2rem(4px);
-        // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
         background:
           linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
           linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -746,7 +745,6 @@ body {
     .sprite-container {
       padding: px2rem(8px);
       cursor: pointer;
-      // https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
       background:
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
