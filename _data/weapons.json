@@ -1812,7 +1812,8 @@
 		"type": "hdg",
 		"slots": [
 			"magazine",
-			"muzzle"
+			"muzzle",
+			"underbarrel"
 		],
 		"talents": [
 			null,
