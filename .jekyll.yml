@@ -8,7 +8,7 @@ repo_url: https://github.com/Strappazzon/td1-builder
 # Website metadata
 meta:
   title: TD1 Builder
-  description: Unofficial fanmade website for creating and sharing The Division builds.
+  description: Unofficial fanmade website for creating, sharing and finding The Division builds.
   keywords:
     - td1
     - td1 build
