@@ -6,7 +6,7 @@
 html {
   font-family: $font-stack-text;
   font-size: 112.5%;
-  @include respond-to('large') {
+  @include respond-to('larger') {
     font-size: 100%;
   }
 }
