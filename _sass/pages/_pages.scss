@@ -35,7 +35,8 @@ a {
 section,
 .gear-talents .item-container,
 .weapon-talents .item-container,
-.gear-sets .item-container {
+.gear-sets .item-container,
+.weapon-sets .item-container {
   background:
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -71,7 +72,8 @@ section {
   }
   &.gear-talents,
   &.weapon-talents,
-  &.gear-sets {
+  &.gear-sets,
+  &.weapon-sets {
     padding: 1em;
     // mix-blend-mode won't work with blur
     backdrop-filter: unset;
@@ -106,7 +108,8 @@ section {
   }
   &.gear-talents,
   &.weapon-talents,
-  &.gear-sets {
+  &.gear-sets,
+  &.weapon-sets {
     .item-container {
       // stylelint-disable-next-line defensive-css/require-flex-wrap
       display: flex;
@@ -114,7 +117,8 @@ section {
       background-size: 3px 3px;
     }
   }
-  &.weapon-talents {
+  &.weapon-talents,
+  &.weapon-sets {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include respond-to('large') {
@@ -130,12 +134,8 @@ section {
       gap: 0.5em;
       justify-content: space-between;
       .info-container,
-      .compat-info {
-        .prefix,
-        .text {
-          color: var(--brand-color);
-          &.exotic { color: var(--quality-exotic); }
-        }
+      .compat-info,
+      .unlock-info {
         .desc,
         .weapons {
           font-size: 0.875em;
@@ -156,6 +156,20 @@ section {
         width: 96px;
         height: 96px;
         // stylelint-enable unit-disallowed-list
+      }
+    }
+  }
+  &.weapon-talents {
+    .item-container {
+      .info-container,
+      .compat-info {
+        .prefix,
+        .text {
+          color: var(--brand-color);
+          &.exotic { color: var(--quality-exotic); }
+        }
+      }
+      .sprite {
         // stylelint-disable-next-line defensive-css/require-background-repeat
         background-image: url('#{$base-url}img/sprites/w_talents.png');
         background-position: -576px -576px;
@@ -308,6 +322,24 @@ section {
         .desc {
           opacity: 0.9;
         }
+      }
+    }
+  }
+  &.weapon-sets {
+    .item-container {
+      .info-container,
+      .unlock-info {
+        .prefix,
+        .text {
+          color: var(--quality-exotic);
+        }
+      }
+      .sprite {
+        // stylelint-disable-next-line defensive-css/require-background-repeat
+        background-image: url('#{$base-url}img/sprites/w_bonus.png');
+        &.devil { background-position: -0 -0; }
+        &.republic { background-position: -96px -0; }
+        &.valkyria { background-position: -192px -0; }
       }
     }
   }

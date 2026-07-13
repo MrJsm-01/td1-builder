@@ -1,0 +1,46 @@
+---
+layout: page
+permalink: /database/weapon-sets/
+title: Weapon Sets
+description: Every weapon set and their bonuses.
+---
+
+<section class="database-wsets">
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.description }}</p>
+</section>
+
+<section class="weapon-sets">
+	{%- assign weapons = site.data.weapons -%}
+	{%- assign weapon_bonus = site.data.weapon_bonus -%}
+	{%- assign sortable = "" | split: "" -%}
+
+	{% for bonus in weapon_bonus %}
+		{%- assign sortable = sortable | push: bonus.name -%}
+	{% endfor %}
+
+	{%- assign sortable = sortable | sort_natural -%}
+	{% for bonus_name in sortable %}
+		{%- assign bonus = weapon_bonus | where: "name", bonus_name | first -%}
+		<div class="item-container">
+			<div class="info-container">
+				<div class="name">
+					<span class="prefix">Talent |</span>
+					{{ bonus.name }}
+				</div>
+				<div class="desc">{{ bonus.desc }}</div>
+			</div>
+			<div class="sprite {{ bonus.id }}" role="presentation"></div>
+			<div class="unlock-info">
+				<div class="text">Unlocked with:</div>
+				{%- assign weapon_names = "" | split: "" -%}
+				{% for weapon_id in bonus.weapons %}
+					{%- assign wp = weapons | where: "id", weapon_id | first -%}
+					{%- assign weapon_names = weapon_names | push: wp.name -%}
+				{% endfor %}
+				{%- assign weapon_names = weapon_names | sort_natural -%}
+				<span class="weapons">{{ weapon_names | join: " and " }}</span>
+			</div>
+		</div>
+	{% endfor %}
+</section>
