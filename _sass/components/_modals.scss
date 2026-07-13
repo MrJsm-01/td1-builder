@@ -37,7 +37,7 @@
     .mod,
     .gear,
     .attr,
-    [class^='gear-mod'],
+    .gear-mod,
     .skill,
     .player-talent {
       cursor: pointer;
@@ -45,7 +45,7 @@
     .weapon,
     .talent,
     .gear,
-    [class^='gear-mod'],
+    .gear-mod,
     .skill {
       .sprite {
         background-repeat: no-repeat;
@@ -71,11 +71,10 @@
     }
     .weapon,
     .gear,
-    [class^='gear-mod'] {
+    .gear-mod {
       display: flex;
       flex-flow: row wrap;
       gap: px2rem(4px);
-      margin-bottom: 0.5rem;
       &[data-quality='highend'] {
         .sprite-container {
           background-color: var(--quality-highend--light);
@@ -333,7 +332,6 @@
     }
     .mod,
     .attr {
-      width: 100%;
       padding: px2rem(2px) px2rem(4px);
     }
     .gear {
@@ -391,7 +389,7 @@
         }
       }
     }
-    [class^='gear-mod'] {
+    .gear-mod {
       &[data-quality='superior'] {
         .sprite-container {
           background-color: var(--quality-superior--light);
@@ -547,11 +545,23 @@
         }
       }
     }
+    &:has(> .weapon),
+    &:has(> .gear),
+    &:has(> .mod),
+    &:has(> .attr),
+    &:has(.gear-mod) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: stretch;
+    }
+    &:has(> .weapon),
+    &:has(> .gear),
     &:has(> .talent),
     &:has(> .mod),
     &:has(> .attr),
     &:has(> .wing),
-    &:has(> .share) {
+    &:has(> .share),
+    &:has(> .gear-mod) {
       gap: 0.5rem;
     }
     &:has(> .talent) {
@@ -563,12 +573,6 @@
       @include respond-to('medium') {
         grid-template-columns: repeat(1, 1fr);
       }
-    }
-    &:has(> .mod),
-    &:has(> .attr) {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: flex-start;
     }
     &:has(> .mod),
     &:has(> .attr),
