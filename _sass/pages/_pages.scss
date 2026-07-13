@@ -36,7 +36,8 @@ section,
 .gear-talents .item-container,
 .weapon-talents .item-container,
 .gear-sets .item-container,
-.weapon-sets .item-container {
+.weapon-sets .item-container,
+.face-masks .item-container {
   background:
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
     linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
@@ -73,15 +74,19 @@ section {
   &.gear-talents,
   &.weapon-talents,
   &.gear-sets,
-  &.weapon-sets {
+  &.weapon-sets,
+  &.face-masks {
     padding: 1em;
-    // mix-blend-mode won't work with blur
-    backdrop-filter: unset;
     .item-container {
       .sprite {
         background-repeat: no-repeat;
       }
     }
+  }
+  &.gear-talents,
+  &.gear-sets {
+    // mix-blend-mode won't work with blur
+    backdrop-filter: unset;
   }
   &.gear-talents,
   &.gear-sets {
@@ -109,7 +114,8 @@ section {
   &.gear-talents,
   &.weapon-talents,
   &.gear-sets,
-  &.weapon-sets {
+  &.weapon-sets,
+  &.face-masks {
     .item-container {
       // stylelint-disable-next-line defensive-css/require-flex-wrap
       display: flex;
@@ -118,7 +124,8 @@ section {
     }
   }
   &.weapon-talents,
-  &.weapon-sets {
+  &.weapon-sets,
+  &.face-masks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include respond-to('large') {
@@ -128,10 +135,19 @@ section {
       grid-template-columns: repeat(1, 1fr);
     }
     gap: 1em;
+  }
+  &.weapon-talents,
+  &.weapon-sets,
+  &.face-masks {
     .item-container {
       display: flex;
       flex-flow: column nowrap;
       gap: 0.5em;
+    }
+  }
+  &.weapon-talents,
+  &.weapon-sets {
+    .item-container {
       justify-content: space-between;
       .info-container,
       .compat-info,
@@ -340,6 +356,86 @@ section {
         &.devil { background-position: -0 -0; }
         &.republic { background-position: -96px -0; }
         &.valkyria { background-position: -192px -0; }
+      }
+    }
+  }
+  &.face-masks {
+    .item-container {
+      hr {
+        margin: 0.2em 0;
+        border: 0;
+        border-top: 1px solid var(--default-bg-color--clearer);
+      }
+      .event-container {
+        .commendation {
+          font-size: 0.875em;
+          opacity: 0.9;
+        }
+      }
+      .event-container,
+      .objective-container,
+      .conditions-container,
+      .mask-container {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.25em;
+        align-items: flex-start;
+      }
+      .objective-container,
+      .conditions-container,
+      .mask-container {
+        .title {
+          color: var(--brand-color);
+        }
+      }
+      .conditions-container {
+        ul {
+          margin: 0;
+          li {
+            margin-left: 1.25em;
+          }
+        }
+      }
+      .mask-container {
+        margin-top: auto;
+        .sprite {
+          position: relative;
+          &::before {
+            position: absolute;
+            inset: 0;
+            z-index: z('sprite');
+            content: '';
+            background-color: var(--default-bg-color--lightest);
+          }
+          // stylelint-disable unit-disallowed-list
+          width: 256px;
+          height: 256px;
+          // stylelint-enable unit-disallowed-list
+          // stylelint-disable-next-line defensive-css/require-background-repeat
+          background-image: url('#{$base-url}img/sprites/v_masks.png');
+          &.bug     { background-position: -0 -0; }
+          &.cage    { background-position: -256px -0; }
+          &.cbrn    { background-position: -512px -0; }
+          &.chemist { background-position: -768px -0; }
+          &.classic { background-position: -1024px -0; }
+          &.ember   { background-position: -0 -256px; }
+          &.happy   { background-position: -256px -256px; }
+          &.haze    { background-position: -512px -256px; }
+          &.hockey  { background-position: -768px -256px; }
+          &.jungle  { background-position: -1024px -256px; }
+          &.oni     { background-position: -0 -512px; }
+          &.piggy   { background-position: -256px -512px; }
+          &.rictus  { background-position: -512px -512px; }
+          &.rider   { background-position: -768px -512px; }
+          &.shady   { background-position: -1024px -512px; }
+          &.smiler  { background-position: -0 -768px; }
+          &.sting   { background-position: -256px -768px; }
+          &.stripes { background-position: -512px -768px; }
+          &.stygian { background-position: -768px -768px; }
+          &.tao     { background-position: -1024px -768px; }
+          &.trench  { background-position: -0 -1024px; }
+          &.vulcan  { background-position: -256px -1024px; }
+        }
       }
     }
   }

@@ -1,0 +1,216 @@
+[
+	{
+		"name": "Bug",
+		"event": "GE - Ambush",
+		"commendation": "Motion Blur",
+		"objective": {
+			"description": "Kill 100 enemies whilst moving",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)"
+			]
+		}
+	},
+	{
+		"name": "CBRN",
+		"event": "GE - Outbreak",
+		"commendation": "Need An Aspirin?",
+		"objective": "Perform 125 marked headshot kills during Critical Outbreak."
+	},
+	{
+		"name": "Cage",
+		"event": "GE - Ambush",
+		"commendation": "Statuesque",
+		"objective": {
+			"description": "Kill 400 enemies whilst stationary",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)"
+			]
+		}
+	},
+	{
+		"name": "Chemist",
+		"event": "GE - Outbreak",
+		"commendation": "Too Close for Comfort",
+		"objective": {
+			"description": "Perform 170 Headshot kills with a Shotgun under the specified conditions.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Severe or Critical modifier"
+			]
+		}
+	},
+	{
+		"name": "Classic",
+		"event": "GE - Strike",
+		"commendation": "Best Frenemies",
+		"objective": {
+			"description": "Complete a Strike Mission without taking explosion damage from an ally.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Tactical Strike",
+				"In a group"
+			]
+		}
+	},
+	{
+		"name": "Ember",
+		"event": "GE - Onslaught",
+		"commendation": "Kill Count",
+		"objective": {
+			"description": "Kill 5 enemies in a row with the effect they are vulnerable to.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)"
+			]
+		}
+	},
+	{
+		"name": "Happy",
+		"event": "GE - Assault",
+		"commendation": "No Surrender",
+		"objective": {
+			"description": "Complete all Assault Missions without Agent(s) being downed or dead.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Crucial or Major Assault",
+				"No downed or dead"
+			]
+		}
+	},
+	{
+		"name": "Haze",
+		"event": "GE - Ambush",
+		"commendation": "Personal Space",
+		"objective": {
+			"description": "Kill 250 enemies whilst near an ally in Strategic Ambush.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Strategic Ambush"
+			]
+		}
+	},
+	{
+		"name": "Hockey",
+		"event": "GE - Assault",
+		"commendation": "LMB Slayer!",
+		"objective": {
+			"description": "Obtain 500 LMB kills during Assault under the specified conditions.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Crucial or Major Assault"
+			]
+		}
+	},
+	{
+		"name": "Jungle",
+		"event": "GE - Strike",
+		"commendation": "Strike Boss Killer",
+		"objective": "Kill 150 Riker Bosses during Strike."
+	},
+	{
+		"name": "Oni",
+		"event": "GE - Onslaught",
+		"commendation": "Full House",
+		"objective": {
+			"description": "Burn 200, Bleed 200, and Gas 200 enemies during the Onslaught event.",
+			"conditions": [
+				"World Tier 5"
+			]
+		}
+	},
+	{
+		"name": "Piggy",
+		"event": "GE - Assault",
+		"commendation": "Leave No One Behind",
+		"objective": {
+			"description": "In co-op, complete all Assault Missions without any Agents using First Aid, Group Heal, or Support Station.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Crucial or Major Assault",
+				"No medical skills"
+			]
+		}
+	},
+	{
+		"name": "Rictus",
+		"event": "GE - Blackout",
+		"commendation": "Safety First",
+		"objective": {
+			"description": "Complete an activity during Blackout, without shocking yourself.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Extreme Blackout or Total Blackout active",
+				"In a group"
+			]
+		}
+	},
+	{
+		"name": "Rider",
+		"event": "GE - Strike",
+		"commendation": "Bomb Proof",
+		"objective": {
+			"description": "Complete a Strike activity without taking any explosion damage.",
+			"conditions": [
+				"World Tier 5",
+				"Hard difficulty (or above)",
+				"Pre-emptive or Tactical Strike"
+			]
+		}
+	},
+	{
+		"name": "Smiler",
+		"event": "GE - Onslaught",
+		"commendation": "Never Enough",
+		"objective": "Complete 4 Events in the Onslaught Playlist."
+	},
+	{
+		"name": "Sting",
+		"event": "Commendation",
+		"commendation": "Hunter as Prey",
+		"objective": "Kill a total of 100 Hunters in the Underground, Survival, or Resistance"
+	},
+	{
+		"name": "Stripes",
+		"event": "Login Reward",
+		"commendation": null,
+		"objective": "Login between Dec 6, 2018 and Jan 10, 2019."
+	},
+	{
+		"name": "Stygian",
+		"event": "Commendation",
+		"commendation": "You Hunt me I Hunt You",
+		"objective": "Kill 5 Hunters in Survival, 5 Hunters in Resistance, and 5 Hunters in the Underground"
+	},
+	{
+		"name": "Tao",
+		"event": "GE - Blackout",
+		"commendation": "Fists Of Fury",
+		"objective": {
+			"description": "Perform a Melee Shock Kill on 200 enemies.",
+			"conditions": [
+				"Extreme Blackout or Total Blackout active"
+			]
+		}
+	},
+	{
+		"name": "Trench",
+		"event": "GE - Outbreak",
+		"commendation": "Clean Up on Outbreak",
+		"objective": "Kill 50 Cleaner Bosses."
+	},
+	{
+		"name": "Vulcan",
+		"event": "GE - Blackout",
+		"commendation": "Thunder And Lightning",
+		"objective": "Kill 500 enemies while they are Shocked."
+	}
+]
