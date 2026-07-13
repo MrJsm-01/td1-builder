@@ -16,8 +16,8 @@
 
 <!-- markdownlint-enable MD033 MD041 -->
 
-TD1 Builder is an unofficial fanmade website for creating and sharing The Division builds.
-It's not a tool for theorycrafting as it lacks numbers and calculations.
+TD1 Builder is an unofficial fanmade website for creating, sharing and finding The Division builds.  
+This is not a tool for theorycrafting, the builder does not calculate any gameplay stats. It is mainly a way to visualize your build, making it easy to share.
 
 ## Contributing
 
