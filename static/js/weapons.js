@@ -66,6 +66,16 @@ export function openWeaponPicker(slot) {
       `).join('')}
     </div>
     <div class="weapons-container">
+      ${BUILD[slot] !== null
+        ? `
+        <div class="weapon empty" id="clear-slot">
+          <div class="info-container">
+            <div class="name">Empty Slot</div>
+            <div class="desc">Remove the current item from this slot</div>
+          </div>
+        </div>
+      `
+        : ''}
       ${WEAPONS.map(w => `
         <div class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
           <div class="sprite-container">
@@ -123,6 +133,54 @@ export function selectWeapon(slot, weaponId) {
   renderWeaponSlot(slot);
   renderWeaponTalentSlots(slot);
   renderWeaponModSlots(slot);
+  renderWeaponBonuses();
+}
+
+export function clearWeaponSlot(slot) {
+  BUILD[slot] = null;
+
+  const CONTAINER = document.getElementById(`wp-${slot}`);
+  const SPRITE    = CONTAINER.querySelector('.type-container .sprite');
+  const SCORE     = DOM.score[slot];
+
+  CONTAINER.querySelector('.meta-container .name').textContent = 'Choose Weapon';
+  CONTAINER.querySelector('.meta-container .quality').textContent = 'Unknown quality';
+  CONTAINER.dataset.quality = 'worn';
+  SPRITE.className = 'sprite';
+  CONTAINER.querySelector('.type-container .type').textContent = 'Unknown Weapon Type';
+  CONTAINER.querySelector('.type-container .bonus').textContent = 'Unknown Bonus';
+  SCORE.hidden = true;
+  SCORE.textContent = '';
+
+  for (let i = 0; i < 3; i++) {
+    const TALENT_CONTAINER = document.getElementById(`wp-${slot}-talent${i + 1}`);
+
+    TALENT_CONTAINER.hidden = false;
+    TALENT_CONTAINER.classList.remove('locked');
+    TALENT_CONTAINER.querySelector('.name-container .name').textContent = 'Choose';
+    TALENT_CONTAINER.querySelector('.desc').textContent = 'Talent description is unavailable.';
+    TALENT_CONTAINER.querySelector('.sprite').className = 'sprite';
+    TALENT_CONTAINER.onclick = null;
+  }
+
+  [
+    'magazine',
+    'optics',
+    'muzzle',
+    'underbarrel'
+  ].forEach(modSlot => {
+    const MOD_CONTAINER = document.querySelector(`#wp-${slot} .sprite.${modSlot}`).closest('.mod-container');
+
+    MOD_CONTAINER.hidden = false;
+
+    for (let i = 0; i < 3; i++) {
+      const BONUS_EL = document.getElementById(`wp-${slot}-${modSlot}${i + 1}`);
+
+      BONUS_EL.textContent = 'Choose Bonus';
+      BONUS_EL.onclick = null;
+    }
+  });
+
   renderWeaponBonuses();
 }
 

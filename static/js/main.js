@@ -1,7 +1,7 @@
 import { DOM } from './dom.js';
 import { STATE } from './state.js';
 import { openModal, closeModal } from './modal.js';
-import { openWeaponPicker, selectWeapon, selectWeaponTalent, selectWeaponMod } from './weapons.js';
+import { openWeaponPicker, selectWeapon, selectWeaponTalent, selectWeaponMod, clearWeaponSlot } from './weapons.js';
 import { openGearPicker, selectGear, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { openSkillPicker, selectSkill } from './skills.js';
 import { openPlayerTalentPicker, selectPlayerTalent } from './talents.js';
@@ -63,6 +63,15 @@ DOM.modal.container.addEventListener('click', e => {
     setTimeout(() => {
       HELP.textContent = 'Click the URL above to copy it';
     }, 2000);
+
+    return;
+  }
+
+  if (e.target.closest('#clear-slot')) {
+    STATE.activeMode === 'weapon' && clearWeaponSlot(STATE.activeSlot);
+
+    updateAddressBar();
+    closeModal();
 
     return;
   }
