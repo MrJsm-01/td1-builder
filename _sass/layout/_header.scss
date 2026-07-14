@@ -20,11 +20,10 @@ header {
       opacity: 0.9;
     }
     .title {
+      @include respond-to('small') {
+        font-size: px2rem(20px);
+      }
       a {
-        font-size: px2rem(32px);
-        @include respond-to('small') {
-          font-size: px2rem(20px);
-        }
         opacity: 1;
       }
       &__emphasis {
