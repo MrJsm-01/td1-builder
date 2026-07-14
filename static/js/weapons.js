@@ -50,19 +50,45 @@ export function openWeaponPicker(slot) {
     );
   });
 
-  openModal(
-    WEAPONS.map(w => `
-      <div class="weapon" data-id="${w.id}" data-quality="${w.quality}">
-        <div class="sprite-container">
-          <div class="sprite ${w.id}" role="presentation"></div>
+  const TYPE_FILTERS = WP_TYPE_ORDER.filter(t => WEAPONS.some(w => w.type === t));
+
+  openModal(`
+    <div class="filters-container">
+      <label class="filter-container">
+        <input type="radio" name="weapon-filter" value="all" class="filter-radio" checked>
+        <div class="filter">Show All</div>
+      </label>
+      ${TYPE_FILTERS.map(t => `
+        <label class="filter-container">
+          <input type="radio" name="weapon-filter" value="${t}" class="filter-radio">
+          <div class="filter">${GAME_DATA.weapon_types[t].short ?? GAME_DATA.weapon_types[t].label}</div>
+        </label>
+      `).join('')}
+    </div>
+    <div class="weapons-container">
+      ${WEAPONS.map(w => `
+        <div class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
+          <div class="sprite-container">
+            <div class="sprite ${w.id}" role="presentation"></div>
+          </div>
+          <div class="info-container">
+            <div class="name">${w.name}</div>
+            <div class="desc">${GAME_DATA.weapon_types[w.type].label}</div>
+          </div>
         </div>
-        <div class="info-container">
-          <div class="name">${w.name}</div>
-          <div class="desc">${GAME_DATA.weapon_types[w.type].label}</div>
-        </div>
-      </div>
-    `).join('')
-  );
+      `).join('')}
+    </div>
+  `);
+
+  document.querySelectorAll('.filter-radio').forEach(radio => {
+    radio.addEventListener('change', () => filterWeapons(radio.value));
+  });
+}
+
+function filterWeapons(type) {
+  document.querySelectorAll('.weapons-container .weapon').forEach(el => {
+    el.hidden = type !== 'all' && el.dataset.type !== type;
+  });
 }
 
 function renderWeaponSlot(slot) {

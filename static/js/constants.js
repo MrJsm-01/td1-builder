@@ -9,9 +9,9 @@ export const QUALITY_ORDER = {
 // Quality order for gear
 export const GEAR_QUALITY_ORDER = {
   exotic  : 0,
-  classy  : 1,
-  gearset : 2,
-  highend : 3
+  highend : 1,
+  classy  : 2,
+  gearset : 3
 };
 
 // Quality order for gear mods

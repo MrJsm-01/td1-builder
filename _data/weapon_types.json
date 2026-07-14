@@ -16,16 +16,19 @@
 	},
 	"lmg": {
 		"label": "Light Machine Gun",
+		"short": "LMG",
 		"bonus": "DMG to Target Out of Cover",
 		"slot": "primary_secondary"
 	},
 	"mmr": {
 		"label": "Marksman Rifle",
+		"short": "MMR",
 		"bonus": "Headshot Damage",
 		"slot": "primary_secondary"
 	},
 	"smg": {
 		"label": "Submachine Gun",
+		"short": "SMG",
 		"bonus": "Critical Hit Chance",
 		"slot": "primary_secondary"
 	},

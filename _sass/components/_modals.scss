@@ -545,7 +545,71 @@
         }
       }
     }
-    &:has(> .weapon),
+    &:has(> .filters-container) {
+      @include respond-to('small') {
+        width: 90vw;
+      }
+      .filters-container,
+      .weapons-container,
+      .gear-container {
+        gap: 0.5em;
+      }
+      .filters-container {
+        display: flex;
+        flex-flow: row wrap;
+        .filter-container {
+          position: relative;
+          flex: 1 1 auto;
+          padding: px2rem(4px) px2rem(8px);
+          font-size: 0.875em;
+          color: var(--default-text-color--light);
+          cursor: pointer;
+          background-color: var(--default-bg-color--clearest);
+          transition: background-color 0.15s ease;
+          &::before {
+            position: absolute;
+            top: -4px;
+            left: 0;
+            width: 100%;
+            content: '';
+          }
+          @include hocus {
+            background-color: var(--default-bg-color--clearer);
+            &::before {
+              border-top: 2px solid var(--default-bg-color--clearer);
+              animation: absolute-slide 0.25s ease-in-out;
+              @include reduced-motion {
+                animation: none;
+              }
+            }
+          }
+          .filter-radio {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+          }
+          &:has(.filter-radio:checked) {
+            color: var(--default-text-color);
+            background-color: var(--brand-color);
+            &::before {
+              border-top: 2px solid var(--brand-color);
+              animation: none;
+            }
+          }
+        }
+      }
+      .weapons-container,
+      .gear-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        [hidden] {
+          display: none;
+        }
+      }
+    }
+    &:has(> .filters-container),
     &:has(> .gear),
     &:has(> .mod),
     &:has(> .attr),
@@ -554,7 +618,7 @@
       flex-flow: column nowrap;
       align-items: stretch;
     }
-    &:has(> .weapon),
+    &:has(> .filters-container),
     &:has(> .gear),
     &:has(> .talent),
     &:has(> .mod),
@@ -562,7 +626,7 @@
     &:has(> .wing),
     &:has(> .share),
     &:has(> .gear-mod) {
-      gap: 0.5rem;
+      gap: 0.5em;
     }
     &:has(> .talent) {
       display: grid;

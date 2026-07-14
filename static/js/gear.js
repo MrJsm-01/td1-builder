@@ -31,19 +31,45 @@ export function openGearPicker(slot) {
     );
   });
 
-  openModal(
-    ITEMS.map(g => `
-      <div class="gear" data-id="${g.id}" data-quality="${g.quality}">
-        <div class="sprite-container">
-          <div class="sprite ${g.id}" role="presentation"></div>
+  openModal(`
+    <div class="filters-container">
+      <label class="filter-container">
+        <input type="radio" name="gear-filter" value="all" class="filter-radio" checked>
+        <div class="filter">Show All</div>
+      </label>
+      <label class="filter-container">
+        <input type="radio" name="gear-filter" value="classy" class="filter-radio">
+        <div class="filter">Classified</div>
+      </label>
+      <label class="filter-container">
+        <input type="radio" name="gear-filter" value="gearset" class="filter-radio">
+        <div class="filter">Gear Set</div>
+      </label>
+    </div>
+    <div class="gear-container">
+      ${ITEMS.map(g => `
+        <div class="gear" data-id="${g.id}" data-quality="${g.quality}">
+          <div class="sprite-container">
+            <div class="sprite ${g.id}" role="presentation"></div>
+          </div>
+          <div class="info-container">
+            <div class="name">${g.name}</div>
+            <div class="desc">${GAME_DATA.qualities[g.quality]}</div>
+          </div>
         </div>
-        <div class="info-container">
-          <div class="name">${g.name}</div>
-          <div class="desc">${GAME_DATA.qualities[g.quality]}</div>
-        </div>
-      </div>
-    `).join('')
-  );
+      `).join('')}
+    </div>
+  `);
+
+  document.querySelectorAll('.filter-radio').forEach(radio => {
+    radio.addEventListener('change', () => filterGear(radio.value));
+  });
+}
+
+function filterGear(quality) {
+  document.querySelectorAll('.gear-container .gear').forEach(el => {
+    el.hidden = quality !== 'all' && el.dataset.quality !== quality;
+  });
 }
 
 function renderGearSlot(slot) {
