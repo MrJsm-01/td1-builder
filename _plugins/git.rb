@@ -11,10 +11,10 @@
 #
 
 module Jekyll
-  class GitMetadataGenerator < Generator
+  class GitMetadata < Generator
     priority :highest
 
-    VERSION = '1.0.0'.freeze
+    VERSION = '1.0.1'.freeze
 
     def generate(site)
       site.config['git'] = {}
@@ -26,4 +26,4 @@ module Jekyll
   end
 end
 
-Jekyll.logger.info 'Plugin:', "#{File.basename(__FILE__)} #{Jekyll::GitMetadataGenerator::VERSION} loaded."
+Jekyll.logger.info 'Plugin:', "#{File.basename(__FILE__)} #{Jekyll::GitMetadata::VERSION} loaded."
