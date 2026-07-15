@@ -68,7 +68,12 @@ export function openWeaponPicker(slot) {
     <div class="weapons-container">
       ${BUILD[slot] !== null
         ? `
-        <div class="weapon empty" id="clear-slot">
+        <div class="weapon" id="clear-slot" data-type="unknown" data-quality="worn">
+          <div class="icon-container">
+            <svg viewBox="0 0 24 24" class="icon empty">
+              <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            </svg>
+          </div>
           <div class="info-container">
             <div class="name">Empty Slot</div>
             <div class="desc">Remove the current item from this slot</div>

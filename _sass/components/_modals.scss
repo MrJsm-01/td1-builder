@@ -108,6 +108,26 @@
       }
     }
     .weapon {
+      &[data-quality='worn'] {
+        .icon-container {
+          background-color: var(--quality-worn--light);
+        }
+        .info-container {
+          .name {
+            // color: var(--quality-worn);
+          }
+        }
+      }
+      .icon-container {
+        .icon {
+          display: block;
+          // stylelint-disable unit-disallowed-list
+          width: 128px;
+          height: 64px;
+          // stylelint-enable unit-disallowed-list
+          fill: currentColor;
+        }
+      }
       .sprite-container {
         .sprite {
           // stylelint-disable-next-line defensive-css/require-background-repeat
