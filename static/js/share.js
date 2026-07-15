@@ -1,6 +1,7 @@
 /* global LZString */
 
 import { BUILD_VERSION } from './constants.js';
+import { STRINGS } from './strings.js';
 import { BUILD } from './state.js';
 import { openModal } from './modal.js';
 import { selectWeapon, selectWeaponTalent, selectWeaponMod, setWeaponScore, GEAR_SCORE } from './weapons.js';
@@ -246,6 +247,6 @@ export function openShareModal() {
     <div class="share">
       <input type="text" id="share-url" value="${SHARE_URL}" readonly>
     </div>
-    <div class="help">Click the URL above to copy it</div>
+    <div class="help">${STRINGS.help.clipboard.copy}</div>
   `);
 }

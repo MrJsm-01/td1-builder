@@ -2,6 +2,7 @@ import { GAME_DATA } from './data.js';
 import { QUALITY_ORDER } from './constants.js';
 import { BUILD, STATE } from './state.js';
 import { DOM } from './dom.js';
+import { STRINGS } from './strings.js';
 import { openModal } from './modal.js';
 import { updateAddressBar } from './share.js';
 
@@ -56,7 +57,7 @@ export function openWeaponPicker(slot) {
     <div class="filters-container">
       <label class="filter-container">
         <input type="radio" name="weapon-filter" value="all" class="filter-radio" checked>
-        <div class="filter">Show All</div>
+        <div class="filter">${STRINGS.filters.all}</div>
       </label>
       ${TYPE_FILTERS.map(t => `
         <label class="filter-container">
@@ -75,8 +76,8 @@ export function openWeaponPicker(slot) {
             </svg>
           </div>
           <div class="info-container">
-            <div class="name">Empty Slot</div>
-            <div class="desc">Remove the current item from this slot</div>
+            <div class="name">${STRINGS.weapons.empty.name}</div>
+            <div class="desc">${STRINGS.weapons.empty.desc}</div>
           </div>
         </div>
       `
@@ -148,12 +149,12 @@ export function clearWeaponSlot(slot) {
   const SPRITE    = CONTAINER.querySelector('.type-container .sprite');
   const SCORE     = DOM.score[slot];
 
-  CONTAINER.querySelector('.meta-container .name').textContent = 'Choose Weapon';
-  CONTAINER.querySelector('.meta-container .quality').textContent = 'Unknown quality';
+  CONTAINER.querySelector('.meta-container .name').textContent = STRINGS.weapons.choose;
+  CONTAINER.querySelector('.meta-container .quality').textContent = STRINGS.weapons.quality;
   CONTAINER.dataset.quality = 'worn';
   SPRITE.className = 'sprite';
-  CONTAINER.querySelector('.type-container .type').textContent = 'Unknown Weapon Type';
-  CONTAINER.querySelector('.type-container .bonus').textContent = 'Unknown Bonus';
+  CONTAINER.querySelector('.type-container .type').textContent = STRINGS.weapons.type;
+  CONTAINER.querySelector('.type-container .bonus').textContent = STRINGS.weapons.bonus;
   SCORE.hidden = true;
   SCORE.textContent = '';
 
@@ -162,8 +163,8 @@ export function clearWeaponSlot(slot) {
 
     TALENT_CONTAINER.hidden = false;
     TALENT_CONTAINER.classList.remove('locked');
-    TALENT_CONTAINER.querySelector('.name-container .name').textContent = 'Choose';
-    TALENT_CONTAINER.querySelector('.desc').textContent = 'Talent description is unavailable.';
+    TALENT_CONTAINER.querySelector('.name-container .name').textContent = STRINGS.talents.name;
+    TALENT_CONTAINER.querySelector('.desc').textContent = STRINGS.talents.desc;
     TALENT_CONTAINER.querySelector('.sprite').className = 'sprite';
     TALENT_CONTAINER.onclick = null;
   }
@@ -181,7 +182,7 @@ export function clearWeaponSlot(slot) {
     for (let i = 0; i < 3; i++) {
       const BONUS_EL = document.getElementById(`wp-${slot}-${modSlot}${i + 1}`);
 
-      BONUS_EL.textContent = 'Choose Bonus';
+      BONUS_EL.textContent = STRINGS.mods.unknown.bonus;
       BONUS_EL.onclick = null;
     }
   });
@@ -217,7 +218,7 @@ function openWeaponTalentPicker(slot, index) {
     TALENTS.map(t => `
       <div class="talent" data-id="${t.id}">
         <div class="name-container">
-          <strong class="quality">Talent</strong>
+          <strong class="quality">${STRINGS.talents.talent}</strong>
           <span class="separator"> | </span>
           <span class="name">${t.name}</span>
         </div>
@@ -257,8 +258,8 @@ function renderWeaponTalentSlots(slot) {
       CONTAINER.querySelector('.desc').textContent = TALENT.desc;
       SPRITE.classList.add(TALENT_ID);
     } else {
-      CONTAINER.querySelector('.name-container .name').textContent = 'Choose';
-      CONTAINER.querySelector('.desc').textContent = 'Talent description is unavailable.';
+      CONTAINER.querySelector('.name-container .name').textContent = STRINGS.talents.name;
+      CONTAINER.querySelector('.desc').textContent = STRINGS.talents.desc;
     }
 
     // Check for Exotic talent
@@ -353,7 +354,7 @@ function renderWeaponModSlots(slot) {
 
       BONUS.textContent = MOD_ID !== null
         ? GAME_DATA.weapon_mods.find(m => m.id === MOD_ID).label
-        : 'Choose Bonus';
+        : STRINGS.mods.choose.bonus;
       BONUS.onclick = () => openWeaponModPicker(slot, modSlot, i);
     }
   });

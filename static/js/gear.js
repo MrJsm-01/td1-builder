@@ -1,4 +1,5 @@
 import { GAME_DATA } from './data.js';
+import { STRINGS } from './strings.js';
 import { GEAR_QUALITY_ORDER, GEAR_MOD_QUALITY_ORDER, GEAR_SLOT_CONFIG } from './constants.js';
 import { BUILD, STATE } from './state.js';
 import { openModal } from './modal.js';
@@ -35,15 +36,15 @@ export function openGearPicker(slot) {
     <div class="filters-container">
       <label class="filter-container">
         <input type="radio" name="gear-filter" value="all" class="filter-radio" checked>
-        <div class="filter">Show All</div>
+        <div class="filter">${STRINGS.filters.all}</div>
       </label>
       <label class="filter-container">
         <input type="radio" name="gear-filter" value="classy" class="filter-radio">
-        <div class="filter">Classified</div>
+        <div class="filter">${STRINGS.filters.classy}</div>
       </label>
       <label class="filter-container">
         <input type="radio" name="gear-filter" value="gearset" class="filter-radio">
-        <div class="filter">Gear Set</div>
+        <div class="filter">${STRINGS.filters.gearset}</div>
       </label>
     </div>
     <div class="gear-container">
@@ -141,7 +142,7 @@ function renderGearAttrs(slot) {
 
       CONTAINER.textContent = ATTR_ID !== null
         ? GAME_DATA.gear_attr[attrType].find(a => a.id === ATTR_ID).name
-        : 'Choose Attribute';
+        : STRINGS.attributes.choose;
       CONTAINER.onclick = () => openGearAttrPicker(slot, attrType, i);
     }
   });
@@ -224,13 +225,13 @@ function renderGearMods(slot) {
       TYPE_CONTAINER.dataset.quality = MOD.quality;
       SPRITE.classList.add(MOD.type);
     } else {
-      TYPE_CONTAINER.querySelector('strong').textContent = 'Choose Mod';
+      TYPE_CONTAINER.querySelector('strong').textContent = STRINGS.mods.choose.gear;
     }
     TYPE_CONTAINER.onclick = () => openGearModTypePicker(slot, i);
 
     BONUS_CONTAINER.textContent = MOD_STATE.bonus !== null
       ? GAME_DATA.gear_mods_bonus.find(b => b.id === MOD_STATE.bonus).name
-      : 'Choose Bonus';
+      : STRINGS.mods.choose.bonus;
     BONUS_CONTAINER.classList.toggle('disabled', MOD_STATE.type === null);
     BONUS_CONTAINER.onclick = MOD_STATE.type === null ? null : () => openGearModBonusPicker(slot, i);
   }
@@ -278,7 +279,7 @@ function renderPerfMods(slot) {
 
     CONTAINER.textContent = MOD_ID !== null
       ? GAME_DATA.gear_perf_mods.find(m => m.id === MOD_ID).name
-      : 'Choose Bonus';
+      : STRINGS.mods.choose.bonus;
     CONTAINER.onclick = () => openPerfModPicker(slot, i);
   }
 }
@@ -375,14 +376,13 @@ function openGearTalentPicker(slot) {
   STATE.activeMode = 'gear-talent';
 
   const TALENTS = GAME_DATA.gear_talents.filter(t => t.compat.slot === slot);
-
   TALENTS.sort((a, b) => a.name.localeCompare(b.name));
 
   openModal(
     TALENTS.map(t => `
       <div class="talent" data-id="${t.id}">
         <div class="name-container">
-          <strong class="quality">Talent</strong>
+          <strong class="quality">${STRINGS.talents.talent}</strong>
           <span class="separator"> | </span>
           <span class="name">${t.name}</span>
         </div>
@@ -407,11 +407,12 @@ function renderGearTalent(slot) {
 
   if (TALENT_ID !== null) {
     const TALENT = GAME_DATA.gear_talents.find(t => t.id === TALENT_ID);
+
     CONTAINER.querySelector('.name-container .name').textContent = TALENT.name;
     CONTAINER.querySelector('.desc').innerHTML = TALENT.desc;
   } else {
-    CONTAINER.querySelector('.name-container .name').textContent = 'Choose';
-    CONTAINER.querySelector('.desc').textContent = 'Talent description is unavailable.';
+    CONTAINER.querySelector('.name-container .name').textContent = STRINGS.talents.name;
+    CONTAINER.querySelector('.desc').textContent = STRINGS.talents.desc;
   }
 
   CONTAINER.classList.toggle('locked', IS_LOCKED);

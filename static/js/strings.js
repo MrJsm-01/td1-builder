@@ -1,0 +1,53 @@
+export const STRINGS = {
+  weapons : {
+    choose  : 'Choose Weapon',
+    quality : 'Unknown quality',
+    type    : 'Unkwnown Weapon Type',
+    bonus   : 'Unknown Bonus',
+    empty   : {
+      name : 'Empty Slot',
+      desc : 'Remove the current item from this slot'
+    }
+  },
+  gear : {
+    slots : {
+      chest    : 'Choose Chest',
+      mask     : 'Choose Mask',
+      kneepads : 'Choose Kneepads',
+      backpack : 'Choose Backpack',
+      gloves   : 'Choose Gloves',
+      holster  : 'Choose Holster'
+    },
+    quality : 'Unknown quality'
+  },
+  talents : {
+    talent : 'Talent',
+    name   : 'Choose',
+    desc   : 'Talent description is unavailable'
+  },
+  attributes : {
+    choose  : 'Choose Attribute',
+    unknown : 'Unknown Attribute'
+  },
+  mods : {
+    choose : {
+      gear  : 'Choose Mod',
+      bonus : 'Choose Bonus'
+    },
+    unknown : {
+      gear  : 'Gear Mod',
+      bonus : 'Unknown Bonus'
+    }
+  },
+  filters : {
+    all     : 'Show All',
+    classy  : 'Classified',
+    gearset : 'Gear Set'
+  },
+  help : {
+    clipboard : {
+      copy   : 'Click the URL above to copy it',
+      copied : 'Copied'
+    }
+  }
+};

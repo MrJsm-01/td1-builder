@@ -1,4 +1,5 @@
 import { DOM } from './dom.js';
+import { STRINGS } from './strings.js';
 import { STATE } from './state.js';
 import { openModal, closeModal } from './modal.js';
 import { openWeaponPicker, selectWeapon, selectWeaponTalent, selectWeaponMod, clearWeaponSlot } from './weapons.js';
@@ -59,9 +60,9 @@ DOM.modal.container.addEventListener('click', e => {
     INPUT.select();
     navigator.clipboard.writeText(INPUT.value);
 
-    HELP.textContent = 'Copied';
+    HELP.textContent = STRINGS.help.clipboard.copied;
     setTimeout(() => {
-      HELP.textContent = 'Click the URL above to copy it';
+      HELP.textContent = STRINGS.help.clipboard.copy;
     }, 2000);
 
     return;
