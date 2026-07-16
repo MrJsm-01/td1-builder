@@ -20,6 +20,9 @@ export const GEAR_MOD_QUALITY_ORDER = {
   superior : 1
 };
 
+export const BASE_PLAYER_STAT = 535;
+export const BASE_GEAR_STAT   = 205;
+
 // Gear attributes and mods count
 export const GEAR_SLOT_CONFIG = {
   chest : {

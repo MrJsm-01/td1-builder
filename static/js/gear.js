@@ -1,12 +1,23 @@
 import { GAME_DATA } from './data.js';
+import { DOM } from './dom.js';
 import { STRINGS } from './strings.js';
-import { GEAR_QUALITY_ORDER, GEAR_MOD_QUALITY_ORDER, GEAR_SLOT_CONFIG } from './constants.js';
+import { GEAR_QUALITY_ORDER, GEAR_MOD_QUALITY_ORDER, BASE_PLAYER_STAT, BASE_GEAR_STAT, GEAR_SLOT_CONFIG } from './constants.js';
 import { BUILD, STATE } from './state.js';
 import { openModal } from './modal.js';
 import { updateAddressBar } from './share.js';
 
 // Gear Set bonuses
 const BONUS_SLOTS = [
+  'chest',
+  'mask',
+  'kneepads',
+  'backpack',
+  'gloves',
+  'holster'
+];
+
+// Gear main stats
+const STAT_SLOTS = [
   'chest',
   'mask',
   'kneepads',
@@ -109,6 +120,7 @@ export function selectGear(slot, itemId) {
   renderGearMods(slot);
   renderPerfMods(slot);
   renderGearSetBonuses();
+  renderGearStats();
 }
 
 function openGearAttrPicker(slot, attrType, index) {
@@ -241,6 +253,7 @@ export function selectGearModType(slot, index, modId) {
   BUILD[slot].gearMods[index].type = Number(modId);
   BUILD[slot].gearMods[index].bonus = null;
   renderGearMods(slot);
+  renderGearStats();
 }
 
 export function selectGearModBonus(slot, index, bonusId) {
@@ -371,6 +384,54 @@ function renderGearSetBonuses() {
   });
 }
 
+function computeGearStats() {
+  const TOTALS = {
+    fa  : BASE_PLAYER_STAT,
+    sta : BASE_PLAYER_STAT,
+    ele : BASE_PLAYER_STAT
+  };
+
+  STAT_SLOTS.forEach(slot => {
+    const GEAR_STATE = BUILD[slot];
+    if (GEAR_STATE === null) return;
+
+    const ITEM     = GAME_DATA.gear.find(g => g.id === GEAR_STATE.itemId);
+    const STAT_MAX = ITEM.quality === 'classy' ? GAME_DATA.gear_attr.stats.classy : GAME_DATA.gear_attr.stats.highend;
+
+    if (slot === 'holster') {
+      TOTALS.fa += STAT_MAX;
+      TOTALS.sta += STAT_MAX;
+      TOTALS.ele += STAT_MAX;
+
+      return;
+    }
+
+    TOTALS.fa += BASE_GEAR_STAT;
+    TOTALS.sta += BASE_GEAR_STAT;
+    TOTALS.ele += BASE_GEAR_STAT;
+
+    if (GEAR_STATE.stat !== null) TOTALS[GEAR_STATE.stat] += STAT_MAX - BASE_GEAR_STAT;
+
+    GEAR_STATE.gearMods.forEach(mod => {
+      if (mod.type === null) return;
+
+      const MOD = GAME_DATA.gear_mods.find(m => m.id === mod.type);
+
+      TOTALS[MOD.type] += MOD.value;
+    });
+  });
+
+  return TOTALS;
+}
+
+export function renderGearStats() {
+  const TOTALS = computeGearStats();
+
+  DOM.stats.fa.textContent = TOTALS.fa.toLocaleString('en-US');
+  DOM.stats.sta.textContent = TOTALS.sta.toLocaleString('en-US');
+  DOM.stats.ele.textContent = TOTALS.ele.toLocaleString('en-US');
+}
+
 function openGearTalentPicker(slot) {
   STATE.activeSlot = slot;
   STATE.activeMode = 'gear-talent';
@@ -432,5 +493,6 @@ document.querySelectorAll('.stat-radio').forEach(radio => {
 
     BUILD[SLOT].stat = e.target.value;
     updateAddressBar();
+    renderGearStats();
   });
 });

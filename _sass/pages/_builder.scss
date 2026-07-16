@@ -77,9 +77,62 @@ body {
   }
 }
 
+.stats,
 .build {
   --margin: 2rem;
   margin-bottom: var(--margin);
+}
+
+.stats {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  .firearms,
+  .stamina,
+  .electronics {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em;
+    font-size: h(3);
+    background:
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+    ;
+    background-color: var(--default-bg-color--clearest);
+    background-size: 3px 3px;
+    // border-top: 1px solid var(--default-bg-color--clearest);
+    // border-bottom: 1px solid var(--default-bg-color--clearest);
+    backdrop-filter: blur(5px);
+    .name,
+    .value {
+      text-shadow:
+        0 0 3px var(--default-bg-color--lightest),
+        3px 3px 0 var(--default-bg-color--clearest)
+      ;
+    }
+    .sprite {
+      // stylelint-disable unit-disallowed-list
+      width: 24px;
+      height: 24px;
+      // stylelint-enable unit-disallowed-list
+      background-image: url('#{$base-url}img/sprites/g_stats_calc.png');
+      background-repeat: no-repeat;
+    }
+  }
+  .firearms .sprite    { background-position: -24px -0; }
+  .stamina .sprite     { background-position: -48px -0; }
+  .electronics .sprite { background-position: -0 -0; }
+}
+
+.build {
   .weapon,
   .gear {
     &::-webkit-scrollbar {

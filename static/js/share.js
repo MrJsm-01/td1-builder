@@ -5,7 +5,7 @@ import { STRINGS } from './strings.js';
 import { BUILD } from './state.js';
 import { openModal } from './modal.js';
 import { selectWeapon, selectWeaponTalent, selectWeaponMod, setWeaponScore, GEAR_SCORE } from './weapons.js';
-import { selectGear, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
+import { selectGear, renderGearStats, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { selectSkill } from './skills.js';
 import { selectPlayerTalent } from './talents.js';
 
@@ -224,6 +224,8 @@ function applyBuildData(payload) {
   if (payload.pt) {
     Object.keys(payload.pt).forEach(slot => selectPlayerTalent(slot, payload.pt[slot]));
   }
+
+  renderGearStats();
 }
 
 export function loadBuildFromUrl() {

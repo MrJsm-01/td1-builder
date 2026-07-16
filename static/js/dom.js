@@ -8,6 +8,11 @@ export const DOM = {
     container : document.querySelector('.modal-container'),
     close     : document.querySelector('#close-modal')
   },
+  stats : {
+    fa  : document.querySelector('#fa-value'),
+    sta : document.querySelector('#sta-value'),
+    ele : document.querySelector('#ele-value')
+  },
   slots : {
     primary   : document.querySelector('#wp-primary-select'),
     secondary : document.querySelector('#wp-secondary-select'),
