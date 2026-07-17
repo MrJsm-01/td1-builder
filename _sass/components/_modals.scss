@@ -633,7 +633,7 @@
     &:has(> .gear),
     &:has(> .mod),
     &:has(> .attr),
-    &:has(.gear-mod) {
+    &:has(> .gear-mod) {
       display: flex;
       flex-flow: column nowrap;
       align-items: stretch;
