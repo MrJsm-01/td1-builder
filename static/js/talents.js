@@ -1,5 +1,6 @@
 import { GAME_DATA } from './data.js';
 import { DOM } from './dom.js';
+import { STRINGS } from './strings.js';
 import { BUILD, STATE } from './state.js';
 import { openModal } from './modal.js';
 
@@ -40,7 +41,7 @@ export function openPlayerTalentPicker(slot) {
     `;
   }).join('');
 
-  openModal(HTML);
+  openModal(HTML, STRINGS.talents.choose_player);
 }
 
 function findPlayerTalent(talentId) {
@@ -62,6 +63,7 @@ function renderPlayerTalentSlot(slot) {
   SPRITE.className = 'sprite';
   SPRITE.classList.add(TALENT.id);
   CONTAINER.dataset.tooltip = `${TALENT.name}\n${TALENT.desc}`;
+  CONTAINER.setAttribute('aria-label', `${TALENT.name} - Click to change`);
 }
 
 export function selectPlayerTalent(slot, talentId) {

@@ -1,6 +1,7 @@
 import { GAME_DATA } from './data.js';
-import { BUILD, STATE } from './state.js';
 import { DOM } from './dom.js';
+import { STRINGS } from './strings.js';
+import { BUILD, STATE } from './state.js';
 import { openModal } from './modal.js';
 
 function findSkill(pool, skillId) {
@@ -67,7 +68,7 @@ export function openSkillPicker(slot) {
     `;
   }).join('');
 
-  openModal(HTML);
+  openModal(HTML, STRINGS.skills.choose);
 }
 
 function renderSkill(slot) {
@@ -80,6 +81,7 @@ function renderSkill(slot) {
   SPRITE.className = 'sprite';
   SPRITE.classList.add(SKILL.id);
   CONTAINER.dataset.tooltip = `${SKILL.name}\n${SKILL.desc}`;
+  CONTAINER.setAttribute('aria-label', `${SKILL.name} - Click to change`);
 }
 
 export function selectSkill(slot, skillId) {

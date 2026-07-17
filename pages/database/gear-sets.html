@@ -5,12 +5,12 @@ title: Gear Sets
 description: Every Gear Set and their 4-piece and Classified bonuses.
 ---
 
-<section class="database-gsets">
-	<h1>{{ page.title }}</h1>
+<section class="database-gsets" aria-labelledby="title-gsets">
+	<h1 id="title-gsets">{{ page.title }}</h1>
 	<p>{{ page.description }}</p>
 </section>
 
-<section class="gear-sets">
+<section class="gear-sets" aria-label="Gear Sets Bonuses">
 	{%- assign gear_sets = site.data.gear_bonus -%}
 	{% for gs in gear_sets %}
 		{%- assign key = gs[0] -%}

@@ -1,10 +1,11 @@
 import { DOM } from './dom.js';
 
-// See _sass/components/_modals.scss .modal-container.animated
+// See: _sass/components/_modals.scss .modal-container.animated
 const ANIM_CLOSE_DURATION = 250;
 
-export function openModal(html) {
+export function openModal(html, title) {
   DOM.modal.container.innerHTML = html;
+  DOM.modal.container.setAttribute('aria-label', title);
   DOM.modal.backdrop.classList.remove('d-none');
   DOM.modal.close.classList.remove('d-none');
   DOM.modal.container.scrollTop = 0;
@@ -20,5 +21,6 @@ export function closeModal() {
     DOM.body.classList.remove('no-overflow');
     DOM.modal.container.textContent = '';
     DOM.modal.container.classList.remove('closing');
+    DOM.modal.container.removeAttribute('aria-label');
   }, ANIM_CLOSE_DURATION);
 }

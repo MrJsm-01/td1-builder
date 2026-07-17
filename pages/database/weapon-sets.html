@@ -5,12 +5,12 @@ title: Weapon Sets
 description: Every weapon set and their bonuses.
 ---
 
-<section class="database-wsets">
-	<h1>{{ page.title }}</h1>
+<section class="database-wsets" aria-labelledby="title-wsets">
+	<h1 id="title-wsets">{{ page.title }}</h1>
 	<p>{{ page.description }}</p>
 </section>
 
-<section class="weapon-sets">
+<section class="weapon-sets" aria-label="Weapon Sets Bonuses">
 	{%- assign weapons = site.data.weapons -%}
 	{%- assign weapon_bonus = site.data.weapon_bonus -%}
 	{%- assign sortable = "" | split: "" -%}

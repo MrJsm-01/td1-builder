@@ -5,12 +5,12 @@ title: Gear Talents
 description: Every Exotic and High-End gear and their talents.
 ---
 
-<section class="database-gtalents">
-	<h1>{{ page.title }}</h1>
+<section class="database-gtalents" aria-labelledby="title-gtalents">
+	<h1 id="title-gtalents">{{ page.title }}</h1>
 	<p>{{ page.description }}</p>
 </section>
 
-<section class="gear-talents">
+<section class="gear-talents" aria-label="Gear Talents Database">
 	{%- assign gear_talents = site.data.gear_talents -%}
 	{%- assign gear_talents_he = gear_talents | where_exp: "gear_talents", "gear_talents.compat.slot != nil" -%}
 	{%- assign gear_talents_exotic = gear_talents | where_exp: "gear_talents", "gear_talents.compat.item != nil" -%}

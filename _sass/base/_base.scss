@@ -51,10 +51,14 @@ a {
   text-decoration: none;
 }
 
-[type='button'],
-button {
+button:not(
+  [id^='wp-'],
+  [id^='gp-'],
+  [id^='skill'],
+  [id^='talent']
+) {
   padding: px2rem(6px) px2rem(12px);
-  font-family: $font-stack-text;
+  font-family: inherit;
   font-size: px2rem(16px);
   color: var(--default-text-color);
   touch-action: manipulation;
@@ -75,3 +79,21 @@ button {
     background-color: var(--default-bg-color--clearer);
   }
 }
+
+// Visually hide content
+// https://github.com/twbs/bootstrap/blob/-/scss/mixins/_visually-hidden.scss
+// stylelint-disable declaration-no-important, unit-disallowed-list
+.visually-hidden:not(
+  :focus,
+  :active
+) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  clip-path: rect(0 0 0 0) !important;
+}
+// stylelint-enable declaration-no-important, unit-disallowed-list

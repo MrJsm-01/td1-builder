@@ -21,9 +21,11 @@ export const STRINGS = {
     quality : 'Unknown quality'
   },
   talents : {
-    talent : 'Talent',
-    name   : 'Choose',
-    desc   : 'Talent description is unavailable'
+    choose        : 'Choose Talent',
+    choose_player : 'Choose Player Talent',
+    talent        : 'Talent',
+    name          : 'Choose',
+    desc          : 'Talent description is unavailable'
   },
   attributes : {
     choose  : 'Choose Attribute',
@@ -39,12 +41,17 @@ export const STRINGS = {
       bonus : 'Unknown Bonus'
     }
   },
+  skills : {
+    choose : 'Choose Skill'
+  },
   filters : {
     all     : 'Show All',
     classy  : 'Classified',
     gearset : 'Gear Set'
   },
   help : {
+    share     : 'Share build URL',
+    issues    : 'Report an issue',
     clipboard : {
       copy   : 'Click the URL above to copy it',
       copied : 'Copied'

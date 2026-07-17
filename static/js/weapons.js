@@ -94,7 +94,7 @@ export function openWeaponPicker(slot) {
         </div>
       `).join('')}
     </div>
-  `);
+  `, STRINGS.weapons.choose);
 
   document.querySelectorAll('.filter-radio').forEach(radio => {
     radio.addEventListener('change', () => filterWeapons(radio.value));
@@ -225,7 +225,8 @@ function openWeaponTalentPicker(slot, index) {
         <div class="desc">${t.desc}</div>
         <div class="sprite ${t.id}" role="presentation"></div>
       </div>
-    `).join('')
+    `).join(''),
+    STRINGS.talents.choose
   );
 }
 
@@ -326,7 +327,8 @@ function openWeaponModPicker(slot, modSlot, index) {
   openModal(
     MODS.map(m => `
       <div class="mod" data-id="${m.id}">${m.label}</div>
-    `).join('')
+    `).join(''),
+    STRINGS.mods.choose.bonus
   );
 }
 

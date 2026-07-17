@@ -250,5 +250,5 @@ export function openShareModal() {
       <input type="text" id="share-url" value="${SHARE_URL}" readonly>
     </div>
     <div class="help">${STRINGS.help.clipboard.copy}</div>
-  `);
+  `, STRINGS.help.share);
 }

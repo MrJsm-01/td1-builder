@@ -49,7 +49,7 @@ DOM.issueButton.addEventListener('click', () => openModal(`
       You can also <a href="https://strappazzon.xyz/contact/">contact me</a> directly if you don't have an account.
     </p>
   </div>
-`));
+`, STRINGS.help.issues));
 
 // Modal
 DOM.modal.container.addEventListener('click', e => {

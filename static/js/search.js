@@ -1,6 +1,7 @@
 // Adapted from: https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/master/js/index.js
 
-const SEARCH_INPUT = document.querySelector('#search');
+const SEARCH_INPUT  = document.querySelector('#search');
+const SEARCH_STATUS = document.querySelector('#search-status');
 
 function debounce(func, delay) {
   let t = null;
@@ -29,6 +30,9 @@ function search(query) {
       card.classList.add('d-none');
     }
   });
+
+  const VISIBLE_COUNT = document.querySelectorAll('.cards .card.build:not(.d-none)').length;
+  if (SEARCH_STATUS) SEARCH_STATUS.textContent = `${VISIBLE_COUNT} build${VISIBLE_COUNT === 1 ? '' : 's'} found`;
 }
 
 if (SEARCH_INPUT) SEARCH_INPUT.addEventListener('input', debounce(e => search(e.target.value), 300));

@@ -5,8 +5,8 @@ title: Find Builds
 description: Find builds for The Division made by the community.
 ---
 
-<section class="builds">
-	<h1>Builds</h1>
+<section class="builds" aria-labelledby="title-builds">
+	<h1 id="title-builds">Builds</h1>
 	<p>
 		{{ page.description }}
 		You can also <a href="/submit/">submit your own</a>.
@@ -16,6 +16,7 @@ description: Find builds for The Division made by the community.
 {% if site.data.builds_ugc %}
 	<div class="search-container">
 		<input class="search" id="search" placeholder="Search builds" aria-label="Search builds">
+		<div class="visually-hidden" id="search-status" aria-live="polite"></div>
 	</div>
 	<div class="cards" role="list">
 		{%- assign builds = site.data.builds_ugc -%}
@@ -28,7 +29,7 @@ description: Find builds for The Division made by the community.
 					<hgroup class="build-title">
 						<h2 class="build-title__name" id="build-title__{{ forloop.index }}">{{ build.title }}</h2>
 						{% if build.featured == true %}
-							<div class="icon" role="presentation" aria-label="Featured">
+							<div class="icon" aria-label="Featured">
 								{% include icons/trophy.svg %}
 							</div>
 						{% endif %}

@@ -71,7 +71,7 @@ export function openGearPicker(slot) {
         </div>
       `).join('')}
     </div>
-  `);
+  `, STRINGS.gear.slots[slot]);
 
   document.querySelectorAll('.filter-radio').forEach(radio => {
     radio.addEventListener('change', () => filterGear(radio.value));
@@ -137,7 +137,8 @@ function openGearAttrPicker(slot, attrType, index) {
   openModal(
     ATTRS.map(a => `
       <div class="attr" data-id="${a.id}">${a.name}</div>
-    `).join('')
+    `).join(''),
+    STRINGS.attributes.choose
   );
 }
 
@@ -186,7 +187,8 @@ function openGearModTypePicker(slot, index) {
           <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
         </div>
       </div>
-    `).join('')
+    `).join(''),
+    STRINGS.mods.choose.gear
   );
 }
 
@@ -216,7 +218,8 @@ function openGearModBonusPicker(slot, index) {
           <div class="desc">${GAME_DATA.qualities[b.quality]}</div>
         </div>
       </div>
-    `).join('')
+    `).join(''),
+    STRINGS.mods.choose.bonus
   );
 }
 
@@ -279,7 +282,8 @@ function openPerfModPicker(slot, index) {
           <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
         </div>
       </div>
-    `).join('')
+    `).join(''),
+    STRINGS.mods.choose.gear
   );
 }
 
@@ -449,7 +453,8 @@ function openGearTalentPicker(slot) {
         </div>
         <div class="desc">${t.desc}</div>
       </div>
-    `).join('')
+    `).join(''),
+    STRINGS.talents.choose
   );
 }
 
