@@ -43,7 +43,7 @@ description: All weapon talents and their effects.
 		{%- assign rank = parts[0] -%}
 		{%- assign talent_id = parts[1] -%}
 		{%- assign talent = weapon_talents | where: "id", talent_id | first -%}
-		<div class="item-container">
+		<article class="item-container" aria-label="{{ talent.name }}">
 			{% if talent.compat.weapon %}
 				{%- assign first_weapon_id = talent.compat.weapon[0] -%}
 				{%- assign weapon = weapons | where: "id", first_weapon_id | first -%}
@@ -89,6 +89,6 @@ description: All weapon talents and their effects.
 					{% endfor %}
 				</div>
 			{% endif %}
-		</div>
+		</article>
 	{% endfor %}
 </section>

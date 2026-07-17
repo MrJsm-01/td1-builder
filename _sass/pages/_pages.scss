@@ -271,6 +271,7 @@ section {
       .info-container {
         flex: 1;
         .name {
+          text-shadow: unset;
           &.exotic  { color: var(--quality-exotic); }
           &.highend { color: var(--quality-highend); }
         }

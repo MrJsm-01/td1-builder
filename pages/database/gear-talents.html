@@ -16,7 +16,7 @@ description: Every Exotic and High-End gear and their talents.
 	{%- assign gear_talents_exotic = gear_talents | where_exp: "gear_talents", "gear_talents.compat.item != nil" -%}
 	{%- assign sorted_gear_talents = gear_talents_exotic | concat: gear_talents_he -%}
 	{% for gt in sorted_gear_talents %}
-		<div class="item-container">
+		<article class="item-container" aria-labelledby="gt-name__{{ forloop.index }}">
 			<div class="sprite {{ gt.compat.item | default: gt.compat.slot }}" role="presentation"></div>
 			<div class="info-container">
 				{% if gt.compat contains "slot" %}
@@ -24,9 +24,9 @@ description: Every Exotic and High-End gear and their talents.
 				{% else %}
 					{%- assign quality = "exotic" -%}
 				{% endif %}
-				<div class="name {{ quality }}">{{ gt.name }} {{ gt.compat.slot | capitalize }}</div>
+				<h2 class="name {{ quality }}" id="gt-name__{{ forloop.index }}">{{ gt.name }} {{ gt.compat.slot | capitalize }}</h2>
 				<div class="desc">{{ gt.desc }}</div>
 			</div>
-		</div>
+		</article>
 	{% endfor %}
 </section>

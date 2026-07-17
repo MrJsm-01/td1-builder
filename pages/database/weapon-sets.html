@@ -22,7 +22,7 @@ description: Every weapon set and their bonuses.
 	{%- assign sortable = sortable | sort_natural -%}
 	{% for bonus_name in sortable %}
 		{%- assign bonus = weapon_bonus | where: "name", bonus_name | first -%}
-		<div class="item-container">
+		<article class="item-container" aria-label="{{ bonus.name }}">
 			<div class="info-container">
 				<div class="name">
 					<span class="prefix">Talent |</span>
@@ -41,6 +41,6 @@ description: Every weapon set and their bonuses.
 				{%- assign weapon_names = weapon_names | sort_natural -%}
 				<span class="weapons">{{ weapon_names | join: " and " }}</span>
 			</div>
-		</div>
+		</article>
 	{% endfor %}
 </section>

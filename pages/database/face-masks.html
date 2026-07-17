@@ -13,7 +13,7 @@ description: Every face mask and how to obtain them.
 <section class="face-masks" aria-label="Face Masks Database">
 	{%- assign masks = site.data.vanity_masks | sort: "name" -%}
 	{% for mask in masks %}
-		<div class="item-container">
+		<article class="item-container" aria-label="{{ mask.name }}">
 			<div class="event-container">
 				<div class="name">{{ mask.event }}</div>
 				{% if mask.commendation %}
@@ -44,6 +44,6 @@ description: Every face mask and how to obtain them.
 				<div class="name">{{ mask.name }}</div>
 				<div class="sprite {{ mask.name | downcase }}" role="presentation"></div>
 			</div>
-		</div>
+		</article>
 	{% endfor %}
 </section>

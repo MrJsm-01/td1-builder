@@ -15,7 +15,7 @@ description: Every Gear Set and their 4-piece and Classified bonuses.
 	{% for gs in gear_sets %}
 		{%- assign key = gs[0] -%}
 		{%- assign item = gs[1] -%}
-		<div class="item-container">
+		<article class="item-container" aria-label="{{ item.name }}">
 			<div class="info-container">
 				<div class="name">{{ item.name }}</div>
 				<div class="sprite {{ key }}" role="presentation"></div>
@@ -34,6 +34,6 @@ description: Every Gear Set and their 4-piece and Classified bonuses.
 					</div>
 				{% endfor %}
 			</div>
-		</div>
+		</article>
 	{% endfor %}
 </section>
