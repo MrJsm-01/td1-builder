@@ -50,10 +50,10 @@ export const STRINGS = {
     gearset : 'Gear Set'
   },
   help : {
-    share     : 'Share build URL',
-    issues    : 'Report an issue',
+    share     : 'Share Build',
+    issues    : 'Report Issue',
     clipboard : {
-      copy   : 'Click the URL above to copy it',
+      copy   : 'Click the URL below to copy it',
       copied : 'Copied'
     }
   }

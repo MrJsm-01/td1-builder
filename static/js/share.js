@@ -246,9 +246,17 @@ export function openShareModal() {
   const SHARE_URL = generateShareUrl();
 
   openModal(`
-    <div class="share">
+    <div class="title-container share">
+      <div class="icon-container">
+        <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
+          <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
+        </svg>
+      </div>
+      <div class="title">Share Build</div>
+    </div>
+    <div class="content">
+      <div class="help">${STRINGS.help.clipboard.copy}</div>
       <input type="text" id="share-url" value="${SHARE_URL}" readonly>
     </div>
-    <div class="help">${STRINGS.help.clipboard.copy}</div>
   `, STRINGS.help.share);
 }

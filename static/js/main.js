@@ -41,7 +41,15 @@ DOM.shareButton.addEventListener('click', () => openShareModal());
 
 // Issues button
 DOM.issueButton.addEventListener('click', () => openModal(`
-  <div class="issues">
+  <div class="title-container issues">
+    <div class="icon-container">
+      <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
+        <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
+      </svg>
+    </div>
+    <div class="title">Report Issue</div>
+  </div>
+  <div class="content">
     <p>
       If you're having an issue with the builder, please open a ticket
       <a href="https://github.com/Strappazzon/td1-builder/issues/new?template=bug-report.yml">on GitHub</a>.

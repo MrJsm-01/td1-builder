@@ -634,9 +634,17 @@
     &:has(> .mod),
     &:has(> .attr),
     &:has(> .gear-mod) {
+      align-items: stretch;
+    }
+    &:has(> .filters-container),
+    &:has(> .gear),
+    &:has(> .mod),
+    &:has(> .attr),
+    &:has(> .gear-mod),
+    &:has(> .share),
+    &:has(> .issues) {
       display: flex;
       flex-flow: column nowrap;
-      align-items: stretch;
     }
     &:has(> .filters-container),
     &:has(> .gear),
@@ -644,8 +652,9 @@
     &:has(> .mod),
     &:has(> .attr),
     &:has(> .wing),
+    &:has(> .gear-mod),
     &:has(> .share),
-    &:has(> .gear-mod) {
+    &:has(> .issues) {
       gap: 0.5em;
     }
     &:has(> .talent) {
@@ -677,36 +686,72 @@
         width: 90vw;
       }
     }
-    &:has(> .share) {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      .share,
-      input {
-        width: 100%;
-      }
-      input {
-        padding: px2rem(4px);
-        font-family: inherit;
-        font-size: 0.875rem;
-        color: var(--default-text-color);
-        background-color: var(--default-bg-color--lighter);
-        border: 1px solid transparent;
-        border-bottom: 1px solid var(--brand-color);
-        @include hocus {
-          outline: 0;
-          background-color: var(--default-bg-color--light);
-          border: 1px solid var(--brand-color--lighter);
+    &:has(> .share),
+    &:has(> .issues) {
+      padding: 0.66rem 1rem;
+      .title-container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        justify-content: flex-start;
+        font-size: h(3);
+        .icon-container {
+          width: 1.5em;
+          height: 1.5em;
+          .icon {
+            fill: currentColor;
+          }
+        }
+        .title {
+          flex: 1;
+          align-self: center;
+          padding: 0 0.5em;
+          font-weight: 700;
         }
       }
-      .help {
-        font-size: 0.8em;
-        color: var(--default-text-color--light);
+      .content {
+        padding: 0.5em 2em;
+      }
+    }
+    &:has(> .share) {
+      .title-container {
+        &.share {
+          border-bottom: 2px solid var(--brand-color--light);
+          .icon-container { background-color: var(--brand-color); }
+        }
+      }
+      .content {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.5em;
+        input {
+          padding: px2rem(4px);
+          font-family: inherit;
+          font-size: 1rem;
+          color: var(--default-text-color);
+          background-color: var(--default-bg-color--lighter);
+          border: 1px solid transparent;
+          border: 1px solid var(--brand-color--lighter);
+          @include hocus {
+            outline: 0;
+            background-color: var(--default-bg-color--light);
+            border-color: var(--brand-color--light);
+          }
+        }
+        .help {
+          color: var(--default-text-color--light);
+        }
       }
     }
     &:has(> .issues) {
-      p {
-        text-align: center;
+      .title-container {
+        &.issues {
+          border-bottom: 2px solid var(--modal-error--light);
+          .icon-container { background-color: var(--modal-error); }
+        }
+      }
+      .content {
+        opacity: 0.7;
         a {
           position: relative;
           &::before {
@@ -785,12 +830,14 @@
     }
   }
   &-buttons {
+    font-size: 1rem;
     .close {
       display: flex;
       flex-flow: row wrap;
       gap: px2rem(4px);
       align-items: center;
       justify-content: center;
+      font-size: inherit;
       background-color: var(--default-bg-color--light);
       .shortcut {
         color: var(--brand-color);
