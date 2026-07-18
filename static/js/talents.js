@@ -24,10 +24,10 @@ export function openPlayerTalentPicker(slot) {
     const TALENTS = GAME_DATA.player_talents[wing].filter(t => !CURRENT_IDS.includes(t.id));
 
     return `
-      <div class="wing">
+      <div class="wing" role="group" aria-label="${GAME_DATA.wings[wing]}">
         <div class="wing-name ${GAME_DATA.wings[wing].toLowerCase()}">${GAME_DATA.wings[wing].toUpperCase()}</div>
         ${TALENTS.map(t => `
-          <div class="player-talent" data-id="${t.id}">
+          <button class="player-talent" data-id="${t.id}">
             <div class="sprite-container">
               <div class="sprite ${t.id}" role="presentation"></div>
             </div>
@@ -35,7 +35,7 @@ export function openPlayerTalentPicker(slot) {
               <div class="name">${t.name}</div>
               <div class="desc">${t.desc}</div>
             </div>
-          </div>
+          </button>
         `).join('')}
       </div>
     `;

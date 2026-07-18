@@ -122,8 +122,18 @@ DOM.modal.close.addEventListener('click', () => {
 });
 
 // Modal: Close shortcut
-DOM.modal.backdrop.addEventListener('keydown', e => {
+document.addEventListener('keydown', e => {
   if (e.key === 'Escape' || e.keyCode === 27) {
+    if (!DOM.modal.backdrop.classList.contains('d-none')) {
+      closeModal();
+    }
+  }
+});
+
+// Modal: Close on outside click
+DOM.modal.backdrop.addEventListener('mousedown', e => {
+  if (e.target === DOM.modal.backdrop) {
+    e.preventDefault();
     closeModal();
   }
 });

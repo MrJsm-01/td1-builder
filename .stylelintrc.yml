@@ -146,6 +146,8 @@ rules:
           - box-shadow
           - inset
           - left
+          - outline
+          - outline-offset
           - right
           - text-shadow
           - top

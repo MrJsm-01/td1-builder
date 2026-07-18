@@ -32,15 +32,19 @@
     @include respond-to('larger') {
       width: 75vw;
     }
-    .weapon,
-    .talent,
-    .mod,
-    .gear,
-    .attr,
-    .gear-mod,
-    .skill,
-    .player-talent {
-      cursor: pointer;
+    @include hocus {
+      outline: 0;
+    }
+    button {
+      display: block;
+      padding: 0;
+      font-size: inherit;
+      color: currentColor;
+      text-align: unset;
+      background-color: transparent;
+      &[hidden] {
+        display: none;
+      }
     }
     .weapon,
     .talent,

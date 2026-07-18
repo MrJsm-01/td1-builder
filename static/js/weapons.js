@@ -69,9 +69,9 @@ export function openWeaponPicker(slot) {
     <div class="weapons-container">
       ${BUILD[slot] !== null
         ? `
-        <div class="weapon" id="clear-slot" data-type="unknown" data-quality="worn">
+        <button class="weapon" id="clear-slot" data-type="unknown" data-quality="worn">
           <div class="icon-container">
-            <svg viewBox="0 0 24 24" class="icon empty">
+            <svg viewBox="0 0 24 24" class="icon empty" aria-hidden="true">
               <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
             </svg>
           </div>
@@ -79,11 +79,11 @@ export function openWeaponPicker(slot) {
             <div class="name">${STRINGS.weapons.empty.name}</div>
             <div class="desc">${STRINGS.weapons.empty.desc}</div>
           </div>
-        </div>
+        </button>
       `
         : ''}
       ${WEAPONS.map(w => `
-        <div class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
+        <button class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
           <div class="sprite-container">
             <div class="sprite ${w.id}" role="presentation"></div>
           </div>
@@ -91,7 +91,7 @@ export function openWeaponPicker(slot) {
             <div class="name">${w.name}</div>
             <div class="desc">${GAME_DATA.weapon_types[w.type].label}</div>
           </div>
-        </div>
+        </button>
       `).join('')}
     </div>
   `, STRINGS.weapons.choose);
@@ -216,7 +216,7 @@ function openWeaponTalentPicker(slot, index) {
 
   openModal(
     TALENTS.map(t => `
-      <div class="talent" data-id="${t.id}">
+      <button class="talent" data-id="${t.id}">
         <div class="name-container">
           <strong class="quality">${STRINGS.talents.talent}</strong>
           <span class="separator"> | </span>
@@ -224,7 +224,7 @@ function openWeaponTalentPicker(slot, index) {
         </div>
         <div class="desc">${t.desc}</div>
         <div class="sprite ${t.id}" role="presentation"></div>
-      </div>
+      </button>
     `).join(''),
     STRINGS.talents.choose
   );
@@ -326,7 +326,7 @@ function openWeaponModPicker(slot, modSlot, index) {
 
   openModal(
     MODS.map(m => `
-      <div class="mod" data-id="${m.id}">${m.label}</div>
+      <button class="mod" data-id="${m.id}">${m.label}</button>
     `).join(''),
     STRINGS.mods.choose.bonus
   );

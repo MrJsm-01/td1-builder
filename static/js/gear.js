@@ -60,7 +60,7 @@ export function openGearPicker(slot) {
     </div>
     <div class="gear-container">
       ${ITEMS.map(g => `
-        <div class="gear" data-id="${g.id}" data-quality="${g.quality}">
+        <button class="gear" data-id="${g.id}" data-quality="${g.quality}">
           <div class="sprite-container">
             <div class="sprite ${g.id}" role="presentation"></div>
           </div>
@@ -68,7 +68,7 @@ export function openGearPicker(slot) {
             <div class="name">${g.name}</div>
             <div class="desc">${GAME_DATA.qualities[g.quality]}</div>
           </div>
-        </div>
+        </button>
       `).join('')}
     </div>
   `, STRINGS.gear.slots[slot]);
@@ -136,7 +136,7 @@ function openGearAttrPicker(slot, attrType, index) {
 
   openModal(
     ATTRS.map(a => `
-      <div class="attr" data-id="${a.id}">${a.name}</div>
+      <button class="attr" data-id="${a.id}">${a.name}</button>
     `).join(''),
     STRINGS.attributes.choose
   );
@@ -178,7 +178,7 @@ function openGearModTypePicker(slot, index) {
 
   openModal(
     MODS.map(m => `
-      <div class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
+      <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
         <div class="sprite-container">
           <div class="sprite" role="presentation"></div>
         </div>
@@ -186,7 +186,7 @@ function openGearModTypePicker(slot, index) {
           <div class="name">${m.name}</div>
           <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
         </div>
-      </div>
+      </button>
     `).join(''),
     STRINGS.mods.choose.gear
   );
@@ -209,7 +209,7 @@ function openGearModBonusPicker(slot, index) {
 
   openModal(
     BONUSES.map(b => `
-      <div class="gear-mod" data-id="${b.id}" data-quality="${b.quality}">
+      <button class="gear-mod" data-id="${b.id}" data-quality="${b.quality}">
         <div class="sprite-container">
           <div class="sprite" role="presentation"></div>
         </div>
@@ -217,7 +217,7 @@ function openGearModBonusPicker(slot, index) {
           <div class="name">${b.name}</div>
           <div class="desc">${GAME_DATA.qualities[b.quality]}</div>
         </div>
-      </div>
+      </button>
     `).join(''),
     STRINGS.mods.choose.bonus
   );
@@ -273,7 +273,7 @@ function openPerfModPicker(slot, index) {
 
   openModal(
     MODS.map(m => `
-      <div class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
+      <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
         <div class="sprite-container">
           <div class="sprite perf" role="presentation"></div>
         </div>
@@ -281,7 +281,7 @@ function openPerfModPicker(slot, index) {
           <div class="name">${m.name}</div>
           <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
         </div>
-      </div>
+      </button>
     `).join(''),
     STRINGS.mods.choose.gear
   );
@@ -445,14 +445,14 @@ function openGearTalentPicker(slot) {
 
   openModal(
     TALENTS.map(t => `
-      <div class="talent" data-id="${t.id}">
+      <button class="talent" data-id="${t.id}">
         <div class="name-container">
           <strong class="quality">${STRINGS.talents.talent}</strong>
           <span class="separator"> | </span>
           <span class="name">${t.name}</span>
         </div>
         <div class="desc">${t.desc}</div>
-      </div>
+      </button>
     `).join(''),
     STRINGS.talents.choose
   );

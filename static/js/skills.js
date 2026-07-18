@@ -51,10 +51,10 @@ export function openSkillPicker(slot) {
     if (SKILLS.length === 0) return '';
 
     return `
-      <div class="wing">
+      <div class="wing" role="group" aria-label="${GAME_DATA.wings[wing]}">
         <div class="wing-name ${GAME_DATA.wings[wing].toLowerCase()}">${GAME_DATA.wings[wing].toUpperCase()}</div>
         ${SKILLS.map(s => `
-          <div class="skill" data-id="${s.id}">
+          <button class="skill" data-id="${s.id}">
             <div class="sprite-container">
               <div class="sprite ${s.id}" role="presentation"></div>
             </div>
@@ -62,7 +62,7 @@ export function openSkillPicker(slot) {
               <div class="name">${s.name}</div>
               <div class="desc">${s.desc}</div>
             </div>
-          </div>
+          </button>
         `).join('')}
       </div>
     `;

@@ -227,7 +227,6 @@ body {
     }
     .talent-container {
       width: 100%;
-      cursor: pointer;
     }
     .type-container {
       display: grid;
@@ -360,10 +359,6 @@ body {
       flex-flow: row wrap;
       gap: px2rem(8px);
       justify-content: space-between;
-      .weapon-select,
-      .score {
-        cursor: pointer;
-      }
       .weapon-select {
         flex: 1;
       }
@@ -523,7 +518,6 @@ body {
         grid-area: slot;
       }
       .bonus {
-        cursor: pointer;
         &1 {
           grid-area: bonus1;
         }
@@ -546,7 +540,6 @@ body {
     }
     .meta-container {
       width: 100%;
-      cursor: pointer;
     }
     fieldset {
       margin: 0;
@@ -609,10 +602,6 @@ body {
       padding: 0.25em 0.5em;
       .title {
         margin-top: px2rem(8px);
-      }
-      .title[id$='-type'],
-      .attribute {
-        cursor: pointer;
       }
     }
     .mod-container {
@@ -822,7 +811,6 @@ body {
     gap: px2rem(12px);
     .sprite-container {
       padding: px2rem(8px);
-      cursor: pointer;
       background:
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
         linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,

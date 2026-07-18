@@ -51,32 +51,44 @@ a {
   text-decoration: none;
 }
 
-button:not(
-  [id^='wp-'],
-  [id^='gp-'],
-  [id^='skill'],
-  [id^='talent']
-) {
-  padding: px2rem(6px) px2rem(12px);
+button {
   font-family: inherit;
-  font-size: px2rem(16px);
-  color: var(--default-text-color);
   touch-action: manipulation;
   cursor: pointer;
-  background:
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-  ;
-  background-color: var(--default-bg-color--clearest);
-  background-size: 2px 2px;
   border: 0;
-  // Don't use hocus mixin because when clicking the button
-  // it will not return to the default state
-  // stylelint-disable-next-line a11y/selector-pseudo-class-focus
-  &:hover {
-    background-color: var(--default-bg-color--clearer);
+  &:focus-visible {
+    outline: 1px solid var(--brand-color--light);
+    outline-offset: 1px;
+  }
+  &:not(
+    [id^='wp-'],
+    [id^='gp-'],
+    [id^='skill'],
+    [id^='talent'],
+    [class^='gear'],
+    [class$='talent'],
+    .weapon,
+    .mod,
+    .attr,
+    .skill
+  ) {
+    padding: px2rem(6px) px2rem(12px);
+    font-size: px2rem(16px);
+    color: var(--default-text-color);
+    background:
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+    ;
+    background-color: var(--default-bg-color--clearest);
+    background-size: 2px 2px;
+    // Don't use hocus mixin because when clicking the button
+    // it will not return to the default state
+    // stylelint-disable-next-line a11y/selector-pseudo-class-focus
+    &:hover {
+      background-color: var(--default-bg-color--clearer);
+    }
   }
 }
 

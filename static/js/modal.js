@@ -2,14 +2,17 @@ import { DOM } from './dom.js';
 
 // See: _sass/components/_modals.scss .modal-container.animated
 const ANIM_CLOSE_DURATION = 250;
+// Re-focus on the element that opened the modal
+let triggerElement = null;
 
 export function openModal(html, title) {
+  triggerElement = document.activeElement;
   DOM.modal.container.innerHTML = html;
   DOM.modal.container.setAttribute('aria-label', title);
   DOM.modal.backdrop.classList.remove('d-none');
   DOM.modal.close.classList.remove('d-none');
   DOM.modal.container.scrollTop = 0;
-  DOM.modal.backdrop.focus();
+  DOM.modal.container.focus();
   DOM.body.classList.add('no-overflow');
 }
 
@@ -22,5 +25,7 @@ export function closeModal() {
     DOM.modal.container.textContent = '';
     DOM.modal.container.classList.remove('closing');
     DOM.modal.container.removeAttribute('aria-label');
+    triggerElement?.focus();
+    triggerElement = null;
   }, ANIM_CLOSE_DURATION);
 }
