@@ -93,7 +93,7 @@ button {
 }
 
 // Visually hide content
-// https://github.com/twbs/bootstrap/blob/-/scss/mixins/_visually-hidden.scss
+// https://vispero.com/resources/the-anatomy-of-visually-hidden/
 // stylelint-disable declaration-no-important, unit-disallowed-list
 .visually-hidden:not(
   :focus,
@@ -102,10 +102,8 @@ button {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
-  padding: 0 !important;
   overflow: hidden !important;
   white-space: nowrap !important;
-  border: 0 !important;
-  clip-path: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
 }
 // stylelint-enable declaration-no-important, unit-disallowed-list
