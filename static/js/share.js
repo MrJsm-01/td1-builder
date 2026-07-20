@@ -211,7 +211,7 @@ function applyBuildData(payload) {
             <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
           </svg>
         </div>
-        <div class="title">Invalid Share Link</div>
+        <div class="title">${STRINGS.error.version}</div>
       </div>
       <div class="content">
         <p>The shared build link contains outdated data.</p>
@@ -265,7 +265,7 @@ export function openShareModal() {
           <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
         </svg>
       </div>
-      <div class="title">Share Build</div>
+      <div class="title">${STRINGS.help.share}</div>
     </div>
     <div class="content">
       <div class="help">${STRINGS.help.clipboard.copy}</div>

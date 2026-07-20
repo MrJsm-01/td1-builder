@@ -47,7 +47,7 @@ DOM.issueButton.addEventListener('click', () => openModal(`
         <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
       </svg>
     </div>
-    <div class="title">Report Issue</div>
+    <div class="title">${STRINGS.help.issues}</div>
   </div>
   <div class="content">
     <p>
