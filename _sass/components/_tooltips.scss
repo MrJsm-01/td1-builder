@@ -22,7 +22,11 @@
     transform: translateX(-50%);
     transition: opacity 0.15s ease;
   }
-  @include hocus {
+  // Don't use hocus mixin
+  // When the modal returns focus to the button the tooltip will reveal
+  // stylelint-disable-next-line a11y/selector-pseudo-class-focus
+  &:hover,
+  &:focus-visible {
     &::after {
       opacity: 1;
     }
