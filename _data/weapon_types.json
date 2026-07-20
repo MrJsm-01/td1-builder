@@ -2,39 +2,46 @@
 	"ar": {
 		"label": "Assault Rifle",
 		"bonus": "Enemy Armor Damage",
+		"desc": "Assault rifles are well-balanced fully automatic weapons with a moderate amount of recoil, most useful at medium range.",
 		"slot": "primary_secondary"
 	},
 	"hdg": {
 		"label": "Pistol",
 		"bonus": null,
+		"desc": "Pistols are accurate, easy to handle sidearms that deal extra damage to injured enemies.",
 		"slot": "handgun"
 	},
 	"hdgstg": {
 		"label": "Shotgun",
 		"bonus": "Stagger",
+		"desc": "The ultimate close quarters weapon, shotguns provide extremely high damage at close range.",
 		"slot": "handgun"
 	},
 	"lmg": {
 		"label": "Light Machine Gun",
 		"short": "LMG",
 		"bonus": "DMG to Target Out of Cover",
+		"desc": "Light machine guns are high-powered fully automatic weapons with large capacity magazines, but which require some time to stabilize when firing.",
 		"slot": "primary_secondary"
 	},
 	"mmr": {
 		"label": "Marksman Rifle",
 		"short": "MMR",
 		"bonus": "Headshot Damage",
+		"desc": "Marksman rifles are high-powered precision rifles with extra headshot damage, designed for long range combat.",
 		"slot": "primary_secondary"
 	},
 	"smg": {
 		"label": "Submachine Gun",
 		"short": "SMG",
 		"bonus": "Critical Hit Chance",
+		"desc": "Submachine guns are stable, high mobility weapons with extra critical hit chance but short range.",
 		"slot": "primary_secondary"
 	},
 	"stg": {
 		"label": "Shotgun",
 		"bonus": "Stagger",
+		"desc": "The ultimate close quarters weapon, shotguns provide extremely high damage at close range.",
 		"slot": "primary_secondary"
 	}
 }

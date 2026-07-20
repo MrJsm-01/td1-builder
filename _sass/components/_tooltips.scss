@@ -5,8 +5,6 @@
   position: relative;
   &::after {
     position: absolute;
-    bottom: 110%;
-    left: 50%;
     z-index: z('tooltip');
     width: max-content;
     max-width: px2rem(250px);
@@ -21,6 +19,14 @@
     opacity: 0;
     transform: translateX(-50%);
     transition: opacity 0.15s ease;
+  }
+  &[data-position='top']::after {
+    bottom: 110%;
+    left: 50%;
+  }
+  &[data-position='bottom']::after {
+    top: 110%;
+    left: 50%;
   }
   // Don't use hocus mixin
   // When the modal returns focus to the button the tooltip will reveal

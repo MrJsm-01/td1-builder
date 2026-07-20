@@ -121,6 +121,8 @@ function renderWeaponSlot(slot) {
   SPRITE.classList.add(WEAPON.type);
   CONTAINER.querySelector('.type-container .type').textContent = GAME_DATA.weapon_types[WEAPON.type].label;
   CONTAINER.querySelector('.type-container .bonus').textContent = GAME_DATA.weapon_types[WEAPON.type].bonus ?? '';
+  CONTAINER.querySelector('.type-container').dataset.tooltip = GAME_DATA.weapon_types[WEAPON.type].desc;
+  CONTAINER.querySelector('.type-container').dataset.position = 'bottom';
   SCORE.hidden = WEAPON.quality !== 'highend';
   SCORE.textContent = WP_STATE.gs;
 }
@@ -155,6 +157,8 @@ export function clearWeaponSlot(slot) {
   SPRITE.className = 'sprite';
   CONTAINER.querySelector('.type-container .type').textContent = STRINGS.weapons.type;
   CONTAINER.querySelector('.type-container .bonus').textContent = STRINGS.weapons.bonus;
+  CONTAINER.querySelector('.type-container').removeAttribute('data-tooltip');
+  CONTAINER.querySelector('.type-container').removeAttribute('data-position');
   SCORE.hidden = true;
   SCORE.textContent = '';
 

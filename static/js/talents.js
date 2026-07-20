@@ -63,6 +63,7 @@ function renderPlayerTalentSlot(slot) {
   SPRITE.className = 'sprite';
   SPRITE.classList.add(TALENT.id);
   CONTAINER.dataset.tooltip = `${TALENT.name}\n${TALENT.desc}`;
+  CONTAINER.dataset.position = 'top';
   CONTAINER.setAttribute('aria-label', `${TALENT.name} - Click to change`);
 }
 

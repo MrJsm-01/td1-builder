@@ -81,6 +81,7 @@ function renderSkill(slot) {
   SPRITE.className = 'sprite';
   SPRITE.classList.add(SKILL.id);
   CONTAINER.dataset.tooltip = `${SKILL.name}\n${SKILL.desc}`;
+  CONTAINER.dataset.position = 'top';
   CONTAINER.setAttribute('aria-label', `${SKILL.name} - Click to change`);
 }
 
