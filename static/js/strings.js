@@ -56,5 +56,8 @@ export const STRINGS = {
       copy   : 'Click the URL below to copy it',
       copied : 'Copied'
     }
+  },
+  error : {
+    version : 'Outdated Share Link'
   }
 };

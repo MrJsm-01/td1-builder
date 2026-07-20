@@ -141,5 +141,9 @@ DOM.modal.backdrop.addEventListener('mousedown', e => {
 document.addEventListener('DOMContentLoaded', () => {
   loadBuildFromUrl();
   DOM.loader.remove();
-  DOM.body.classList.remove('no-overflow');
+
+  // Check no modal is open
+  if (DOM.modal.backdrop.classList.contains('d-none')) {
+    DOM.body.classList.remove('no-overflow');
+  }
 });

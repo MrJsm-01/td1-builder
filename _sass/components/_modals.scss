@@ -342,7 +342,8 @@
     &:has(> .attr),
     &:has(> .gear-mod),
     &:has(> .share),
-    &:has(> .issues) {
+    &:has(> .issues),
+    &:has(> .error) {
       display: flex;
       flex-flow: column nowrap;
     }
@@ -354,7 +355,8 @@
     &:has(> .wing),
     &:has(> .gear-mod),
     &:has(> .share),
-    &:has(> .issues) {
+    &:has(> .issues),
+    &:has(> .error) {
       gap: 0.5em;
     }
     &:has(> .talent) {
@@ -370,7 +372,8 @@
     &:has(> .mod),
     &:has(> .attr),
     &:has(> .share),
-    &:has(> .issues) {
+    &:has(> .issues),
+    &:has(> .error) {
       height: max-content;
     }
     &:has(> .wing .skill[data-id^='ult']) {
@@ -387,7 +390,8 @@
       }
     }
     &:has(> .share),
-    &:has(> .issues) {
+    &:has(> .issues),
+    &:has(> .error) {
       padding: 0.66rem 1rem;
       .title-container {
         display: flex;
@@ -411,6 +415,9 @@
       }
       .content {
         padding: 0.5em 2em;
+        p {
+          margin: 0;
+        }
       }
     }
     &:has(> .share) {
@@ -443,9 +450,11 @@
         }
       }
     }
-    &:has(> .issues) {
+    &:has(> .issues),
+    &:has(> .error) {
       .title-container {
-        &.issues {
+        &.issues,
+        &.error {
           border-bottom: 2px solid var(--modal-error--light);
           .icon-container { background-color: var(--modal-error); }
         }

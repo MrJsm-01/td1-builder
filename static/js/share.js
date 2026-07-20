@@ -204,7 +204,20 @@ function applyGearSlot(slot, data) {
 
 function applyBuildData(payload) {
   if (payload.v !== BUILD_VERSION) {
-    console.warn('Unsupported build version, cannot load.');
+    openModal(`
+      <div class="title-container error">
+        <div class="icon-container">
+          <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
+            <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
+          </svg>
+        </div>
+        <div class="title">Invalid Share Link</div>
+      </div>
+      <div class="content">
+        <p>The shared build link contains outdated data.</p>
+        <p>The default build has been loaded instead.</p>
+      </div>
+    `, STRINGS.error.version);
 
     return;
   }
