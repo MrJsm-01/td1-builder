@@ -25,7 +25,9 @@ export function closeModal() {
     DOM.modal.container.textContent = '';
     DOM.modal.container.classList.remove('closing');
     DOM.modal.container.removeAttribute('aria-label');
-    triggerElement?.focus();
+    triggerElement?.focus({
+      focusVisible : false
+    });
     triggerElement = null;
   }, ANIM_CLOSE_DURATION);
 }

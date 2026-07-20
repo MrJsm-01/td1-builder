@@ -57,8 +57,8 @@ button {
   cursor: pointer;
   border: 0;
   &:focus-visible {
-    outline: 1px solid var(--brand-color--light);
-    outline-offset: 1px;
+    outline: 1px solid var(--brand-color--lighter);
+    outline-offset: -1px;
   }
   &:not(
     [id^='wp-'],
