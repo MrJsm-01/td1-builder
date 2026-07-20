@@ -59,17 +59,23 @@ export function openGearPicker(slot) {
       </label>
     </div>
     <div class="gear-container">
-      ${ITEMS.map(g => `
-        <button class="gear" data-id="${g.id}" data-quality="${g.quality}">
-          <div class="sprite-container">
-            <div class="sprite ${g.id}" role="presentation"></div>
-          </div>
-          <div class="info-container">
-            <div class="name">${g.name}</div>
-            <div class="desc">${GAME_DATA.qualities[g.quality]}</div>
-          </div>
-        </button>
-      `).join('')}
+      ${ITEMS.map(g => {
+        // Avoid duplicates inside $sprites-gear-pieces SCSS map
+        // See: _sass/abstracts/_variables.scss
+        const SPRITE_ID = g.id.includes('-') ? g.id.split('-')[2] : g.id;
+
+        return `
+          <button class="gear" data-id="${g.id}" data-quality="${g.quality}">
+            <div class="sprite-container">
+              <div class="sprite ${SPRITE_ID}" role="presentation"></div>
+            </div>
+            <div class="info-container">
+              <div class="name">${g.name}</div>
+              <div class="desc">${GAME_DATA.qualities[g.quality]}</div>
+            </div>
+          </button>
+        `;
+      }).join('')}
     </div>
   `, STRINGS.gear.slots[slot]);
 
@@ -180,7 +186,7 @@ function openGearModTypePicker(slot, index) {
     MODS.map(m => `
       <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
         <div class="sprite-container">
-          <div class="sprite" role="presentation"></div>
+          <div class="sprite gear" role="presentation"></div>
         </div>
         <div class="info-container">
           <div class="name">${m.name}</div>
@@ -211,7 +217,7 @@ function openGearModBonusPicker(slot, index) {
     BONUSES.map(b => `
       <button class="gear-mod" data-id="${b.id}" data-quality="${b.quality}">
         <div class="sprite-container">
-          <div class="sprite" role="presentation"></div>
+          <div class="sprite gear" role="presentation"></div>
         </div>
         <div class="info-container">
           <div class="name">${b.name}</div>

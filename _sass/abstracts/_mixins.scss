@@ -45,3 +45,26 @@
     @error 'No value found for #{$breakpoint}. Available breakpoints are: #{map.keys($breakpoints)}.';
   }
 }
+
+/// Sprites positioner
+/// @param {String} $spritesheet - Filename of the sprite sheet, relative to img/sprites/
+/// @param {Length} $width - Sprite width
+/// @param {Length} $height - Sprite height
+/// @param {Map} $positions - Map of sprite and position pairs
+/// @param {List} $defaultpos Optional fallback position
+/// @example scss - Spritesheet mixin
+///   @include spritesheet('w_talents.png', 96px, 96px, $weapon-talent-sprites, (-576px, -576px));
+@mixin spritesheet($spritesheet, $width, $height, $positions, $defaultpos: null) {
+  width: $width;
+  height: $height;
+  background-image: url('#{$base-url}img/sprites/#{$spritesheet}');
+  background-repeat: no-repeat;
+  @if $defaultpos {
+    background-position: list.nth($defaultpos, 1) list.nth($defaultpos, 2);
+  }
+  @each $sprite, $pos in $positions {
+    &.#{$sprite} {
+      background-position: list.nth($pos, 1) list.nth($pos, 2);
+    }
+  }
+}

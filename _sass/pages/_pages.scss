@@ -77,11 +77,6 @@ section {
   &.weapon-sets,
   &.face-masks {
     padding: 1em;
-    .item-container {
-      .sprite {
-        background-repeat: no-repeat;
-      }
-    }
   }
   &.gear-talents,
   &.gear-sets {
@@ -101,13 +96,8 @@ section {
         }
       }
       .sprite {
-        // stylelint-disable unit-disallowed-list
-        width: 128px;
-        height: 64px;
-        // stylelint-enable unit-disallowed-list
-        // stylelint-disable-next-line defensive-css/require-background-repeat
-        background-image: url('#{$base-url}img/sprites/g_items.png');
         mix-blend-mode: screen;
+        @include spritesheet('g_items.png', 128px, 64px, $sprites-gear-pieces);
       }
     }
   }
@@ -168,10 +158,6 @@ section {
       }
       .sprite {
         align-self: center;
-        // stylelint-disable unit-disallowed-list
-        width: 96px;
-        height: 96px;
-        // stylelint-enable unit-disallowed-list
       }
     }
   }
@@ -186,67 +172,7 @@ section {
         }
       }
       .sprite {
-        // stylelint-disable-next-line defensive-css/require-background-repeat
-        background-image: url('#{$base-url}img/sprites/w_talents.png');
-        background-position: -576px -576px;
-        &.accurate      { background-position: -0 -0; }
-        &.adept         { background-position: -192px -0; }
-        &.ambusher      { background-position: -384px -0; }
-        &.balanced      { background-position: -480px -0; }
-        &.boomstick     { background-position: -576px -0; }
-        &.brutal        { background-position: -672px -0; }
-        &.caduceus      { background-position: -0 -96px; }
-        &.capable       { background-position: -96px -96px; }
-        &.card-counter  { background-position: -672px -288px; }
-        &.carefree      { background-position: -192px -576px; }
-        &.centermass    { background-position: -192px -384px; }
-        &.commanding    { background-position: -192px -96px; }
-        &.competent     { background-position: -288px -96px; }
-        &.cover-shooter { background-position: -288px -0; }
-        &.coolheaded    { background-position: -384px -96px; }
-        &.deadly        { background-position: -480px -96px; }
-        &.destructive   { background-position: -576px -96px; }
-        &.determined    { background-position: -672px -96px; }
-        &.devil         { background-position: -384px -288px; }
-        &.disciplined   { background-position: -0 -192px; }
-        &.distracted    { background-position: -96px -192px; }
-        &.dominant      { background-position: -192px -192px; }
-        &.elevated      { background-position: -288px -192px; }
-        &.expert        { background-position: -384px -192px; }
-        &.ferocious     { background-position: -576px -192px; }
-        &.fierce        { background-position: -672px -192px; }
-        &.fire          { background-position: -0 -288px; }
-        &.focused       { background-position: -96px -288px; }
-        &.fury          { background-position: -192px -288px; }
-        &.glutton       { background-position: -576px -288px; }
-        &.harmful       { background-position: -288px -288px; }
-        &.history       { background-position: -480px -288px; }
-        &.hurried       { background-position: -0 -384px; }
-        &.intense       { background-position: -96px -384px; }
-        &.lights-out    { background-position: -96px -576px; }
-        &.meticulous    { background-position: -288px -384px; }
-        &.midas         { background-position: -384px -384px; }
-        &.pakhan        { background-position: -480px -384px; }
-        &.predatory     { background-position: -576px -384px; }
-        &.prepared      { background-position: -672px -384px; }
-        &.preserved     { background-position: -0 -480px; }
-        &.proficient    { background-position: -96px -480px; }
-        &.quickdraw     { background-position: -192px -672px; }
-        &.republic      { background-position: -192px -480px; }
-        &.responsive    { background-position: -288px -480px; }
-        &.golden-rhino  { background-position: -384px -480px; }
-        &.rough         { background-position: -96px -672px; }
-        &.showstopper   { background-position: -96px -0; }
-        &.skilled       { background-position: -480px -480px; }
-        &.sustained     { background-position: -576px -480px; }
-        &.swift         { background-position: -672px -480px; }
-        &.talented      { background-position: -0 -576px; }
-        &.toxic         { background-position: -288px -576px; }
-        &.trained       { background-position: -384px -576px; }
-        &.uncomplicated { background-position: -480px -192px; }
-        &.unforgiving   { background-position: -480px -576px; }
-        &.valkyria      { background-position: -672px -576px; }
-        &.vicious       { background-position: -0 -672px; }
+        @include spritesheet('w_talents.png', 96px, 96px, $sprites-weapon-talents, (-576px, -576px));
       }
     }
   }
@@ -254,20 +180,6 @@ section {
     .item-container {
       flex-flow: row wrap;
       align-items: center;
-      .sprite {
-        &.barrett,
-        &.chest     { background-position: -0 -320px; }
-        &.ferro,
-        &.mask      { background-position: -128px -384px; }
-        &.shortbow,
-        &.kneepads  { background-position: -0 -384px; }
-        &.ninja,
-        &.backpack  { background-position: -256px -256px; }
-        &.skulls,
-        &.gloves    { background-position: -128px -320px; }
-        &.bliss,
-        &.holster   { background-position: -256px -320px; }
-      }
       .info-container {
         flex: 1;
         .name {
@@ -303,22 +215,6 @@ section {
       .name {
         text-align: center;
       }
-      .sprite {
-        &.ab        { background-position: -0 -0; }
-        &.banshee   { background-position: -128px -0; }
-        &.d3        { background-position: -256px -0; }
-        &.eye       { background-position: -0 -64px; }
-        &.fc        { background-position: -128px -64px; }
-        &.fm        { background-position: -256px -64px; }
-        &.hf        { background-position: -0 -128px; }
-        &.ls        { background-position: -128px -128px; }
-        &.nomad     { background-position: -256px -128px; }
-        &.pred      { background-position: -0 -192px; }
-        &.reclaimer { background-position: -128px -192px; }
-        &.sentry    { background-position: -256px -192px; }
-        &.striker   { background-position: -0 -256px; }
-        &.tac       { background-position: -128px -256px; }
-      }
     }
     .bonus-container {
       flex: 0 1 80%;
@@ -352,11 +248,7 @@ section {
         }
       }
       .sprite {
-        // stylelint-disable-next-line defensive-css/require-background-repeat
-        background-image: url('#{$base-url}img/sprites/w_bonus.png');
-        &.devil { background-position: -0 -0; }
-        &.republic { background-position: -96px -0; }
-        &.valkyria { background-position: -192px -0; }
+        @include spritesheet('w_bonus.png', 96px, 96px, $sprites-weapon-bonus);
       }
     }
   }
@@ -401,6 +293,7 @@ section {
         margin-top: auto;
         .sprite {
           position: relative;
+          @include spritesheet('v_masks.png', 256px, 256px, $sprites-vanity-masks);
           &::before {
             position: absolute;
             inset: 0;
@@ -408,34 +301,6 @@ section {
             content: '';
             background-color: var(--default-bg-color--lightest);
           }
-          // stylelint-disable unit-disallowed-list
-          width: 256px;
-          height: 256px;
-          // stylelint-enable unit-disallowed-list
-          // stylelint-disable-next-line defensive-css/require-background-repeat
-          background-image: url('#{$base-url}img/sprites/v_masks.png');
-          &.bug     { background-position: -0 -0; }
-          &.cage    { background-position: -256px -0; }
-          &.cbrn    { background-position: -512px -0; }
-          &.chemist { background-position: -768px -0; }
-          &.classic { background-position: -1024px -0; }
-          &.ember   { background-position: -0 -256px; }
-          &.happy   { background-position: -256px -256px; }
-          &.haze    { background-position: -512px -256px; }
-          &.hockey  { background-position: -768px -256px; }
-          &.jungle  { background-position: -1024px -256px; }
-          &.oni     { background-position: -0 -512px; }
-          &.piggy   { background-position: -256px -512px; }
-          &.rictus  { background-position: -512px -512px; }
-          &.rider   { background-position: -768px -512px; }
-          &.shady   { background-position: -1024px -512px; }
-          &.smiler  { background-position: -0 -768px; }
-          &.sting   { background-position: -256px -768px; }
-          &.stripes { background-position: -512px -768px; }
-          &.stygian { background-position: -768px -768px; }
-          &.tao     { background-position: -1024px -768px; }
-          &.trench  { background-position: -0 -1024px; }
-          &.vulcan  { background-position: -256px -1024px; }
         }
       }
     }

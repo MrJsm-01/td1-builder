@@ -119,17 +119,9 @@ body {
       ;
     }
     .sprite {
-      // stylelint-disable unit-disallowed-list
-      width: 24px;
-      height: 24px;
-      // stylelint-enable unit-disallowed-list
-      background-image: url('#{$base-url}img/sprites/g_stats_calc.png');
-      background-repeat: no-repeat;
+      @include spritesheet('g_stats_calc.png', 24px, 24px, $sprites-gear-stats-calc);
     }
   }
-  .firearms .sprite    { background-position: -24px -0; }
-  .stamina .sprite     { background-position: -48px -0; }
-  .electronics .sprite { background-position: -0 -0; }
 }
 
 .build,
@@ -240,21 +232,8 @@ body {
         position: relative;
         grid-area: sprite;
         align-self: center;
-        // stylelint-disable unit-disallowed-list
-        width: 32px;
-        height: 32px;
-        // stylelint-enable unit-disallowed-list
         margin-right: 0.5em;
-        // stylelint-disable-next-line defensive-css/require-background-repeat
-        background-image: url('#{$base-url}img/sprites/w_type.png');
-        background-position: -0 -64px;
-        &.ar     { background-position: -0 -0; }
-        &.hdg    { background-position: -32px -0; }
-        &.hdgstg { background-position: -64px -32px; }
-        &.lmg    { background-position: -0 -32px; }
-        &.mmr    { background-position: -32px -32px; }
-        &.smg    { background-position: -64px -0; }
-        &.stg    { background-position: -64px -32px; }
+        @include spritesheet('w_type.png', 32px, 32px, $sprites-weapon-type, (-0, -64px));
         &::before {
           position: absolute;
           inset: -4px;
@@ -274,14 +253,6 @@ body {
     .mod-container,
     .stats-container {
       margin-bottom: px2rem(4px);
-    }
-    .talent-container,
-    .type-container,
-    .mod-container,
-    .stats-container {
-      .sprite {
-        background-repeat: no-repeat;
-      }
     }
     .talent-container,
     .stats-container .sprite-container {
@@ -398,73 +369,9 @@ body {
     }
     .talent-container {
       .sprite {
-        // stylelint-disable unit-disallowed-list
-        width: 96px;
-        height: 96px;
-        // stylelint-enable unit-disallowed-list
         margin: px2rem(8px) auto;
-        // stylelint-disable-next-line defensive-css/require-background-repeat
-        background-image: url('#{$base-url}img/sprites/w_talents.png');
-        background-position: -576px -576px;
         filter: drop-shadow(-12px -4px 0 var(--default-bg-color--clearest));
-        &.accurate      { background-position: -0 -0; }
-        &.adept         { background-position: -192px -0; }
-        &.ambusher      { background-position: -384px -0; }
-        &.balanced      { background-position: -480px -0; }
-        &.boomstick     { background-position: -576px -0; }
-        &.brutal        { background-position: -672px -0; }
-        &.caduceus      { background-position: -0 -96px; }
-        &.capable       { background-position: -96px -96px; }
-        &.card-counter  { background-position: -672px -288px; }
-        &.carefree      { background-position: -192px -576px; }
-        &.centermass    { background-position: -192px -384px; }
-        &.commanding    { background-position: -192px -96px; }
-        &.competent     { background-position: -288px -96px; }
-        &.cover-shooter { background-position: -288px -0; }
-        &.coolheaded    { background-position: -384px -96px; }
-        &.deadly        { background-position: -480px -96px; }
-        &.destructive   { background-position: -576px -96px; }
-        &.determined    { background-position: -672px -96px; }
-        &.devil         { background-position: -384px -288px; }
-        &.disciplined   { background-position: -0 -192px; }
-        &.distracted    { background-position: -96px -192px; }
-        &.dominant      { background-position: -192px -192px; }
-        &.elevated      { background-position: -288px -192px; }
-        &.expert        { background-position: -384px -192px; }
-        &.ferocious     { background-position: -576px -192px; }
-        &.fierce        { background-position: -672px -192px; }
-        &.fire          { background-position: -0 -288px; }
-        &.focused       { background-position: -96px -288px; }
-        &.fury          { background-position: -192px -288px; }
-        &.glutton       { background-position: -576px -288px; }
-        &.harmful       { background-position: -288px -288px; }
-        &.history       { background-position: -480px -288px; }
-        &.hurried       { background-position: -0 -384px; }
-        &.intense       { background-position: -96px -384px; }
-        &.lights-out    { background-position: -96px -576px; }
-        &.meticulous    { background-position: -288px -384px; }
-        &.midas         { background-position: -384px -384px; }
-        &.pakhan        { background-position: -480px -384px; }
-        &.predatory     { background-position: -576px -384px; }
-        &.prepared      { background-position: -672px -384px; }
-        &.preserved     { background-position: -0 -480px; }
-        &.proficient    { background-position: -96px -480px; }
-        &.quickdraw     { background-position: -192px -672px; }
-        &.republic      { background-position: -192px -480px; }
-        &.responsive    { background-position: -288px -480px; }
-        &.golden-rhino  { background-position: -384px -480px; }
-        &.rough         { background-position: -96px -672px; }
-        &.showstopper   { background-position: -96px -0; }
-        &.skilled       { background-position: -480px -480px; }
-        &.sustained     { background-position: -576px -480px; }
-        &.swift         { background-position: -672px -480px; }
-        &.talented      { background-position: -0 -576px; }
-        &.toxic         { background-position: -288px -576px; }
-        &.trained       { background-position: -384px -576px; }
-        &.uncomplicated { background-position: -480px -192px; }
-        &.unforgiving   { background-position: -480px -576px; }
-        &.valkyria      { background-position: -672px -576px; }
-        &.vicious       { background-position: -0 -672px; }
+        @include spritesheet('w_talents.png', 96px, 96px, $sprites-weapon-talents, (-576px, -576px));
       }
     }
     .bonus-container {
@@ -495,17 +402,8 @@ body {
         position: relative;
         grid-area: sprite;
         align-self: start;
-        // stylelint-disable unit-disallowed-list
-        width: 32px;
-        height: 32px;
         margin-right: 0.5em;
-        // stylelint-disable-next-line defensive-css/require-background-repeat
-        background-image: url('#{$base-url}img/sprites/w_mod.png');
-        // stylelint-enable unit-disallowed-list
-        &.magazine    { background-position: -0 -0; }
-        &.muzzle      { background-position: -32px -0; }
-        &.optics      { background-position: -0 -32px; }
-        &.underbarrel { background-position: -32px -32px; }
+        @include spritesheet('w_mod.png', 32px, 32px, $sprites-weapon-mods);
         &::before {
           position: absolute;
           inset: -2px;
@@ -580,18 +478,10 @@ body {
           }
         }
         .sprite {
-          // stylelint-disable unit-disallowed-list
-          width: 64px;
-          height: 64px;
-          // stylelint-enable unit-disallowed-list
           margin: 0 auto;
-          // stylelint-disable-next-line defensive-css/require-background-repeat
-          background-image: url('#{$base-url}img/sprites/g_stats.png');
           opacity: 0.7;
           filter: drop-shadow(-2px -6px 0 var(--default-bg-color--clearest));
-          &.ele { background-position: -0 -0; }
-          &.fa  { background-position: -64px -0; }
-          &.sta { background-position: -128px -0; }
+          @include spritesheet('g_stats.png', 64px, 64px, $sprites-gear-stats);
         }
       }
     }
@@ -612,14 +502,7 @@ body {
         align-items: center;
         margin-bottom: px2rem(4px);
         .sprite {
-          // stylelint-disable unit-disallowed-list
-          width: 22px;
-          height: 22px;
-          // stylelint-enable unit-disallowed-list
-          // stylelint-disable-next-line defensive-css/require-background-repeat
-          background-image: url('#{$base-url}img/sprites/g_mod.png');
-          &.stat { background-position: -0 -0; }
-          &.perf { background-position: -22px -0; }
+          @include spritesheet('g_mod.png', 22px, 22px, $sprites-gear-mods);
         }
         &::before {
           // stylelint-disable unit-disallowed-list

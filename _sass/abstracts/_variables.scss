@@ -47,3 +47,420 @@ $z-indexes: (
   tooltip    : 20,
   loading    : 30,
 ) !default;
+
+/// Spritesheet: Gear stats (Calculator)
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-gear-stats-calc: (
+  fa  : (-24px, -0),
+  sta : (-48px, -0),
+  ele : (-0, -0)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Weapons
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-weapons: (
+  acr               : (-384px, -0),
+  acr-enhanced      : (-512px, -0),
+  acr-tac           : (-640px, -0),
+  acs               : (-768px, -0),
+  ak47-classic      : (-896px, -0),
+  ak47m-military    : (-0, -64px),
+  ak74              : (-128px, -64px),
+  alejandro         : (-256px, -64px),
+  aug-enhanced      : (-384px, -64px),
+  aug-para          : (-512px, -64px),
+  aug-tac           : (-640px, -64px),
+  benelli           : (-768px, -64px),
+  benelli-marine    : (-896px, -64px),
+  benelli-tac       : (-0, -128px),
+  caduceus          : (-128px, -128px),
+  doublebarrel      : (-256px, -128px),
+  cassidy           : (-384px, -128px),
+  centurion         : (-512px, -128px),
+  custom-pf45       : (-640px, -128px),
+  damascus          : (-768px, -128px),
+  devil             : (-896px, -128px),
+  eir               : (-0, -192px),
+  fal-classic       : (-128px, -192px),
+  famas             : (-256px, -192px),
+  firstwave-pf45    : (-384px, -192px),
+  firstwave-x45     : (-512px, -192px),
+  g36c              : (-640px, -192px),
+  g36-enhanced      : (-768px, -192px),
+  g36-military      : (-896px, -192px),
+  heel              : (-0, -256px),
+  hildr             : (-128px, -256px),
+  m1a-classic       : (-256px, -256px),
+  historian         : (-384px, -256px),
+  m60-classic       : (-512px, -256px),
+  hog               : (-640px, -256px),
+  l86-custom        : (-768px, -256px),
+  l86-military      : (-896px, -256px),
+  lwm4              : (-0, -320px),
+  liberator         : (-128px, -320px),
+  lvoac             : (-256px, -320px),
+  m1a-firstwave     : (-384px, -320px),
+  m1a-socom         : (-512px, -320px),
+  m4-police         : (-640px, -320px),
+  m44-classic       : (-768px, -320px),
+  m44-custom        : (-896px, -320px),
+  m44-hunt          : (-0, -384px),
+  m45a1             : (-128px, -384px),
+  m60-blackmarket   : (-256px, -384px),
+  m60-military      : (-384px, -384px),
+  m249              : (-512px, -384px),
+  m249-tac          : (-640px, -384px),
+  m700              : (-768px, -384px),
+  m700-carbon       : (-896px, -384px),
+  m700-tac          : (-0, -448px),
+  m870-custom       : (-128px, -448px),
+  m870-express      : (-256px, -448px),
+  beretta-93r       : (-384px, -448px),
+  military-m9       : (-384px, -448px),
+  m870-military     : (-512px, -448px),
+  m1911             : (-640px, -448px),
+  m1911-tac         : (-768px, -448px),
+  magnum-586        : (-128px, -0),
+  magnum-686        : (-256px, -0),
+  mdr               : (-896px, -448px),
+  scarl             : (-0, -512px),
+  saiga-tac         : (-128px, -512px),
+  medved            : (-256px, -512px),
+  mg5               : (-384px, -512px),
+  mg5-infantry      : (-512px, -512px),
+  t821-blackmarket  : (-640px, -512px),
+  midas             : (-768px, -512px),
+  mk16-tac          : (-896px, -512px),
+  mk17-police       : (-0, -576px),
+  mk20-socom        : (-128px, -576px),
+  mk46-military     : (-256px, -576px),
+  mp5-burst         : (-384px, -576px),
+  mp5-navy          : (-512px, -576px),
+  mp5-st            : (-640px, -576px),
+  mp7               : (-768px, -576px),
+  mpx               : (-896px, -576px),
+  officers-m9a1     : (-0, -640px),
+  p416-custom       : (-128px, -640px),
+  p416-military     : (-256px, -640px),
+  pakhan            : (-384px, -640px),
+  rpk74-classic     : (-512px, -640px),
+  pp                : (-640px, -640px),
+  pp-enhanced       : (-768px, -640px),
+  rhino             : (-896px, -640px),
+  rhino-spec        : (-0, -704px),
+  rhino-gold        : (-128px, -704px),
+  rhino-snub        : (-256px, -704px),
+  rpk74-blackmarket : (-384px, -704px),
+  rpk74-military    : (-512px, -704px),
+  sa58-military     : (-640px, -704px),
+  sa58-tac          : (-768px, -704px),
+  saiga             : (-896px, -704px),
+  saiga-blackmarket : (-0, -768px),
+  sawedoff          : (-128px, -768px),
+  scarh-military    : (-256px, -768px),
+  tenebrae          : (-384px, -768px),
+  scarl-socom       : (-512px, -768px),
+  srs-a1            : (-640px, -768px),
+  srs-covert        : (-768px, -768px),
+  svd-para          : (-896px, -768px),
+  svd-surplus       : (-0, -832px),
+  t821-police       : (-128px, -832px),
+  tec9              : (-256px, -832px),
+  tec9-converted    : (-384px, -832px),
+  thompson          : (-512px, -832px),
+  tommy             : (-640px, -832px),
+  type-f            : (-768px, -832px),
+  type-t            : (-896px, -832px),
+  ump-police        : (-0, -896px),
+  ump-tac           : (-128px, -896px),
+  usc               : (-256px, -896px),
+  vector            : (-384px, -896px),
+  vector-firstwave  : (-512px, -896px),
+  vector-tac        : (-640px, -896px),
+  warlord           : (-768px, -896px),
+  x45               : (-896px, -896px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Weapon type
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-weapon-type: (
+  ar     : (-0, -0),
+  hdg    : (-32px, -0),
+  hdgstg : (-64px, -32px),
+  lmg    : (-0, -32px),
+  mmr    : (-32px, -32px),
+  smg    : (-64px, -0),
+  stg    : (-64px, -32px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Weapon talents
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-weapon-talents: (
+  accurate      : (-0, -0),
+  adept         : (-192px, -0),
+  ambusher      : (-384px, -0),
+  balanced      : (-480px, -0),
+  boomstick     : (-576px, -0),
+  brutal        : (-672px, -0),
+  caduceus      : (-0, -96px),
+  capable       : (-96px, -96px),
+  card-counter  : (-672px, -288px),
+  carefree      : (-192px, -576px),
+  centermass    : (-192px, -384px),
+  commanding    : (-192px, -96px),
+  competent     : (-288px, -96px),
+  cover-shooter : (-288px, -0),
+  coolheaded    : (-384px, -96px),
+  deadly        : (-480px, -96px),
+  destructive   : (-576px, -96px),
+  determined    : (-672px, -96px),
+  devil         : (-384px, -288px),
+  disciplined   : (-0, -192px),
+  distracted    : (-96px, -192px),
+  dominant      : (-192px, -192px),
+  elevated      : (-288px, -192px),
+  expert        : (-384px, -192px),
+  ferocious     : (-576px, -192px),
+  fierce        : (-672px, -192px),
+  fire          : (-0, -288px),
+  focused       : (-96px, -288px),
+  fury          : (-192px, -288px),
+  glutton       : (-576px, -288px),
+  harmful       : (-288px, -288px),
+  history       : (-480px, -288px),
+  hurried       : (-0, -384px),
+  intense       : (-96px, -384px),
+  lights-out    : (-96px, -576px),
+  meticulous    : (-288px, -384px),
+  midas         : (-384px, -384px),
+  pakhan        : (-480px, -384px),
+  predatory     : (-576px, -384px),
+  prepared      : (-672px, -384px),
+  preserved     : (-0, -480px),
+  proficient    : (-96px, -480px),
+  quickdraw     : (-192px, -672px),
+  republic      : (-192px, -480px),
+  responsive    : (-288px, -480px),
+  golden-rhino  : (-384px, -480px),
+  rough         : (-96px, -672px),
+  showstopper   : (-96px, -0),
+  skilled       : (-480px, -480px),
+  sustained     : (-576px, -480px),
+  swift         : (-672px, -480px),
+  talented      : (-0, -576px),
+  toxic         : (-288px, -576px),
+  trained       : (-384px, -576px),
+  uncomplicated : (-480px, -192px),
+  unforgiving   : (-480px, -576px),
+  valkyria      : (-672px, -576px),
+  vicious       : (-0, -672px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Weapon bonuses
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-weapon-bonus: (
+  devil    : (-0, -0),
+  republic : (-96px, -0),
+  valkyria : (-192px, -0)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Weapon mods
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-weapon-mods: (
+  magazine    : (-0, -0),
+  muzzle      : (-32px, -0),
+  optics      : (-0, -32px),
+  underbarrel : (-32px, -32px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Gear pieces
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-gear-pieces: (
+  chest     : (-0, -320px),
+  mask      : (-128px, -384px),
+  kneepads  : (-0, -384px),
+  backpack  : (-256px, -256px),
+  gloves    : (-128px, -320px),
+  holster   : (-256px, -320px),
+  barrett   : (-0, -320px),
+  ferro     : (-128px, -384px),
+  shortbow  : (-0, -384px),
+  ninja     : (-256px, -256px),
+  skulls    : (-128px, -320px),
+  bliss     : (-256px, -320px),
+  ab        : (-0, -0),
+  banshee   : (-128px, -0),
+  d3        : (-256px, -0),
+  eye       : (-0, -64px),
+  fc        : (-128px, -64px),
+  fm        : (-256px, -64px),
+  hf        : (-0, -128px),
+  ls        : (-128px, -128px),
+  nomad     : (-256px, -128px),
+  pred      : (-0, -192px),
+  reclaimer : (-128px, -192px),
+  sentry    : (-256px, -192px),
+  striker   : (-0, -256px),
+  tac       : (-128px, -256px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Gear stats
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-gear-stats: (
+  fa  : (-64px, -0),
+  sta : (-128px, -0),
+  ele : (-0, -0)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Gear mods
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-gear-mods: (
+  stat : (-0, -0),
+  perf : (-22px, -0)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Gear mods (Modal)
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-gear-mods-modal: (
+  gear : (-0, -0),
+  perf : (-128px, -0)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Skills
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-skills: (
+  aid            : (-0, -0),
+  aid-boost      : (-64px, -0),
+  aid-defib      : (-128px, -0),
+  aid-overdose   : (-192px, -0),
+  cover          : (-256px, -0),
+  cover-conceal  : (-320px, -0),
+  cover-recharge : (-0, -64px),
+  cover-trapper  : (-64px, -64px),
+  mcover         : (-128px, -64px),
+  mcover-blast   : (-192px, -64px),
+  mcover-counter : (-256px, -64px),
+  mcover-ext     : (-320px, -64px),
+  pulse          : (-0, -128px),
+  pulse-conceal  : (-64px, -128px),
+  pulse-recon    : (-128px, -128px),
+  pulse-tac      : (-192px, -128px),
+  seeker         : (-256px, -128px),
+  seeker-burst   : (-320px, -128px),
+  seeker-cluster : (-0, -192px),
+  seeker-gas     : (-64px, -192px),
+  shield         : (-128px, -192px),
+  shield-ass     : (-192px, -192px),
+  shield-kinetic : (-256px, -192px),
+  shield-react   : (-320px, -192px),
+  station        : (-0, -256px),
+  station-ammo   : (-64px, -256px),
+  station-immune : (-128px, -256px),
+  station-life   : (-192px, -256px),
+  sticky         : (-256px, -256px),
+  sticky-bfb     : (-320px, -256px),
+  sticky-flash   : (-0, -320px),
+  sticky-disrupt : (-64px, -320px),
+  turret         : (-128px, -320px),
+  turret-fire    : (-192px, -320px),
+  turret-sensor  : (-256px, -320px),
+  turret-zap     : (-320px, -320px),
+  ult-def        : (-0, -384px),
+  ult-med        : (-64px, -384px),
+  ult-tac        : (-128px, -384px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Player talents
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-player-talents: (
+  adrenaline : (-0, -0),
+  awe        : (-64px, -0),
+  buddy      : (-128px, -0),
+  chain      : (-192px, -0),
+  critsave   : (-256px, -0),
+  demo       : (-0, -64px),
+  desperate  : (-64px, -64px),
+  evasive    : (-128px, -64px),
+  fear       : (-192px, -64px),
+  medic      : (-256px, -64px),
+  move       : (-0, -128px),
+  onenone    : (-64px, -128px),
+  police     : (-128px, -128px),
+  power      : (-192px, -128px),
+  precision  : (-256px, -128px),
+  proxy      : (-0, -192px),
+  reaper     : (-64px, -192px),
+  shrapnel   : (-128px, -192px),
+  steady     : (-192px, -192px),
+  strike     : (-256px, -192px),
+  tacadv     : (-0, -256px),
+  techsupp   : (-64px, -256px),
+  triage     : (-128px, -256px),
+  wildfire   : (-256px, -256px)
+) !default;
+// stylelint-enable unit-disallowed-list
+
+/// Spritesheet: Face masks
+/// @prop {String} key - Identifier
+/// @prop {Map} value - Sprite position
+// stylelint-disable unit-disallowed-list
+$sprites-vanity-masks: (
+  bug     : (-0, -0),
+  cage    : (-256px, -0),
+  cbrn    : (-512px, -0),
+  chemist : (-768px, -0),
+  classic : (-1024px, -0),
+  ember   : (-0, -256px),
+  happy   : (-256px, -256px),
+  haze    : (-512px, -256px),
+  hockey  : (-768px, -256px),
+  jungle  : (-1024px, -256px),
+  oni     : (-0, -512px),
+  piggy   : (-256px, -512px),
+  rictus  : (-512px, -512px),
+  rider   : (-768px, -512px),
+  shady   : (-1024px, -512px),
+  smiler  : (-0, -768px),
+  sting   : (-256px, -768px),
+  stripes : (-512px, -768px),
+  stygian : (-768px, -768px),
+  tao     : (-1024px, -768px),
+  trench  : (-0, -1024px),
+  vulcan  : (-256px, -1024px)
+) !default;
+// stylelint-enable unit-disallowed-list
