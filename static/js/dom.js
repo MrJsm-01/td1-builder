@@ -8,6 +8,9 @@ export const DOM = {
     container : document.querySelector('.modal-container'),
     close     : document.querySelector('#close-modal')
   },
+  meta : {
+    name : document.querySelector('#name-select')
+  },
   stats : {
     fa  : document.querySelector('#fa-value'),
     sta : document.querySelector('#sta-value'),

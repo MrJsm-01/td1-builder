@@ -2,6 +2,7 @@ import { DOM } from './dom.js';
 import { STRINGS } from './strings.js';
 import { STATE } from './state.js';
 import { openModal, closeModal } from './modal.js';
+import { openNamePicker, selectLoadoutName, clearLoadoutName } from './name.js';
 import { openWeaponPicker, selectWeapon, selectWeaponTalent, selectWeaponMod, clearWeaponSlot } from './weapons.js';
 import { openGearPicker, selectGear, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { openSkillPicker, selectSkill } from './skills.js';
@@ -59,6 +60,9 @@ DOM.issueButton.addEventListener('click', () => openModal(`
   </div>
 `, STRINGS.help.issues));
 
+// Build name
+DOM.meta.name.addEventListener('click', () => openNamePicker());
+
 // Modal
 DOM.modal.container.addEventListener('click', e => {
   if (e.target.closest('#share-url')) {
@@ -77,6 +81,7 @@ DOM.modal.container.addEventListener('click', e => {
   }
 
   if (e.target.closest('#clear-slot')) {
+    STATE.activeMode === 'loadout-name' && clearLoadoutName();
     STATE.activeMode === 'weapon' && clearWeaponSlot(STATE.activeSlot);
 
     updateAddressBar();
@@ -88,7 +93,9 @@ DOM.modal.container.addEventListener('click', e => {
   const ITEM = e.target.closest('[data-id]');
   if (!ITEM) return;
 
-  if (STATE.activeMode === 'weapon') {
+  if (STATE.activeMode === 'loadout-name') {
+    selectLoadoutName(ITEM.dataset.id);
+  } else if (STATE.activeMode === 'weapon') {
     selectWeapon(STATE.activeSlot, ITEM.dataset.id);
   } else if (STATE.activeMode === 'wp-talent') {
     selectWeaponTalent(STATE.activeSlot, STATE.activeTalentIndex, ITEM.dataset.id);

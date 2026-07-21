@@ -4,6 +4,7 @@ import { BUILD_VERSION } from './constants.js';
 import { STRINGS } from './strings.js';
 import { BUILD } from './state.js';
 import { openModal } from './modal.js';
+import { selectLoadoutName } from './name.js';
 import { selectWeapon, selectWeaponTalent, selectWeaponMod, setWeaponScore, GEAR_SCORE } from './weapons.js';
 import { selectGear, renderGearStats, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { selectSkill } from './skills.js';
@@ -100,6 +101,8 @@ function serializeGearSlot(slot) {
 
 function serializeBuild() {
   const PAYLOAD = { v: BUILD_VERSION };
+
+  if (BUILD.name !== null) PAYLOAD.n = BUILD.name;
 
   const WEAPONS = {};
   WEAPON_SLOTS.forEach(slot => {
@@ -220,6 +223,10 @@ function applyBuildData(payload) {
     `, STRINGS.error.version);
 
     return;
+  }
+
+  if (payload.n !== undefined) {
+    selectLoadoutName(payload.n);
   }
 
   if (payload.w) {

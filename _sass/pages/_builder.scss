@@ -78,6 +78,7 @@ body {
 }
 
 .stats,
+.meta,
 .build {
   --margin: 2rem;
   margin-bottom: var(--margin);
@@ -124,6 +125,7 @@ body {
   }
 }
 
+.meta,
 .build,
 .skills {
   button {
@@ -135,9 +137,30 @@ body {
     text-align: unset;
     background-color: transparent;
     border: 0;
-    &[hidden] {
-      display: none;
-    }
+  }
+}
+
+.meta {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25em;
+  align-items: center;
+  justify-self: flex-end;
+  width: max-content;
+  padding: 0.25em 0.33em;
+  font-size: h(3);
+  background-color: var(--default-bg-color--clearest);
+  backdrop-filter: blur(5px);
+  .build-name {
+    font-weight: 700;
+    &.selected { color: var(--brand-color); }
+  }
+}
+
+.build,
+.skills {
+  button[hidden] {
+    display: none;
   }
 }
 

@@ -1,4 +1,5 @@
 export const BUILD = {
+  name      : null,
   primary   : null,
   secondary : null,
   handgun   : null,

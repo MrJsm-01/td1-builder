@@ -4,6 +4,7 @@
 ---
 
 export const GAME_DATA = {
+  build_names     : {{ site.data.build_names | jsonify }},
   qualities       : {{ site.data.qualities | jsonify }},
   weapon_types    : {{ site.data.weapon_types | jsonify }},
   weapon_slots    : {{ site.data.weapon_slots | jsonify }},

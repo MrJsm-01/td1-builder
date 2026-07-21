@@ -329,6 +329,21 @@
         }
       }
     }
+    &:has(> .build-name) {
+      width: 33vw;
+      @include respond-to('large')  { width: 50vw; }
+      @include respond-to('medium') { width: 75vw; }
+      @include respond-to('small')  { width: 90vw; }
+      .build-name {
+        padding: 0.5em 0.5em 0.25em;
+        font-size: h(3);
+        background-color: var(--default-bg-color--clearest);
+        @include hocus {
+          background-color: var(--brand-color--lighter);
+        }
+      }
+    }
+    &:has(> .build-name),
     &:has(> .filters-container),
     &:has(> .gear),
     &:has(> .mod),
@@ -336,6 +351,7 @@
     &:has(> .gear-mod) {
       align-items: stretch;
     }
+    &:has(> .build-name),
     &:has(> .filters-container),
     &:has(> .gear),
     &:has(> .mod),
@@ -347,6 +363,7 @@
       display: flex;
       flex-flow: column nowrap;
     }
+    &:has(> .build-name),
     &:has(> .filters-container),
     &:has(> .gear),
     &:has(> .talent),

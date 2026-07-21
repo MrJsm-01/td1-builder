@@ -1,4 +1,8 @@
 export const STRINGS = {
+  loadout : {
+    choose : 'Choose Loadout Name',
+    empty  : 'Untitled'
+  },
   weapons : {
     choose  : 'Choose Weapon',
     quality : 'Unknown quality',

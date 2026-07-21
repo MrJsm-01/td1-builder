@@ -1,0 +1,210 @@
+[
+	{
+		"id": 1,
+		"name": "Assault"
+	},
+	{
+		"id": 2,
+		"name": "Dark Zone"
+	},
+	{
+		"id": 3,
+		"name": "DPS"
+	},
+	{
+		"id": 4,
+		"name": "Exotic"
+	},
+	{
+		"id": 5,
+		"name": "Hexotic"
+	},
+	{
+		"id": 6,
+		"name": "High-End"
+	},
+	{
+		"id": 7,
+		"name": "Hybrid"
+	},
+	{
+		"id": 8,
+		"name": "Incursion"
+	},
+	{
+		"id": 9,
+		"name": "Last Stand"
+	},
+	{
+		"id": 10,
+		"name": "Marksman"
+	},
+	{
+		"id": 11,
+		"name": "Medic"
+	},
+	{
+		"id": 12,
+		"name": "NinjaBike"
+	},
+	{
+		"id": 13,
+		"name": "PvE"
+	},
+	{
+		"id": 14,
+		"name": "PvP"
+	},
+	{
+		"id": 15,
+		"name": "Resistance"
+	},
+	{
+		"id": 16,
+		"name": "Rusher"
+	},
+	{
+		"id": 17,
+		"name": "Skill Power"
+	},
+	{
+		"id": 18,
+		"name": "Skirmish"
+	},
+	{
+		"id": 19,
+		"name": "Solo"
+	},
+	{
+		"id": 20,
+		"name": "Support"
+	},
+	{
+		"id": 21,
+		"name": "Tank"
+	},
+	{
+		"id": 22,
+		"name": "Toughness"
+	},
+	{
+		"id": 23,
+		"name": "Trial"
+	},
+	{
+		"id": 24,
+		"name": "Underground"
+	},
+	{
+		"id": 25,
+		"name": "AlphaBridge"
+	},
+	{
+		"id": 26,
+		"name": "Banshee"
+	},
+	{
+		"id": 27,
+		"name": "D3-FNC"
+	},
+	{
+		"id": 28,
+		"name": "DeadEYE"
+	},
+	{
+		"id": 29,
+		"name": "Final Measure"
+	},
+	{
+		"id": 30,
+		"name": "FireCrest"
+	},
+	{
+		"id": 31,
+		"name": "Hunter's Faith"
+	},
+	{
+		"id": 32,
+		"name": "Lone Star"
+	},
+	{
+		"id": 33,
+		"name": "Nomad"
+	},
+	{
+		"id": 34,
+		"name": "Predator's Mark"
+	},
+	{
+		"id": 35,
+		"name": "Reclaimer"
+	},
+	{
+		"id": 36,
+		"name": "Sentry's Call"
+	},
+	{
+		"id": 37,
+		"name": "Striker"
+	},
+	{
+		"id": 38,
+		"name": "Tactician"
+	},
+	{
+		"id": 39,
+		"name": "AlphaBridge Classified"
+	},
+	{
+		"id": 40,
+		"name": "Banshee Classified"
+	},
+	{
+		"id": 41,
+		"name": "D3-FNC Classified"
+	},
+	{
+		"id": 42,
+		"name": "DeadEYE Classified"
+	},
+	{
+		"id": 43,
+		"name": "Final Measure Classified"
+	},
+	{
+		"id": 44,
+		"name": "FireCrest Classified"
+	},
+	{
+		"id": 45,
+		"name": "Hunter's Faith Classified"
+	},
+	{
+		"id": 46,
+		"name": "Lone Star Classified"
+	},
+	{
+		"id": 47,
+		"name": "Nomad Classified"
+	},
+	{
+		"id": 48,
+		"name": "Predator's Mark Classified"
+	},
+	{
+		"id": 49,
+		"name": "Reclaimer Classified"
+	},
+	{
+		"id": 50,
+		"name": "Sentry's Call Classified"
+	},
+	{
+		"id": 51,
+		"name": "Striker Classified"
+	},
+	{
+		"id": 52,
+		"name": "Tactician Classified"
+	}
+]
