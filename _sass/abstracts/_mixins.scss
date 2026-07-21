@@ -68,3 +68,21 @@
     }
   }
 }
+
+/// The Division background
+/// @param {String} $color - Background color
+/// @param {Length} $size - Size of the square dots at each corner
+/// @link https://github.com/DivisionBuilds/divisionbuilds.github.io/blob/b0af897/css/division.scss#L157
+/// @example scss - The Division Background mixin
+///   @include td-background;
+///   @include td-background($size: 3px);
+@mixin td-background($color: var(--default-bg-color--clearest), $size: 2px) {
+  background:
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
+    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
+  ;
+  background-color: $color;
+  background-size: $size $size;
+}

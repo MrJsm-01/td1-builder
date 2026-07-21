@@ -76,14 +76,7 @@ button {
     padding: px2rem(6px) px2rem(12px);
     font-size: px2rem(16px);
     color: var(--default-text-color);
-    background:
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-    ;
-    background-color: var(--default-bg-color--clearest);
-    background-size: 2px 2px;
+    @include td-background;
     // Don't use hocus mixin because when clicking the button
     // it will not return to the default state
     // stylelint-disable-next-line a11y/selector-pseudo-class-focus

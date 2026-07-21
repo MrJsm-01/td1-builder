@@ -101,14 +101,7 @@ body {
     justify-content: center;
     padding: 1em 2em;
     font-size: h(3);
-    background:
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-    ;
-    background-color: var(--default-bg-color--clearest);
-    background-size: 3px 3px;
+    @include td-background($size: 3px);
     // border-top: 1px solid var(--default-bg-color--clearest);
     // border-bottom: 1px solid var(--default-bg-color--clearest);
     backdrop-filter: blur(5px);
@@ -226,14 +219,7 @@ body {
     @media (hover: hover) {
       overscroll-behavior: contain;
     }
-    background:
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-    ;
-    background-color: var(--default-bg-color--clearest);
-    background-size: 2px 2px;
+    @include td-background;
     backdrop-filter: blur(5px);
     .meta-container,
     .talent-container,
@@ -279,14 +265,7 @@ body {
     }
     .talent-container,
     .stats-container .sprite-container {
-      background:
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-      ;
-      background-color: var(--default-bg-color--clearest);
-      background-size: 2px 2px;
+      @include td-background;
     }
     .talent-container {
       &.locked {
@@ -300,14 +279,7 @@ body {
       [class^='bonus'] {
         padding: 0.25em 0.5em;
         margin-bottom: px2rem(4px);
-        background:
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-        ;
-        background-color: var(--default-bg-color--lightest);
-        background-size: 2px 2px;
+        @include td-background($color: var(--default-bg-color--lightest));
         opacity: 0.9;
         &.highlight {
           opacity: 1;
@@ -718,14 +690,7 @@ body {
     gap: px2rem(12px);
     .sprite-container {
       padding: px2rem(8px);
-      background:
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-      ;
-      background-color: var(--default-bg-color--clearest);
-      background-size: 2px 2px;
+      @include td-background;
       backdrop-filter: blur(5px);
       .sprite {
         // stylelint-disable unit-disallowed-list

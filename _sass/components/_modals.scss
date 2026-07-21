@@ -19,14 +19,7 @@
     height: 90dvh;
     padding: 0.5rem;
     overflow-y: auto;
-    background:
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-      linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-    ;
-    background-color: var(--default-bg-color--clearest);
-    background-size: 3px 3px;
+    @include td-background($size: 3px);
     backdrop-filter: blur(5px);
     @include respond-to('larger') {
       width: 75vw;
@@ -123,14 +116,7 @@
     .talent,
     .mod,
     .attr {
-      background:
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-        linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-      ;
-      background-color: var(--default-bg-color--clearest);
-      background-size: 2px 2px;
+      @include td-background;
     }
     .talent {
       display: flex;
@@ -203,14 +189,7 @@
       align-items: center;
       .sprite-container {
         padding: px2rem(8px);
-        background:
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-          linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-        ;
-        background-color: var(--default-bg-color--clearest);
-        background-size: 2px 2px;
+        @include td-background;
         .sprite {
           filter: drop-shadow(-2px -6px 0 var(--default-bg-color--clearest));
         }

@@ -32,25 +32,10 @@ a {
   }
 }
 
-section,
-.gear-talents .item-container,
-.weapon-talents .item-container,
-.gear-sets .item-container,
-.weapon-sets .item-container,
-.face-masks .item-container {
-  background:
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) no-repeat,
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) top right no-repeat,
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom left no-repeat,
-    linear-gradient(rgba(244, 255, 255, 0.2), rgba(244, 255, 255, 0.2) 0) bottom right no-repeat
-  ;
-  background-color: var(--default-bg-color--clearest);
-}
-
 section {
   padding: 0.5rem;
-  background-size: 2px 2px;
   backdrop-filter: blur(5px);
+  @include td-background;
   h1,
   h2,
   h3 {
@@ -110,7 +95,7 @@ section {
       // stylelint-disable-next-line defensive-css/require-flex-wrap
       display: flex;
       padding: 1em;
-      background-size: 3px 3px;
+      @include td-background($size: 3px);
     }
   }
   &.weapon-talents,
