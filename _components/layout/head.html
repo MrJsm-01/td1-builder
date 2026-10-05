@@ -26,7 +26,7 @@
 	<meta property="og:site_name" content="{{ site.meta.title }}">
 	<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="{{ site.url }}/static/img/meta/og.jpg">
+	<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/static/img/meta/og.jpg">
 	<meta property="og:image:alt" content="{{ site.meta.title }}">
 	<meta property="og:image:width" content="1280">
 	<meta property="og:image:height" content="640">
@@ -41,33 +41,33 @@
 		<meta name="twitter:description" content="{{ site.meta.description }}">
 		<meta name="twitter:title" content="{{ site.meta.title }}">
 	{% endif %}
-	<meta name="twitter:image" content="{{ site.url }}/static/img/meta/og.jpg">
+	<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/static/img/meta/og.jpg">
 	<meta name="twitter:image:alt" content="{{ site.meta.title }}">
 	{%- comment -%} Link Relationships {%- endcomment -%}
-	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
 	{%- comment -%} Favicons {%- endcomment -%}
-	<link rel="icon" href="/favicon.ico" sizes="32x32">
-	<link rel="icon" type="image/svg+xml" href="/static/img/meta/favicon.svg" sizes="any">
-	<link rel="apple-touch-icon" href="/static/img/meta/favicon-180.png">
+	<link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="32x32">
+	<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/static/img/meta/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" href="{{ site.baseurl }}/static/img/meta/favicon-180.png">
 	{%- comment -%} Fonts {%- endcomment -%}
 	<link rel="preconnect" href="https://fonts.bunny.net">
 	<link rel="stylesheet" href="https://fonts.bunny.net/css?family=chakra-petch:400,400i,700,700i&display=swap">
 	{%- comment -%} Stylesheets {%- endcomment -%}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gardevoir@1.0.0/dist/index.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="/static/css/common.css?{{ site.time | date: '%s%N' }}">
+	<link rel="stylesheet" href="{{ site.baseurl }}/static/css/common.css?{{ site.time | date: '%s%N' }}">
 	{% if page.layout == "builder" %}
-		<link rel="stylesheet" href="/static/css/builder.css?{{ site.time | date: '%s%N' }}">
+		<link rel="stylesheet" href="{{ site.baseurl }}/static/css/builder.css?{{ site.time | date: '%s%N' }}">
 	{% endif %}
 	{% if page.layout == "page" %}
-		<link rel="stylesheet" href="/static/css/pages.css?{{ site.time | date: '%s%N' }}">
+		<link rel="stylesheet" href="{{ site.baseurl }}/static/css/pages.css?{{ site.time | date: '%s%N' }}">
 	{% endif %}
 	{%- comment -%} Scripts {%- endcomment -%}
 	{% if page.layout == "builder" %}
 		<script defer src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
-		<script defer type="module" src="/static/js/main.js?{{ site.time | date: '%s%N' }}"></script>
+		<script defer type="module" src="{{ site.baseurl }}/static/js/main.js?{{ site.time | date: '%s%N' }}"></script>
 	{% endif %}
 	{% if page.url == "/builds/" %}
-		<script defer src="/static/js/search.js?{{ site.time | date: '%s%N' }}"></script>
+		<script defer src="{{ site.baseurl }}/static/js/search.js?{{ site.time | date: '%s%N' }}"></script>
 	{% endif %}
 </head>
