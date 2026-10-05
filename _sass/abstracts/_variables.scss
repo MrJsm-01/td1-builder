@@ -1,6 +1,6 @@
 /// Relative or absolute URL where all assets are served from
 /// @type String
-$base-url: '{{ site.baseurl }}/static/' !default;
+$base-url: '/static/' !default;
 
 /// Breakpoints
 /// @prop {String} key - Identifier
