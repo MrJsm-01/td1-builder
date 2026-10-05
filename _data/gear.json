@@ -43,21 +43,21 @@
 	},
 	{
 		"id": "barrett",
-		"name": "바렛의 방탄조끼",
+		"name": "라리 바렛의 방탄 조끼",
 		"quality": "exotic",
 		"slot": "chest",
 		"talent": "barrett"
 	},
 	{
 		"id": "ferro",
-		"name": "페로의 산소마스크",
+		"name": "페로의 산소 호흡기",
 		"quality": "exotic",
 		"slot": "mask",
 		"talent": "ferro"
 	},
 	{
 		"id": "shortbow",
-		"name": "숏보우 챔피언십 무릎보호대",
+		"name": "숏보우 챔피언 보호대",
 		"quality": "exotic",
 		"slot": "kneepads",
 		"talent": "shortbow"
@@ -71,7 +71,7 @@
 	},
 	{
 		"id": "skulls",
-		"name": "스컬스 MC 장갑",
+		"name": "스컬스 오토바이 장갑",
 		"quality": "exotic",
 		"slot": "gloves",
 		"talent": "skulls"
