@@ -1,6 +1,6 @@
 ---
 ---
-$base-url: '{{ site.baseurl }}/static/img/';
+$base-url: "{{ site.baseurl }}/static/img/";
 
 @use 'components/modals' as *;
 @use 'components/tooltips' as *;
