@@ -1,44 +1,37 @@
 {
 	"ar": {
 		"label": "돌격소총",
-		"bonus": "Enemy Armor Damage",
-		"desc": "Assault rifles are well-balanced fully automatic weapons with a moderate amount of recoil, most useful at medium range.",
+		"bonus": "보호장구 추가 대미지",
 		"slot": "primary_secondary"
 	},
 	"hdg": {
 		"label": "권총",
 		"bonus": null,
-		"desc": "Pistols are accurate, easy to handle sidearms that deal extra damage to injured enemies.",
 		"slot": "handgun"
 	},
 	"hdgstg": {
 		"label": "보조무기 산탄총",
-		"bonus": "Stagger",
-		"desc": "The ultimate close quarters weapon, shotguns provide extremely high damage at close range.",
+		"bonus": "비틀거림",
 		"slot": "handgun"
 	},
 	"lmg": {
 		"label": "경기관총",
-		"bonus": "DMG to Target Out of Cover",
-		"desc": "Light machine guns are high-powered fully automatic weapons with large capacity magazines, but which require some time to stabilize when firing.",
+		"bonus": "비엄페 대미지",
 		"slot": "primary_secondary"
 	},
 	"mmr": {
 		"label": "저격소총",
-		"bonus": "Headshot Damage",
-		"desc": "Marksman rifles are high-powered precision rifles with extra headshot damage, designed for long range combat.",
+		"bonus": "헤드샷 대미지",
 		"slot": "primary_secondary"
 	},
 	"smg": {
 		"label": "기관단총",
-		"bonus": "Critical Hit Chance",
-		"desc": "Submachine guns are stable, high mobility weapons with extra critical hit chance but short range.",
+		"bonus": "치명타 확률",
 		"slot": "primary_secondary"
 	},
 	"stg": {
 		"label": "산탄총",
-		"bonus": "Stagger",
-		"desc": "The ultimate close quarters weapon, shotguns provide extremely high damage at close range.",
+		"bonus": "비틀거림",
 		"slot": "primary_secondary"
 	}
 }
