@@ -1,9 +1,9 @@
 # Website
-url: https://td1builder.strappazzon.xyz
-baseurl: /
+url: https://mrjsm-01.github.io
+baseurl: /td1-builder
 
 # Git
-repo_url: https://github.com/Strappazzon/td1-builder
+repo_url: https://github.com/MrJsm-01/td1-builder
 
 # Website metadata
 meta:
