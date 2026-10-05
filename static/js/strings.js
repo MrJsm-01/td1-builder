@@ -4,13 +4,13 @@ export const STRINGS = {
     empty  : 'Untitled'
   },
   weapons : {
-    choose  : 'Choose Weapon',
+    choose  : '무기 선택',
     quality : 'Unknown quality',
     type    : 'Unkwnown Weapon Type',
     bonus   : 'Unknown Bonus',
     empty   : {
-      name : 'Empty Slot',
-      desc : 'Remove the current item from this slot'
+      name : '빈 슬롯',
+      desc : '선택 해제'
     }
   },
   gear : {
