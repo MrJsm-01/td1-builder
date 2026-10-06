@@ -1,4 +1,4 @@
-export const STRINGS = {
+wexport const STRINGS = {
   loadout : {
     choose : 'Choose Loadout Name',
     empty  : 'Untitled'
@@ -27,7 +27,7 @@ export const STRINGS = {
   talents : {
     choose        : 'Choose Talent',
     choose_player : 'Choose Player Talent',
-    talent        : 'Talent',
+    talent        : '특수효과',
     name          : 'Choose',
     desc          : 'Talent description is unavailable'
   },
