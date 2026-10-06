@@ -1,4 +1,4 @@
-wexport const STRINGS = {
+export const STRINGS = {
   loadout : {
     choose : 'Choose Loadout Name',
     empty  : 'Untitled'
