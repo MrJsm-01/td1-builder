@@ -38,34 +38,12 @@
         display: none;
       }
     }
-    // 1. 특수 (Exotic) - 선명하고 진한 빨간색 및 혼합모드 정상화
-    .weapon,
-    .gear {
-      &[data-quality='exotic'] {
-        .sprite-container {
-          background-color: #c82323 !important; // 아이콘 배경: 진한 빨간색
-        }
-        .info-container .name {
-          color: var(--quality-exotic);
-        }
-      }
-      .sprite-container {
-        .sprite {
-          mix-blend-mode: normal !important; // 검은색 가림 방지
-        }
-      }
-    }
     .weapon,
     .gear,
     .gear-mod {
       display: flex;
       flex-flow: row wrap;
       gap: px2rem(4px);
-      &[data-quality='highend'] {
-        .sprite-container {
-          background-color: #de990f !important; // 변수 대신 선명한 노란색 직접 지정
-        }
-      }
       .info-container {
         display: flex;
         flex: 1;
@@ -90,19 +68,12 @@
         .icon-container {
           background-color: var(--quality-worn--light);
         }
-        .info-container {
-          .name {
-            // color: var(--quality-worn);
-          }
-        }
       }
       .icon-container {
         .icon {
           display: block;
-          // stylelint-disable unit-disallowed-list
           width: 128px;
           height: 64px;
-          // stylelint-enable unit-disallowed-list
           fill: currentColor;
         }
       }
@@ -141,33 +112,13 @@
       padding: px2rem(2px) px2rem(4px);
     }
     .gear {
-      // 일반 세트 (Gear Set) -> 짙은 풀색
-      &[data-quality='gearset'] {
-        .sprite-container {
-          background-color: #265c33 !important;
-        }
-        .info-container .name {
-          color: var(--quality-gset);
-        }
+      &[data-quality='classy'] .desc::before,
+      &[data-quality='classified'] .desc::before {
+        margin-right: px2rem(2px);
+        vertical-align: middle;
+        content: url('#{$base-url}img/sprites/g_classy.png');
+        opacity: 0.7;
       }
-
-      // 복합형 세트 (Classified) -> 밝은 청록색
-      &[data-quality='classy'],
-      &[data-quality='classified'] {
-        .sprite-container {
-          background-color: #00cc7a !important;
-        }
-        .info-container .name {
-          color: #00cc7a;
-        }
-        .desc::before {
-          margin-right: px2rem(2px);
-          vertical-align: middle;
-          content: url('#{$base-url}img/sprites/g_classy.png');
-          opacity: 0.7;
-        }
-      }
-
       .sprite-container {
         .sprite {
           @include spritesheet('g_items.png', 128px, 64px, $sprites-gear-pieces);
@@ -175,12 +126,6 @@
       }
     }
     .gear-mod {
-      &[data-quality='superior'],
-      &[data-quality='specialized'] {
-        .sprite-container {
-          background-color: #0072ce !important; // 아이콘 배경: 파란색 직접 지정
-        }
-      }
       .sprite-container {
         .sprite {
           @include spritesheet('g_mod_picker.png', 128px, 64px, $sprites-gear-mods-modal);
@@ -189,7 +134,6 @@
     }
     .skill,
     .player-talent {
-      // stylelint-disable-next-line defensive-css/require-flex-wrap
       display: flex;
       gap: px2rem(8px);
       align-items: center;
@@ -484,7 +428,6 @@
         }
       }
     }
-    // https://codepen.io/designcouch/pen/obvKxm
     &.animated {
       transform: scaleY(0.01) scaleX(0);
       animation: unfold-in 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
@@ -506,7 +449,6 @@
       &-corner {
         background-color: transparent;
       }
-      // Bar
       &-thumb {
         background:
           linear-gradient(
@@ -519,7 +461,6 @@
             transparent 100%
           );
         ;
-        // stylelint-disable-next-line a11y/selector-pseudo-class-focus
         &:hover {
           background:
             linear-gradient(
@@ -534,7 +475,6 @@
           ;
         }
       }
-      // Background
       &-track {
         background: transparent;
       }
@@ -556,51 +496,51 @@
     }
   }
 }
+
 /* =========================================================
-   QUALITY BACKGROUND COLOR OVERRIDES (FORCE OVERRIDE)
+   QUALITY BACKGROUND COLOR OVERRIDES (CLEAN OVERRIDE)
    ========================================================= */
 .modal-container {
-  // 1. 버튼 전체 영역 투명화
   button.weapon,
   button.gear,
-  button.gear-mod {
-    background-color: transparent !important;
+  button.gear-mod,
+  .weapon,
+  .gear,
+  .gear-mod {
+    background-color: #000000 !important;
 
-    // 2. [특수 - Exotic] 진한 선명한 빨간색 (#c82323)
+    // 1. [특수 - Exotic] 진한 선명한 빨간색
     &[data-quality='exotic'] .sprite-container {
       background-color: #c82323 !important;
     }
 
-    // 3. [특급 - High-End] 붉은 기 완벽 제거한 선명한 황금 노란색 (#de990f)
+    // 2. [특급 - High-End] 붉은 기 완벽 제거한 선명한 황금 노란색
     &[data-quality='highend'] .sprite-container,
     &[data-quality='high-end'] .sprite-container {
       background-color: #de990f !important;
     }
 
-    // 4. [전문 / 우수 - Specialized / Superior] 파란색 (#0072ce)
+    // 3. [전문 / 우수 - Specialized / Superior] 파란색
     &[data-quality='specialized'] .sprite-container,
     &[data-quality='superior'] .sprite-container {
       background-color: #0072ce !important;
     }
 
-    // 5. [일반 세트 - Gear Set] 더 밝아진 진녹색 (#007a2c)
+    // 4. [일반 세트 - Gear Set] 맑은 진녹색
     &[data-quality='gearset'] .sprite-container,
     &[data-quality='gset'] .sprite-container,
     &[data-type='set'] .sprite-container {
       background-color: #007a2c !important;
     }
 
-    // 6. [복합형 세트 - Classified] 인게임 시그니처 민트/청록색 (#00a873)
+    // 5. [복합형 세트 - Classified] 인게임 시그니처 민트/청록색
     &[data-quality='classified'] .sprite-container,
     &[data-quality='classy'] .sprite-container {
       background-color: #00a873 !important;
     }
   }
 
-  // 7. 검은 바탕 투명화 (아이콘 뒤 배경색 노출)
-  .weapon .sprite-container .sprite,
-  .gear .sprite-container .sprite,
-  .gear-mod .sprite-container .sprite,
+  // 6. 스크린 혼합 모드로 순수 배경색만 투과시킴
   .sprite-container .sprite {
     mix-blend-mode: screen !important;
   }
