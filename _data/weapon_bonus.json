@@ -1,8 +1,8 @@
 [
 	{
 		"id": "republic",
-		"name": "Free Republic",
-		"desc": "Each shot with the Liberator grants +5% to your next headshot damage with the Centurion. Max is 200%<br>Kills with the Centurion grants +10% RPM to all weapons for 10 seconds",
+		"name": "자유공화국",
+		"desc": "리버레이터를 발사할 때마다 센츄리온으로 기록하는 다음 헤드샷에 +5% 대미지 효과를 줍니다. 최대 200%까지 누적 됩니다. 센츄리온으로 기록한 킬은 모든 무기에 10초간 +10% 분당 발사수 증가 효과를 줍니다",
 		"weapons": [
 			"centurion",
 			"liberator"
@@ -10,8 +10,8 @@
 	},
 	{
 		"id": "devil",
-		"name": "The Devil's Heel",
-		"desc": "Both weapons gain the Fire and Fury talents and the buff durations are increased by 15 seconds.<br>Bonuses from Fire and Fury are no longer lost when swapping between Fire and Fury.<br>Weapon swap speed is increased by 50%.",
+		"name": "악마의 발꿈치",
+		"desc": "주 무기와 예비 무기에 \"화염\"과 \"분노\" 특수효과가 적용되고 버프 지속시간이 15초 증가합니다. 주 무기와 예비 무기를 교체해도 \"화염\"과 \"분노\" 보너스가 더는 사라지지 않습니다. 무기 교체속도가 증가합니다",
 		"weapons": [
 			"devil",
 			"heel"
@@ -19,8 +19,8 @@
 	},
 	{
 		"id": "valkyria",
-		"name": "Twin Valkyries",
-		"desc": "Each hit with Hildr increases critical hit damage by 1% to a max of 30%. The bonus decreases by 1% every second.<br>This bonus applies only to Eir.",
+		"name": "발키리아",
+		"desc": "힐드르로 공격이 적중할 때마다 치명타 대미지가 1%씩 최대 30%까지 증가합니다. 보너스는 1초마다 감소합니다. 이 보너스는 에어에만 적용됩니다",
 		"weapons": [
 			"eir",
 			"hildr"
