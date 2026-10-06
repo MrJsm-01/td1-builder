@@ -7,25 +7,24 @@
 
 $base-url: "../img/";
 
-/* MODAL QUALITY BACKGROUND & BLEND MODE FINAL FIX */
+/* MODAL OVERLAY CLEAR & HIGHEND COLOR FIX */
 .modal-container {
-  // 1. 특급(High-End) 노란색 - 밝고 선명한 황금색으로 변경 (#ffb400)
-  button.weapon[data-quality='highend'] .sprite-container,
-  button.weapon[data-quality='high-end'] .sprite-container,
-  button.gear[data-quality='highend'] .sprite-container,
-  button.gear[data-quality='high-end'] .sprite-container,
-  .weapon[data-quality='highend'] .sprite-container,
-  .weapon[data-quality='high-end'] .sprite-container,
+  // 1. 특급(High-End) 아이콘 배경색 지정 (변수값 #de990f 적용)
   .gear[data-quality='highend'] .sprite-container,
-  .gear[data-quality='high-end'] .sprite-container {
-    background-color: #ffb400 !important;
+  .gear[data-quality='high-end'] .sprite-container,
+  .weapon[data-quality='highend'] .sprite-container,
+  .weapon[data-quality='high-end'] .sprite-container {
+    background-color: var(--quality-highend, #de990f) !important;
+    opacity: 1 !important;
   }
 
-  // 2. mix-blend-mode: screen 투과 유지
-  .gear .sprite-container .sprite,
-  .weapon .sprite-container .sprite,
-  .gear-mod .sprite-container .sprite,
-  .sprite-container .sprite {
-    mix-blend-mode: screen !important;
+  // 2. 배경을 가리는 어두운 필터/가상 요소 제거 및 투과
+  .sprite-container {
+    opacity: 1 !important;
+    
+    .sprite {
+      mix-blend-mode: screen !important;
+      opacity: 1 !important;
+    }
   }
 }
