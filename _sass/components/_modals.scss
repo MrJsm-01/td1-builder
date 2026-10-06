@@ -498,10 +498,10 @@
 }
 
 /* =========================================================
-   CLEAN OVERRIDE: 상위 버튼 배경 제거 및 아이콘 컨테이너 규격 강제
+   CLEAN OVERRIDE: 상위 버튼 배경 및 내부 오버레이 완전 제거
    ========================================================= */
 .modal-container {
-  // 1. 상위 버튼들의 바탕색을 비워 오버레이 중첩 차단
+  // 1. 상위 버튼 및 정보 박스의 배경 간섭 제거
   button.weapon,
   button.gear,
   button.gear-mod,
@@ -509,19 +509,24 @@
   .gear,
   .gear-mod {
     background-color: transparent !important;
-  }
 
-  // 2. 인라인 배경색이 들어가는 컨테이너의 영역 크기와 위치 고정
-  .sprite-container {
-    display: inline-block !important;
-    width: 128px !important;
-    height: 64px !important;
-    flex-shrink: 0 !important;
+    // 2. 아이콘 박스 내부의 불필요한 가상 레이어(오버레이/패턴) 차단
+    .sprite-container {
+      display: block !important;
+      width: 128px !important;
+      height: 64px !important;
+      flex-shrink: 0 !important;
 
-    .sprite {
-      width: 100% !important;
-      height: 100% !important;
-      mix-blend-mode: screen !important;
+      &::before,
+      &::after {
+        display: none !important; // 붉은빛/어두운 오버레이 레이어 강제 제거
+      }
+
+      .sprite {
+        width: 100% !important;
+        height: 100% !important;
+        mix-blend-mode: screen !important;
+      }
     }
   }
 }
