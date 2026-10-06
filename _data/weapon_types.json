@@ -1,7 +1,7 @@
 {
 	"ar": {
 		"label": "돌격소총",
-		"bonus": "보호장구 추가 대미지",
+		"bonus": "적 보호장구 대미지",
 		"slot": "primary_secondary"
 	},
 	"hdg": {
@@ -16,7 +16,7 @@
 	},
 	"lmg": {
 		"label": "경기관총",
-		"bonus": "비엄페 대미지",
+		"bonus": "비엄페 대상에게 입히는 대미지",
 		"slot": "primary_secondary"
 	},
 	"mmr": {
