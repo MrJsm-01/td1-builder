@@ -1,82 +1,82 @@
 [
 	{
 		"id": 1,
-		"name": "All Resistance",
+		"name": "모든 저항",
 		"quality": "highend"
 	},
 	{
 		"id": 2,
-		"name": "Critical Hit Chance",
+		"name": "치명타 확률",
 		"quality": "highend"
 	},
 	{
 		"id": 3,
-		"name": "Exotic Damage Resilience",
+		"name": "특수 대미지 저항",
 		"quality": "highend"
 	},
 	{
 		"id": 4,
-		"name": "Health",
+		"name": "생명력",
 		"quality": "highend"
 	},
 	{
 		"id": 5,
-		"name": "Signature Resource Gain",
+		"name": "링크 스킬 자원 증가",
 		"quality": "highend"
 	},
 	{
 		"id": 6,
-		"name": "Skill Haste",
+		"name": "스킬 가속",
 		"quality": "highend"
 	},
 	{
 		"id": 7,
-		"name": "Skill Power",
+		"name": "스킬 파워",
 		"quality": "highend"
 	},
 	{
 		"id": 8,
-		"name": "Ammo Capacity",
+		"name": "탄약 휴대량",
 		"quality": "superior"
 	},
 	{
 		"id": 9,
-		"name": "Bleed Resistance",
+		"name": "출혈 저항",
 		"quality": "superior"
 	},
 	{
 		"id": 10,
-		"name": "Blind/Deaf Resitance",
+		"name": "시력/청력 상실 저항",
 		"quality": "superior"
 	},
 	{
 		"id": 11,
-		"name": "Burn Resistance",
+		"name": "화상 저항",
 		"quality": "superior"
 	},
 	{
 		"id": 12,
-		"name": "Damage to Elites",
+		"name": "엘리트에게 주는 대미지",
 		"quality": "superior"
 	},
 	{
 		"id": 13,
-		"name": "Disorient Resistance",
+		"name": "방향감각 상실 저항",
 		"quality": "superior"
 	},
 	{
 		"id": 14,
-		"name": "Disrupt Resistance",
+		"name": "방해 저항",
 		"quality": "superior"
 	},
 	{
 		"id": 15,
-		"name": "Increased Kill XP",
+		"name": "적 처치 시 XP 증가",
 		"quality": "superior"
 	},
 	{
 		"id": 16,
-		"name": "Shock Resistance",
+		"name": "충격 저항",
 		"quality": "superior"
 	}
 ]
