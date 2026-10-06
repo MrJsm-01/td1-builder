@@ -93,7 +93,7 @@ export function openWeaponPicker(slot) {
 
         return `
           <button class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
-            <div class="sprite-container" style="background-color: ${bgColor} !important;">
+            <div class="sprite-container">
               <div class="sprite ${w.id}" role="presentation"></div>
             </div>
             <div class="info-container">
