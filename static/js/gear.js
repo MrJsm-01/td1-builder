@@ -75,7 +75,7 @@ export function openGearPicker(slot) {
         return `
           <button class="gear" data-id="${g.id}" data-quality="${g.quality}">
             <div class="sprite-container" style="background-color: ${bgColor} !important;">
-              <div class="sprite ${SPRITE_ID}" role="presentation" style="mix-blend-mode: normal !important;"></div>
+              <div class="sprite ${SPRITE_ID}" role="presentation"></div>
             </div>
             <div class="info-container">
               <div class="name">${g.name}</div>
