@@ -218,6 +218,7 @@ body {
       .quality {
         color: var(--quality-worn);
       }
+    }  
     &[data-quality='specialized'] {
       .quality {
         color: var(--quality-specialized);
