@@ -1780,6 +1780,21 @@
 		]
 	},
 	{
+		"id": "custom-pf45-specialized",
+		"name": "커스텀 PF45",
+		"quality": "specialized",
+		"type": "hdg",
+		"slots": [
+			"magazine",
+			"muzzle",
+			"underbarrel"
+		],
+		"talents": [
+			null,
+			null
+		]
+	},
+	{
 		"id": "type-f",
 		"name": "Px4 Storm F형",
 		"quality": "highend",
