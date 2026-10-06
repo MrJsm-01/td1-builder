@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"label": "Critical Hit Chance",
+		"label": "치명타 확률",
 		"slot": [
 			"optics",
 			"magazine",
@@ -10,7 +10,7 @@
 	},
 	{
 		"id": 2,
-		"label": "Critical Hit Damage",
+		"label": "치명타 대미지",
 		"slot": [
 			"optics",
 			"magazine",
@@ -20,7 +20,7 @@
 	},
 	{
 		"id": 3,
-		"label": "Headshot Damage",
+		"label": "헤드샷 대미지",
 		"slot": [
 			"optics",
 			"muzzle"
@@ -28,7 +28,7 @@
 	},
 	{
 		"id": 4,
-		"label": "Accuracy",
+		"label": "명중률",
 		"slot": [
 			"optics",
 			"underbarrel",
@@ -37,7 +37,7 @@
 	},
 	{
 		"id": 5,
-		"label": "Stability",
+		"label": "안정성",
 		"slot": [
 			"optics",
 			"muzzle",
@@ -46,7 +46,7 @@
 	},
 	{
 		"id": 6,
-		"label": "Reload Speed",
+		"label": "재장전 속도",
 		"slot": [
 			"underbarrel",
 			"magazine"
@@ -54,14 +54,14 @@
 	},
 	{
 		"id": 7,
-		"label": "Rate of Fire",
+		"label": "발사 속도",
 		"slot": [
 			"magazine"
 		]
 	},
 	{
 		"id": 8,
-		"label": "Optimal Range",
+		"label": "근접 판정 거리",
 		"slot": [
 			"optics",
 			"muzzle",
@@ -70,7 +70,7 @@
 	},
 	{
 		"id": 9,
-		"label": "Magazine Size",
+		"label": "탄창 용량",
 		"slot": [
 			"magazine"
 		]
