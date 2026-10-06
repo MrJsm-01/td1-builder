@@ -818,45 +818,38 @@ body {
 // MODAL QUALITY BACKGROUND OVERRIDES
 
 .modal-container {
-  // 1. 특급 무기/방어구 (exotic, highend -> 노란색 배경)
-  button.weapon[data-quality='exotic'],
-  button.weapon[data-quality='highend'],
-  button.gear[data-quality='exotic'],
-  button.gear[data-quality='highend'] {
+  // 1. 특급 / 특수 (exotic, highend -> 노란색 배경)
+  button[data-quality='exotic'],
+  button[data-quality='highend'] {
     .sprite-container,
-    .sprite-container *,
     .sprite-container::before,
-    .sprite-container::after {
+    .type-container .sprite::before {
       background-color: var(--quality-highend--light) !important;
     }
   }
 
-  // 2. 중급 무기/방어구 (specialized -> 파란색 배경)
-  button.weapon[data-quality='specialized'],
-  button.gear[data-quality='specialized'] {
+  // 2. 중급 (specialized -> 파란색 배경)
+  button[data-quality='specialized'] {
     .sprite-container,
-    .sprite-container *,
     .sprite-container::before,
-    .sprite-container::after {
+    .type-container .sprite::before {
       background-color: var(--quality-specialized) !important;
     }
   }
 
-  // 3. 복합형 세트 및 세트 방어구 (classy, gearset -> 밝은 청녹색 배경)
-  button.gear[data-quality='classy'],
-  button.gear[data-quality='gearset'],
-  button.gear[data-type='set'] {
+  // 3. 복합형 세트 / 일반 세트 (classy, gearset -> 밝은 청녹색 배경)
+  button[data-quality='classy'],
+  button[data-quality='gearset'],
+  button[data-type='set'] {
     .sprite-container,
-    .sprite-container *,
     .sprite-container::before,
-    .sprite-container::after {
+    .type-container .sprite::before {
       background-color: var(--quality-gset--light) !important;
     }
   }
 
-  // 4. 색상 혼합(Blend Mode) 해제 (배경색 그대로 표시)
-  .weapon .sprite-container .sprite,
-  .gear .sprite-container .sprite {
+  // 4. 아이콘 혼합 모드 및 투명도 해제
+  .sprite-container .sprite {
     mix-blend-mode: normal !important;
   }
 }
