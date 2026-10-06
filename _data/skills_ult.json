@@ -2,22 +2,22 @@
 	"med": [
 		{
 			"id": "ult-med",
-			"name": "Recovery Link",
-			"desc": "Heals and cures the user and nearby allies. Revives allies in range. Automatically triggers on lethal damage when not in a group."
+			"name": "회복 링크",
+			"desc": "스킬을 사용하는 플레이어와 주변의 아군을 치유하고 범위 내에 있는 빈사 상태의 아군을 회생시킵니다. 최대 생명력을 넘어서는 추가 생명력을 부여합니다"
 		}
 	],
 	"tech": [
 		{
 			"id": "ult-tac",
-			"name": "Tactical Link",
-			"desc": "Weapon enhancement system which provides temporarily increased damage and weapon performance to the user and all nearby allies"
+			"name": "전술 링크",
+			"desc": "플레이어와 주변에 있는 모든 아군의 대미지와 연사력,재장전 속도가 증가합니다"
 		}
 	],
 	"def": [
 		{
 			"id": "ult-def",
-			"name": "Survivor Link",
-			"desc": "Increases damage resistance and speed for group members. Grants an emergency health boost to group members when taking lethal damage."
+			"name": "생존 링크",
+			"desc": "플레이어와 근처 아군의 대미지 저항과 속도가 증가합니다"
 		}
 	]
 }
