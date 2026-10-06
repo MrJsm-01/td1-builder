@@ -7,24 +7,25 @@
 
 $base-url: "../img/";
 
-/* MODAL OVERLAY CLEAR & HIGHEND COLOR FIX */
+/* MODAL HIGHEND BACKGROUND & SPRITE SCREEN FIX */
 .modal-container {
-  // 1. 특급(High-End) 아이콘 배경색 지정 (변수값 #de990f 적용)
-  .gear[data-quality='highend'] .sprite-container,
-  .gear[data-quality='high-end'] .sprite-container,
+  // 1. 특급(High-End) 아이콘 배경색 (#de990f)
+  button.weapon[data-quality='highend'] .sprite-container,
+  button.weapon[data-quality='high-end'] .sprite-container,
+  button.gear[data-quality='highend'] .sprite-container,
+  button.gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
-  .weapon[data-quality='high-end'] .sprite-container {
-    background-color: var(--quality-highend, #de990f) !important;
-    opacity: 1 !important;
+  .weapon[data-quality='high-end'] .sprite-container,
+  .gear[data-quality='highend'] .sprite-container,
+  .gear[data-quality='high-end'] .sprite-container {
+    background-color: #de990f !important;
   }
 
-  // 2. 배경을 가리는 어두운 필터/가상 요소 제거 및 투과
-  .sprite-container {
-    opacity: 1 !important;
-    
-    .sprite {
-      mix-blend-mode: screen !important;
-      opacity: 1 !important;
-    }
+  // 2. sprite-container가 아닌 실제 아이콘 이미지(.sprite)에 screen 강제 적용
+  .sprite-container .sprite,
+  .gear .sprite-container .sprite,
+  .weapon .sprite-container .sprite,
+  .gear-mod .sprite-container .sprite {
+    mix-blend-mode: screen !important;
   }
 }
