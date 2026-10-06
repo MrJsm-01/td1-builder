@@ -103,6 +103,7 @@ export function openWeaponPicker(slot) {
           </button>
         `;
       }).join('')}
+    </div>
   `, STRINGS.weapons.choose);
 
   document.querySelectorAll('.filter-radio').forEach(radio => {
@@ -249,12 +250,10 @@ function renderWeaponTalentSlots(slot) {
   const PREFIX   = `wp-${slot}`;
 
   for (let i = 0; i < 3; i++) {
-    // Construct talent container ID
     const CONTAINER = document.getElementById(`${PREFIX}-talent${i + 1}`);
 
     if (i >= WEAPON.talents.length) {
       CONTAINER.hidden = true;
-
       continue;
     }
     CONTAINER.hidden = false;
@@ -276,7 +275,6 @@ function renderWeaponTalentSlots(slot) {
       CONTAINER.querySelector('.desc').textContent = STRINGS.talents.desc;
     }
 
-    // Check for Exotic talent
     CONTAINER.classList.toggle('locked', IS_LOCKED);
     CONTAINER.onclick = IS_LOCKED ? null : () => openWeaponTalentPicker(slot, i);
   }
@@ -300,7 +298,6 @@ function renderWeaponBonuses() {
     if (BUILD[slot] === null) {
       BONUS_CONTAINER.hidden = true;
       SEPARATOR.hidden = true;
-
       return;
     }
 
@@ -322,7 +319,6 @@ function renderWeaponBonuses() {
 
 export function selectWeaponTalent(slot, index, talentId) {
   BUILD[slot].talents[index] = talentId;
-
   renderWeaponTalentSlots(slot);
 }
 
