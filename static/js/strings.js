@@ -28,7 +28,7 @@ export const STRINGS = {
     choose        : '특수효과 선택',
     choose_player : '전문기술 선택',
     talent        : '특수효과',
-    name          : '미선택',
+    name          : '선택',
   },
   attributes : {
     choose  : '속성 선택',
