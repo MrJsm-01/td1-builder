@@ -45,6 +45,9 @@ $base-url: "../img/";
   }
 
   // 3. 검은색 배경을 투명화하여 뒤쪽 등급 색상이 비치도록 설정 (핵심!)
+  .weapon .sprite-container .sprite,
+  .gear .sprite-container .sprite,
+  .gear-mod .sprite-container .sprite,
   .sprite-container .sprite {
     mix-blend-mode: screen !important;
   }
