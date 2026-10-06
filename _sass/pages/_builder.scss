@@ -821,24 +821,28 @@ body {
   // 1. 특급 (노란색) - 무기 및 방어구
   button.weapon[data-quality='highend'],
   button.gear[data-quality='highend'] {
-    .sprite-container {
-      background-color: var(--quality-highend--light);
+    .sprite-container,
+    .sprite::before {
+      background-color: var(--quality-highend--light) !important;
     }
   }
 
   // 2. 중급 (파란색) - 무기 및 방어구
   button.weapon[data-quality='specialized'],
   button.gear[data-quality='specialized'] {
-    .sprite-container {
-      background-color: var(--quality-specialized);
+    .sprite-container,
+    .sprite::before {
+      background-color: var(--quality-specialized) !important;
     }
   }
 
-  // 3. 복합형 세트 / 세트 (밝은 청녹색) - 방어구
+  // 3. 복합형 세트 및 일반 세트 (밝은 청녹색) - 방어구
   button.gear[data-quality='classy'],
-  button.gear[data-quality='gearset'] {
-    .sprite-container {
-      background-color: var(--quality-gset--light);
+  button.gear[data-quality='gearset'],
+  button.gear[data-type='set'] {
+    .sprite-container,
+    .sprite::before {
+      background-color: var(--quality-gset--light) !important;
     }
   }
 }
