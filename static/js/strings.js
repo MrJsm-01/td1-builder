@@ -31,7 +31,7 @@ export const STRINGS = {
     name          : '선택',
   },
   attributes : {
-    choose  : 'Choose Attribute',
+    choose  : '속성 미선택',
     unknown : 'Unknown Attribute'
   },
   mods : {
