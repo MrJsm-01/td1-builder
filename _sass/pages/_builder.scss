@@ -213,15 +213,21 @@ body {
       .quality {
         color: var(--quality-highend);
       }
+      .type-container .sprite::before {
+        background-color: var(--quality-highend--light);
+      }
     }
     &[data-quality='worn'] {
       .quality {
         color: var(--quality-worn);
       }
-    }  
+    }
     &[data-quality='specialized'] {
       .quality {
         color: var(--quality-specialized);
+      }
+      .type-container .sprite::before {
+        background-color: var(--quality-specialized);
       }
     }
     max-height: px2rem(500px);
@@ -447,6 +453,9 @@ body {
       .quality,
       .meta-container .name {
         color: var(--quality-gset);
+      }
+      .type-container .sprite::before {
+        background-color: var(--quality-gset--light);
       }
     }
     .meta-container {
