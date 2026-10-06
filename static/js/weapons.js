@@ -103,7 +103,6 @@ export function openWeaponPicker(slot) {
           </button>
         `;
       }).join('')}
-      }).join('')}
   `, STRINGS.weapons.choose);
 
   document.querySelectorAll('.filter-radio').forEach(radio => {
