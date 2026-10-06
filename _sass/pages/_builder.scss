@@ -816,42 +816,50 @@ body {
   }
 }
 
-// MODAL QUALITY BACKGROUND OVERRIDES (FIXED)
+// MODAL QUALITY BACKGROUND OVERRIDES (CORRECTED TARGET & COLORS)
 .modal-container {
-  // 1. 특급 (High-End) - 노란색 / 금색
-  button.weapon[data-quality='highend'],
-  button.gear[data-quality='highend'] {
-    background-color: var(--quality-highend, #de990f) !important;
+  // 1. 버튼 전체의 배경은 검은색/투명 유지
+  button.weapon,
+  button.gear {
+    background-color: transparent !important;
   }
 
-  // 2. 특수 (Exotic) - 선명한 빨간색
-  button.weapon[data-quality='exotic'],
-  button.gear[data-quality='exotic'] {
-    background-color: var(--quality-exotic, #eb624a) !important;
+  // 2. 좌측 아이콘 사각형 영역(.sprite-container)에만 등급별 배경색 적용
+
+  // [특수 - Exotic] 진한/선명한 빨간색
+  button.weapon[data-quality='exotic'] .sprite-container,
+  button.gear[data-quality='exotic'] .sprite-container {
+    background-color: #c82323 !important;
   }
 
-  // 3. 전문 / 우수 (Specialized / Superior) - 파란색
-  button.weapon[data-quality='specialized'],
-  button.gear[data-quality='specialized'],
-  button.weapon[data-quality='superior'],
-  button.gear[data-quality='superior'] {
-    background-color: var(--quality-specialized, #0072ce) !important;
+  // [특급 - High-End] 밝고 선명한 노란색/금색
+  button.weapon[data-quality='highend'] .sprite-container,
+  button.gear[data-quality='highend'] .sprite-container {
+    background-color: #e5a900 !important;
   }
 
-  // 4. 일반 세트 (Gear Set) - 초록색 / 풀색
-  button.gear[data-quality='gset'],
-  button.gear[data-quality='gearset'],
-  button.gear[data-type='set'] {
-    background-color: var(--quality-gset, #04c570) !important;
+  // [전문/우수 - Specialized / Superior] 파란색
+  button.weapon[data-quality='specialized'] .sprite-container,
+  button.gear[data-quality='specialized'] .sprite-container,
+  button.weapon[data-quality='superior'] .sprite-container,
+  button.gear[data-quality='superior'] .sprite-container {
+    background-color: #0072ce !important;
   }
 
-  // 5. 복합형 세트 (Classified / Classy) - 밝은 청록색 / 연두색
-  button.gear[data-quality='classified'],
-  button.gear[data-quality='classy'] {
-    background-color: #38a371 !important;
+  // [일반 세트 - Gear Set] 짙은 풀색/녹색
+  button.gear[data-quality='gset'] .sprite-container,
+  button.gear[data-quality='gearset'] .sprite-container,
+  button.gear[data-type='set'] .sprite-container {
+    background-color: #265c33 !important;
   }
 
-  // 6. 스프라이트 및 혼합 모드 정상화
+  // [복합형 세트 - Classified / Classy] 밝은 청록색 / 민트연두
+  button.gear[data-quality='classified'] .sprite-container,
+  button.gear[data-quality='classy'] .sprite-container {
+    background-color: #00cc7a !important;
+  }
+
+  // 3. 스프라이트 내부 레이어 투명화 및 혼합 모드 정상화
   .sprite-container,
   .sprite-container * {
     &::before,
