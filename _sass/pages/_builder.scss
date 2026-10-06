@@ -818,7 +818,7 @@ body {
 // MODAL QUALITY BACKGROUND OVERRIDES
 
 .modal-container {
-  // 1. 특급 무기 및 특급 방어구 (exotic, highend -> 노란색 배경)
+  // 1. 특급 무기/방어구 (exotic, highend -> 노란색 배경)
   button.weapon[data-quality='exotic'],
   button.weapon[data-quality='highend'],
   button.gear[data-quality='exotic'],
@@ -831,7 +831,7 @@ body {
     }
   }
 
-  // 2. 중급 무기 및 중급 방어구 (specialized -> 파란색 배경)
+  // 2. 중급 무기/방어구 (specialized -> 파란색 배경)
   button.weapon[data-quality='specialized'],
   button.gear[data-quality='specialized'] {
     .sprite-container,
@@ -852,5 +852,11 @@ body {
     .sprite-container::after {
       background-color: var(--quality-gset--light) !important;
     }
+  }
+
+  // 4. 색상 혼합(Blend Mode) 해제 (배경색 그대로 표시)
+  .weapon .sprite-container .sprite,
+  .gear .sprite-container .sprite {
+    mix-blend-mode: normal !important;
   }
 }
