@@ -5,3 +5,52 @@ $base-url: "../img/";
 @use 'components/modals' as *;
 @use 'components/tooltips' as *;
 @use 'pages/builder' as *;
+
+/* =========================================================
+   MODAL QUALITY BACKGROUND OVERRIDES (DIRECT ENTRY FIX)
+   ========================================================= */
+.modal-container {
+  // 1. 버튼 전체 배경은 투명으로 고정
+  button.weapon,
+  button.gear,
+  button.gear-mod {
+    background-color: transparent !important;
+
+    // 2. 좌측 아이콘 사각형 영역(.sprite-container)에 등급별 배경색 직접 적용
+
+    // [특수 - Exotic] 진한/선명한 빨간색
+    &[data-quality='exotic'] .sprite-container {
+      background-color: #c82323 !important;
+    }
+
+    // [특급 - High-End] 선명한 노란색/금색
+    &[data-quality='highend'] .sprite-container {
+      background-color: #de990f !important;
+    }
+
+    // [전문 / 우수 - Specialized / Superior] 파란색
+    &[data-quality='specialized'] .sprite-container,
+    &[data-quality='superior'] .sprite-container {
+      background-color: #0072ce !important;
+    }
+
+    // [일반 세트 - Gear Set] 짙은 풀색/녹색
+    &[data-quality='gearset'] .sprite-container,
+    &[data-quality='gset'] .sprite-container,
+    &[data-type='set'] .sprite-container {
+      background-color: #265c33 !important;
+    }
+
+    // [복합형 세트 - Classified / Classy] 밝은 청록색 / 연두색
+    &[data-quality='classified'] .sprite-container,
+    &[data-quality='classy'] .sprite-container {
+      background-color: #00cc7a !important;
+    }
+  }
+
+  // 3. 아이콘 배경을 가리는 혼합 모드 해제
+  .sprite-container,
+  .sprite-container .sprite {
+    mix-blend-mode: normal !important;
+  }
+}
