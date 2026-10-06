@@ -82,18 +82,27 @@ export function openWeaponPicker(slot) {
         </button>
       `
         : ''}
-      ${WEAPONS.map(w => `
-        <button class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
-          <div class="sprite-container">
-            <div class="sprite ${w.id}" role="presentation"></div>
-          </div>
-          <div class="info-container">
-            <div class="name">${w.name}</div>
-            <div class="desc">${GAME_DATA.weapon_types[w.type].label}</div>
-          </div>
-        </button>
-      `).join('')}
-    </div>
+      ${WEAPONS.map(w => {
+        const bgColors = {
+          exotic: '#c82323',
+          highend: '#de990f',
+          specialized: '#0072ce',
+          superior: '#0072ce'
+        };
+        const bgColor = bgColors[w.quality] || 'transparent';
+
+        return `
+          <button class="weapon" data-id="${w.id}" data-type="${w.type}" data-quality="${w.quality}">
+            <div class="sprite-container" style="background-color: ${bgColor} !important;">
+              <div class="sprite ${w.id}" role="presentation"></div>
+            </div>
+            <div class="info-container">
+              <div class="name">${w.name}</div>
+              <div class="desc">${GAME_DATA.weapon_types[w.type].label}</div>
+            </div>
+          </button>
+        `;
+      }).join('')}
   `, STRINGS.weapons.choose);
 
   document.querySelectorAll('.filter-radio').forEach(radio => {
