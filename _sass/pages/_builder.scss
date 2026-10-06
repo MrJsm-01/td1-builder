@@ -824,9 +824,9 @@ body {
   button.gear[data-quality='exotic'],
   button.gear[data-quality='highend'] {
     .sprite-container,
+    .sprite-container *,
     .sprite-container::before,
-    .sprite::before,
-    .type-container .sprite::before {
+    .sprite-container::after {
       background-color: var(--quality-highend--light) !important;
     }
   }
@@ -835,9 +835,9 @@ body {
   button.weapon[data-quality='specialized'],
   button.gear[data-quality='specialized'] {
     .sprite-container,
+    .sprite-container *,
     .sprite-container::before,
-    .sprite::before,
-    .type-container .sprite::before {
+    .sprite-container::after {
       background-color: var(--quality-specialized) !important;
     }
   }
@@ -847,9 +847,9 @@ body {
   button.gear[data-quality='gearset'],
   button.gear[data-type='set'] {
     .sprite-container,
+    .sprite-container *,
     .sprite-container::before,
-    .sprite::before,
-    .type-container .sprite::before {
+    .sprite-container::after {
       background-color: var(--quality-gset--light) !important;
     }
   }
