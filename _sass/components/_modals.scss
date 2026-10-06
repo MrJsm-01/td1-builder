@@ -530,3 +530,9 @@
     }
   }
 }
+/* 특급(Highend) 노란색 강제 적용 */
+.modal-container .weapon[data-quality='highend'] .sprite-container,
+.modal-container .gear[data-quality='highend'] .sprite-container,
+.modal-container [data-quality='highend'] .sprite-container {
+  background-color: #de990f !important;
+}
