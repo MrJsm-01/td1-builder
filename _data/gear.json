@@ -16,7 +16,7 @@
 	{
 		"id": "kneepads",
 		"name": "무릎보호대",
-		"quality": "kneepads",
+		"quality": "highend",
 		"slot": "kneepads",
 		"talent": null
 	},
