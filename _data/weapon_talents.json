@@ -1,8 +1,8 @@
 [
 	{
 		"id": "accurate",
-		"name": "Accurate",
-		"desc": "Accuracy is increased by 25%",
+		"name": "정밀사격 ",
+		"desc": "명중률이 25% 증가합니다.",
 		"compat": {
 			"type": [
 				"ar",
@@ -17,8 +17,8 @@
 	},
 	{
 		"id": "adept",
-		"name": "Adept",
-		"desc": "Using a skill increases your critical hits chance by 7.5% for 15 seconds",
+		"name": "숙달된 조교",
+		"desc": "스킬을 사용하면 치명타 확률이 15초 동안 7.5% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -33,8 +33,8 @@
 	},
 	{
 		"id": "ambusher",
-		"name": "Ambusher",
-		"desc": "Increase your damage by 10% against targets in cover",
+		"name": "매복 공격",
+		"desc": "대상이 엄폐 상태일 때 주는 대미지가 10% 증가합니다",
 		"compat": {
 			"weapon": [
 				"ump-police",
@@ -45,8 +45,8 @@
 	},
 	{
 		"id": "balanced",
-		"name": "Balanced",
-		"desc": "Weapon acquires maximum accuracy faster when shouldered",
+		"name": "견착사격",
+		"desc": "견착 시 무기의 명중률이 최대치까지 빠르게 도달합니다",
 		"compat": {
 			"type": [
 				"mmr"
@@ -55,8 +55,8 @@
 	},
 	{
 		"id": "brutal",
-		"name": "Brutal",
-		"desc": "Headshot damage is increased by 12% when using this weapon",
+		"name": "일격필살",
+		"desc": "이 무기를 사용하면 헤드샷 대미지가 12% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -71,8 +71,8 @@
 	},
 	{
 		"id": "capable",
-		"name": "Capable",
-		"desc": "Using a skill improves the handling of your weapon for 15 seconds",
+		"name": "손놀림",
+		"desc": "스킬을 사용하면 15초동안 무기를 다루는 능력이 향상됩니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -87,8 +87,8 @@
 	},
 	{
 		"id": "commanding",
-		"name": "Commanding",
-		"desc": "Every kill performed while the signature skill is active extends its duration by 20%",
+		"name": "파죽지세",
+		"desc": "링크 스킬 효과가 적용 중일 때 적을 처치하면, 링크 스킬의 지속 시간이 20% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -103,8 +103,8 @@
 	},
 	{
 		"id": "competent",
-		"name": "Competent",
-		"desc": "Weapon damage is increased by 10% for 15 seconds after using a skill",
+		"name": "사기충천",
+		"desc": "스킬 사용 후 15초 동안 무기 대미지가 10% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -119,8 +119,8 @@
 	},
 	{
 		"id": "coolheaded",
-		"name": "Coolheaded",
-		"desc": "Performing a headshot reduces all skill cooldowns by 5%",
+		"name": "냉혈한",
+		"desc": "헤드샷 명중 시 모든 스킬의 재사용 대기시간이 5% 감소합니다",
 		"compat": {
 			"type": [
 				"mmr",
@@ -130,8 +130,8 @@
 	},
 	{
 		"id": "deadly",
-		"name": "Deadly",
-		"desc": "Critical hit damage is increased by 15%",
+		"name": "치명상",
+		"desc": "치명타 대미지가 15% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -146,8 +146,8 @@
 	},
 	{
 		"id": "disciplined",
-		"name": "Disciplined",
-		"desc": "Killing a target makes your next shot with the weapon be an automatic critical hit",
+		"name": "정예병",
+		"desc": "적 처치 후에 다음 사격 대상의 첫 탄환이 반드시 치명타 대미지를 입힙니다",
 		"compat": {
 			"type": [
 				"mmr"
@@ -156,8 +156,8 @@
 	},
 	{
 		"id": "destructive",
-		"name": "Destructive",
-		"desc": "Armor destruction value is increased by 15% when using this weapon",
+		"name": "관통상",
+		"desc": "이 무기를 사용할 때 보호장구 관통률이 15% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -172,8 +172,8 @@
 	},
 	{
 		"id": "determined",
-		"name": "Determined",
-		"desc": "Killing a target reduces skill cooldowns by 7.5%",
+		"name": "속도전",
+		"desc": "대상을 처치하면 스킬의 재사용 대기시간이 7.5% 단축됩니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -188,8 +188,8 @@
 	},
 	{
 		"id": "dominant",
-		"name": "Dominant",
-		"desc": "Every kill while your Signature Skill is active reduces the cooldown of your other skills by 10%",
+		"name": "지배자",
+		"desc": "링크 스킬의 효과가 지속되는 동안 적을 처치할 때마다 일반 스킬의 재사용 대기시간이 10% 단축됩니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -204,8 +204,8 @@
 	},
 	{
 		"id": "elevated",
-		"name": "Elevated",
-		"desc": "Increase your damage by 10% when elevated more than 1.2 meters above your target",
+		"name": "위치선점",
+		"desc": "1.2m 이상 높은 곳에 올라갈시에 무기대미지가 10% 증가합니다",
 		"compat": {
 			"weapon": [
 				"m700",
@@ -216,8 +216,8 @@
 	},
 	{
 		"id": "expert",
-		"name": "Expert",
-		"desc": "This weapon deals 100% more damage when the target is below 30% health",
+		"name": "마무리",
+		"desc": "생명력이 30% 미만인 적에게 100% 추가 대미지를 줍니다",
 		"compat": {
 			"type": [
 				"hdg"
@@ -226,8 +226,8 @@
 	},
 	{
 		"id": "ferocious",
-		"name": "Ferocious",
-		"desc": "Damage against elite and named enemies is increased by 10%",
+		"name": "겁 없는 맹수",
+		"desc": "엘리트와 네임드 NPC에게 주는 대미지가 10% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -242,8 +242,8 @@
 	},
 	{
 		"id": "fierce",
-		"name": "Fierce",
-		"desc": "Critical hit chance is increased by 5% when using this weapon",
+		"name": "극악무도",
+		"desc": "이 무기를 사용하면 치명타 확률이 5% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -258,8 +258,8 @@
 	},
 	{
 		"id": "focused",
-		"name": "Focused",
-		"desc": "When no skills are on cooldown, your weapon damage is increased by 10%",
+		"name": "집중력",
+		"desc": "스킬을 사용하지 않을시에 무기대미지가 10% 증가합니다",
 		"compat": {
 			"type": [
 				"ar"
@@ -268,8 +268,8 @@
 	},
 	{
 		"id": "harmful",
-		"name": "Harmful",
-		"desc": "Each hit has a 15% chance to apply the Bleed status effect",
+		"name": "유혈사태",
+		"desc": "대상을 명중시킬 때마다 15%의 확률로 출혈 효과를 일으킵니다",
 		"compat": {
 			"type": [
 				"mmr",
@@ -279,8 +279,8 @@
 	},
 	{
 		"id": "hurried",
-		"name": "Hurried",
-		"desc": "Critical hits increase reload speed by 10% to a minimum of 1 seconds reload time",
+		"name": "쾌속장전",
+		"desc": "치명타를 입히면 재장전 속도가 최소 1초로 10%씩 상승합니다",
 		"compat": {
 			"type": [
 				"smg"
@@ -289,8 +289,8 @@
 	},
 	{
 		"id": "intense",
-		"name": "Intense",
-		"desc": "The first bullet of a magazine has a 25% chance to apply the On Fire status effect to the target",
+		"name": "불똥",
+		"desc": "탄창의 첫 발을 사용할 때 25%의 확률로 적에게 연소 효과를 유발합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -301,8 +301,8 @@
 	},
 	{
 		"id": "meticulous",
-		"name": "Meticulous",
-		"desc": "Killing a target has a 25% chance to instantly refill the magazine",
+		"name": "알뜰살뜰",
+		"desc": "대상을 처치하면 25%의 확률로 탄창을 즉시 보충합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -317,8 +317,8 @@
 	},
 	{
 		"id": "predatory",
-		"name": "Predatory",
-		"desc": "Killing a target regenerates 35% health over 20 seconds",
+		"name": "생명흡수",
+		"desc": "대상을 처치하면 20초 동안 생명력의 35% 회복됩니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -333,8 +333,8 @@
 	},
 	{
 		"id": "prepared",
-		"name": "Prepared",
-		"desc": "Damage is increased by 15% when more than 30 meters from the target",
+		"name": "준비된 사수",
+		"desc": "대상과의 거리가 30M 이상일 때 대미지가 15% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -345,8 +345,8 @@
 	},
 	{
 		"id": "proficient",
-		"name": "Proficient",
-		"desc": "The first bullet shot when out of combat has a 50% bonus chance to result in a critical hit",
+		"name": "일발필중",
+		"desc": "비전투 상황에서 처음 사격할 때, 첫 탄약이 치명타를 입힐 확률이 50% 증가합니다",
 		"compat": {
 			"type": [
 				"mmr",
@@ -356,8 +356,8 @@
 	},
 	{
 		"id": "responsive",
-		"name": "Responsive",
-		"desc": "Damage is increased by 10% when closer than 10 meters to the target",
+		"name": "근접전",
+		"desc": "대상과의 거리가 10M 이하일 때 대미지가 10% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -370,8 +370,8 @@
 	},
 	{
 		"id": "preserved",
-		"name": "Self-Preserved",
-		"desc": "Critical hits with this weapon heal the user for 3% of damage dealt",
+		"name": "자가수혈",
+		"desc": "이 무기를 사용해 치명타를 성공시키면, 대미지의 3%만큼 플레이어를 회복시킵니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -385,8 +385,8 @@
 	},
 	{
 		"id": "skilled",
-		"name": "Skilled",
-		"desc": "Headshot kills with this weapon increase signature skill resources by 5%",
+		"name": "명사수",
+		"desc": "이 무기를 사용해 대상을 헤드샷으로 처치하면, 링크 스킬 자원이 5% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -399,8 +399,8 @@
 	},
 	{
 		"id": "sustained",
-		"name": "Sustained",
-		"desc": "Killing a target increases your health by 6%",
+		"name": "사냥의 대가",
+		"desc": "대상을 처치하면, 생명력이 6% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -415,8 +415,8 @@
 	},
 	{
 		"id": "swift",
-		"name": "Swift",
-		"desc": "Reloading is 25% faster",
+		"name": "장전의 대가",
+		"desc": "재장전 속도가 25% 빨라집니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -430,8 +430,8 @@
 	},
 	{
 		"id": "talented",
-		"name": "Talented",
-		"desc": "Killing a target with this weapon increases your Skill Power by 15% for 20 seconds. The effect does not stack. Killing a new target refreshes the timer.",
+		"name": "킬링머신",
+		"desc": "이 무기를 사용해 대상을 처치하면, 스킬 파워가 20초동안 15% 증가합니다. 이 효과는 중첩되지 않으며, 새로운 대상을 처치하면 효과가 다시 발동합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -446,8 +446,8 @@
 	},
 	{
 		"id": "toxic",
-		"name": "Toxic",
-		"desc": "Headshots with this weapon have a 15% chance to apply the Blind status effect",
+		"name": "악성빈혈",
+		"desc": "이 무기를 사용해 헤드샷을 성공시키면 15% 확률로 시야 상실 효과를 일으킵니다",
 		"compat": {
 			"type": [
 				"mmr",
@@ -457,8 +457,8 @@
 	},
 	{
 		"id": "trained",
-		"name": "Trained",
-		"desc": "Critical hits increase signature skill resources by 0.10%",
+		"name": "하이퍼링크",
+		"desc": "치명타를 입히면 링크 자원이 0.1% 증가합니다",
 		"compat": {
 			"type": [
 				"mmr",
@@ -470,8 +470,8 @@
 	},
 	{
 		"id": "unforgiving",
-		"name": "Unforgiving",
-		"desc": "Missing health segments increase your damage: 1 missing segment +10%, 2 missing segments +25%",
+		"name": "육참골단",
+		"desc": "자신의 생명력바 1칸이 떨어지면 10%, 2개가 떨어지면 25% 대미지가 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -486,8 +486,8 @@
 	},
 	{
 		"id": "vicious",
-		"name": "Vicious",
-		"desc": "Critical hit chance is increased by 10% while having more than two segments of health",
+		"name": "강자독식",
+		"desc": "생명력 바가 2칸 이상 차 있는 동안 치명타 확률이 10% 증가합니다",
 		"compat": {
 			"type": [
 				"ar",
@@ -502,8 +502,8 @@
 	},
 	{
 		"id": "cover-shooter",
-		"name": "Cover Shooter",
-		"desc": "Every bullet fired at an enemy from cover increases weapon damage by 0.5% up to 50%. The bonus lasts for 10 seconds. Getting a kill with this weapon while in cover resets the duration. The bonus damage is cancelled by reloading, swapping weapons, or exiting combat.",
+		"name": "엄폐 사격특화",
+		"desc": "엄폐 상태에서 적에게 발사하는 모든 탄환의 무기 대미지가 0.5% 최대 50%까지 증가합니다. 추가대미지는 10초동안 지속합니다. 엄폐상태에서 해당 무기로 적을 처치하면 지속시간이 초기화됩니다. 추가대미지는 재장전하거나 무기를 교체하거나 전투가 종료되면 사라집니다",
 		"compat": {
 			"weapon": [
 				"alejandro"
@@ -512,8 +512,8 @@
 	},
 	{
 		"id": "boomstick",
-		"name": "Boomstick",
-		"desc": "Double trigger fires off both barrels in short succession",
+		"name": "붐스틱",
+		"desc": "이중 방아쇠를 당겨 빠르게 연속으로 탄환을 각 총열에서 발사합니다",
 		"compat": {
 			"weapon": [
 				"cassidy"
@@ -522,8 +522,8 @@
 	},
 	{
 		"id": "caduceus",
-		"name": "Caduceus",
-		"desc": "Each Critical hit heals you and your group for 1% of your Skill Power. Can only heal each player once every 0.2 seconds.",
+		"name": "군의관",
+		"desc": "치명타가 성공할 때마다 스킬파워의 1%만큼 플레이어와 아군의 체력이 회복됩니다. 0.20초마다 회복이 가능합니다",
 		"compat": {
 			"weapon": [
 				"caduceus"
@@ -532,8 +532,8 @@
 	},
 	{
 		"id": "card-counter",
-		"name": "Card Counter",
-		"desc": "One half of the magazine does 20% increased damage. The half which deals increased damage flips after 15 seconds or when the magazine is empty.",
+		"name": "카드 카운터",
+		"desc": "탄창 절반의 대미지가 20% 증가합니다. 남은 절반은 15초 또는 탄창을 다 소모할 때까지 증가했던 만큼의 대미지가 감소됩니다",
 		"compat": {
 			"weapon": [
 				"mpx"
@@ -542,8 +542,8 @@
 	},
 	{
 		"id": "carefree",
-		"name": "Carefree",
-		"desc": "Hipfire damage is increased by 11%",
+		"name": "무심한 공격",
+		"desc": "지향사격 대미지가 11% 증가합니다",
 		"compat": {
 			"weapon": [
 				"thompson",
@@ -553,8 +553,8 @@
 	},
 	{
 		"id": "centermass",
-		"name": "Center Mass",
-		"desc": "Shoots heavy slugs instead of buckshot",
+		"name": "정중앙",
+		"desc": "벅샷 대신 슬러그 탄환을 발사합니다",
 		"compat": {
 			"weapon": [
 				"medved"
@@ -563,8 +563,8 @@
 	},
 	{
 		"id": "distracted",
-		"name": "Distracted",
-		"desc": "Your damage is increased by 18% against targets with status effects",
+		"name": "주의산만",
+		"desc": "상태 이상인 대상에게 가하는 대미지가 18% 증가합니다",
 		"compat": {
 			"weapon": [
 				"mdr"
@@ -573,8 +573,8 @@
 	},
 	{
 		"id": "fire",
-		"name": "Fire",
-		"desc": "Headshots increase stability by 30% for 15 seconds. Body shots increase headshot damage by 30% for 15 seconds.",
+		"name": "화염",
+		"desc": "헤드샷이 적중하면 안정성이 15초동안 30% 증가합니다. 몸에 적중하면 헤드샷 대미지가 15초동안 30% 증가합니다",
 		"compat": {
 			"weapon": [
 				"devil"
@@ -583,8 +583,8 @@
 	},
 	{
 		"id": "fury",
-		"name": "Fury",
-		"desc": "Hitting weak points increases weapon damage by 15% for 15 seconds. Hitting skill proxies increase critical hit damage by 30% for 15 seconds.",
+		"name": "분노",
+		"desc": "약점을 적중하면 무기 대미지가 15% 증가합니다. 스킬 전투 디바이스를 적중하면 치명타 대미지가 15초동안 30% 증가합니다",
 		"compat": {
 			"weapon": [
 				"heel"
@@ -593,8 +593,8 @@
 	},
 	{
 		"id": "glutton",
-		"name": "Glutton",
-		"desc": "Killing a target increases your Damage dealt 10% until you stop firing. Multiple kills stack this bonus up to 5 times.",
+		"name": "열중",
+		"desc": "대상을 처치하면 사격을 멈출 때까지 10%의 추가피해를 줍니다. 다수의 대상을 처치할 경우 해당 보너스 효과는 최대 5회까지 누적됩니다",
 		"compat": {
 			"weapon": [
 				"hog"
@@ -603,8 +603,8 @@
 	},
 	{
 		"id": "golden-rhino",
-		"name": "Golden Rhino",
-		"desc": "Increase stagger by 200%",
+		"name": "황금 라이노",
+		"desc": "비틀거림 증가 200%",
 		"compat": {
 			"weapon": [
 				"rhino-gold"
@@ -613,8 +613,8 @@
 	},
 	{
 		"id": "history",
-		"name": "History Repeats",
-		"desc": "Each Bullet embeds itself in the target and detonates 1 second later for 700% of your Firearms total",
+		"name": "반복되는 역사",
+		"desc": "탄환이 대상에 박혀 1초 후 폭발하며 총 화기 공격력의 700%만큼 대미지를 줍니다",
 		"compat": {
 			"weapon": [
 				"historian"
@@ -623,8 +623,8 @@
 	},
 	{
 		"id": "lights-out",
-		"name": "Lights Out",
-		"desc": "Destroying an enemy weak point resets skill cooldowns for you and your nearby group members. Can happen once every 10 seconds.",
+		"name": "소등",
+		"desc": "적의 취약 지점을 파괴하면 플레이어와 주위 팀원의 스킬 재사용 대기시간이 초기화 됩니다. 이는 10초마다 사용할 수 있습니다",
 		"compat": {
 			"weapon": [
 				"tenebrae"
@@ -633,8 +633,8 @@
 	},
 	{
 		"id": "midas",
-		"name": "Midas",
-		"desc": "Each Bullet you hit with reduces your damage by 1% and your target's damage by 1% to a max of 20%. The effect is reduced by 5% per second.",
+		"name": "미다스",
+		"desc": "사격당할 때마다 플레이어의 대미지가 1% 감소하고 표적의 대미지가 1%씩 최대 20% 까지 감소합니다. 효과는 초당 5%씩 감소합니다",
 		"compat": {
 			"weapon": [
 				"midas"
@@ -643,8 +643,8 @@
 	},
 	{
 		"id": "pakhan",
-		"name": "Pakhan",
-		"desc": "Each kill makes the next reload have 20% extra bullets compared to its base",
+		"name": "러시아 마피아",
+		"desc": "대상을 처치할 때마다 다음 재장전 시 원래보다 20%만큼 추가 탄환이 장전됩니다",
 		"compat": {
 			"weapon": [
 				"pakhan"
@@ -653,8 +653,8 @@
 	},
 	{
 		"id": "quickdraw",
-		"name": "Quickdraw",
-		"desc": "When drawn weapon damage is increased by 20% for 2 seconds. After that weapon damage is decreased by 20%.",
+		"name": "M9 다마스커스",
+		"desc": "2초 동안 사용하는 무기의 대미지가 20% 증가하고 2초 후 20% 감소합니다",
 		"compat": {
 			"weapon": [
 				"damascus"
@@ -663,8 +663,8 @@
 	},
 	{
 		"id": "showstopper",
-		"name": "Showstopper",
-		"desc": "Your accuracy with this weapon is increased the fewer shells you have left in the magazine",
+		"name": "쇼스톱퍼",
+		"desc": "사격개시후 탄약이 적어질수록 명중률이 증가합니다",
 		"compat": {
 			"weapon": [
 				"acs"
@@ -673,8 +673,8 @@
 	},
 	{
 		"id": "uncomplicated",
-		"name": "Uncomplicated",
-		"desc": "Damage is increased by 15%, accuracy and stability mods reduce this bonus.",
+		"name": "단순 공격",
+		"desc": "대미지가 15% 증가합니다. 명중률과 안정성 모듈은 이 보너스를 감소시킵니다",
 		"compat": {
 			"weapon": [
 				"famas"
@@ -683,8 +683,8 @@
 	},
 	{
 		"id": "rough",
-		"name": "Play Rough",
-		"desc": "Damage taken is reduced by 20% while firing. The taken damage is applied when you stop firing.",
+		"name": "거칠게 놀기",
+		"desc": "사격할 때는 받는 대미지가 20% 감소합니다. 사격을 중지하면 대미지가 적용됩니다",
 		"compat": {
 			"weapon": [
 				"warlord"
