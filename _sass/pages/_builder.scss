@@ -830,7 +830,7 @@ body {
   button.weapon[data-quality='specialized'],
   button.gear[data-quality='specialized'] {
     .sprite-container {
-      background-color: var(--quality-specialized--light);
+      background-color: var(--quality-specialized);
     }
   }
 
@@ -841,3 +841,4 @@ body {
       background-color: var(--quality-gset--light);
     }
   }
+}
