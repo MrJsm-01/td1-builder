@@ -60,13 +60,21 @@ export function openGearPicker(slot) {
     </div>
     <div class="gear-container">
       ${ITEMS.map(g => {
-        // Avoid duplicates inside $sprites-gear-pieces SCSS map
-        // See: _sass/abstracts/_variables.scss
         const SPRITE_ID = g.id.includes('-') ? g.id.split('-')[2] : g.id;
+
+        const gearColors = {
+          classy: '#00a873',
+          classified: '#00a873',
+          gearset: '#007a2c',
+          gset: '#007a2c',
+          highend: '#de990f',
+          exotic: '#c82323'
+        };
+        const bgColor = gearColors[g.quality] || 'transparent';
 
         return `
           <button class="gear" data-id="${g.id}" data-quality="${g.quality}">
-            <div class="sprite-container">
+            <div class="sprite-container" style="background-color: ${bgColor} !important;">
               <div class="sprite ${SPRITE_ID}" role="presentation"></div>
             </div>
             <div class="info-container">
@@ -182,18 +190,27 @@ function openGearModTypePicker(slot, index) {
       || a.name.localeCompare(b.name);
   });
 
+  const modColors = {
+    highend: '#de990f',
+    superior: '#0072ce',
+    specialized: '#0072ce'
+  };
+
   openModal(
-    MODS.map(m => `
-      <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
-        <div class="sprite-container">
-          <div class="sprite gear" role="presentation"></div>
-        </div>
-        <div class="info-container">
-          <div class="name">${m.name}</div>
-          <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
-        </div>
-      </button>
-    `).join(''),
+    MODS.map(m => {
+      const bgColor = modColors[m.quality] || 'transparent';
+      return `
+        <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
+          <div class="sprite-container" style="background-color: ${bgColor} !important;">
+            <div class="sprite gear" role="presentation"></div>
+          </div>
+          <div class="info-container">
+            <div class="name">${m.name}</div>
+            <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
+          </div>
+        </button>
+      `;
+    }).join(''),
     STRINGS.mods.choose.gear
   );
 }
@@ -213,18 +230,27 @@ function openGearModBonusPicker(slot, index) {
     .filter(b => b.quality === MOD_QUALITY)
     .sort((a, b) => a.name.localeCompare(b.name));
 
+  const modColors = {
+    highend: '#de990f',
+    superior: '#0072ce',
+    specialized: '#0072ce'
+  };
+
   openModal(
-    BONUSES.map(b => `
-      <button class="gear-mod" data-id="${b.id}" data-quality="${b.quality}">
-        <div class="sprite-container">
-          <div class="sprite gear" role="presentation"></div>
-        </div>
-        <div class="info-container">
-          <div class="name">${b.name}</div>
-          <div class="desc">${GAME_DATA.qualities[b.quality]}</div>
-        </div>
-      </button>
-    `).join(''),
+    BONUSES.map(b => {
+      const bgColor = modColors[b.quality] || 'transparent';
+      return `
+        <button class="gear-mod" data-id="${b.id}" data-quality="${b.quality}">
+          <div class="sprite-container" style="background-color: ${bgColor} !important;">
+            <div class="sprite gear" role="presentation"></div>
+          </div>
+          <div class="info-container">
+            <div class="name">${b.name}</div>
+            <div class="desc">${GAME_DATA.qualities[b.quality]}</div>
+          </div>
+        </button>
+      `;
+    }).join(''),
     STRINGS.mods.choose.bonus
   );
 }
@@ -277,18 +303,27 @@ function openPerfModPicker(slot, index) {
 
   const MODS = [...GAME_DATA.gear_perf_mods].sort((a, b) => a.name.localeCompare(b.name));
 
+  const modColors = {
+    highend: '#de990f',
+    superior: '#0072ce',
+    specialized: '#0072ce'
+  };
+
   openModal(
-    MODS.map(m => `
-      <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
-        <div class="sprite-container">
-          <div class="sprite perf" role="presentation"></div>
-        </div>
-        <div class="info-container">
-          <div class="name">${m.name}</div>
-          <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
-        </div>
-      </button>
-    `).join(''),
+    MODS.map(m => {
+      const bgColor = modColors[m.quality] || 'transparent';
+      return `
+        <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
+          <div class="sprite-container" style="background-color: ${bgColor} !important;">
+            <div class="sprite perf" role="presentation"></div>
+          </div>
+          <div class="info-container">
+            <div class="name">${m.name}</div>
+            <div class="desc">${GAME_DATA.qualities[m.quality]}</div>
+          </div>
+        </button>
+      `;
+    }).join(''),
     STRINGS.mods.choose.gear
   );
 }
