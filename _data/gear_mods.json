@@ -2,42 +2,42 @@
 	{
 		"id": 1,
 		"type": "fa",
-		"name": "화기 모듈",
+		"name": "화기 모듈(267)",
 		"quality": "highend",
 		"value": 267
 	},
 	{
 		"id": 2,
 		"type": "sta",
-		"name": "스태미나 모듈",
+		"name": "스태미나 모듈(267)",
 		"quality": "highend",
 		"value": 267
 	},
 	{
 		"id": 3,
 		"type": "ele",
-		"name": "전력 모듈",
+		"name": "전력 모듈(267)",
 		"quality": "highend",
 		"value": 267
 	},
 	{
 		"id": 4,
 		"type": "fa",
-		"name": "화기 모듈",
+		"name": "화기 모듈(214)",
 		"quality": "superior",
 		"value": 214
 	},
 	{
 		"id": 5,
 		"type": "sta",
-		"name": "스태미나 모듈",
+		"name": "스태미나 모듈(214)",
 		"quality": "superior",
 		"value": 214
 	},
 	{
 		"id": 6,
 		"type": "ele",
-		"name": "전력 모듈",
+		"name": "전력 모듈(214)",
 		"quality": "superior",
 		"value": 214
 	}
