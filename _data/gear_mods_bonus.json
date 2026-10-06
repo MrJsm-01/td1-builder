@@ -6,7 +6,7 @@
 	},
 	{
 		"id": 2,
-		"name": "치명타 확률",
+		"name": "치명타 확률(1%)",
 		"quality": "highend"
 	},
 	{
@@ -26,12 +26,12 @@
 	},
 	{
 		"id": 6,
-		"name": "스킬 가속",
+		"name": "스킬 가속(3%)",
 		"quality": "highend"
 	},
 	{
 		"id": 7,
-		"name": "스킬 파워",
+		"name": "스킬 파워(3335)",
 		"quality": "highend"
 	},
 	{
@@ -56,7 +56,7 @@
 	},
 	{
 		"id": 12,
-		"name": "엘리트에게 주는 대미지",
+		"name": "엘리트에게 주는 대미지(4%)",
 		"quality": "superior"
 	},
 	{
