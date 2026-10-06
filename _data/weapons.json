@@ -18,7 +18,7 @@
 	},
 	{
 		"id": "aug-enhanced",
-		"name": "Enhanced AUG A3P",
+		"name": "강화형 AUG A3P",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -35,7 +35,7 @@
 	},
 	{
 		"id": "aug-tac",
-		"name": "Tactical AUG A3P",
+		"name": "전술용 AUG A3P",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -52,7 +52,7 @@
 	},
 	{
 		"id": "mp5-burst",
-		"name": "Burst Fire MP-5 A4",
+		"name": "점사용 MP-5 A4",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -69,7 +69,7 @@
 	},
 	{
 		"id": "mp5-navy",
-		"name": "Navy MP5 N",
+		"name": "해군형 MP5 N",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -86,7 +86,7 @@
 	},
 	{
 		"id": "mp5-st",
-		"name": "MP-5 ST",
+		"name": "MP5 ST",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -120,7 +120,7 @@
 	},
 	{
 		"id": "t821-blackmarket",
-		"name": "Black Market T821",
+		"name": "블랙마켓 T821",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -137,7 +137,7 @@
 	},
 	{
 		"id": "t821-police",
-		"name": "Police T821",
+		"name": "경찰용 T821",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -154,7 +154,7 @@
 	},
 	{
 		"id": "midas",
-		"name": "Midas",
+		"name": "미다스",
 		"quality": "exotic",
 		"type": "smg",
 		"slots": [
@@ -171,7 +171,7 @@
 	},
 	{
 		"id": "tec9",
-		"name": "Converted SMG-9",
+		"name": "개조형 SMG-9",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -188,7 +188,7 @@
 	},
 	{
 		"id": "tec9-converted",
-		"name": "Converted SMG-9 A2",
+		"name": "개조형 SMG-9 A2",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -205,7 +205,7 @@
 	},
 	{
 		"id": "hildr",
-		"name": "Hildr",
+		"name": "힐드르",
 		"quality": "exotic",
 		"type": "smg",
 		"slots": [
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "eir",
-		"name": "Eir",
+		"name": "에어",
 		"quality": "exotic",
 		"type": "smg",
 		"slots": [
@@ -237,7 +237,7 @@
 	},
 	{
 		"id": "vector-tac",
-		"name": "Tactical Vector 45 ACP",
+		"name": "전술형 벡터 45 ACP",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -254,7 +254,7 @@
 	},
 	{
 		"id": "vector",
-		"name": "Vector 45 ACP",
+		"name": "벡터 45 ACP",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -271,7 +271,7 @@
 	},
 	{
 		"id": "vector-firstwave",
-		"name": "First Wave Vector 45 ACP",
+		"name": "1차 투입 요원용 벡터",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -288,7 +288,7 @@
 	},
 	{
 		"id": "pp-enhanced",
-		"name": "Enhanced PP-19",
+		"name": "강화형 PP-19",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -322,7 +322,7 @@
 	},
 	{
 		"id": "usc",
-		"name": "Converted USC",
+		"name": "USC",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -339,7 +339,7 @@
 	},
 	{
 		"id": "ump-police",
-		"name": "Police UMP-45",
+		"name": "경찰용 UMP45",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -356,7 +356,7 @@
 	},
 	{
 		"id": "ump-tac",
-		"name": "Tactical UMP-45",
+		"name": "전술용 UMP45",
 		"quality": "highend",
 		"type": "smg",
 		"slots": [
@@ -373,7 +373,7 @@
 	},
 	{
 		"id": "mpx",
-		"name": "The House",
+		"name": "하우스",
 		"quality": "exotic",
 		"type": "smg",
 		"slots": [
@@ -390,7 +390,7 @@
 	},
 	{
 		"id": "thompson",
-		"name": "Thompson M1928",
+		"name": "톰슨 M1928",
 		"quality": "exotic",
 		"type": "smg",
 		"slots": [
@@ -404,7 +404,7 @@
 	},
 	{
 		"id": "tommy",
-		"name": "Tommy Gun",
+		"name": "토미건",
 		"quality": "exotic",
 		"type": "smg",
 		"slots": [
@@ -418,7 +418,7 @@
 	},
 	{
 		"id": "m1a-classic",
-		"name": "Classic M1A",
+		"name": "클래식 M1A",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -451,7 +451,7 @@
 	},
 	{
 		"id": "m1a-firstwave",
-		"name": "First Wave M1A",
+		"name": "1차 투입 요원용 M1A",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -468,7 +468,7 @@
 	},
 	{
 		"id": "historian",
-		"name": "Historian",
+		"name": "M14 히스토리안",
 		"quality": "exotic",
 		"type": "mmr",
 		"slots": [
@@ -484,7 +484,7 @@
 	},
 	{
 		"id": "m44-classic",
-		"name": "Classic M44 Carbine",
+		"name": "클래식 M44 카빈",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -499,7 +499,7 @@
 	},
 	{
 		"id": "m44-hunt",
-		"name": "Hunting M44",
+		"name": "사냥용 M44",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -514,7 +514,7 @@
 	},
 	{
 		"id": "m44-custom",
-		"name": "Custom M44",
+		"name": "커스텀 M44",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -531,7 +531,7 @@
 	},
 	{
 		"id": "scarh-military",
-		"name": "Military SCAR-H",
+		"name": "군용 SCAR-H",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -548,7 +548,7 @@
 	},
 	{
 		"id": "mk17-police",
-		"name": "Police Mk17",
+		"name": "경찰용 MK17",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -582,7 +582,7 @@
 	},
 	{
 		"id": "tenebrae",
-		"name": "Tenebrae",
+		"name": "SCAR 2K",
 		"quality": "exotic",
 		"type": "mmr",
 		"slots": [
@@ -599,7 +599,7 @@
 	},
 	{
 		"id": "srs-covert",
-		"name": "Covert SRS",
+		"name": "총열 단축형 SRS",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -633,7 +633,7 @@
 	},
 	{
 		"id": "svd-para",
-		"name": "Paratrooper SVD",
+		"name": "낙하산병용 SVD",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -650,7 +650,7 @@
 	},
 	{
 		"id": "svd-surplus",
-		"name": "Surplus SVD",
+		"name": "구제 SVD",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -667,7 +667,7 @@
 	},
 	{
 		"id": "m700",
-		"name": "Model 700",
+		"name": "모델 700",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -684,7 +684,7 @@
 	},
 	{
 		"id": "m700-tac",
-		"name": "M700 Tactical",
+		"name": "M700 전술형",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -701,7 +701,7 @@
 	},
 	{
 		"id": "m700-carbon",
-		"name": "M700 Carbon",
+		"name": "M700 카본",
 		"quality": "highend",
 		"type": "mmr",
 		"slots": [
@@ -718,7 +718,7 @@
 	},
 	{
 		"id": "devil",
-		"name": "Devil",
+		"name": "데빌",
 		"quality": "exotic",
 		"type": "mmr",
 		"slots": [
@@ -735,7 +735,7 @@
 	},
 	{
 		"id": "heel",
-		"name": "Heel",
+		"name": "힐",
 		"quality": "exotic",
 		"type": "mmr",
 		"slots": [
@@ -769,7 +769,7 @@
 	},
 	{
 		"id": "acr-enhanced",
-		"name": "Enhanced ACR-E",
+		"name": "강화형 ACR-E",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -786,7 +786,7 @@
 	},
 	{
 		"id": "acr-tac",
-		"name": "Tactical ACR",
+		"name": "전술용 ACR",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -803,7 +803,7 @@
 	},
 	{
 		"id": "ak47-classic",
-		"name": "Classic AK-47",
+		"name": "클래식 AK-47",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -820,7 +820,7 @@
 	},
 	{
 		"id": "ak47m-military",
-		"name": "Military AK-47M",
+		"name": "군용 AK-47M",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -837,7 +837,7 @@
 	},
 	{
 		"id": "ak74",
-		"name": "Black Market AK-74",
+		"name": "블랙 마켓 AK-74",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -854,7 +854,7 @@
 	},
 	{
 		"id": "warlord",
-		"name": "Warlord",
+		"name": "워로드",
 		"quality": "exotic",
 		"type": "ar",
 		"slots": [
@@ -871,7 +871,7 @@
 	},
 	{
 		"id": "fal-classic",
-		"name": "Classic FAL",
+		"name": "클래식 FAL",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -888,7 +888,7 @@
 	},
 	{
 		"id": "sa58-military",
-		"name": "Military SA-58",
+		"name": "군용 SA-58",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -905,7 +905,7 @@
 	},
 	{
 		"id": "sa58-tac",
-		"name": "Tactical SA-58",
+		"name": "전술용 SA-58",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -922,7 +922,7 @@
 	},
 	{
 		"id": "m4-police",
-		"name": "Police M4",
+		"name": "경찰용 M4",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -939,7 +939,7 @@
 	},
 	{
 		"id": "lwm4",
-		"name": "Lightweight M4",
+		"name": "경량형 M4",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -973,7 +973,7 @@
 	},
 	{
 		"id": "liberator",
-		"name": "Liberator",
+		"name": "리버레이터",
 		"quality": "exotic",
 		"type": "ar",
 		"slots": [
@@ -990,7 +990,7 @@
 	},
 	{
 		"id": "p416-military",
-		"name": "Military P416",
+		"name": "군용 P416",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -1007,7 +1007,7 @@
 	},
 	{
 		"id": "p416-custom",
-		"name": "Custom P416 G3",
+		"name": "커스텀 P416 G3",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -1058,7 +1058,7 @@
 	},
 	{
 		"id": "mk16-tac",
-		"name": "Tactical Mk16",
+		"name": "전술용 MK16",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -1075,7 +1075,7 @@
 	},
 	{
 		"id": "caduceus",
-		"name": "Caduceus",
+		"name": "전투 의무병용 SCAR",
 		"quality": "exotic",
 		"type": "ar",
 		"slots": [
@@ -1092,7 +1092,7 @@
 	},
 	{
 		"id": "g36c",
-		"name": "G36 C",
+		"name": "G36C",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -1109,7 +1109,7 @@
 	},
 	{
 		"id": "g36-enhanced",
-		"name": "G36 Enhanced",
+		"name": "강화형 G36",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -1126,7 +1126,7 @@
 	},
 	{
 		"id": "g36-military",
-		"name": "Military G36",
+		"name": "군용 G36",
 		"quality": "highend",
 		"type": "ar",
 		"slots": [
@@ -1143,7 +1143,7 @@
 	},
 	{
 		"id": "famas",
-		"name": "Bullfrog",
+		"name": "불프로그",
 		"quality": "exotic",
 		"type": "ar",
 		"slots": [
@@ -1160,7 +1160,7 @@
 	},
 	{
 		"id": "mdr",
-		"name": "Urban MDR",
+		"name": "도심 MDR",
 		"quality": "exotic",
 		"type": "ar",
 		"slots": [
@@ -1194,7 +1194,7 @@
 	},
 	{
 		"id": "mg5-infantry",
-		"name": "MG5 Infantry",
+		"name": "보병용 MG5",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1211,7 +1211,7 @@
 	},
 	{
 		"id": "l86-military",
-		"name": "Military L86 LSW",
+		"name": "군용 L86 LSW",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1228,7 +1228,7 @@
 	},
 	{
 		"id": "l86-custom",
-		"name": "Custom L86 A2",
+		"name": "커스텀 L86 A2",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1262,7 +1262,7 @@
 	},
 	{
 		"id": "m249-tac",
-		"name": "Tactical M249 Para",
+		"name": "전술형 M249 Para",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1279,7 +1279,7 @@
 	},
 	{
 		"id": "mk46-military",
-		"name": "Military MK46",
+		"name": "군용 MK46",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1296,7 +1296,7 @@
 	},
 	{
 		"id": "m60-classic",
-		"name": "Classic M60",
+		"name": "클래식 M60",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1313,7 +1313,7 @@
 	},
 	{
 		"id": "m60-military",
-		"name": "Military M60 E4",
+		"name": "군용 M60 E4",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1330,7 +1330,7 @@
 	},
 	{
 		"id": "m60-blackmarket",
-		"name": "Black Market M60 E6",
+		"name": "블랙마켓 M60E6",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1347,7 +1347,7 @@
 	},
 	{
 		"id": "hog",
-		"name": "Hungry Hog",
+		"name": "헝그리 호그",
 		"quality": "exotic",
 		"type": "lmg",
 		"slots": [
@@ -1364,7 +1364,7 @@
 	},
 	{
 		"id": "rpk74-classic",
-		"name": "Classic RPK-74",
+		"name": "클래식 RPK-74",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1380,7 +1380,7 @@
 	},
 	{
 		"id": "rpk74-military",
-		"name": "Military RPK-74 M",
+		"name": "군용 RPK-74M",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1396,7 +1396,7 @@
 	},
 	{
 		"id": "rpk74-blackmarket",
-		"name": "Black Market RPK-74 E",
+		"name": "블랙마켓 RPK-74E",
 		"quality": "highend",
 		"type": "lmg",
 		"slots": [
@@ -1413,7 +1413,7 @@
 	},
 	{
 		"id": "pakhan",
-		"name": "Pakhan",
+		"name": "마피아용 RPK-74",
 		"quality": "exotic",
 		"type": "lmg",
 		"slots": [
@@ -1429,7 +1429,7 @@
 	},
 	{
 		"id": "alejandro",
-		"name": "Big Alejandro",
+		"name": "빅 알레한드로",
 		"quality": "exotic",
 		"type": "lmg",
 		"slots": [
@@ -1445,7 +1445,7 @@
 	},
 	{
 		"id": "doublebarrel",
-		"name": "Double Barrel Shotgun",
+		"name": "쌍발 산탄총",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [],
@@ -1457,7 +1457,7 @@
 	},
 	{
 		"id": "cassidy",
-		"name": "Cassidy",
+		"name": "캐시디",
 		"quality": "exotic",
 		"type": "stg",
 		"slots": [],
@@ -1469,7 +1469,7 @@
 	},
 	{
 		"id": "m870-express",
-		"name": "M870 Express",
+		"name": "보급형 M870",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1485,7 +1485,7 @@
 	},
 	{
 		"id": "m870-military",
-		"name": "Military M870",
+		"name": "군용 M870",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1501,7 +1501,7 @@
 	},
 	{
 		"id": "m870-custom",
-		"name": "Custom M870 MCS",
+		"name": "커스텀 M870 MCS",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1532,7 +1532,7 @@
 	},
 	{
 		"id": "saiga-tac",
-		"name": "Tactical SASG-12 K",
+		"name": "전술형 SASG-12 K",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1548,7 +1548,7 @@
 	},
 	{
 		"id": "saiga-blackmarket",
-		"name": "Black Market SASG-12 S",
+		"name": "블랙마켓 SASG-12 S",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1564,7 +1564,7 @@
 	},
 	{
 		"id": "medved",
-		"name": "Medved",
+		"name": "메드베드",
 		"quality": "exotic",
 		"type": "stg",
 		"slots": [
@@ -1580,7 +1580,7 @@
 	},
 	{
 		"id": "acs",
-		"name": "Showstopper",
+		"name": "쇼스톱퍼",
 		"quality": "exotic",
 		"type": "stg",
 		"slots": [
@@ -1595,7 +1595,7 @@
 	},
 	{
 		"id": "benelli",
-		"name": "Super 90",
+		"name": "슈퍼 90",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1611,7 +1611,7 @@
 	},
 	{
 		"id": "benelli-marine",
-		"name": "Marine Super 90",
+		"name": "해병대용 슈퍼 90",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1627,7 +1627,7 @@
 	},
 	{
 		"id": "benelli-tac",
-		"name": "Tactical Super 90 SBS",
+		"name": "전술용 슈퍼 90 SBS",
 		"quality": "highend",
 		"type": "stg",
 		"slots": [
@@ -1657,7 +1657,7 @@
 	},
 	{
 		"id": "m1911-tac",
-		"name": "Tactical M1911",
+		"name": "전술형 M1911",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1685,7 +1685,7 @@
 	},
 	{
 		"id": "centurion",
-		"name": "Centurion",
+		"name": "센츄리온",
 		"quality": "exotic",
 		"type": "hdg",
 		"slots": [
@@ -1699,7 +1699,7 @@
 	},
 	{
 		"id": "military-m9",
-		"name": "Military M9",
+		"name": "군용 M9",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1712,7 +1712,7 @@
 	},
 	{
 		"id": "officers-m9a1",
-		"name": "Officer's M9 A1",
+		"name": "장교용 M9A1",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1725,7 +1725,7 @@
 	},
 	{
 		"id": "beretta-93r",
-		"name": "93R",
+		"name": "M93R",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1738,7 +1738,7 @@
 	},
 	{
 		"id": "damascus",
-		"name": "Damascus",
+		"name": "M9 다마스커스",
 		"quality": "exotic",
 		"type": "hdg",
 		"slots": [
@@ -1751,7 +1751,7 @@
 	},
 	{
 		"id": "firstwave-pf45",
-		"name": "First Wave PF45",
+		"name": "1차 투입 요원용 PF45",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1766,7 +1766,7 @@
 	},
 	{
 		"id": "custom-pf45",
-		"name": "Custom PF45",
+		"name": "커스텀 PF45",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1781,7 +1781,7 @@
 	},
 	{
 		"id": "type-f",
-		"name": "Px4 Storm Type F",
+		"name": "Px4 Storm F형",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1794,7 +1794,7 @@
 	},
 	{
 		"id": "type-t",
-		"name": "Px4 Storm Type T",
+		"name": "Px4 Storm T형",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1807,7 +1807,7 @@
 	},
 	{
 		"id": "firstwave-x45",
-		"name": "First Wave X-45",
+		"name": "1차 투입요원용 X-45",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1836,7 +1836,7 @@
 	},
 	{
 		"id": "rhino",
-		"name": "Rhino",
+		"name": "라이노",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [],
@@ -1847,7 +1847,7 @@
 	},
 	{
 		"id": "rhino-gold",
-		"name": "Golden Rhino",
+		"name": "황금 라이노",
 		"quality": "exotic",
 		"type": "hdg",
 		"slots": [
@@ -1860,7 +1860,7 @@
 	},
 	{
 		"id": "rhino-snub",
-		"name": "Snubnosed Rhino",
+		"name": "단총신 라이노",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [],
@@ -1871,7 +1871,7 @@
 	},
 	{
 		"id": "rhino-spec",
-		"name": "Special Rhino",
+		"name": "라이노 스페셜",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [
@@ -1884,7 +1884,7 @@
 	},
 	{
 		"id": "magnum-586",
-		"name": "586 Magnum",
+		"name": "586 매그넘",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [],
@@ -1895,7 +1895,7 @@
 	},
 	{
 		"id": "magnum-686",
-		"name": "Police 686 Magnum",
+		"name": "경찰용 686 매그넘",
 		"quality": "highend",
 		"type": "hdg",
 		"slots": [],
@@ -1906,7 +1906,7 @@
 	},
 	{
 		"id": "sawedoff",
-		"name": "Double Barrel Sawed Off",
+		"name": "총열 단축형 쌍발 산탄총",
 		"quality": "highend",
 		"type": "hdgstg",
 		"slots": [],
