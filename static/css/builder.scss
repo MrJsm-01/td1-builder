@@ -9,7 +9,6 @@ $base-url: "../img/";
 
 /* MODAL QUALITY BACKGROUND OVERRIDES (FINAL FORCE OVERRIDE) */
 .modal-container {
-  // 1. 버튼 전체 박스의 붉은 오버레이/배경 완전 차단
   button.weapon,
   button.gear,
   button.gear-mod,
@@ -17,48 +16,53 @@ $base-url: "../img/";
   .gear,
   .gear-mod {
     background-color: transparent !important;
-  }
 
-  // 2. [특수 - Exotic] 진한 선명한 빨간색 (도심 MDR, 리버레이터 등)
-  *[data-quality='exotic'] .sprite-container,
-  .weapon[data-quality='exotic'] .sprite-container {
-    background-color: #c82323 !important;
-  }
+    .sprite-container {
+      display: block !important;
+      width: 128px !important;
+      height: 64px !important;
+      flex-shrink: 0 !important;
 
-  // 3. [특급 - High-End] 붉은 기 완벽 제거한 맑은 노란색/금색 (ACR-E, M4 등)
-  *[data-quality='highend'] .sprite-container,
-  *[data-quality='high-end'] .sprite-container,
-  .weapon[data-quality='highend'] .sprite-container,
-  .gear[data-quality='highend'] .sprite-container {
-    background-color: #de990f !important;
-  }
+      &::before,
+      &::after {
+        display: none !important;
+      }
 
-  // 4. [전문 / 우수 - Specialized / Superior] 파란색
-  *[data-quality='specialized'] .sprite-container,
-  *[data-quality='superior'] .sprite-container {
-    background-color: #0072ce !important;
-  }
+      .sprite {
+        width: 100% !important;
+        height: 100% !important;
+        mix-blend-mode: screen !important;
+      }
+    }
 
-  // 5. [일반 세트 - Gear Set] 짙은 녹색 (개척자, 고독한 별, 기동타격대 등)
-  *[data-quality='gearset'] .sprite-container,
-  *[data-quality='gset'] .sprite-container,
-  *[data-type='set'] .sprite-container {
-    background-color: #006b24 !important;
-  }
+    // 1. [특수 - Exotic] 빨간색
+    &[data-quality='exotic'] .sprite-container {
+      background-color: #c82323 !important;
+    }
 
-  // 6. [복합형 세트 - Classified] 시그니처 에메랄드 민트/청록색 (최후의 수단, 포식자 등)
-  *[data-quality='classified'] .sprite-container,
-  *[data-quality='classy'] .sprite-container,
-  .gear[data-quality='classified'] .sprite-container,
-  .gear[data-quality='classy'] .sprite-container {
-    background-color: #00a873 !important;
-  }
+    // 2. [특급 - High-End] 탁함 없는 선명한 황금 노란색 고정
+    &[data-quality='highend'] .sprite-container,
+    &[data-quality='high-end'] .sprite-container {
+      background-color: #ffaa00 !important; // 칙칙함을 없애기 위해 보정된 선명한 금빛 노란색
+    }
 
-  // 7. 검은 바탕 투명화 (스크린 혼합 모드 적용)
-  .weapon .sprite-container .sprite,
-  .gear .sprite-container .sprite,
-  .gear-mod .sprite-container .sprite,
-  .sprite-container .sprite {
-    mix-blend-mode: screen !important;
+    // 3. [전문 / 우수 - Specialized / Superior] 파란색
+    &[data-quality='specialized'] .sprite-container,
+    &[data-quality='superior'] .sprite-container {
+      background-color: #0072ce !important;
+    }
+
+    // 4. [일반 세트 - Gear Set] 진녹색
+    &[data-quality='gearset'] .sprite-container,
+    &[data-quality='gset'] .sprite-container,
+    &[data-type='set'] .sprite-container {
+      background-color: #006b24 !important;
+    }
+
+    // 5. [복합형 세트 - Classified] 민트/청록색
+    &[data-quality='classified'] .sprite-container,
+    &[data-quality='classy'] .sprite-container {
+      background-color: #00a873 !important;
+    }
   }
 }
