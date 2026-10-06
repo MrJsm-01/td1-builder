@@ -1,5 +1,5 @@
 ---
-# Rebuild-Trigger: 2026-10-07-04
+# Rebuild-Trigger: 2026-10-07-05
 ---
 $base-url: "../img/";
 
@@ -7,60 +7,60 @@ $base-url: "../img/";
 @use 'components/tooltips' as *;
 @use 'pages/builder' as *;
 
-/* MODAL QUALITY BACKGROUND OVERRIDES (FORCE COLOR FIX) */
+/* MODAL QUALITY BACKGROUND OVERRIDES (IN-GAME ACCURACY FIX) */
 .modal-container {
   // 1. 전체 버튼 배경 투명화
   button.weapon,
   button.gear,
-  button.gear-mod {
+  button.gear-mod,
+  .weapon,
+  .gear,
+  .gear-mod {
     background-color: transparent !important;
   }
 
-  // 2. 특수 (Exotic) - 진한 빨간색
-  .weapon[data-quality='exotic'] .sprite-container,
-  .gear[data-quality='exotic'] .sprite-container,
-  button[data-quality='exotic'] .sprite-container {
+  // 2. [특수 - Exotic] 진한 빨간색 (도심 MDR, 리버레이터 등)
+  *[data-quality='exotic'] .sprite-container,
+  .weapon.exotic .sprite-container,
+  .gear.exotic .sprite-container {
     background-color: #c82323 !important;
   }
 
-  // 3. 특급 (High-End) - 붉은 기를 완전히 뺀 선명한 노란색/금색 (강제 덮어쓰기)
-  .weapon[data-quality='highend'] .sprite-container,
-  .gear[data-quality='highend'] .sprite-container,
-  .gear-mod[data-quality='highend'] .sprite-container,
-  button[data-quality='highend'] .sprite-container {
-    background-color: #e69d00 !important;
+  // 3. [특급 - High-End] 붉은 기 완벽 제거한 선명한 황금/노란색 (경량형 M4, ACR-E 등)
+  *[data-quality='highend'] .sprite-container,
+  *[data-quality='high-end'] .sprite-container,
+  .weapon.highend .sprite-container,
+  .gear.highend .sprite-container,
+  .gear-mod.highend .sprite-container {
+    background-color: #de990f !important;
   }
 
-  // 4. 전문/우수 (Specialized / Superior) - 파란색
-  .weapon[data-quality='specialized'] .sprite-container,
-  .gear[data-quality='specialized'] .sprite-container,
-  .weapon[data-quality='superior'] .sprite-container,
-  .gear[data-quality='superior'] .sprite-container,
-  .gear-mod[data-quality='superior'] .sprite-container,
-  .gear-mod[data-quality='specialized'] .sprite-container,
-  button[data-quality='superior'] .sprite-container,
-  button[data-quality='specialized'] .sprite-container {
-    background-color: #0066cc !important;
+  // 4. [전문/우수 - Specialized / Superior] 파란색
+  *[data-quality='specialized'] .sprite-container,
+  *[data-quality='superior'] .sprite-container,
+  .weapon.superior .sprite-container,
+  .gear.superior .sprite-container,
+  .gear-mod.superior .sprite-container {
+    background-color: #0072ce !important;
   }
 
-  // 5. 일반 세트 (Gear Set) - 밝아진 진녹색
-  .gear[data-quality='gearset'] .sprite-container,
-  .gear[data-quality='gset'] .sprite-container,
-  .gear[data-type='set'] .sprite-container,
-  button[data-quality='gearset'] .sprite-container,
-  button[data-quality='gset'] .sprite-container {
+  // 5. [일반 세트 - Gear Set] 맑은 진녹색 (개척자, 고독한 별, 기동타격대 등)
+  *[data-quality='gearset'] .sprite-container,
+  *[data-quality='gset'] .sprite-container,
+  *[data-type='set'] .sprite-container,
+  .gear.gearset .sprite-container {
     background-color: #007a2c !important;
   }
 
-  // 6. 복합형 세트 (Classified) - 2번째 사진 인게임 시그니처 에메랄드/청록색
-  .gear[data-quality='classified'] .sprite-container,
-  .gear[data-quality='classy'] .sprite-container,
-  button[data-quality='classified'] .sprite-container,
-  button[data-quality='classy'] .sprite-container {
+  // 6. [복합형 세트 - Classified] 2번째 사진 인게임 시그니처 에메랄드/민트 청록색
+  *[data-quality='classified'] .sprite-container,
+  *[data-quality='classy'] .sprite-container,
+  .gear.classified .sprite-container,
+  .gear.classy .sprite-container {
     background-color: #00a873 !important;
   }
 
-  // 7. 혼합 모드로 검은 배경 투명화
+  // 7. 검은색 바탕 제거 (스크린 혼합 모드 강제 적용)
   .weapon .sprite-container .sprite,
   .gear .sprite-container .sprite,
   .gear-mod .sprite-container .sprite,
