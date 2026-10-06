@@ -1,7 +1,7 @@
 :root {
-  --default-text-color         : rgba(255, 255, 255, 1);
+  --default-text-color          : rgba(255, 255, 255, 1);
   --default-text-color--light  : rgba(255, 255, 255, 0.7);
-  --default-bg-color           : rgba(0, 0, 0, 1);
+  --default-bg-color            : rgba(0, 0, 0, 1);
   --default-bg-color--clearest : rgba(255, 255, 255, 0.1);
   --default-bg-color--clearer  : rgba(255, 255, 255, 0.3);
   --default-bg-color--light    : rgba(0, 0, 0, 0.7);
@@ -12,19 +12,38 @@
   --brand-color--lighter       : rgba(255, 128, 0, 0.4);
   --modal-error                : rgba(214, 50, 50, 1);
   --modal-error--light         : rgba(214, 50, 50, 0.4);
-  --quality-exotic             : rgba(237, 98, 74, 1);
-  --quality-exotic--light      : rgba(237, 98, 74, 0.4);
-  --quality-exotic--lighter    : rgba(237, 98, 74, 0.2);
-  --quality-gset               : rgba(4, 197, 112, 1);
-  --quality-gset--light        : rgba(4, 197, 112, 0.4);
-  --quality-gset--lighter      : rgba(4, 197, 112, 0.2);
+
+  /* [특수 - Exotic] 선명한 빨간색 */
+  --quality-exotic             : rgba(200, 35, 35, 1);
+  --quality-exotic--light      : rgba(200, 35, 35, 0.4);
+  --quality-exotic--lighter    : rgba(200, 35, 35, 0.2);
+
+  /* [복합형 세트 - Classified / Classy] 인게임 시그니처 민트/청록색 */
+  --quality-classy             : rgba(0, 168, 115, 1);
+  --quality-classy--light      : rgba(0, 168, 115, 0.4);
+  --quality-classy--lighter    : rgba(0, 168, 115, 0.2);
+  --quality-classified         : rgba(0, 168, 115, 1);
+  --quality-classified--light  : rgba(0, 168, 115, 0.4);
+  --quality-classified--lighter: rgba(0, 168, 115, 0.2);
+
+  /* [일반 세트 - Gear Set] 맑은 진녹색 */
+  --quality-gset               : rgba(0, 122, 44, 1);
+  --quality-gset--light        : rgba(0, 122, 44, 0.4);
+  --quality-gset--lighter      : rgba(0, 122, 44, 0.2);
+  --quality-gearset            : rgba(0, 122, 44, 1);
+  --quality-gearset--light     : rgba(0, 122, 44, 0.4);
+
+  /* [특급 - High-End] 붉은 기 완벽 제거한 선명한 황금 노란색 (불투명 1.0) */
   --quality-highend            : rgba(222, 153, 15, 1);
-  --quality-highend--light     : rgba(222, 153, 15, 0.4);
-  --quality-superior           : rgba(177, 66, 152, 1);
-  --quality-superior--light    : rgba(177, 66, 152, 0.4);
-  --quality-specialized          : rgba(0, 114, 206, 1);
-  --quality-specialized--light   : rgba(0, 114, 206, 0.4);
-  --quality-specialized--lighter : rgba(0, 114, 206, 0.2);
+  --quality-highend--light     : rgba(222, 153, 15, 1);
+
+  /* [우수 / 전문 - Superior / Specialized] 파란색 */
+  --quality-superior           : rgba(0, 114, 206, 1);
+  --quality-superior--light    : rgba(0, 114, 206, 0.4);
+  --quality-specialized        : rgba(0, 114, 206, 1);
+  --quality-specialized--light : rgba(0, 114, 206, 0.4);
+  --quality-specialized--lighter: rgba(0, 114, 206, 0.2);
+
   --quality-worn               : rgba(204, 204, 204, 1);
   --quality-worn--light        : rgba(204, 204, 204, 0.4);
   --quality-worn--lighter      : rgba(204, 204, 204, 0.2);
