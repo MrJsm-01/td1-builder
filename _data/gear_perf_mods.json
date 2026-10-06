@@ -1,112 +1,112 @@
 [
 	{
 		"id": 1,
-		"name": "First Aid Ally Heal",
+		"name": "응급 처치 아군 치유",
 		"quality": "highend"
 	},
 	{
 		"id": 2,
-		"name": "First Aid Self Heal",
+		"name": "응급 처치 자가 치유",
 		"quality": "highend"
 	},
 	{
 		"id": 3,
-		"name": "Mobile Cover Blast Resilience",
+		"name": "휴대용 엄폐물 대미지 저항",
 		"quality": "highend"
 	},
 	{
 		"id": 4,
-		"name": "Mobile Cover Health",
+		"name": "휴대용 엄폐물 생명력",
 		"quality": "highend"
 	},
 	{
 		"id": 5,
-		"name": "Pulse Critical Hit Chance",
+		"name": "펄스 치명타 확률(2%)",
 		"quality": "highend"
 	},
 	{
 		"id": 6,
-		"name": "Pulse Critical Hit Damage",
+		"name": "펄스 치명타 대미지(2%)",
 		"quality": "highend"
 	},
 	{
 		"id": 7,
-		"name": "Pulse Duration",
+		"name": "펄스 지속시간",
 		"quality": "highend"
 	},
 	{
 		"id": 8,
-		"name": "Seeker Mine Explosion Damage",
+		"name": "대인 지뢰 대미지",
 		"quality": "highend"
 	},
 	{
 		"id": 9,
-		"name": "Seeker Mine Explosion Range",
+		"name": "대인 지뢰 폭발 범위",
 		"quality": "highend"
 	},
 	{
 		"id": 10,
-		"name": "Shield Damage",
+		"name": "방탄 방패 대미지",
 		"quality": "highend"
 	},
 	{
 		"id": 11,
-		"name": "Shield Damage Resilience",
+		"name": "방탄 방패 대미지 저항(5%)",
 		"quality": "highend"
 	},
 	{
 		"id": 12,
-		"name": "Shield Health",
+		"name": "방탄 방패 생명력(7.5%)",
 		"quality": "highend"
 	},
 	{
 		"id": 13,
-		"name": "Smart Cover Damage Resistance",
+		"name": "스마트 커버 대미지 저항",
 		"quality": "highend"
 	},
 	{
 		"id": 14,
-		"name": "Smart Cover Duration",
+		"name": "스마트 커버 지속시간",
 		"quality": "highend"
 	},
 	{
 		"id": 15,
-		"name": "Sticky Bomb Explosion Damage",
+		"name": "점착 폭탄 폭발 대미지(4%)",
 		"quality": "highend"
 	},
 	{
 		"id": 16,
-		"name": "Sticky Bomb Explosion Range",
+		"name": "점착 폭탄 폭발 범위(6%)",
 		"quality": "highend"
 	},
 	{
 		"id": 17,
-		"name": "Support Station Healing Rate",
+		"name": "지원소 치유 속도(5%)",
 		"quality": "highend"
 	},
 	{
 		"id": 18,
-		"name": "Support Station Duration",
+		"name": "지원소 지속 시간",
 		"quality": "highend"
 	},
 	{
 		"id": 19,
-		"name": "Support Station Range",
+		"name": "지원소 범위(7.5%)",
 		"quality": "highend"
 	},
 	{
 		"id": 20,
-		"name": "Turret Damage",
+		"name": "터렛 대미지",
 		"quality": "highend"
 	},
 	{
 		"id": 21,
-		"name": "Turret Duration",
+		"name": "터렛 지속시간",
 		"quality": "highend"
 	},
 	{
 		"id": 22,
-		"name": "Turret Health",
+		"name": "터렛 생명력",
 		"quality": "highend"
 	}
 ]
