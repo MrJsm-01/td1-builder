@@ -815,31 +815,43 @@ body {
     }
   }
 }
-// MODAL QUALITY BACKGROUND OVERRIDES
 
+// MODAL QUALITY BACKGROUND OVERRIDES (FIXED)
 .modal-container {
-  // 1. 특급(Exotic) & 고급(High-End) -> 선명한 노란색
-  .weapon[data-quality='exotic'] .sprite-container,
-  .weapon[data-quality='highend'] .sprite-container,
-  .gear[data-quality='exotic'] .sprite-container,
-  .gear[data-quality='highend'] .sprite-container {
-    background: #de990f !important;
+  // 1. 특급 (High-End) - 노란색 / 금색
+  button.weapon[data-quality='highend'],
+  button.gear[data-quality='highend'] {
+    background-color: var(--quality-highend, #de990f) !important;
   }
 
-  // 2. 전문(Specialized) -> 선명한 파란색
-  .weapon[data-quality='specialized'] .sprite-container,
-  .gear[data-quality='specialized'] .sprite-container {
-    background: #0072ce !important;
+  // 2. 특수 (Exotic) - 선명한 빨간색
+  button.weapon[data-quality='exotic'],
+  button.gear[data-quality='exotic'] {
+    background-color: var(--quality-exotic, #eb624a) !important;
   }
 
-  // 3. 복합형 세트 & 일반 세트 -> 선명한 밝은 청녹색
-  .gear[data-quality='classy'] .sprite-container,
-  .gear[data-quality='gearset'] .sprite-container,
-  .gear[data-type='set'] .sprite-container {
-    background: #04c570 !important;
+  // 3. 전문 / 우수 (Specialized / Superior) - 파란색
+  button.weapon[data-quality='specialized'],
+  button.gear[data-quality='specialized'],
+  button.weapon[data-quality='superior'],
+  button.gear[data-quality='superior'] {
+    background-color: var(--quality-specialized, #0072ce) !important;
   }
 
-  // 4. 가상 요소 스킨 제거 및 혼합 모드 해제
+  // 4. 일반 세트 (Gear Set) - 초록색 / 풀색
+  button.gear[data-quality='gset'],
+  button.gear[data-quality='gearset'],
+  button.gear[data-type='set'] {
+    background-color: var(--quality-gset, #04c570) !important;
+  }
+
+  // 5. 복합형 세트 (Classified / Classy) - 밝은 청록색 / 연두색
+  button.gear[data-quality='classified'],
+  button.gear[data-quality='classy'] {
+    background-color: #38a371 !important;
+  }
+
+  // 6. 스프라이트 및 혼합 모드 정상화
   .sprite-container,
   .sprite-container * {
     &::before,
