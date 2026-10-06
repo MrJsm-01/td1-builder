@@ -3,26 +3,26 @@
 		"name": "AlphaBridge",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 100% Health Regen"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 100% 생명력 재생"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 5% Weapon Damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 5% 무기 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "If your Primary and Secondary Weapon is of the same category, they share the free talent. All talent requirements are ignored for all weapon talents."
+				"name": "세트 보너스 (4)",
+				"desc": "플레이어가 같은 종류의 무기를 주 무기와 예비 무기로 사용할 경우, 각각의 무기에 대한 특수 효과 활성 조건을 무시하고 특수 효과가 활성화됩니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 25% Health Regen<br>+ 10 % Weapon Damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 25% 생명력 재생<br>+ 10% 무기 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "Inactive personal versions of all Signature Skills are rotating every 6 seconds and can be activated by killing enemy agents or Veteran/Elite NPCs. The Signature Skill that is up on rotation when an enemy is killed is activated for 10 seconds when all primary Stats are balanced between each other. These times are shortened depending on the difference in the ranges of your Primary Attributes. You can no longer activate Signature Skills or be affected by Ally Signature Skills."
+				"name": "세트 보너스 (6)",
+				"desc": "6초마다 개인 버전의 모든 링크 스킬이 번갈아 비활성화되며 적 플레이어나 베테랑 NPC, 엘리트 NPC를 처치하여 활성화할 수 있습니다. 모든 주 능력치가 서로 균형 잡혀 있다면, 적을 처치했을 때 비활성화 상태에 있는 링크 스킬이 10초 동안 활성화됩니다. 주 속성이 서로 차이나는 만큼 활성 시간이 줄어듭니다. 더는 링크 스킬을 활성화하거나 아군 링크 스킬의 효과를 받을 수 없습니다."
 			}
 		]
 	},
@@ -30,26 +30,26 @@
 		"name": "Banshee's Shadow",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 20% Looted DZ Funds"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 20% 획득한 다크존 코인"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 10% DMG to target out of cover"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 10% 비엄폐 대상에게 입히는 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "While Rogue, all ammo is completely refilled every 30 seconds. Damage taken from non rogue players reduced by 10%. While not Rogue, Damage to Rogue players is increased by 10%. This bonus is increased by 20% for 10 minutes after being killed by a rogue."
+				"name": "세트 보너스 (4)",
+				"desc": "로그 요원일 때는 30초마다 모든 탄약이 완전히 보충되며 로그 요원이 아닌 플레이어에게 받는 대미지가 10% 감소합니다.<br><br>로그 요원이 아닐 경우 로그 요원인 플레이어에게 입히는 대미지가 10% 증가합니다. 로그 요원에게 사망한 후 10분 동안은 이 보너스가 20%로 증가합니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 20% Looted DZ Funds<br>+ 5% DMG to target out of cover"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 20% 획득한 다크존 코인<br>+ 5% 비엄폐 대상에게 입히는 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "While Rogue, the time to clear Manhunt status is decreased by 5% for every group member within 15 meters. All Rogue status actions that result in a rank up are doubled. Rewards for clearing Manhunt status are improved.<br><br>While Not Rogue, damage to Manhunt status agents is increased by 2% for each Manhunt level the agent has, Rewards for killing a Manhunt players are improved"
+				"name": "세트 보너스 (6)",
+				"desc": "로그 요원일 때, 맨헌트 상태 제거 시간이 15m 이내의 그룹 멤버마다 5%씩 감소합니다. 모든 로그 상태 행동의 랭크 상승 효과가 두 배가 됩니다. 맨헌트 상태 제거 보상이 증가합니다.<br><br>로그 요원이 아닐 때, 맨헌트 상태의 플레이어에게 주는 대미지가 맨헌트 레벨당 2%씩 증가합니다. 맨헌트 플레이어를 처치하고 얻는 보상이 증가합니다."
 			}
 		]
 	},
@@ -57,26 +57,26 @@
 		"name": "D3-FNC",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 15% Protection from Elites"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 15% 정예 상대 방호도"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 10% Ballistic Shield damage resilience"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 10% 방탄 방패 대미지 저항"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Allows using an SMG if one is equipped when Ballistic Shield is deployed. Only Master Rank shield mod is active. Ballistic Shield health is increased by 57% for every 3000 Stamina."
+				"name": "세트 보너스 (4)",
+				"desc": "방탄 방패를 장착했을 때 기관단총을 사용할 수 있게 됩니다.<br>마스터 랭크의 방패 모드만 활성화됩니다.<br>방탄 방패 체력이 3000 스태미너마다 57% 증가합니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 15% Protection for Elites<br>+ 5% ballistic Shield damage resilience"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 15% 정예 상대 방호도<br>+ 5% 방탄 방패 대미지 저항"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "When Ballistic Shield is deployed, melee damage is increased by 2000% and all overhealing the agent receives is applied to the Ballistic Shield as healing. After receiving a damage threshold from receiving Physical or Exotic damage, the Ballistic Shield grants a buff to the agent and all group members within 15 meters for 6 seconds. The duration of the buff is increased by 2 seconds for every 3000 Stamina the agent has.<br>Physical Damage: Armor is increased by 30%<br>Exotic Damage: Weapon Damage is increased by 30%."
+				"name": "세트 보너스 (6)",
+				"desc": "방탄 방패가 배치되면 근접 대미지가 2000% 증가하고 플레이어가 받는 모든 추가 치유가 방탄 방패에 적용됩니다.<br>임계값을 초과하는 물리 또는 특수 대미지를 받으면 방탄 방패가 플레이어와 15m 이내의 모든 그룹원에게 6초 동안 버프를 제공합니다. 버프 지속시간은 3000 스태미너마다 2초 증가합니다.<br>물리 대미지 버프 : 방어도 30% 증가<br>특수 대미지 버프 : 무기 대미지 30% 증가<br>스태미너가 9000이 되면 임계값을 200% 증가"
 			}
 		]
 	},
@@ -84,26 +84,26 @@
 		"name": "DeadEYE",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 40% Initial Bullet Stability"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 40% 초탄 안정성"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 20% marksman Rifle Critical hit damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 20% 저격소총 치명타 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "When zoomed, Marksman rifles lose headshot bonus but gain 50% critical strike chance when out of cover and 100% critical strike chance when in cover."
+				"name": "세트 보너스 (4)",
+				"desc": "확대할 경우, 저격소총의 헤드샷 대미지 보너스가 사라지는 대신, 치명타 확률이 비엄폐 상태일 때 50%, 엄폐 상태일 때 100% 증가합니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 40% Initial Bullet Stability<br>+ 20% Marksman Rifle Critical hit damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 40% 초탄 안정성<br>+ 20% 저격소총 치명타 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "When Zoomed, getting a headshot kill with Marksman rifles will increase critical hit damage by 20% every second to a maximum of 100%, and will increase stability by 100%. Lasts for 10 seconds or until no longer zoomed."
+				"name": "세트 보너스 (6)",
+				"desc": "헤드샷으로 적을 처치하면 조준경 확대 상태에서 치명타 대미지가 1초마다 20%씩 100%까지 증가하고, 안정성이 100% 증가합니다.<br>10초 동안 지속되며 조준경을 꺼면 사라집니다."
 			}
 		]
 	},
@@ -111,26 +111,26 @@
 		"name": "Final Measure",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 25% Exotic Damage Resilience"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 25% 특수 대미지 저항"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 15% Protection from Elites"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 15% 정예 상대 방호도"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "When in range of hostile grenades or mortars, defuses them and adds grenades to your inventory. Can only happen once every 8 seconds"
+				"name": "세트 보너스 (4)",
+				"desc": "적의 수류탄이나 박격포의 유효 범위 내에 있는 경우 해당 무기를 해제하고 플레이어의 인벤토리에 수류탄을 추가합니다. 해당 효과는 8초마다 한 번씩 발생합니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 15% Exotic Damage Resilience<br>+ 15% Protection from Elites"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 15% 특수 대미지 저항<br>+ 15% 정예 상대 방호도"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "When a grenade is defused the player and all group members within 30 meters gain a buff based on the grenade type that was defused.<br>- EMP/Shock: Skill Power increased By 40% for 8 seconds<br>- Fragmentation/Incendiary: Weapon Damage increased by 40% for 8 seconds<br>- Flashbang/Tear Gas: Armor is increased by 40% for 8 seconds"
+				"name": "세트 보너스 (6)",
+				"desc": "수류탄이 제거되면 플레이어와 30m 반경의 모든 그룹 멤버가 제거된 수류탄 유형에 따라 버프를 획득합니다.<br>- EMP/충격탄 : 8초 동안 스킬 파워 40% 증가<br>- 파편탄/소이탄 : 8초 동안 무기 대미지 40% 증가<br>- 섬광탄/최루 가스탄 : 8초 동안 방어도 40% 증가"
 			}
 		]
 	},
@@ -138,26 +138,26 @@
 		"name": "FireCrest",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 3 Incendiary Grenade Capacity"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 3 소이 수류탄 휴대량"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 50% Flame Turret range<br>+ 30% Flame Turret damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 50% 화염 터렛 사거리<br>+ 30% 화염 터렛 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Your Weapon damage is increased by 15% against burning targets."
+				"name": "세트 보너스 (4)",
+				"desc": "화상 상태 대상에게 가하는 무기 대미지가 15% 증가합니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 1 Incendiary Grenade Capacity<br>+ 5% Flame Turret range<br>+ 20% Flame Turret damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 1 소이 수류탄 휴대량<br>+ 5% 화염 터렛 사거리<br>+ 20% 화염 터렛 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "Bullets have 2% chance to cause an enemy to burn, burning targets can cause a fiery explosion when killed once every 10 seconds. NPCs set on fire by your flame turret will burn 25% longer for every 2000 Electronics."
+				"name": "세트 보너스 (6)",
+				"desc": "탄환이 2% 확률로 적에게 화상 효과를 일으킵니다.<br>10초마다 한 번씩 화상 상태의 대상을 처치하면 화염 폭발을 일으킬 수 있습니다.<br>화염 터렛에 의한 적의 화상 효과 지속시간이 2000 전력마다 25% 증가합니다."
 			}
 		]
 	},
@@ -165,26 +165,26 @@
 		"name": "Hunter's Faith",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 20% Optimal Range"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 20% 근접 판정 거리"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 10% Headshot Damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 10% 헤드샷 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Each Consecutive shot with a bolt action marksman rifle that hits an enemy deals 3% more damage. The damage bonus is increased by 4% for every 3000 Firearms. The Bonus damage is removed once a shot misses a target, upon weapon swap or realoded, or after 10 seconds."
+				"name": "세트 보너스 (4)",
+				"desc": "볼트 액션 저격소총으로 적을 연속으로 명중시키면, 적중할 때마다 3% 추가 대미지를 줍니다. 3000 화기마다 대미지 보너스가 4% 증가합니다. 공격이 빗나가거나 무기 교체, 재장전 시 추가 대미지가 사라지며, 10초가 지나도 자동으로 사라집니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 20% Optimal Range<br>+ 10% Headshot Damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 20% 근접 판정 거리<br>+ 10% 헤드샷 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "Headshots double the gained increased damage bonus. 2 consecutive missed shots are needed to lose the bonus damage."
+				"name": "세트 보너스 (6)",
+				"desc": "헤드샷이 두 배의 대미지를 줍니다. 2회 연속으로 사격이 빗나가야 추가 대미지가 사라집니다."
 			}
 		]
 	},
@@ -192,26 +192,26 @@
 		"name": "Lone Star",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 100% Ammo Capacity"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 100% 탄약 휴대량"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 8% LMG Damage<br>+ 8% Shotgun Damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 8% 경기관총 대미지<br>+ 8% 산탄총 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "When the weapon is holstered, it is instantly reloaded."
+				"name": "세트 보너스 (4)",
+				"desc": "무기를 휴대 상태로 전환하면 즉시 탄약이 재장전됩니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 50% Ammo Capacity<br>+ 12% LMG Damage<br>+ 12% Shotgun Damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 50% 탄약 휴대량<br>+ 12% 경기관총 대미지<br>+ 12% 산탄총 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "When a weapon has 50% of its magazine remaining in combat, there is a 75% chance to receive a bonus that activates when the final bullet is fired from the current magazine. Once activated, the magazine is instantly refilled, weapon damage and fire rate is increased by 30%. The bonus is cancelled by reloading, swapping weapons or exiting combat."
+				"name": "세트 보너스 (6)",
+				"desc": "전투에서 탄창 잔량이 50% 남았을 때, 75%의 확률로 현재 탄창의 마지막 탄환이 발사될 때 활성화되는 보너스를 받습니다.<br>발성화되면 탄창이 즉시 채워지고 무기 대미지와 발사 속도가 30% 증가합니다. 재장전하거나 무기를 교체하거나 전투가 종료되면 보너스는 사라집니다."
 			}
 		]
 	},
@@ -219,26 +219,26 @@
 		"name": "Path of the Nomad",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 15% Health on Kill"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 15% 적 처치시 생명력 회복"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "Grants a constant small amount of healing, allowing the user to regenerate all segments of the health bar during combat."
+				"name": "세트 보너스 (3)",
+				"desc": "생명력을 조금씩 지속적으로 회복하며 전투 중 생명력 게이지 전부를 회복합니다."
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "When receiving fatal damage, you are instead healed to full health. Can only occur once every 4 minutes."
+				"name": "세트 보너스 (4)",
+				"desc": "치명적인 대미지를 입으면 생명력이 완전히 회복됩니다.<br>4분마다 발생합니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 10% Health on Kill<br><br>Increases the amount of healing from Nomad's Resolve. Nomad's Resolve will now overheal."
+				"name": "세트 보너스 (5)",
+				"desc": "+ 10% 적 처치시 생명력 회복<br><br>방랑자의 의지에 의한 생명력 회복량이 증가합니다. 추가 생명력도 회복됩니다."
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "50% chance to have no cooldown for Path of the Nomad. Take 60% less damage for 10 seconds after Path of the Nomad is triggered."
+				"name": "세트 보너스 (6)",
+				"desc": "방랑자의 길 사용 시 50% 확률로 재사용 대기시간이 사라집니다. 방랑자의 길이 발동하면 10초 동안 받는 대미지가 60% 감소합니다."
 			}
 		]
 	},
@@ -246,26 +246,26 @@
 		"name": "Predator's Mark",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 10% Reload Speed"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 10% 재장전 속도"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 8% Assault Rifle Damage<br>+ 8% SMG Damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 8% 돌격소총 대미지<br>+ 8% 기관단총 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Hit 10 shots without switching target to make the target bleed for 50% of damage already done by those bullets."
+				"name": "세트 보너스 (4)",
+				"desc": "같은 대상에게 연속으로 10발을 명중시키면 대상에게 입힌 대미지의 50%만큼 출혈 대미지를 입힙니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 10% Reload Speed<br>+ 8% Assault Rifle Damage<br>+ 8% SMG Damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 10% 재장전 속도<br>+ 8% 돌격소총 대미지<br>+ 8% 기관단총 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "Hitting 10 shots without switching targets now applies The Predator's Mark which makes the target bleed for 50% of the damage already done by those bullets, The Predator's Mark ignores the target's Bleed Resistance. The Damage over time to the target is increased by 15% for every 3000 Stamina and can critically hit the target. When at 9000 Stamina the damage over time bonus is increased by an additional 120%."
+				"name": "세트 보너스 (6)",
+				"desc": "대상을 변경하지 않고 사격을 10번 적중하면, 대상에 포식자의 표식을 적용하여 이미 받은 대미지의 50%만큼 출혈 대미지를 줄 수 있습니다. 대상에 주는 공격 지속 피해가 3000 스태미너마다 15% 증가하고 치명타를 줄 수 있습니다. 9000 스태미너가 되면 공격 지속 효과 보너스가 120% 추가로 증가합니다. 포식자의 표식은 NPC의 상태이상 효과 면역을 무시합니다."
 			}
 		]
 	},
@@ -273,26 +273,26 @@
 		"name": "Reclaimer",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 30% Support Station range"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 30% 지원소 범위"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 50% Support Station duration"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 50% 지원소 지속 시간"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Support station gains the benefit of the Life Support, Immunizer and Ammo Cache mods at the same time"
+				"name": "세트 보너스 (4)",
+				"desc": "지원소가 생명 유지 장치, 상태이상 면역, 탄약 보충 효과를 동시에 받습니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 15% Support Station range<br>+ 25% Support Station duration"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 15% 지원소 범위<br>+ 25% 지원소 지속 시간"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "+ 50% Support Station health<br>+ 100% Support Station healing Speed<br><br>Support Station gains a 40% chance to have no cooldown triggered when it is destroyed by an enemy. This chance is increased by 20% every 3000 Electronics."
+				"name": "세트 보너스 (6)",
+				"desc": "+ 50% 지원소 생명력<br>+ 100% 지원소 치유 속도<br><br>지원소가 적에게 파괴되면 40% 확률로 즉시 재사용할 수 있게 됩니다. 이 확률은 3000 전력마다 20%씩 증가합니다."
 			}
 		]
 	},
@@ -300,26 +300,26 @@
 		"name": "Sentry's Call",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 30% Accuracy"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 30% 명중률"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 10% Headshot Damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 10% 헤드샷 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Headshots using semi-automatic weapons mark the enemy, increasing the damage inflicted on the target by 5% for a duration of 30 seconds each. A target can receive up to three marks."
+				"name": "세트 보너스 (4)",
+				"desc": "반자동 무기로 헤드샷에 성공하면 대상에 표식이 생기고 대미지가 5%씩 증가하며, 이렇게 누적된 대미지는 각각 30초 동안 유지됩니다. 동일한 대상에 최대 3번 누적할 수 있습니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 15% Accuracy<br>+ 15% Headshot Damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 15% 명중률<br>+ 15% 헤드샷 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "NPC Targets can now receive up to six marks. After one mark, every headshot on the target has a 50% chance to spread a single mark to additional target within 25 meters. At six marks, your headshot damage on the target is increased by 100%."
+				"name": "세트 보너스 (6)",
+				"desc": "이제 NPC 대상에 6개까지 표식이 누적됩니다.<br>표식이 1개 이상 누적되면 대상에게 헤드샷이 적중할 때마다 50% 확률로 25m 내의 추가 대상에게 표식 1개가 누적됩니다.<br>표식이 6개 누적되면 대상이 받는 헤드샷 대미지가 100% 증가합니다."
 			}
 		]
 	},
@@ -327,26 +327,26 @@
 		"name": "Striker's Battlegear",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 20% Stability"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 20% 안정성"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 10% Enemy Armor Damage"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 10% 적 보호장구 대미지"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Every consecutive hit deals 1% more damage. Stacks up to 100%. missing shots drop the bonus by 2%. Bonus is reduced by 1% every second. It is not possible to gain stacks and bonus damage is not applied while under the effects of EMP. Bonus is lost when exiting combat."
+				"name": "세트 보너스 (4)",
+				"desc": "연속 공격 시 1%의 추가 대미지를 줍니다. 최대 100%까지 누적됩니다. 공격이 빗나가면 보너스 효과가 2%씩 감소합니다. 보너스 효과는 1초마다 1%씩 감소합니다. EMP에 맞으면 보너스가 일시 중단될 수 있으며, 전투를 중단하면 사라집니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 10% Stability<br>+ 5% Enemy Armor Damage"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 10% 안정성<br>+ 5% 적 보호장구 대미지"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "Every hit adds 2 stacks of a self healing bonus; each stack is worth 0.01% of max health per second. Stacks up to 100 hits. This bonus is increased by 0.05% per stack for every 3000 Stamina. Missing shots drop the bonus by 1 stack and the bonus is reduced by 2 stacks every second. It is not possible to gain stacks and the self-healing bonus is not applied while under the effects of EMP. Bonus is lost when exiting combat. While in the Dark Zone, Last Stand. or Skirmish, each hit only adds 1 stack instead of 2 and the healing rate is reduced.<br><br>Every hit increases the bonus damage from Striker's Battlegear by an additional 1%. Missing shots drop the bonus damage from Striker's Battlegear by 1% and the bonus is reduced by 2% every second. While in the Dark Zone, Last Stand, or Skirmish, the additional 1% bonus damage is not applied."
+				"name": "세트 보너스 (6)",
+				"desc": "공격이 적중할 때마다 초당 최대 생명력의 0.02%만큼 자가 치유 보너스가 추가됩니다. 3000 스태미너마다 보너스가 0.05% 추가됩니다.<br>공격이 빗나가면 누적 효과가 1획 감소하며 1초마다 1획 감소합니다.<br>공격이 빗나가면 누적 효과가 1회 감소하고 대미지가 1%씩 감소하며 1초마다 2%씩 감소합니다."
 			}
 		]
 	},
@@ -354,26 +354,26 @@
 		"name": "Tactician's Authority",
 		"gearset": [
 			{
-				"name": "Set Bonus (2)",
-				"desc": "+ 15% Skill Haste"
+				"name": "세트 보너스 (2)",
+				"desc": "+ 15% 스킬 가속"
 			},
 			{
-				"name": "Set Bonus (3)",
-				"desc": "+ 10% Skill Power"
+				"name": "세트 보너스 (3)",
+				"desc": "+ 10% 스킬 파워"
 			},
 			{
-				"name": "Set Bonus (4)",
-				"desc": "Every Bullet you hit enemies with adds 1% bonus skill power. Every Bullet your deployed skills hit enemies with adds 0.2% bonus skill power. Skill power bonus max is 30%. Bonus is consumed on skill use."
+				"name": "세트 보너스 (4)",
+				"desc": "적에게 대미지를 줄 때마다 보너스 스킬 파워가 1% 추가됩니다. 설치한 전투 디바이스로 적에게 대미지를 줄 때마다 보너스 스킬 파워가 0.2% 추가됩니다. 스킬 파워 보너스는 최대 30%까지 증가합니다. 스킬을 사용하면 보너스가 소진됩니다."
 			}
 		],
 		"classy": [
 			{
-				"name": "Set Bonus (5)",
-				"desc": "+ 5% Skill Haste<br>+ 5% Skill Power"
+				"name": "세트 보너스 (5)",
+				"desc": "+ 5% 스킬 가속<br>+ 5% 스킬 파워"
 			},
 			{
-				"name": "Set Bonus (6)",
-				"desc": "Using a skill while at the max bonus will reset the skill power buff but will raise the cap to 60%. Using a different skill at 60% has a 40% chance to set the buff power back to 30% while keeping the cap at 60%. This chance is increased by 20% for every 3000 Electronics."
+				"name": "세트 보너스 (6)",
+				"desc": "최대 스킬 가속 상태에서 스킬을 사용하면 스킬 파워 버프가 초기화되지만, 최대치가 60% 증가합니다. 최대치가 60%들 유지하는 동안 60% 가속에 다른 스킬을 사용하면 40% 확률로 버프 파워가 30%로 리셋됩니다. 3000 전력마다 확률이 20% 증가합니다."
 			}
 		]
 	}
