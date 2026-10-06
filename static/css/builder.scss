@@ -1,5 +1,5 @@
 ---
-# Rebuild-Trigger: 2026-10-07-02
+# Rebuild-Trigger: 2026-10-07-03
 ---
 $base-url: "../img/";
 
@@ -7,44 +7,44 @@ $base-url: "../img/";
 @use 'components/tooltips' as *;
 @use 'pages/builder' as *;
 
-/* MODAL QUALITY BACKGROUND OVERRIDES */
+/* MODAL QUALITY BACKGROUND OVERRIDES (IN-GAME COLOR ACCURACY) */
 .modal-container {
   button.weapon,
   button.gear,
   button.gear-mod {
     background-color: transparent !important;
 
-    // [특수 - Exotic] 진한/선명한 빨간색
+    // 1. [특수 - Exotic] 인게임 선명한 붉은색 (사진 1 참고)
     &[data-quality='exotic'] .sprite-container {
-      background-color: #c82323 !important;
+      background-color: #b80000 !important;
     }
 
-    // [특급 - High-End] 선명한 노란색/금색
+    // 2. [특급 - High-End] 인게임 붉은 기 빠진 선명한 황금/노란색 (사진 2 교정)
     &[data-quality='highend'] .sprite-container {
-      background-color: #de990f !important;
+      background-color: #d68000 !important;
     }
 
-    // [전문 / 우수 - Specialized / Superior] 파란색
+    // 3. [전문/우수 - Specialized / Superior] 선명한 파란색
     &[data-quality='specialized'] .sprite-container,
     &[data-quality='superior'] .sprite-container {
-      background-color: #0072ce !important;
+      background-color: #0066cc !important;
     }
 
-    // [일반 세트 - Gear Set] 짙은 풀색/녹색
+    // 4. [일반 세트 - Gear Set] 더 맑고 밝아진 녹색 (사진 3 참고)
     &[data-quality='gearset'] .sprite-container,
     &[data-quality='gset'] .sprite-container,
     &[data-type='set'] .sprite-container {
-      background-color: #265c33 !important;
+      background-color: #007a2c !important;
     }
 
-    // [복합형 세트 - Classified / Classy] 밝은 청록색 / 연두색
+    // 5. [복합형 세트 - Classified / Classy] 인게임 4번째 사진 시그니처 민트/청록색
     &[data-quality='classified'] .sprite-container,
     &[data-quality='classy'] .sprite-container {
-      background-color: #00cc7a !important;
+      background-color: #00a873 !important;
     }
   }
 
-  // 3. 검은색 배경을 투명화하여 뒤쪽 등급 색상이 비치도록 설정 (핵심!)
+  // 혼합 모드 적용으로 검은 배경을 투명화하여 뒤쪽 등급 색상 노출
   .weapon .sprite-container .sprite,
   .gear .sprite-container .sprite,
   .gear-mod .sprite-container .sprite,
