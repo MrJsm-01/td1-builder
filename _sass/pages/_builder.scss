@@ -522,6 +522,11 @@ body {
             background-color: var(--quality-highend);
           }
         }
+        &[data-quality='specialized'] {
+		    	&::before {
+			    	background-color: var(--quality-specialized);
+		    	}
+	    	}
       }
       .attribute {
         margin-left: calc(px2rem(22px) + px2rem(6px));
