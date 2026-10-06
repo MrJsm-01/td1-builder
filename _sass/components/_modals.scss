@@ -498,10 +498,10 @@
 }
 
 /* =========================================================
-   CLEAN OVERRIDE: 상위 버튼 배경 및 내부 오버레이 완전 제거
+   CLEAN OVERRIDE: 오버레이 차단 및 등급별 배경색 확실 고정
    ========================================================= */
 .modal-container {
-  // 1. 상위 버튼 및 정보 박스의 배경 간섭 제거
+  // 1. 상위 버튼 전체 투명화
   button.weapon,
   button.gear,
   button.gear-mod,
@@ -510,7 +510,7 @@
   .gear-mod {
     background-color: transparent !important;
 
-    // 2. 아이콘 박스 내부의 불필요한 가상 레이어(오버레이/패턴) 차단
+    // 2. 아이콘 컨테이너 기본 규격 설정
     .sprite-container {
       display: block !important;
       width: 128px !important;
@@ -519,7 +519,7 @@
 
       &::before,
       &::after {
-        display: none !important; // 붉은빛/어두운 오버레이 레이어 강제 제거
+        display: none !important; // 오버레이 레이어 차단
       }
 
       .sprite {
@@ -528,13 +528,29 @@
         mix-blend-mode: screen !important;
       }
     }
+
+    // 3. 특급(Highend) 노란색 배경 1:1 강제 적용 (선택자 중합으로 우선순위 극대화)
+    &[data-quality='highend'] .sprite-container,
+    &[data-quality='high-end'] .sprite-container {
+      background-color: #de990f !important;
+    }
+
+    // 4. 특급(Exotic) 빨간색 배경 강제 적용
+    &[data-quality='exotic'] .sprite-container {
+      background-color: #c82323 !important;
+    }
+
+    // 5. 복합형(Classy) 민트색 배경 강제 적용
+    &[data-quality='classy'] .sprite-container,
+    &[data-quality='classified'] .sprite-container {
+      background-color: #00a873 !important;
+    }
+
+    // 6. 세트(Gearset) 진녹색 배경 강제 적용
+    &[data-quality='gearset'] .sprite-container,
+    &[data-quality='gset'] .sprite-container {
+      background-color: #007a2c !important;
+    }
   }
 }
-/* 특급(Highend) 노란색 강제 적용 */
-.modal-container .weapon[data-quality='highend'] .sprite-container,
-.modal-container .gear[data-quality='highend'] .sprite-container,
-.modal-container [data-quality='highend'] .sprite-container {
-  background-color: #de990f !important;
-}
-
 
