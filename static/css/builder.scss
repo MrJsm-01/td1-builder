@@ -1,11 +1,11 @@
 ---
 # Rebuild-Trigger: 2026-10-07-10
 ---
-$base-url: "../img/";
-
 @use 'components/modals' as *;
 @use 'components/tooltips' as *;
 @use 'pages/builder' as *;
+
+$base-url: "../img/";
 
 /* MODAL QUALITY BACKGROUND OVERRIDES (FINAL FORCE OVERRIDE) */
 .modal-container {
