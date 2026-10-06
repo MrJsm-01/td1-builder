@@ -25,11 +25,10 @@ export const STRINGS = {
     quality : 'Unknown quality'
   },
   talents : {
-    choose        : 'Choose Talent',
-    choose_player : 'Choose Player Talent',
+    choose        : '특수효과 선택',
+    choose_player : '전문기술 선택',
     talent        : '특수효과',
-    name          : 'Choose',
-    desc          : 'Talent description is unavailable'
+    name          : '선택',
   },
   attributes : {
     choose  : 'Choose Attribute',
