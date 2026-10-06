@@ -7,22 +7,20 @@
 
 $base-url: "../img/";
 
-/* HIGH-END COLOR & SPRITE OVERRIDE FINAL FIX */
-.modal-container {
-  // 1. 특급(High-End) 배경색 강제 지정
-  button.gear[data-quality='highend'] .sprite-container,
-  button.gear[data-quality='high-end'] .sprite-container,
-  button.weapon[data-quality='highend'] .sprite-container,
-  button.weapon[data-quality='high-end'] .sprite-container,
-  .gear[data-quality='highend'] .sprite-container,
-  .gear[data-quality='high-end'] .sprite-container,
-  .weapon[data-quality='highend'] .sprite-container,
-  .weapon[data-quality='high-end'] .sprite-container {
+/* HIGH-END COLOR & SPRITE SCREEN BLEND FINAL OVERRIDE */
+div.modal-container {
+  // 1. 특급(High-End) 배경색 명시도 최상위 부여 (#de990f)
+  button.gear[data-quality='highend'] div.sprite-container,
+  button.gear[data-quality='high-end'] div.sprite-container,
+  button.weapon[data-quality='highend'] div.sprite-container,
+  button.weapon[data-quality='high-end'] div.sprite-container,
+  div[data-quality='highend'] div.sprite-container,
+  div[data-quality='high-end'] div.sprite-container {
     background-color: #de990f !important;
   }
 
-  // 2. JS 인라인 스타일 및 자식 sprite 배경 어두움 무력화
-  .sprite-container .sprite {
+  // 2. 실제 백팩 아이콘(.sprite) 요소에 mix-blend-mode: screen 강제 지정
+  div.sprite-container div.sprite {
     mix-blend-mode: screen !important;
     background-color: transparent !important;
   }
