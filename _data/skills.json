@@ -2,187 +2,187 @@
 	"med": [
 		{
 			"id": "pulse",
-			"name": "Pulse",
-			"desc": "Sends out a recon pulse that marks hostiles and allies through walls and covers"
+			"name": "펄스",
+			"desc": "벽과 엄폐물을 통과하는 펄스를 방출하여 적군과 아군의 위치를 표시합니다"
 		},
 		{
 			"id": "pulse-recon",
-			"name": "Recon Pack",
-			"desc": "The pulse has an increased range and is capable of locating nearby loot containers"
+			"name": "정찰팩",
+			"desc": "펄스의 유효 범위가 증가하고 근처에 있는 아이템 상자의 위치도 파악할 수 있습니다"
 		},
 		{
 			"id": "pulse-conceal",
-			"name": "Scrambler",
-			"desc": "The pulse protects the user and all allies from hostile pulse scans"
+			"name": "방해 전파 발생기",
+			"desc": "적이 펄스로 플레이어와 아군을 스캔하지 못하도록 방해 전파를 방출합니다"
 		},
 		{
 			"id": "pulse-tac",
-			"name": "Tactical Scanner",
-			"desc": "Damage is increased when attacking any hostile targets identified by the pulse scan"
+			"name": "전술 스캐너",
+			"desc": "펄스로 탐지된 적을 공격하면, 더 많은 대미지를 줍니다"
 		},
 		{
 			"id": "aid",
-			"name": "First Aid",
-			"desc": "Heals all allies within a small radius. The device can be used on location or launched to a distant target."
+			"name": "응급 처치",
+			"desc": "좁은 범위 안에 있는 모든 아군을 치유합니다. 플레이어의 위치에서 사용하거나 멀리 떨어진 대상에게 발사할 수 있습니다"
 		},
 		{
 			"id": "aid-defib",
-			"name": "Defibrillator",
-			"desc": "Applies instant healing followed by a heal over time. The device can revive downed allies with a portion of their normal health."
+			"name": "제세동기",
+			"desc": "빈사 상태의 아군을 회생시키고 생명력을 일부 치유하는 디바이스입니다"
 		},
 		{
 			"id": "aid-overdose",
-			"name": "Overdose",
-			"desc": "The device heals targets more efficiently, and may even extend the target's health beyond its normal rating. "
+			"name": "과잉 투여",
+			"desc": "대상을 더욱 효율적으로 치유하며 대상의 최대 생명력을 연장할 수 있습니다"
 		},
 		{
 			"id": "aid-boost",
-			"name": "Booster Shot",
-			"desc": "Temporarily increases damage and resistance for the affected targets in addition to the normal healing effect"
+			"name": "도핑 주사",
+			"desc": "치유한 대상이 대미지 저항과 대미지가 일시적으로 증가합니다"
 		},
 		{
 			"id": "station",
-			"name": "Support Station",
-			"desc": "Drops a support station that heals allies and can be used to revive downed allies"
+			"name": "야전 지원소",
+			"desc": "부상 당한 아군을 치유하고 빈사 상태인 아군을 회생시키는 지원소를 설치합니다"
 		},
 		{
 			"id": "station-life",
-			"name": "Life Support",
-			"desc": "Drops a revival station that automatically revives any allies who are downed within the affected area"
+			"name": "생명 유지 장치",
+			"desc": "범위 내에 있는 빈사 상태의 아군을 자동으로 회생시키는 회생소를 설치합니다"
 		},
 		{
 			"id": "station-immune",
-			"name": "Immunizer",
-			"desc": "Drops a recovery station that removes Status Effects and makes allies immune while within the affected area"
+			"name": "상태이상 면역",
+			"desc": "상태이상 효과를 제거하고 일정 범위 내에 있는 아군에게 면역 효과를 주는 지원소를 설치합니다"
 		},
 		{
 			"id": "station-ammo",
-			"name": "Ammo Cache",
-			"desc": "While close to the device, allies regain their ammo as they reload, and skill cooldown recovery is faster."
+			"name": "탄약 보충",
+			"desc": "아군이 해당 디바이스 근처에서 재장전하면 탄약이 소모되지 않고 스킬 재사용 대기시간이 빠르게 단축됩니다"
 		}
 	],
 	"tech": [
 		{
 			"id": "sticky",
-			"name": "Sticky Bomb",
-			"desc": "Fires a bomb that sticks to most surfaces and explodes when detonated remotely"
+			"name": "점착 폭탄",
+			"desc": "대부분의 표면에 달라붙으며 원격으로 폭파시킬 수 있는 폭탄입니다"
 		},
 		{
 			"id": "sticky-bfb",
-			"name": "BFB",
-			"desc": "Increases the damage and radius of the explosion and may cause targets to bleed"
+			"name": "폭렬탄",
+			"desc": "폭발 반경과 대미지가 증가하며 대상에게 출혈을 일으킬 수 있습니다"
 		},
 		{
 			"id": "sticky-flash",
-			"name": "Flashbang",
-			"desc": "The bomb explodes with a non-lethal effect that blinds all targets in range"
+			"name": "섬광 수류탄",
+			"desc": "폭탄사거리 내 모든 대상의 시각을 마비시키며 일시적인 혼란을 주는 비살상 폭탄입니다"
 		},
 		{
 			"id": "sticky-disrupt",
-			"name": "Disruptor",
-			"desc": "The explosive is replaced with an EMP alternative, causing Disrupt effects to all targets in an area."
+			"name": "분열기",
+			"desc": "폭발물이 EMP로 대처 되어 지역 내의 모든 표적에게 방해 효과가 적용 됩니다"
 		},
 		{
 			"id": "turret",
-			"name": "Turret",
-			"desc": "Deploys a stationary turret that attacks nearby hostiles until it is destroyed or its battery runs out"
+			"name": "터렛",
+			"desc": "고정형 포탑으로, 파괴되거나 배터리가 다 떨어질 때까지 근처의 적을 공격합니다"
 		},
 		{
 			"id": "turret-sensor",
-			"name": "Active Sensor",
-			"desc": "Increases the turret's damage and pulses attacked targets, making them visible to all allies."
+			"name": "대미지 센서",
+			"desc": "더 많은 대미지를 주고, 공격받는 적을 표시해 모든 아군에게 알려줍니다"
 		},
 		{
 			"id": "turret-fire",
-			"name": "Dragonbreath",
-			"desc": "The turret has a reduced range but shoots a column of fire"
+			"name": "드래곤 브레스",
+			"desc": "사거리가 짧은 화염 불길을 쏘아냅니다"
 		},
 		{
 			"id": "turret-zap",
-			"name": "Zapper",
-			"desc": "The turret shoots electrical darts that shock the target"
+			"name": "전기 살충기",
+			"desc": "전기 다트를 발사해, 여러 대상에게 대미지와 충격 효과를 줍니다"
 		},
 		{
 			"id": "seeker",
-			"name": "Seeker Mine",
-			"desc": "Releases an automated mine that seeks out hostile targets before exploding on proximity"
+			"name": "대인 유도 지뢰",
+			"desc": "적을 발견하면 접근하여 폭발하는 지능형 지뢰입니다"
 		},
 		{
 			"id": "seeker-burst",
-			"name": "Airburst",
-			"desc": "Upon impact, the mine is launched in the air and releases a cluster of small incendiary explosives. "
+			"name": "소이 지뢰",
+			"desc": "발동 시 공중으로 튀어올라 소형 소이탄을 뿌립니다"
 		},
 		{
 			"id": "seeker-gas",
-			"name": "Gas Charge",
-			"desc": "Upon impact, the mine moves between multiple targets and releases a cloud of gas."
+			"name": "가스 지뢰",
+			"desc": "발동 시 대상에게 이동하여 주변에 가스를 살포합니다"
 		},
 		{
 			"id": "seeker-cluster",
-			"name": "Cluster",
-			"desc": "The mine separates into smaller mines that seek out multiple targets simultaneously"
+			"name": "집속탄",
+			"desc": "여러 개의 소형 지뢰로 분리되어 다수의 대상을 동시에 추적합니다"
 		}
 	],
 	"def": [
 		{
 			"id": "shield",
-			"name": "Ballistic Shield",
-			"desc": "Equips a portable Ballistic Shield that absorbs damage. The user can only use their sidearm while the shield is active."
+			"name": "방탄 방패",
+			"desc": "대미지를 흡수하는 이동식 방탄 방패입니다. 이 방패를 착용하면 보조 무기만 쓸 수 있습니다"
 		},
 		{
 			"id": "shield-react",
-			"name": "Reactive Targeting",
-			"desc": "Equips a stronger and lighter shield that pulses hostiles who shoot at it"
+			"name": "공격자 추적",
+			"desc": "강력하고 가벼우며, 이 장비를 공격하는 적의 위치를 탐지하는 방패입니다"
 		},
 		{
 			"id": "shield-ass",
-			"name": "Assault Shield",
-			"desc": "Equips a shield that grants the user's weapon increased damage, knockback, accuracy, and faster reload speed."
+			"name": "돌격형 방패",
+			"desc": "플레이어가 소지한 보조 무기의 대미지와 넉백 효과, 명중률, 재장전 속도를 증가시켜주는 방패입니다"
 		},
 		{
 			"id": "shield-kinetic",
-			"name": "Kinetic Breaker",
-			"desc": "Grants the user a small portion of incoming damage as healing"
+			"name": "충격 흡수장",
+			"desc": "플레이어가 받은 대미지 일부를 플레이어의 생명력을 치유하는 효과로 전환합니다"
 		},
 		{
 			"id": "cover",
-			"name": "Smart Cover",
-			"desc": "Reinforces a cover, increasing weapon performance and damage mitigation for allies behind it."
+			"name": "스마트 커버",
+			"desc": "엄폐물에서 추가 효과가 발동하여 플레이어가 주는 대미지를 증가시키고 해당 엄폐물을 사용한 아군이 받는 대미지를 감소시킵니다"
 		},
 		{
 			"id": "cover-trapper",
-			"name": "Trapper",
-			"desc": "Allies in the area of effect are buffed, while enemies are debuffed for the same amounts."
+			"name": "엄폐 약화",
+			"desc": "스마트 커버가 적용된 엄폐물을 적이 사용하면 공격 대미지가 감소하며, 받는 대미지는 증가합니다"
 		},
 		{
 			"id": "cover-recharge",
-			"name": "Recharger",
-			"desc": "Allies using a reinforced cover slowly recover their health and get their skill cooldowns decreased"
+			"name": "회복",
+			"desc": "아군이 스마트 커버가 적용된 엄폐물을 사용하면, 천천히 생명력이 회복되고 스킬 재사용 대기시간이 단축됩니다"
 		},
 		{
 			"id": "cover-conceal",
-			"name": "Concealment",
-			"desc": "Allies using a reinforced cover are hidden from hostile pulses and have reduced threat. Hostiles shot by allies from behind the cover are pulsed."
+			"name": "은폐",
+			"desc": "스마트 커버가 적용된 엄폐물을 아군이 사용하면 적의 펄스를 회피할 수 있으며 위협수준이 감소합니다. 해당 엄폐물을 사용하는 아군에게 공격을 받은 적은 맵에 표시됩니다"
 		},
 		{
 			"id": "mcover",
-			"name": "Mobile Cover",
-			"desc": "Creates a temporary cover for one person, which provides standard cover protection until destroyed."
+			"name": "휴대용 엄페물",
+			"desc": "파괴될 때까지 엄폐 가능한 휴대용 임시 엄폐물을 생성합니다"
 		},
 		{
 			"id": "mcover-ext",
-			"name": "Extension",
-			"desc": "The cover provides more protection and extends to protect two persons"
+			"name": "엄폐물 확장",
+			"desc": "엄폐물의 방어 기능이 강화되어 두 사람까지 보호할 수 있습니다"
 		},
 		{
 			"id": "mcover-blast",
-			"name": "Blast Shield",
-			"desc": "The cover is fitted with remote explosives that damage and blind hostiles in front of it when the shield is disabled"
+			"name": "방어용 폭발물",
+			"desc": "비활성화하면 바로 앞에 있는 적에게 대미지를 주는 원격 폭발물이 설치된 엄폐물입니다"
 		},
 		{
 			"id": "mcover-counter",
-			"name": "Countermeasures",
-			"desc": "While using the cover, the user deals increased damage and becomes immune to pulses."
+			"name": "대응공격",
+			"desc": "엄폐하는 동안, 대상에게 주는 대미지가 증가하며 적의 펄스에 탐지되지 않습니다"
 		}
 	]
 }
