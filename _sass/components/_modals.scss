@@ -498,19 +498,24 @@
 }
 
 /* =========================================================
-   최종 픽스: 검은색 스프라이트 배경 투과 + 등급별 배경 노출
+   최종 해결: 상위 붉은 배경 합성 차단 및 순수 단색 노출
    ========================================================= */
 .modal-container {
-  // 1. 상위 버튼 전체 투명화
+  // 1. 모달 내부 버튼 및 정보 박스의 붉은 바탕을 완전히 억제
   button.weapon,
   button.gear,
   button.gear-mod,
   .weapon,
   .gear,
   .gear-mod {
+    background: transparent !important;
     background-color: transparent !important;
 
-    // 2. 스프라이트 컨테이너 및 검은 배경 투과 처리
+    .info-container {
+      background-color: rgba(255, 255, 255, 0.05) !important; // 붉은빛 제거용 미세 어두운 배경
+    }
+
+    // 2. 아이콘 컨테이너 규격 및 가상 붉은 레이어 차단
     .sprite-container {
       display: block !important;
       width: 128px !important;
@@ -519,34 +524,34 @@
 
       &::before,
       &::after {
-        display: none !important; // 오버레이 차단
+        display: none !important; // 붉은 레이어/그라데이션 패턴 완전 차단
       }
 
       .sprite {
         width: 100% !important;
         height: 100% !important;
-        mix-blend-mode: screen !important; // 필수: 검은색 배경을 투명하게 제거함
+        mix-blend-mode: screen !important; // 검은 바탕만 투과
       }
     }
 
-    // 3. [High-End / 특급 일반] 황금 노란색 지정
+    // 3. [특급 일반 - High-End] 순수 황금 노란색 강제 적용
     &[data-quality='highend'] .sprite-container,
     &[data-quality='high-end'] .sprite-container {
       background-color: #de990f !important;
     }
 
-    // 4. [Exotic / 특급 네임드] 빨간색 지정
+    // 4. [특급 네임드 - Exotic] 빨간색 강제 적용
     &[data-quality='exotic'] .sprite-container {
       background-color: #c82323 !important;
     }
 
-    // 5. [Classy / 복합형] 민트색 지정
+    // 5. [복합형 - Classy] 민트색 강제 적용
     &[data-quality='classy'] .sprite-container,
     &[data-quality='classified'] .sprite-container {
       background-color: #00a873 !important;
     }
 
-    // 6. [Gearset / 세트] 진녹색 지정
+    // 6. [세트 - Gearset] 진녹색 강제 적용
     &[data-quality='gearset'] .sprite-container,
     &[data-quality='gset'] .sprite-container {
       background-color: #007a2c !important;
