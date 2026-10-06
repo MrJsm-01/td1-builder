@@ -38,21 +38,20 @@
         display: none;
       }
     }
+    // 1. 특수 (Exotic) - 선명하고 진한 빨간색 및 혼합모드 정상화
     .weapon,
     .gear {
       &[data-quality='exotic'] {
         .sprite-container {
-          background-color: var(--quality-exotic--light);
+          background-color: #c82323 !important; // 아이콘 배경: 진한 빨간색
         }
-        .info-container {
-          .name {
-            color: var(--quality-exotic);
-          }
+        .info-container .name {
+          color: var(--quality-exotic);
         }
       }
       .sprite-container {
         .sprite {
-          mix-blend-mode: screen;
+          mix-blend-mode: normal !important; // 검은색 가림 방지
         }
       }
     }
@@ -64,7 +63,7 @@
       gap: px2rem(4px);
       &[data-quality='highend'] {
         .sprite-container {
-          background-color: var(--quality-highend--light);
+          background-color: #de990f !important; // 변수 대신 선명한 노란색 직접 지정
         }
       }
       .info-container {
@@ -142,27 +141,33 @@
       padding: px2rem(2px) px2rem(4px);
     }
     .gear {
-      &[data-quality='classy'],
+      // 일반 세트 (Gear Set) -> 짙은 풀색
       &[data-quality='gearset'] {
         .sprite-container {
-          background-color: var(--quality-gset--light);
+          background-color: #265c33 !important;
         }
-        .info-container {
-          .name {
-            color: var(--quality-gset);
-          }
+        .info-container .name {
+          color: var(--quality-gset);
         }
       }
-      &[data-quality='classy'] {
-        .desc {
-          &::before {
-            margin-right: px2rem(2px);
-            vertical-align: middle;
-            content: url('#{$base-url}img/sprites/g_classy.png');
-            opacity: 0.7;
-          }
+
+      // 복합형 세트 (Classified) -> 밝은 청록색
+      &[data-quality='classy'],
+      &[data-quality='classified'] {
+        .sprite-container {
+          background-color: #00cc7a !important;
+        }
+        .info-container .name {
+          color: #00cc7a;
+        }
+        .desc::before {
+          margin-right: px2rem(2px);
+          vertical-align: middle;
+          content: url('#{$base-url}img/sprites/g_classy.png');
+          opacity: 0.7;
         }
       }
+
       .sprite-container {
         .sprite {
           @include spritesheet('g_items.png', 128px, 64px, $sprites-gear-pieces);
@@ -170,9 +175,10 @@
       }
     }
     .gear-mod {
-      &[data-quality='superior'] {
+      &[data-quality='superior'],
+      &[data-quality='specialized'] {
         .sprite-container {
-          background-color: var(--quality-superior--light);
+          background-color: #0072ce !important; // 아이콘 배경: 파란색 직접 지정
         }
       }
       .sprite-container {
