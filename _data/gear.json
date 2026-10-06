@@ -43,14 +43,14 @@
 	},
 	{
 		"id": "barrett",
-		"name": "라리 바렛의 방탄 조끼",
+		"name": "바렛의 방탄 조끼",
 		"quality": "exotic",
 		"slot": "chest",
 		"talent": "barrett"
 	},
 	{
 		"id": "ferro",
-		"name": "페로의 산소 호흡기",
+		"name": "페로의 산소마스크",
 		"quality": "exotic",
 		"slot": "mask",
 		"talent": "ferro"
