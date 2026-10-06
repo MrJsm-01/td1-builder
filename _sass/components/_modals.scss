@@ -498,10 +498,10 @@
 }
 
 /* =========================================================
-   최종 픽스: 붉은색 오버레이 완전 차단 및 등급별 배경 단독 노출
+   최종 픽스: 검은색 스프라이트 배경 투과 + 등급별 배경 노출
    ========================================================= */
 .modal-container {
-  // 1. 부모 버튼 및 상위 용기의 붉은 배경/오버레이 완전히 제거
+  // 1. 상위 버튼 전체 투명화
   button.weapon,
   button.gear,
   button.gear-mod,
@@ -510,7 +510,7 @@
   .gear-mod {
     background-color: transparent !important;
 
-    // 2. 스프라이트 용기 오버레이 차단 및 규격 고정
+    // 2. 스프라이트 컨테이너 및 검은 배경 투과 처리
     .sprite-container {
       display: block !important;
       width: 128px !important;
@@ -519,34 +519,34 @@
 
       &::before,
       &::after {
-        display: none !important; // 붉은색 덮개/패턴 강제 차단
+        display: none !important; // 오버레이 차단
       }
 
       .sprite {
         width: 100% !important;
         height: 100% !important;
-        mix-blend-mode: normal !important; // 색상 왜곡 방지를 위해 normal로 변경
+        mix-blend-mode: screen !important; // 필수: 검은색 배경을 투명하게 제거함
       }
     }
 
-    // 3. [High-End / 특급 일반 무기] 선명한 황금 노란색 단독 지정
+    // 3. [High-End / 특급 일반] 황금 노란색 지정
     &[data-quality='highend'] .sprite-container,
     &[data-quality='high-end'] .sprite-container {
       background-color: #de990f !important;
     }
 
-    // 4. [Exotic / 특급 네임드] 빨간색 단독 지정
+    // 4. [Exotic / 특급 네임드] 빨간색 지정
     &[data-quality='exotic'] .sprite-container {
       background-color: #c82323 !important;
     }
 
-    // 5. [Classy / 복합형] 민트색 단독 지정
+    // 5. [Classy / 복합형] 민트색 지정
     &[data-quality='classy'] .sprite-container,
     &[data-quality='classified'] .sprite-container {
       background-color: #00a873 !important;
     }
 
-    // 6. [Gearset / 세트] 진녹색 단독 지정
+    // 6. [Gearset / 세트] 진녹색 지정
     &[data-quality='gearset'] .sprite-container,
     &[data-quality='gset'] .sprite-container {
       background-color: #007a2c !important;
