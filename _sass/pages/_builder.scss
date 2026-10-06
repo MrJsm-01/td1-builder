@@ -329,6 +329,13 @@ body {
         color: var(--quality-worn);
       }
     }
+    &[data-quality='specialized'] {
+      &.primary .talent-container:not(:has(~ .talent-container)) .name,
+      &.secondary .talent-container:not(:has(~ .talent-container)) .name,
+      &.handgun .talent-container:not(:has(~ .talent-container)) .name {
+        color: var(--quality-specialized);
+      }
+    }
     .meta-container {
       display: flex;
       flex-flow: row wrap;
