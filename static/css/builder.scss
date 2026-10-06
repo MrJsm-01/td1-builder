@@ -7,25 +7,23 @@
 
 $base-url: "../img/";
 
-/* MODAL HIGHEND BACKGROUND & SPRITE SCREEN FIX */
+/* HIGH-END COLOR & SPRITE OVERRIDE FINAL FIX */
 .modal-container {
-  // 1. 특급(High-End) 아이콘 배경색 (#de990f)
-  button.weapon[data-quality='highend'] .sprite-container,
-  button.weapon[data-quality='high-end'] .sprite-container,
+  // 1. 특급(High-End) 배경색 강제 지정
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
-  .weapon[data-quality='highend'] .sprite-container,
-  .weapon[data-quality='high-end'] .sprite-container,
+  button.weapon[data-quality='highend'] .sprite-container,
+  button.weapon[data-quality='high-end'] .sprite-container,
   .gear[data-quality='highend'] .sprite-container,
-  .gear[data-quality='high-end'] .sprite-container {
+  .gear[data-quality='high-end'] .sprite-container,
+  .weapon[data-quality='highend'] .sprite-container,
+  .weapon[data-quality='high-end'] .sprite-container {
     background-color: #de990f !important;
   }
 
-  // 2. sprite-container가 아닌 실제 아이콘 이미지(.sprite)에 screen 강제 적용
-  .sprite-container .sprite,
-  .gear .sprite-container .sprite,
-  .weapon .sprite-container .sprite,
-  .gear-mod .sprite-container .sprite {
+  // 2. JS 인라인 스타일 및 자식 sprite 배경 어두움 무력화
+  .sprite-container .sprite {
     mix-blend-mode: screen !important;
+    background-color: transparent !important;
   }
 }
