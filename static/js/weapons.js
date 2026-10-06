@@ -174,10 +174,10 @@ export function clearWeaponSlot(slot) {
   }
 
   [
-    'magazine',
-    'optics',
-    'muzzle',
-    'underbarrel'
+    '탄창',
+    '조준경',
+    '총구',
+    '총열'
   ].forEach(modSlot => {
     const MOD_CONTAINER = document.querySelector(`#wp-${slot} .sprite.${modSlot}`).closest('.mod-container');
 
@@ -342,10 +342,10 @@ function renderWeaponModSlots(slot) {
   const PREFIX   = `wp-${slot}`;
 
   [
-    'magazine',
-    'optics',
-    'muzzle',
-    'underbarrel'
+    '탄창',
+    '조준경',
+    '총구',
+    '총열'
   ].forEach(modSlot => {
     const CONTAINER = document.querySelector(`#${PREFIX} .sprite.${modSlot}`).closest('.mod-container');
     const IS_ACTIVE = WEAPON.slots.includes(modSlot);
