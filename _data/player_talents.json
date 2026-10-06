@@ -2,127 +2,127 @@
 	"med": [
 		{
 			"id": "adrenaline",
-			"name": "Adrenaline",
-			"desc": "Medkit now gives 7 seconds of immunity from status effects"
+			"name": "아드레날린",
+			"desc": "메디킷 사용 시 7초 동안 상태이상 면역 상태 효과를 받는다"
 		},
 		{
 			"id": "awe",
-			"name": "Shock and Awe",
-			"desc": "Suppress a hostile to increase movement speed by 25% for 10 seconds"
+			"name": "충격과 공포",
+			"desc": "적을 제압하면 10초간 25% 이동속도 버프 효과를 준다"
 		},
 		{
 			"id": "critsave",
-			"name": "Critical Save",
-			"desc": "Use a medkit during low health to increase damage resistance by 20% for 10 seconds"
+			"name": "구급 처치",
+			"desc": "체력이 낮을 때 메딕 킷을 사용하여 10초간 20%의 대미지 저항 효과를 받는다"
 		},
 		{
 			"id": "medic",
-			"name": "Combat Medic",
-			"desc": "Use a medkit near allies to heal group members and proxies within 20m by 40%"
+			"name": "전투 위생병",
+			"desc": "아군 주변에서 응급처치 도구 사용 시 20m내의 파티원과 디바이스에 40% 회복 및 수리 효과 부여. 개척자라면 필수이며 그 외에 방찐이거나 기타 엄청난 극딜을 맨몸으로 버텨야 할 때 팀원들이 사용해 주는 게 좋다"
 		},
 		{
 			"id": "triage",
-			"name": "Triage",
-			"desc": "Heal an ally with a skill to reduce skill cooldowns by 15%"
+			"name": "야전 구호소",
+			"desc": "스킬로 아군을 치료하면 15% 스킬 쿨다운 효과를 받는다"
 		},
 		{
 			"id": "buddy",
-			"name": "Battle Buddy",
-			"desc": "Revive a downed agent to reduce incoming damage by 30% for 10 seconds for both players"
+			"name": "전우애",
+			"desc": "다운된 아군과 다운된 아군을 살리는 양 플레이어에게 10초간 50%의 대미지 저항 효과를 부여한다. 일부 상황이 아니라면 쓸모없다"
 		},
 		{
 			"id": "shrapnel",
-			"name": "Shrapnel",
-			"desc": "Applying Bleed to any target triggers a 30% chance per each target in 10m radius"
+			"name": "유산탄",
+			"desc": "적에게 출혈을 유발시켰을 시 30%의 확률로 10m안에 있는 모든 목표물에게 출혈 효과를 입힙니다. 이게 얼마나 터지느냐가 1대다 상황에서 포식자의 성능을 좌지우지한다. 포식자라면 필수"
 		},
 		{
 			"id": "strike",
-			"name": "Strike Back",
-			"desc": "Reach low health to reduce active skill cooldowns by 20%"
+			"name": "반격 대기",
+			"desc": "생명력이 낮을 때 20%의 스킬 쿨다운 효과를 받는다"
 		}
 	],
 	"tech": [
 		{
 			"id": "tacadv",
-			"name": "Tactical Advance",
-			"desc": "Complete a cover to cover move to increase weapon damage by 2% per meter covered for 5 seconds, up to a maximum of 30%"
+			"name": "전술 이동",
+			"desc": "5초 동안 엄폐물간 1m당 이동마다 2%의 데미지를 상승시킨다"
 		},
 		{
 			"id": "police",
-			"name": "Police Up",
-			"desc": "Kill a hostile with any skill for a 10% chance of auto-refilling all ammo types to capacity"
+			"name": "경찰 출동",
+			"desc": "스킬로 적을 죽일 경우 10% 확률로 모든 탄약을 최대치로 회복시킨다"
 		},
 		{
 			"id": "evasive",
-			"name": "Evasive Action",
-			"desc": "During a cover to cover move incoming damage is reduced by 30%"
+			"name": "회피 기동",
+			"desc": "엄폐물간 이동할 때 30%의 데미지 감소 효과를 받는다"
 		},
 		{
 			"id": "wildfire",
-			"name": "Wildfire",
-			"desc": "Applying Burn to any target triggers a 30% per each target in 10m radius"
+			"name": "불꽃사격",
+			"desc": "적이 화상상태가 되면 10m 이내에 있는 모든 적들에게 30%의 확률로 불을 붙인다"
 		},
 		{
 			"id": "demo",
-			"name": "Demolition Expert",
-			"desc": "Kill a hostile with an explosion to increase explosion damage by 20% for 15 seconds"
+			"name": "폭발물 전문가",
+			"desc": "폭발물로 적을 죽일 경우 15초간 폭발물 데미지 20% 증가 효과를 받는다"
 		},
 		{
 			"id": "fear",
-			"name": "Fear Tactics",
-			"desc": "Applying Shock to any target triggers a 30% chance per each target in 10m radius"
+			"name": "충격 전술",
+			"desc": "적에게 충격상태를 유발하면 10m 이내에 있는 모든 적들에게 30%의 확률로 기절을 일으킨다"
 		},
 		{
 			"id": "techsupp",
-			"name": "Tech Support",
-			"desc": "Kill a hostile while any skill is deployed to extend any active skills duration by 10%"
+			"name": "기술 지원",
+			"desc": "전투 디바이스가 발동 중일 때 적을 사살하면, 활성 상태의 모든 스킬의 지속시간이 10% 증가한다"
 		},
 		{
 			"id": "proxy",
-			"name": "Death by Proxy",
-			"desc": "Destroy a hostile's deployed skill to increase skill power by 20% for 30 seconds"
+			"name": "일심동체",
+			"desc": "상대의 배치된 전투디바이스를 파괴시 30초간 20%의 스킬 파워 증가 효과를 받는다"
 		}
 	],
 	"def": [
 		{
 			"id": "steady",
-			"name": "Steady Hands",
-			"desc": "Enter any cover to reduce recoil by 25% for 10 seconds"
+			"name": "엄폐 사격",
+			"desc": "엄폐시 10초간 25%의 반동 감소 효과를 얻는다"
 		},
 		{
 			"id": "precision",
-			"name": "Precision",
-			"desc": "Headshot a hostile to pulse them for 10 seconds"
+			"name": "정교한 사격",
+			"desc": "헤드샷을 맞출 경우 상대를 10초간 탐지한다. 펄스 효과인데, 스킬 파워등 어떠한 추가 보너스도 없는 순수 기본형 펄스 기본 성능의 7.70% 치명타 확률과 대미지 보너스이다"
 		},
 		{
 			"id": "desperate",
-			"name": "Desperate Times",
-			"desc": "Reach low health to increase blind fire accuracy by 20%"
+			"name": "위기일발",
+			"desc": "체력이 낮아질 경우 지향 사격의 명중률이 25% 증가한다"
 		},
 		{
 			"id": "reaper",
-			"name": "Repo Reaper",
-			"desc": "Kill a hostile with the sidearm to receive 30 rounds for your primary weapon"
+			"name": "알뜰살뜰 킬러",
+			"desc": "세 번째 무기로 적을 죽일 때마다 1개의 주무기 탄창을 받는다"
 		},
 		{
 			"id": "move",
-			"name": "On The Move",
-			"desc": "Kill a hostile while moving to reduce incoming damage by 15% for 10 seconds"
+			"name": "기동전",
+			"desc": "이동 중 적을 죽일 경우 10초간 30%의 데미지 저항 효과를 얻는다"
 		},
 		{
 			"id": "chain",
-			"name": "Chain Reaction",
-			"desc": "Damage multiple hostiles with an explosion to apply 20% more damage from the blast"
+			"name": "연쇄 반응",
+			"desc": "폭발물로 다수의 적에게 데미지를 입힐 경우 20%의 추가 폭발물 데미지를 입힌다"
 		},
 		{
 			"id": "power",
-			"name": "Stopping Power",
-			"desc": "Suppress a hostile to increase headshot damage by 25% for 10 seconds"
+			"name": "저지력",
+			"desc": "적을 제압할 경우 헤드샷 데미지가 10초간 25% 상승한다"
 		},
 		{
 			"id": "onenone",
-			"name": "One is None",
-			"desc": "Headshot a hostile to have a 50% chance of not consuming the bullet"
+			"name": "일석이조",
+			"desc": "적을 해드샷으로 맞출 경우 50%의 확률로 탄약을 소모하지 않는다"
 		}
 	]
 }
