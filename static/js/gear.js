@@ -74,7 +74,7 @@ export function openGearPicker(slot) {
 
         return `
           <button class="gear" data-id="${g.id}" data-quality="${g.quality}">
-            <div class="sprite-container" style="background-color: ${bgColor} !important;">
+            <div class="sprite-container">
               <div class="sprite ${SPRITE_ID}" role="presentation"></div>
             </div>
             <div class="info-container">
@@ -201,7 +201,7 @@ function openGearModTypePicker(slot, index) {
       const bgColor = modColors[m.quality] || 'transparent';
       return `
         <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
-          <div class="sprite-container" style="background-color: ${bgColor} !important;">
+          <div class="sprite-container">
             <div class="sprite gear" role="presentation"></div>
           </div>
           <div class="info-container">
@@ -241,7 +241,7 @@ function openGearModBonusPicker(slot, index) {
       const bgColor = modColors[b.quality] || 'transparent';
       return `
         <button class="gear-mod" data-id="${b.id}" data-quality="${b.quality}">
-          <div class="sprite-container" style="background-color: ${bgColor} !important;">
+          <div class="sprite-container">
             <div class="sprite gear" role="presentation"></div>
           </div>
           <div class="info-container">
@@ -314,7 +314,7 @@ function openPerfModPicker(slot, index) {
       const bgColor = modColors[m.quality] || 'transparent';
       return `
         <button class="gear-mod" data-id="${m.id}" data-quality="${m.quality}">
-          <div class="sprite-container" style="background-color: ${bgColor} !important;">
+          <div class="sprite-container">
             <div class="sprite perf" role="presentation"></div>
           </div>
           <div class="info-container">
