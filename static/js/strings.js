@@ -36,7 +36,7 @@ export const STRINGS = {
   },
   mods : {
     choose : {
-      gear  : '모듈 선택 ',
+      gear  : '스탯 모듈 ',
       bonus : '보너스 선택'
     },
     unknown : {
