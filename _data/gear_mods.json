@@ -2,42 +2,42 @@
 	{
 		"id": 1,
 		"type": "fa",
-		"name": "Firearms Mod",
+		"name": "화기 모듈",
 		"quality": "highend",
 		"value": 267
 	},
 	{
 		"id": 2,
 		"type": "sta",
-		"name": "Stamina Mod",
+		"name": "스태미나 모듈",
 		"quality": "highend",
 		"value": 267
 	},
 	{
 		"id": 3,
 		"type": "ele",
-		"name": "Electronics Mod",
+		"name": "전력 모듈",
 		"quality": "highend",
 		"value": 267
 	},
 	{
 		"id": 4,
 		"type": "fa",
-		"name": "Firearms Mod",
+		"name": "화기 모듈",
 		"quality": "superior",
 		"value": 214
 	},
 	{
 		"id": 5,
 		"type": "sta",
-		"name": "Stamina Mod",
+		"name": "스태미나 모듈",
 		"quality": "superior",
 		"value": 214
 	},
 	{
 		"id": 6,
 		"type": "ele",
-		"name": "Electronics Mod",
+		"name": "전력 모듈",
 		"quality": "superior",
 		"value": 214
 	}
