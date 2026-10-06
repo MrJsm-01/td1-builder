@@ -1,248 +1,248 @@
 [
 	{
 		"id": "forceful",
-		"name": "Forceful",
-		"desc": "Increase Armor by 15% while the user's signature skill is active",
+		"name": "방어진지",
+		"desc": "링크 스킬이 활성화되어 있는 동안 방어도가 15% 증가합니다",
 		"compat": {
 			"slot": "chest"
 		}
 	},
 	{
 		"id": "rapid",
-		"name": "Rapid",
-		"desc": "Decrease cooldown for healing skills by 15%",
+		"name": "속전속결",
+		"desc": "치유 스킬의 재사용 대기시간이 15% 단축합니다",
 		"compat": {
 			"slot": "chest"
 		}
 	},
 	{
 		"id": "reckless",
-		"name": "Reckless",
-		"desc": "Increase damage by 8% and increase incoming damage by 10%",
+		"name": "고문관",
+		"desc": "대상에게 주는 대미지가 8% 증가하는 동시에 받는 대미지도 10% 증가합니다",
 		"compat": {
 			"slot": "chest"
 		}
 	},
 	{
 		"id": "robust",
-		"name": "Robust",
-		"desc": "Increase armor while in cover by 10%",
+		"name": "오리걸음",
+		"desc": "엄폐 중 일 때, 방어도가 10% 증가합니다",
 		"compat": {
 			"slot": "chest"
 		}
 	},
 	{
 		"id": "vigorous",
-		"name": "Vigorous",
-		"desc": "Grants overheal to all healing skills",
+		"name": "특식배급",
+		"desc": "치유 스킬을 사용하면, 추가 생명력을 얻습니다",
 		"compat": {
 			"slot": "chest"
 		}
 	},
 	{
 		"id": "enduring",
-		"name": "Enduring",
-		"desc": "While in your last segment, your health continuously regenerates to fill up the segment.",
+		"name": "잡초근성",
+		"desc": "생명력 바가 1칸 남아있을 때, 사망하지 않도록 생명력이 지속적으로 재생됩니다",
 		"compat": {
 			"slot": "mask"
 		}
 	},
 	{
 		"id": "refreshed",
-		"name": "Refreshed",
-		"desc": "All healing is improved by 30% when in the last health segment",
+		"name": "긴급명령",
+		"desc": "생명력 바가 1칸 남아있을 때, 모든 치유 효과가 30% 증가합니다",
 		"compat": {
 			"slot": "mask"
 		}
 	},
 	{
 		"id": "rehabilitated",
-		"name": "Rehabilitated",
-		"desc": "Heals 2% every second during Status Effects",
+		"name": "아스피린",
+		"desc": "상태이상 효과에 걸려있을 때, 생명력이 1초마다 2% 회복됩니다",
 		"compat": {
 			"slot": "mask"
 		}
 	},
 	{
 		"id": "rejuvenated",
-		"name": "Rejuvenated",
-		"desc": "Consuming a medkit increases all resistances by 40% for 10 seconds",
+		"name": "제독키트",
+		"desc": "응급처치 도구를 사용할 경우 모든 저항이 10초간 40% 증가하게 된다",
 		"compat": {
 			"slot": "mask"
 		}
 	},
 	{
 		"id": "tenacious",
-		"name": "Tenacious",
-		"desc": "Increase damage by 10% for 10 seconds when using a Medkit",
+		"name": "처치도구",
+		"desc": "응급처치 도구를 사용하면, 10초 동안 대미지가 10% 증가합니다",
 		"compat": {
 			"slot": "mask"
 		}
 	},
 	{
 		"id": "accomplished",
-		"name": "Accomplished",
-		"desc": "Rewards from Accolades are tripled",
+		"name": "장군의 아들",
+		"desc": "포상으로 얻는 보상이 3배 증가합니다",
 		"compat": {
 			"slot": "kneepads"
 		}
 	},
 	{
 		"id": "prosperous",
-		"name": "Prosperous",
-		"desc": "Headshot kills grant Credits",
+		"name": "헤드헌터",
+		"desc": "헤드샷으로 대상을 처치하면 크레디트를 획득합니다",
 		"compat": {
 			"slot": "kneepads"
 		}
 	},
 	{
 		"id": "inventive",
-		"name": "Inventive",
-		"desc": "Increase Skill Power by 15% while at full health",
+		"name": "특기병",
+		"desc": "생명력이 가득 차 있는 동안 스킬 파워가 15% 증가합니다",
 		"compat": {
 			"slot": "backpack"
 		}
 	},
 	{
 		"id": "relentless",
-		"name": "Relentless",
-		"desc": "5% of the damage dealt by skills is returned as healing",
+		"name": "복명복창",
+		"desc": "스킬로 받는 대미지[7]의 5%만큼 생명력이 회복됩니다",
 		"compat": {
 			"slot": "backpack"
 		}
 	},
 	{
 		"id": "resourceful",
-		"name": "Resourceful",
-		"desc": "All healing applied to you is also applied to your skill objects",
+		"name": "진지보수",
+		"desc": "모든 치유 효과가 스킬 시전으로 나타난 오브젝트에도 적용됩니다",
 		"compat": {
 			"slot": "backpack"
 		}
 	},
 	{
 		"id": "specialized",
-		"name": "Specialized",
-		"desc": "Adds 200% of Firearms and Stamina to Skill Power",
+		"name": "오버파워",
+		"desc": "화기와 스태미너의 200%만큼 스킬 파워가 증가합니다",
 		"compat": {
 			"slot": "backpack"
 		}
 	},
 	{
 		"id": "technical",
-		"name": "Technical",
-		"desc": "While your signature skill is active, your Skill Power is increased by 15%",
+		"name": "집체교육",
+		"desc": "링크 스킬이 활성화 중일 때, 스킬 파워가 15% 증가합니다",
 		"compat": {
 			"slot": "backpack"
 		}
 	},
 	{
 		"id": "astute",
-		"name": "Astute",
-		"desc": "The first 3 bullets of your magazine have a 5% higher chance to do a Critical Hit",
+		"name": "1식 3찬",
+		"desc": "탄창의 첫 3발 사용 시 대상에게 치명타를 입힐 확률이 5% 증가합니다",
 		"compat": {
 			"slot": "gloves"
 		}
 	},
 	{
 		"id": "cunning",
-		"name": "Cunning",
-		"desc": "After reloading, your next shot with this weapon has a 10% higher critical hit chance",
+		"name": "1번 사로",
+		"desc": "재장전 후 1번째 탄약을 사격 시 치명타를 입힐 확률이 10% 증가합니다",
 		"compat": {
 			"slot": "gloves"
 		}
 	},
 	{
 		"id": "decisive",
-		"name": "Decisive",
-		"desc": "Headshots with the sidearm deal 35% more damage",
+		"name": "총잡이",
+		"desc": "보조 무기로 헤드샷을 성공시키면, 35%의 추가 대미지를 줍니다",
 		"compat": {
 			"slot": "gloves"
 		}
 	},
 	{
 		"id": "savage",
-		"name": "Savage",
-		"desc": "Critical hit chance is increased by 7% against targets out of cover",
+		"name": "먹잇감",
+		"desc": "대상이 엄폐물 바깥에 있을 때, 치명타를 입힐 확률이 7% 증가합니다",
 		"compat": {
 			"slot": "gloves"
 		}
 	},
 	{
 		"id": "nimble",
-		"name": "Nimble",
-		"desc": "After completing a cover to cover move in combat, you heal 2% of your max Health over 4 seconds for every 1 meter you run.",
+		"name": "엄폐 이동",
+		"desc": "전투 중 엄폐물간 위치 이동 시, 이동 거리 1m당 최대 생명력의 2%를 회복합니다.",
 		"compat": {
 			"slot": "holster"
 		}
 	},
 	{
 		"id": "recovered",
-		"name": "Recovered",
-		"desc": "Damage taken during cover-to-cover is regenerated over 5 seconds when reaching the destination",
+		"name": "5초 휴식",
+		"desc": "엄폐물간 이동 중에 대미지를 입으면, 목표 지점에 도착 후 5초에 걸쳐 받은 대미지만큼 생명력이 회복됩니다",
 		"compat": {
 			"slot": "holster"
 		}
 	},
 	{
 		"id": "steadfast",
-		"name": "Steadfast",
-		"desc": "Health regeneration kicks in twice as fast while in cover",
+		"name": "기도비닉",
+		"desc": "엄폐 상태에서 생명력이 2배 빠르게 재생됩니다",
 		"compat": {
 			"slot": "holster"
 		}
 	},
 	{
 		"id": "sturdy",
-		"name": "Sturdy",
-		"desc": "Increase armor by 15% when staying more than 4 seconds in the same cover",
+		"name": "복지부동",
+		"desc": "한 엄폐물에 4초 이상 머물면 방어도가 15% 증가합니다",
 		"compat": {
 			"slot": "holster"
 		}
 	},
 	{
 		"id": "barrett",
-		"name": "Barrett's Bulletproof Vest",
-		"desc": "No skills on cooldown increases Skillpower by 10%<br>One skill on cooldown increases Damage by 5%<br>Two skills on cooldown increases Armor by 10%",
+		"name": "라리 바렛의 방탄 조끼",
+		"desc": "쿨타임중인 스킬이 없을 시 스킬파워+10%, 쿨타임중인 스킬이 1개일 시 대미지+5%, 재사용 대기시간이 2개일시, 방어도+10%",
 		"compat": {
 			"item": "barrett"
 		}
 	},
 	{
 		"id": "ferro",
-		"name": "Ferro's Oxygen Mask",
-		"desc": "User can run and shoot their weapon while burning",
+		"name": "페로의 산소 호흡기",
+		"desc": "불타는 중에도 달릴 수 있으며 무기를 발사할 수 있습니다",
 		"compat": {
 			"item": "ferro"
 		}
 	},
 	{
 		"id": "shortbow",
-		"name": "Shortbow Championship Pads",
-		"desc": "The fuse time on grenades is reduced to 0.20 seconds",
+		"name": "숏보우 챔피언 보호대",
+		"desc": "수류탄의 점화 시간이 0.20초로 감소합니다",
 		"compat": {
 			"item": "shortbow"
 		}
 	},
 	{
 		"id": "ninja",
-		"name": "NinjaBike Messenger Bag",
-		"desc": "Slots in with any equipped Gear Set item to fulfill a requirement towards unlocking a Gear Sets bonus. Can unlock bonuses from multiple Sets simultaneously. Cannot unlock Classified Gear Set bonuses.",
+		"name": "닌자바이크 메신저 백",
+		"desc": "장착된 보호장구 세트의 슬롯에 넣어 보호장구 세트 보너스 해제 조건을 충족시킬 수 있습니다. 동시에 여러 세트 보너스를 해제할 수 있지만, 복합형 보호장구 세트 보너스는 해제할 수 없습니다",
 		"compat": {
 			"item": "ninja"
 		}
 	},
 	{
 		"id": "skulls",
-		"name": "Skulls MC Gloves",
-		"desc": "Damage increased by 16% when no set bonuses are active",
+		"name": "스컬스 오토바이 장갑",
+		"desc": "세트 보너스가 없을 때, 데미지가 16% 증가합니다",
 		"compat": {
 			"item": "skulls"
 		}
 	},
 	{
 		"id": "bliss",
-		"name": "Colonel Bliss's Holster",
-		"desc": "Hitting a target consecutively with a sidearm increases your damage with all weapons by 2% for 20 seconds. This effect stacks until 10 shots, after which the stack is consumed and triggers an EMP effect.",
+		"name": "블리스 중령의 권총집",
+		"desc": "보조 무기로 같은 대상을 연속으로 공격하면 모든 무기 사용 시의 대미지가 20초 동안 2% 증가합니다. 10번째 공격까지 효과가 중첩되며 그 후엔 EMP 효과가 발동되고 누적 횟수를 소모합니다",
 		"compat": {
 			"item": "bliss"
 		}
