@@ -5,9 +5,9 @@ export const STRINGS = {
   },
   weapons : {
     choose  : '무기 선택',
-    quality : 'Unknown quality',
-    type    : 'Unkwnown Weapon Type',
-    bonus   : 'Unknown Bonus',
+    quality : '등급 미선택',
+    type    : '무기 종류 미선택',
+    bonus   : '보너스 미선택',
     empty   : {
       name : '빈 슬롯',
       desc : '선택 해제'
@@ -15,14 +15,14 @@ export const STRINGS = {
   },
   gear : {
     slots : {
-      chest    : 'Choose Chest',
-      mask     : 'Choose Mask',
-      kneepads : 'Choose Kneepads',
-      backpack : 'Choose Backpack',
-      gloves   : 'Choose Gloves',
-      holster  : 'Choose Holster'
+      chest    : '방탄복 선택',
+      mask     : '마스크 선택',
+      kneepads : '무릎보호대 선택',
+      backpack : '백팩 선택',
+      gloves   : '장갑 선택',
+      holster  : '권총집 선택'
     },
-    quality : 'Unknown quality'
+    quality : '등급 미선택'
   },
   talents : {
     choose        : '특수효과 선택',
@@ -36,21 +36,21 @@ export const STRINGS = {
   },
   mods : {
     choose : {
-      gear  : 'Choose Mod',
-      bonus : 'Choose Bonus'
+      gear  : '모듈 선택 ',
+      bonus : '보너스 선택'
     },
     unknown : {
-      gear  : 'Gear Mod',
-      bonus : 'Unknown Bonus'
+      gear  : '방어구 모듈',
+      bonus : '보너스 미선택'
     }
   },
   skills : {
-    choose : 'Choose Skill'
+    choose : '스킬 선택'
   },
   filters : {
-    all     : 'Show All',
-    classy  : 'Classified',
-    gearset : 'Gear Set'
+    all     : '전체',
+    classy  : '복합형 세트',
+    gearset : '세트'
   },
   help : {
     share     : 'Share Build',
