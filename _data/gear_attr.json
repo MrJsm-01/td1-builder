@@ -6,7 +6,7 @@
 	"major": [
 		{
 			"id": 1,
-			"name": "Critical Hit Chance",
+			"name": "치명타 확률",
 			"compat": {
 				"slot": [
 					"mask",
@@ -17,7 +17,7 @@
 		},
 		{
 			"id": 2,
-			"name": "Critical Hit Damage",
+			"name": "치명타 대미지",
 			"compat": {
 				"slot": [
 					"backpack",
@@ -28,7 +28,7 @@
 		},
 		{
 			"id": 3,
-			"name": "SMG Damage",
+			"name": "기관단총 대미지",
 			"compat": {
 				"slot": [
 					"gloves"
@@ -37,7 +37,7 @@
 		},
 		{
 			"id": 4,
-			"name": "Assault Rifle Damage",
+			"name": "돌격소총 대미지",
 			"compat": {
 				"slot": [
 					"gloves"
@@ -46,7 +46,7 @@
 		},
 		{
 			"id": 5,
-			"name": "Shotgun Damage",
+			"name": "산탄총 대미지",
 			"compat": {
 				"slot": [
 					"gloves"
@@ -55,7 +55,7 @@
 		},
 		{
 			"id": 6,
-			"name": "LMG Damage",
+			"name": "경기관총 대미지",
 			"compat": {
 				"slot": [
 					"gloves"
@@ -64,7 +64,7 @@
 		},
 		{
 			"id": 7,
-			"name": "Pistol Damage",
+			"name": "권총 대미지",
 			"compat": {
 				"slot": [
 					"gloves"
@@ -73,7 +73,7 @@
 		},
 		{
 			"id": 8,
-			"name": "Sniper Rifle Damage",
+			"name": "저격소총 대미지",
 			"compat": {
 				"slot": [
 					"gloves"
@@ -82,7 +82,7 @@
 		},
 		{
 			"id": 9,
-			"name": "Enemy Armor Damage",
+			"name": "적 보호장구 대미지",
 			"compat": {
 				"slot": [
 					"mask",
@@ -94,7 +94,7 @@
 		},
 		{
 			"id": 10,
-			"name": "All Resistance",
+			"name": "모든 저항",
 			"compat": {
 				"slot": [
 					"mask",
@@ -105,7 +105,7 @@
 		},
 		{
 			"id": 11,
-			"name": "Health",
+			"name": "생명력",
 			"compat": {
 				"slot": [
 					"chest",
@@ -117,7 +117,7 @@
 		},
 		{
 			"id": 12,
-			"name": "Health on Kill",
+			"name": "적 처치 시 생명력 회복",
 			"compat": {
 				"slot": [
 					"mask",
@@ -128,7 +128,7 @@
 		},
 		{
 			"id": 13,
-			"name": "Exotic Damage Resilience",
+			"name": "특수 대미지 저항",
 			"compat": {
 				"slot": [
 					"mask",
@@ -139,7 +139,7 @@
 		},
 		{
 			"id": 14,
-			"name": "Skill Haste",
+			"name": "스킬 가속",
 			"compat": {
 				"slot": [
 					"chest",
@@ -150,7 +150,7 @@
 		},
 		{
 			"id": 15,
-			"name": "Skill Power",
+			"name": "스킬 파워",
 			"compat": {
 				"slot": [
 					"mask",
@@ -161,7 +161,7 @@
 		},
 		{
 			"id": 16,
-			"name": "Stability",
+			"name": "안정성",
 			"compat": {
 				"slot": [
 					"backpack"
@@ -170,7 +170,7 @@
 		},
 		{
 			"id": 17,
-			"name": "Reload Speed",
+			"name": "재장전 속도",
 			"compat": {
 				"slot": [
 					"holster"
@@ -181,7 +181,7 @@
 	"minor": [
 		{
 			"id": 18,
-			"name": "Damage to Elites",
+			"name": "엘리트에게 주는 대미지",
 			"compat": {
 				"slot": [
 					"mask",
@@ -191,7 +191,7 @@
 		},
 		{
 			"id": 19,
-			"name": "Shock Resistance",
+			"name": "충격 저항",
 			"compat": {
 				"slot": [
 					"kneepads"
@@ -200,7 +200,7 @@
 		},
 		{
 			"id": 20,
-			"name": "Burn Resistance",
+			"name": "화상 저항",
 			"compat": {
 				"slot": [
 					"mask",
@@ -211,7 +211,7 @@
 		},
 		{
 			"id": 21,
-			"name": "Disorient Resistance",
+			"name": "방향감각 상실 저항",
 			"compat": {
 				"slot": [
 					"mask",
@@ -221,7 +221,7 @@
 		},
 		{
 			"id": 22,
-			"name": "Blind/Deaf Resistance",
+			"name": "시력/청력 상실 저항",
 			"compat": {
 				"slot": [
 					"mask",
@@ -231,7 +231,7 @@
 		},
 		{
 			"id": 23,
-			"name": "Disrupt Resistance",
+			"name": "방해 저항",
 			"compat": {
 				"slot": [
 					"backpack",
@@ -241,7 +241,7 @@
 		},
 		{
 			"id": 24,
-			"name": "Bleed Resistance",
+			"name": "출혈 저항",
 			"compat": {
 				"slot": [
 					"backpack",
@@ -251,7 +251,7 @@
 		},
 		{
 			"id": 25,
-			"name": "Increased Kill XP",
+			"name": "적 처치 시 XP 증가",
 			"compat": {
 				"slot": [
 					"mask",
@@ -262,7 +262,7 @@
 		},
 		{
 			"id": 26,
-			"name": "Ammo Capacity",
+			"name": "탄약 휴대량",
 			"compat": {
 				"slot": [
 					"chest",
