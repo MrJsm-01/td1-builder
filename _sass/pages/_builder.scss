@@ -218,6 +218,10 @@ body {
       .quality {
         color: var(--quality-worn);
       }
+    &[data-quality='specialized'] {
+      .quality {
+        color: var(--quality-specialized);
+      }
     }
     max-height: px2rem(500px);
     overflow-y: auto;
