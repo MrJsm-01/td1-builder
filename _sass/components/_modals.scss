@@ -498,49 +498,20 @@
 }
 
 /* =========================================================
-   QUALITY BACKGROUND COLOR OVERRIDES (CLEAN OVERRIDE)
+   CLEAN OVERRIDE: 상위 버튼 배경 완전히 제거 및 혼합 모드 적용
    ========================================================= */
 .modal-container {
+  // 상위 버튼 바탕색을 완전히 투명하게 비워서 오버레이 비침 차단
   button.weapon,
   button.gear,
   button.gear-mod,
   .weapon,
   .gear,
   .gear-mod {
-    background-color: #000000 !important;
-
-    // 1. [특수 - Exotic] 진한 선명한 빨간색
-    &[data-quality='exotic'] .sprite-container {
-      background-color: #c82323 !important;
-    }
-
-    // 2. [특급 - High-End] 붉은 기 완벽 제거한 선명한 황금 노란색
-    &[data-quality='highend'] .sprite-container,
-    &[data-quality='high-end'] .sprite-container {
-      background-color: #de990f !important;
-    }
-
-    // 3. [전문 / 우수 - Specialized / Superior] 파란색
-    &[data-quality='specialized'] .sprite-container,
-    &[data-quality='superior'] .sprite-container {
-      background-color: #0072ce !important;
-    }
-
-    // 4. [일반 세트 - Gear Set] 맑은 진녹색
-    &[data-quality='gearset'] .sprite-container,
-    &[data-quality='gset'] .sprite-container,
-    &[data-type='set'] .sprite-container {
-      background-color: #007a2c !important;
-    }
-
-    // 5. [복합형 세트 - Classified] 인게임 시그니처 민트/청록색
-    &[data-quality='classified'] .sprite-container,
-    &[data-quality='classy'] .sprite-container {
-      background-color: #00a873 !important;
-    }
+    background-color: transparent !important;
   }
 
-  // 6. 스크린 혼합 모드로 순수 배경색만 투과시킴
+  // 스크린 혼합 모드로 순수 배경색만 투과시킴
   .sprite-container .sprite {
     mix-blend-mode: screen !important;
   }
