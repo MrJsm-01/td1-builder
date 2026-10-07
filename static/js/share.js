@@ -131,3 +131,171 @@ function serializeBuild() {
   PL_TALENT_SLOTS.forEach(slot => {
     if (BUILD[slot] !== null && BUILD[slot] !== undefined) TALENTS[slot] = BUILD[slot];
   });
+  if (Object.keys(TALENTS).length) PAYLOAD.pt = TALENTS;
+
+  const JSON_STRING = JSON.stringify(PAYLOAD);
+
+  return LZString.compressToEncodedURIComponent(JSON_STRING);
+}
+
+function generateShareUrl() {
+  const ENCODED   = serializeBuild();
+  const SHARE_URL = new URL(window.location.href);
+
+  SHARE_URL.hash = ENCODED;
+
+  return SHARE_URL.toString();
+}
+
+export function updateAddressBar() {
+  if (isLoadingFromUrl) return;
+
+  const ENCODED = serializeBuild();
+  history.replaceState(null, '', `#${ENCODED}`);
+}
+
+function applyWeaponSlot(slot, data) {
+  if (!data || !data.id) return;
+  selectWeapon(slot, data.id);
+
+  if (Array.isArray(data.t)) {
+    data.t.forEach(([index, talentId]) => {
+      selectWeaponTalent(slot, index, talentId);
+    });
+  }
+
+  if (data.m && typeof data.m === 'object') {
+    Object.keys(data.m).forEach(modSlot => {
+      if (Array.isArray(data.m[modSlot])) {
+        data.m[modSlot].forEach(([index, modId]) => {
+          selectWeaponMod(slot, modSlot, index, modId);
+        });
+      }
+    });
+  }
+
+  if (data.gs) setWeaponScore(slot, data.gs);
+}
+
+function applyGearSlot(slot, data) {
+  if (!data || !data.id) return;
+  selectGear(slot, data.id);
+
+  if (data.s !== undefined && data.s !== null) {
+    const RADIO = document.querySelector(`input[name="${slot}-stat"][value="${data.s}"]`);
+    if (RADIO) RADIO.checked = true;
+    if (BUILD[slot]) BUILD[slot].stat = data.s;
+  }
+
+  if (data.t) selectGearTalent(slot, data.t);
+
+  if (Array.isArray(data.ma)) {
+    data.ma.forEach(([index, attrId]) => selectGearAttr(slot, 'major', index, attrId));
+  }
+
+  if (Array.isArray(data.mi)) {
+    data.mi.forEach(([index, attrId]) => selectGearAttr(slot, 'minor', index, attrId));
+  }
+
+  if (Array.isArray(data.gm)) {
+    data.gm.forEach(([index, modId, bonusId]) => {
+      selectGearModType(slot, index, modId);
+      if (bonusId !== null && bonusId !== undefined) selectGearModBonus(slot, index, bonusId);
+    });
+  }
+
+  if (Array.isArray(data.pm)) {
+    data.pm.forEach(([index, bonusId]) => selectPerfMod(slot, index, bonusId));
+  }
+}
+
+function applyBuildData(payload) {
+  if (!payload) return;
+
+  if (payload.v !== BUILD_VERSION) {
+    openModal(`
+      <div class="title-container error">
+        <div class="icon-container">
+          <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
+            <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
+          </svg>
+        </div>
+        <div class="title">${STRINGS.error.version}</div>
+      </div>
+      <div class="content">
+        <p>The shared build link contains outdated data.</p>
+        <p>The default build has been loaded instead.</p>
+      </div>
+    `, STRINGS.error.version);
+
+    return;
+  }
+
+  if (payload.n !== undefined) {
+    selectLoadoutName(payload.n);
+  }
+
+  if (payload.w) {
+    Object.keys(payload.w).forEach(slot => applyWeaponSlot(slot, payload.w[slot]));
+  }
+
+  if (payload.g) {
+    Object.keys(payload.g).forEach(slot => applyGearSlot(slot, payload.g[slot]));
+  }
+
+  if (payload.sk) {
+    Object.keys(payload.sk).forEach(slot => selectSkill(slot, payload.sk[slot]));
+  }
+
+  if (payload.pt) {
+    Object.keys(payload.pt).forEach(slot => selectPlayerTalent(slot, payload.pt[slot]));
+  }
+
+  renderGearStats();
+}
+
+export function loadBuildFromUrl() {
+  const HASH = window.location.hash.slice(1);
+  if (!HASH) return;
+
+  try {
+    const JSON_STRING = LZString.decompressFromEncodedURIComponent(HASH);
+    if (!JSON_STRING) return;
+
+    const PAYLOAD = JSON.parse(JSON_STRING);
+
+    isLoadingFromUrl = true;
+    applyBuildData(PAYLOAD);
+    isLoadingFromUrl = false;
+  } catch (error) {
+    console.error('Failed to load build from URL:', error);
+    isLoadingFromUrl = false;
+  }
+}
+
+export function openShareModal() {
+  const SHARE_URL = generateShareUrl();
+
+  openModal(`
+    <div class="title-container share">
+      <div class="icon-container">
+        <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
+          <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
+        </svg>
+      </div>
+      <div class="title">${STRINGS.help.share}</div>
+    </div>
+    <div class="content">
+      <div class="help">${STRINGS.help.clipboard.copy}</div>
+      <input type="text" id="share-url" value="${SHARE_URL}" readonly>
+    </div>
+  `, STRINGS.help.share);
+}
+
+// 자동 실행 이벤트 바인딩
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadBuildFromUrl);
+} else {
+  loadBuildFromUrl();
+}
+window.addEventListener('hashchange', loadBuildFromUrl);
