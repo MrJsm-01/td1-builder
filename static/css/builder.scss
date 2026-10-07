@@ -7,9 +7,9 @@
 
 $base-url: "../img/";
 
-/* ACCURATE GOLDEN-YELLOW VIA COLOR-DODGE BOOST */
+/* ABSOLUTE BACKGROUND FIX USING CSS FILTER */
 .modal-container {
-  // 1. 특급 (High-End 황금 노란색) : 맑은 개나리 옐로우 베이스 + 닷지 보정
+  // 1. 특급 (High-End 황금 노란색) 베이스 정색 깔기 (#de990f)
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
@@ -18,25 +18,10 @@ $base-url: "../img/";
   .gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
   .weapon[data-quality='high-end'] .sprite-container {
-    background-color: #fca000 !important;
-    position: relative !important;
-
-    &::after {
-      content: '' !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      background-color: #ffea00 !important;
-      mix-blend-mode: color-dodge !important;
-      opacity: 0.6 !important;
-      pointer-events: none !important;
-      z-index: 1 !important;
-    }
+    background-color: #de990f !important;
   }
 
-  // 2. 세트 (Gear Set / Classy 에메랄드 그린)
+  // 2. 세트 (Gear Set 에메랄드 그린) 베이스 정색 깔기 (#00a66c)
   button.gear[data-quality='classy'] .sprite-container,
   button.gear[data-quality='classified'] .sprite-container,
   button.gear[data-quality='gearset'] .sprite-container,
@@ -48,27 +33,17 @@ $base-url: "../img/";
   .gear[data-quality='gset'] .sprite-container,
   .weapon[data-quality='gearset'] .sprite-container {
     background-color: #00a66c !important;
-    position: relative !important;
-
-    &::after {
-      content: '' !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      background-color: #00ffaa !important;
-      mix-blend-mode: color-dodge !important;
-      opacity: 0.4 !important;
-      pointer-events: none !important;
-      z-index: 1 !important;
-    }
   }
 
-  // 3. 아이콘 (.sprite) 최상위 합성 유지
-  .sprite-container .sprite {
-    mix-blend-mode: screen !important;
-    position: relative !important;
-    z-index: 2 !important;
+  // 3. 중첩 레이어 제거 및 아이콘 픽셀 맑게 마스킹
+  .sprite-container {
+    &::after {
+      display: none !important;
+    }
+
+    .sprite {
+      mix-blend-mode: screen !important;
+      filter: brightness(1.2) contrast(1.1) !important;
+    }
   }
 }
