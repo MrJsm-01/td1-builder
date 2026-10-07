@@ -262,8 +262,9 @@ export function loadBuildFromUrl() {
   }
 }
 
-export function openShareModal() {
+export async function openShareModal() {
   const LONG_URL = generateShareUrl();
+  let finalUrl = LONG_URL;
 
   openModal(`
     <div class="title-container share">
@@ -282,48 +283,21 @@ export function openShareModal() {
 
   const inputEl = document.getElementById('share-url');
 
-  // 전역 고유 콜백 함수명 정의
-  const cbName = 'isgd_callback_' + Date.now();
-
-  // 안전장치: 2초 내 응답 없을 시 긴 원본 URL 출력
-  const timer = setTimeout(() => {
-    if (inputEl && inputEl.value === '단축 링크 생성 중...') {
-      inputEl.value = LONG_URL;
-      inputEl.select();
-    }
-    delete window[cbName];
-  }, 2000);
-
-  // JSONP 콜백 함수 핸들러
-  window[cbName] = function(res) {
-    clearTimeout(timer);
-    if (inputEl) {
-      if (res && res.shorturl) {
-        inputEl.value = res.shorturl;
-      } else {
-        inputEl.value = LONG_URL;
+  try {
+    // 긴 빌드 URL 완벽 지원 & CORS 우회 API 호출
+    const res = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(LONG_URL)}`);
+    if (res.ok) {
+      const shortUrl = await res.text();
+      if (shortUrl && shortUrl.startsWith('http')) {
+        finalUrl = shortUrl;
       }
-      inputEl.select();
     }
-    delete window[cbName];
-    const s = document.getElementById(cbName);
-    if (s) s.remove();
-  };
+  } catch (err) {
+    console.warn('단축 URL 생성 실패, 원본 URL로 대체합니다:', err);
+  }
 
-  // JSONP 스크립트 생성 및 주입
-  const script = document.createElement('script');
-  script.id = cbName;
-  script.src = `https://is.gd/create.php?format=json&callback=${cbName}&url=${encodeURIComponent(LONG_URL)}`;
-  
-  script.onerror = function() {
-    clearTimeout(timer);
-    if (inputEl) {
-      inputEl.value = LONG_URL;
-      inputEl.select();
-    }
-    delete window[cbName];
-    script.remove();
-  };
-
-  document.body.appendChild(script);
+  if (inputEl) {
+    inputEl.value = finalUrl;
+    inputEl.select();
+  }
 }
