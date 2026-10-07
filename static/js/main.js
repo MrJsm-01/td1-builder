@@ -7,7 +7,7 @@ import { openWeaponPicker, selectWeapon, selectWeaponTalent, selectWeaponMod, cl
 import { openGearPicker, selectGear, selectGearTalent, selectGearAttr, selectGearModType, selectGearModBonus, selectPerfMod } from './gear.js';
 import { openSkillPicker, selectSkill } from './skills.js';
 import { openPlayerTalentPicker, selectPlayerTalent } from './talents.js';
-import { loadBuildFromUrl, updateAddressBar, openShareModal } from './share.js';
+import { loadBuildFromUrl, updateAddressBar, openShareModal } from './share2.js';
 
 // Primary Weapon
 DOM.slots.primary.addEventListener('click', () => openWeaponPicker('primary'));
