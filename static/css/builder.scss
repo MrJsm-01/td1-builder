@@ -7,9 +7,9 @@
 
 $base-url: "../img/";
 
-/* ABSOLUTE BACKGROUND FIX USING CSS FILTER */
+/* REVERT TO BEST STACKING BASE & FINE-TUNED YELLOW */
 .modal-container {
-  // 1. 특급 (High-End 황금 노란색) 베이스 정색 깔기 (#de990f)
+  // 1. 특급 (High-End 황금 노란색) : #ffff00 베이스 중첩 구조 복원
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
@@ -18,10 +18,25 @@ $base-url: "../img/";
   .gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
   .weapon[data-quality='high-end'] .sprite-container {
-    background-color: #de990f !important;
+    background-color: #ffcc00 !important;
+    position: relative !important;
+
+    &::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: #ffff00 !important;
+      mix-blend-mode: screen !important;
+      opacity: 0.9 !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
   }
 
-  // 2. 세트 (Gear Set 에메랄드 그린) 베이스 정색 깔기 (#00a66c)
+  // 2. 세트 (Gear Set / Classy 에메랄드 그린)
   button.gear[data-quality='classy'] .sprite-container,
   button.gear[data-quality='classified'] .sprite-container,
   button.gear[data-quality='gearset'] .sprite-container,
@@ -33,17 +48,27 @@ $base-url: "../img/";
   .gear[data-quality='gset'] .sprite-container,
   .weapon[data-quality='gearset'] .sprite-container {
     background-color: #00a66c !important;
+    position: relative !important;
+
+    &::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: #00ffaa !important;
+      mix-blend-mode: screen !important;
+      opacity: 0.5 !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
   }
 
-  // 3. 중첩 레이어 제거 및 아이콘 픽셀 맑게 마스킹
-  .sprite-container {
-    &::after {
-      display: none !important;
-    }
-
-    .sprite {
-      mix-blend-mode: screen !important;
-      filter: brightness(1.2) contrast(1.1) !important;
-    }
+  // 3. 아이콘 (.sprite) screen 합성 유지
+  .sprite-container .sprite {
+    mix-blend-mode: screen !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 }
