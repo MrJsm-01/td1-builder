@@ -4,7 +4,7 @@ import { BUILD, STATE } from './state.js';
 import { DOM } from './dom.js';
 import { STRINGS } from './strings.js';
 import { openModal } from './modal.js';
-import { updateAddressBar } from './share.js';
+import { updateAddressBar } from './share2.js';
 
 // Order of weapon types
 const WP_TYPE_ORDER = [
