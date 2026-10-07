@@ -262,9 +262,8 @@ export function loadBuildFromUrl() {
   }
 }
 
-export async function openShareModal() {
+export function openShareModal() {
   const LONG_URL = generateShareUrl();
-  let finalUrl = LONG_URL;
 
   openModal(`
     <div class="title-container share">
@@ -283,21 +282,48 @@ export async function openShareModal() {
 
   const inputEl = document.getElementById('share-url');
 
-  try {
-    // 긴 빌드 URL 완벽 지원 & CORS 우회 API 호출
-    const res = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(LONG_URL)}`);
-    if (res.ok) {
-      const shortUrl = await res.text();
-      if (shortUrl && shortUrl.startsWith('http')) {
-        finalUrl = shortUrl;
-      }
-    }
-  } catch (err) {
-    console.warn('단축 URL 생성 실패, 원본 URL로 대체합니다:', err);
-  }
+  // 전역 고유 콜백 명칭 정의
+  const cbName = 'isgd_cb_' + Date.now();
 
-  if (inputEl) {
-    inputEl.value = finalUrl;
-    inputEl.select();
-  }
+  // 3초 타임아웃 안전장치 (실패 시 원본 URL 대입)
+  const timer = setTimeout(() => {
+    if (inputEl && inputEl.value === '단축 링크 생성 중...') {
+      inputEl.value = LONG_URL;
+      if (inputEl.select) inputEl.select();
+    }
+    delete window[cbName];
+  }, 3000);
+
+  // JSONP 콜백 등록
+  window[cbName] = function(res) {
+    clearTimeout(timer);
+    if (inputEl) {
+      if (res && res.shorturl) {
+        inputEl.value = res.shorturl;
+      } else {
+        inputEl.value = LONG_URL;
+      }
+      if (inputEl.select) inputEl.select();
+    }
+    delete window[cbName];
+    const scriptTag = document.getElementById(cbName);
+    if (scriptTag) scriptTag.remove();
+  };
+
+  // dynamic <script> 태그 주입으로 CORS 완전 회피
+  const script = document.createElement('script');
+  script.id = cbName;
+  script.src = `https://is.gd/create.php?format=json&callback=${cbName}&url=${encodeURIComponent(LONG_URL)}`;
+  
+  script.onerror = function() {
+    clearTimeout(timer);
+    if (inputEl) {
+      inputEl.value = LONG_URL;
+      if (inputEl.select) inputEl.select();
+    }
+    delete window[cbName];
+    script.remove();
+  };
+
+  document.body.appendChild(script);
 }
