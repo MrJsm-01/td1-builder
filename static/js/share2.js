@@ -284,19 +284,21 @@ export async function openShareModal() {
   const inputEl = document.getElementById('share-url');
 
   try {
-    // CORS 회피용 프록시 파이프라인을 통한 is.gd 호출
+    // CORS 차단을 피하기 위해 allorigins 우회 프록시를 통해 is.gd 호출
     const targetApi = `https://is.gd/create.php?format=json&url=${encodeURIComponent(LONG_URL)}`;
     const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetApi)}`);
     
     if (response.ok) {
       const wrapperData = await response.json();
-      const data = JSON.parse(wrapperData.contents);
-      if (data.shorturl) {
-        finalUrl = data.shorturl;
+      if (wrapperData.contents) {
+        const data = JSON.parse(wrapperData.contents);
+        if (data.shorturl) {
+          finalUrl = data.shorturl;
+        }
       }
     }
   } catch (error) {
-    console.warn('URL 단축 API 실패, 긴 원본 URL로 대체합니다:', error);
+    console.warn('URL 단축 API 실패, 원본 긴 URL로 대체합니다:', error);
   }
 
   if (inputEl) {
