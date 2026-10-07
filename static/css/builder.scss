@@ -7,9 +7,9 @@
 
 $base-url: "../img/";
 
-/* CORRECTED HIGH-END GOLDEN-YELLOW & GEAR SET GREEN STACKING */
+/* ACCURATE GOLDEN-YELLOW VIA COLOR-DODGE BOOST */
 .modal-container {
-  // 1. 특급 (High-End 황금 노란색) : 붉은 기 제거한 황금 베이스 + 레몬빛 중첩
+  // 1. 특급 (High-End 황금 노란색) : 맑은 개나리 옐로우 베이스 + 닷지 보정
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
@@ -18,7 +18,7 @@ $base-url: "../img/";
   .gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
   .weapon[data-quality='high-end'] .sprite-container {
-    background-color: #d49400 !important;
+    background-color: #fca000 !important;
     position: relative !important;
 
     &::after {
@@ -28,9 +28,9 @@ $base-url: "../img/";
       left: 0 !important;
       width: 100% !important;
       height: 100% !important;
-      background-color: #ffff33 !important;
-      mix-blend-mode: screen !important;
-      opacity: 0.75 !important;
+      background-color: #ffea00 !important;
+      mix-blend-mode: color-dodge !important;
+      opacity: 0.6 !important;
       pointer-events: none !important;
       z-index: 1 !important;
     }
@@ -47,7 +47,7 @@ $base-url: "../img/";
   .gear[data-quality='gearset'] .sprite-container,
   .gear[data-quality='gset'] .sprite-container,
   .weapon[data-quality='gearset'] .sprite-container {
-    background-color: #008c55 !important;
+    background-color: #00a66c !important;
     position: relative !important;
 
     &::after {
@@ -57,9 +57,9 @@ $base-url: "../img/";
       left: 0 !important;
       width: 100% !important;
       height: 100% !important;
-      background-color: #00dc8c !important;
-      mix-blend-mode: screen !important;
-      opacity: 0.6 !important;
+      background-color: #00ffaa !important;
+      mix-blend-mode: color-dodge !important;
+      opacity: 0.4 !important;
       pointer-events: none !important;
       z-index: 1 !important;
     }
