@@ -7,9 +7,9 @@
 
 $base-url: "../img/";
 
-/* BOOSTED YELLOW STACKING OVERRIDE (#ffff00) */
+/* CALCULATED COLOR STACKING OVERRIDE (HIGH-END & GEAR SET) */
 .modal-container {
-  // 1. 베이스 레이어에 최고 명도 노란색(#ffff00) 주입
+  // 1. 특급 (High-End 황금 노란색) : 오렌지-레드 베이스 + 옐로우 빛 중첩
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
@@ -18,10 +18,9 @@ $base-url: "../img/";
   .gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
   .weapon[data-quality='high-end'] .sprite-container {
-    background-color: #ffff00 !important;
+    background-color: #ff7800 !important;
     position: relative !important;
 
-    // 2. 가상 레이어(&::after)로 #ffff00 빛을 한 겹 더 중첩 부스팅
     &::after {
       content: '' !important;
       position: absolute !important;
@@ -29,14 +28,42 @@ $base-url: "../img/";
       left: 0 !important;
       width: 100% !important;
       height: 100% !important;
-      background-color: #ffff00 !important;
+      background-color: #ffdc00 !important;
       mix-blend-mode: screen !important;
       pointer-events: none !important;
       z-index: 1 !important;
     }
   }
 
-  // 3. 아이콘 자체의 screen 투과 최상위 유지
+  // 2. 세트 (Gear Set / Classy 에메랄드 그린) : 딥 틸 베이스 + 청록 빛 중첩
+  button.gear[data-quality='classy'] .sprite-container,
+  button.gear[data-quality='classified'] .sprite-container,
+  button.gear[data-quality='gearset'] .sprite-container,
+  button.gear[data-quality='gset'] .sprite-container,
+  button.weapon[data-quality='gearset'] .sprite-container,
+  .gear[data-quality='classy'] .sprite-container,
+  .gear[data-quality='classified'] .sprite-container,
+  .gear[data-quality='gearset'] .sprite-container,
+  .gear[data-quality='gset'] .sprite-container,
+  .weapon[data-quality='gearset'] .sprite-container {
+    background-color: #008c55 !important;
+    position: relative !important;
+
+    &::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: #00dc8c !important;
+      mix-blend-mode: screen !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
+  }
+
+  // 3. 아이콘 (.sprite) 최상위 합성 레이어 유지
   .sprite-container .sprite {
     mix-blend-mode: screen !important;
     position: relative !important;
