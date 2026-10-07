@@ -7,21 +7,39 @@
 
 $base-url: "../img/";
 
-/* HIGH-END COLOR & SPRITE SCREEN BLEND FINAL OVERRIDE */
-div.modal-container {
-  // 1. 특급(High-End) 배경색 명시도 최상위 부여 (#de990f)
-  button.gear[data-quality='highend'] div.sprite-container,
-  button.gear[data-quality='high-end'] div.sprite-container,
-  button.weapon[data-quality='highend'] div.sprite-container,
-  button.weapon[data-quality='high-end'] div.sprite-container,
-  div[data-quality='highend'] div.sprite-container,
-  div[data-quality='high-end'] div.sprite-container {
-    background-color: #de990f !important;
+/* BOOSTED YELLOW STACKING OVERRIDE (#ffff00) */
+.modal-container {
+  // 1. 베이스 레이어에 최고 명도 노란색(#ffff00) 주입
+  button.gear[data-quality='highend'] .sprite-container,
+  button.gear[data-quality='high-end'] .sprite-container,
+  button.weapon[data-quality='highend'] .sprite-container,
+  button.weapon[data-quality='high-end'] .sprite-container,
+  .gear[data-quality='highend'] .sprite-container,
+  .gear[data-quality='high-end'] .sprite-container,
+  .weapon[data-quality='highend'] .sprite-container,
+  .weapon[data-quality='high-end'] .sprite-container {
+    background-color: #ffff00 !important;
+    position: relative !important;
+
+    // 2. 가상 레이어(&::after)로 #ffff00 빛을 한 겹 더 중첩 부스팅
+    &::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: #ffff00 !important;
+      mix-blend-mode: screen !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
   }
 
-  // 2. 실제 백팩 아이콘(.sprite) 요소에 mix-blend-mode: screen 강제 지정
-  div.sprite-container div.sprite {
+  // 3. 아이콘 자체의 screen 투과 최상위 유지
+  .sprite-container .sprite {
     mix-blend-mode: screen !important;
-    background-color: transparent !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 }
