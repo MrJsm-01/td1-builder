@@ -7,6 +7,15 @@
 
 $base-url: "../img/";
 
+---
+# Rebuild-Trigger: 2026-10-07-10
+---
+@use 'components/modals' as *;
+@use 'components/tooltips' as *;
+@use 'pages/builder' as *;
+
+$base-url: "../img/";
+
 /* PERFECT REVERT TO BRIGHT #ffff00 STACKING BASE */
 .modal-container {
   // 1. 특급 (High-End) : 순수 옐로우(#ffff00) 2중 중첩 구조
