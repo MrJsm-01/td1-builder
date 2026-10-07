@@ -10,30 +10,10 @@ import { selectGear, renderGearStats, selectGearTalent, selectGearAttr, selectGe
 import { selectSkill } from './skills.js';
 import { selectPlayerTalent } from './talents.js';
 
-const WEAPON_SLOTS = [
-  'primary',
-  'secondary',
-  'handgun'
-];
-const GEAR_SLOTS = [
-  'chest',
-  'mask',
-  'kneepads',
-  'backpack',
-  'gloves',
-  'holster'
-];
-const SKILL_SLOTS = [
-  'skill1',
-  'skill2',
-  'skillUlt'
-];
-const PL_TALENT_SLOTS = [
-  'talent1',
-  'talent2',
-  'talent3',
-  'talent4'
-];
+const WEAPON_SLOTS = ['primary', 'secondary', 'handgun'];
+const GEAR_SLOTS = ['chest', 'mask', 'kneepads', 'backpack', 'gloves', 'holster'];
+const SKILL_SLOTS = ['skill1', 'skill2', 'skillUlt'];
+const PL_TALENT_SLOTS = ['talent1', 'talent2', 'talent3', 'talent4'];
 
 let isLoadingFromUrl = false;
 
@@ -52,7 +32,6 @@ function serializeWeaponSlot(slot) {
   if (!WEAPON_STATE) return null;
 
   const MOD_ENTRIES = {};
-
   if (WEAPON_STATE.mods) {
     Object.keys(WEAPON_STATE.mods).forEach(modSlot => {
       const PAIRS = compactArray(WEAPON_STATE.mods[modSlot]);
@@ -61,13 +40,12 @@ function serializeWeaponSlot(slot) {
   }
 
   const PAYLOAD = {
-    id : WEAPON_STATE.weaponId,
-    t  : compactArray(WEAPON_STATE.talents),
-    m  : MOD_ENTRIES
+    id: WEAPON_STATE.weaponId,
+    t: compactArray(WEAPON_STATE.talents),
+    m: MOD_ENTRIES
   };
 
   if (WEAPON_STATE.gs !== GEAR_SCORE[0]) PAYLOAD.gs = WEAPON_STATE.gs;
-
   return PAYLOAD;
 }
 
@@ -134,78 +112,82 @@ function serializeBuild() {
   if (Object.keys(TALENTS).length) PAYLOAD.pt = TALENTS;
 
   const JSON_STRING = JSON.stringify(PAYLOAD);
-
   return LZString.compressToEncodedURIComponent(JSON_STRING);
 }
 
 function generateShareUrl() {
-  const ENCODED   = serializeBuild();
+  const ENCODED = serializeBuild();
   const SHARE_URL = new URL(window.location.href);
-
   SHARE_URL.hash = ENCODED;
-
   return SHARE_URL.toString();
 }
 
 export function updateAddressBar() {
   if (isLoadingFromUrl) return;
-
   const ENCODED = serializeBuild();
   history.replaceState(null, '', `#${ENCODED}`);
 }
 
 function applyWeaponSlot(slot, data) {
-  if (!data || !data.id) return;
-  selectWeapon(slot, data.id);
+  try {
+    if (!data || !data.id) return;
+    selectWeapon(slot, data.id);
 
-  if (Array.isArray(data.t)) {
-    data.t.forEach(([index, talentId]) => {
-      selectWeaponTalent(slot, index, talentId);
-    });
+    if (Array.isArray(data.t)) {
+      data.t.forEach(([index, talentId]) => {
+        if (talentId !== undefined && talentId !== null) selectWeaponTalent(slot, index, talentId);
+      });
+    }
+
+    if (data.m && typeof data.m === 'object') {
+      Object.keys(data.m).forEach(modSlot => {
+        if (Array.isArray(data.m[modSlot])) {
+          data.m[modSlot].forEach(([index, modId]) => {
+            if (modId !== undefined && modId !== null) selectWeaponMod(slot, modSlot, index, modId);
+          });
+        }
+      });
+    }
+
+    if (data.gs) setWeaponScore(slot, data.gs);
+  } catch (err) {
+    console.warn(`Error applying weapon slot ${slot}:`, err);
   }
-
-  if (data.m && typeof data.m === 'object') {
-    Object.keys(data.m).forEach(modSlot => {
-      if (Array.isArray(data.m[modSlot])) {
-        data.m[modSlot].forEach(([index, modId]) => {
-          selectWeaponMod(slot, modSlot, index, modId);
-        });
-      }
-    });
-  }
-
-  if (data.gs) setWeaponScore(slot, data.gs);
 }
 
 function applyGearSlot(slot, data) {
-  if (!data || !data.id) return;
-  selectGear(slot, data.id);
+  try {
+    if (!data || !data.id) return;
+    selectGear(slot, data.id);
 
-  if (data.s !== undefined && data.s !== null) {
-    const RADIO = document.querySelector(`input[name="${slot}-stat"][value="${data.s}"]`);
-    if (RADIO) RADIO.checked = true;
-    if (BUILD[slot]) BUILD[slot].stat = data.s;
-  }
+    if (data.s !== undefined && data.s !== null) {
+      const RADIO = document.querySelector(`input[name="${slot}-stat"][value="${data.s}"]`);
+      if (RADIO) RADIO.checked = true;
+      if (BUILD[slot]) BUILD[slot].stat = data.s;
+    }
 
-  if (data.t) selectGearTalent(slot, data.t);
+    if (data.t) selectGearTalent(slot, data.t);
 
-  if (Array.isArray(data.ma)) {
-    data.ma.forEach(([index, attrId]) => selectGearAttr(slot, 'major', index, attrId));
-  }
+    if (Array.isArray(data.ma)) {
+      data.ma.forEach(([index, attrId]) => selectGearAttr(slot, 'major', index, attrId));
+    }
 
-  if (Array.isArray(data.mi)) {
-    data.mi.forEach(([index, attrId]) => selectGearAttr(slot, 'minor', index, attrId));
-  }
+    if (Array.isArray(data.mi)) {
+      data.mi.forEach(([index, attrId]) => selectGearAttr(slot, 'minor', index, attrId));
+    }
 
-  if (Array.isArray(data.gm)) {
-    data.gm.forEach(([index, modId, bonusId]) => {
-      selectGearModType(slot, index, modId);
-      if (bonusId !== null && bonusId !== undefined) selectGearModBonus(slot, index, bonusId);
-    });
-  }
+    if (Array.isArray(data.gm)) {
+      data.gm.forEach(([index, modId, bonusId]) => {
+        selectGearModType(slot, index, modId);
+        if (bonusId !== null && bonusId !== undefined) selectGearModBonus(slot, index, bonusId);
+      });
+    }
 
-  if (Array.isArray(data.pm)) {
-    data.pm.forEach(([index, bonusId]) => selectPerfMod(slot, index, bonusId));
+    if (Array.isArray(data.pm)) {
+      data.pm.forEach(([index, bonusId]) => selectPerfMod(slot, index, bonusId));
+    }
+  } catch (err) {
+    console.warn(`Error applying gear slot ${slot}:`, err);
   }
 }
 
@@ -227,7 +209,6 @@ function applyBuildData(payload) {
         <p>The default build has been loaded instead.</p>
       </div>
     `, STRINGS.error.version);
-
     return;
   }
 
@@ -244,14 +225,22 @@ function applyBuildData(payload) {
   }
 
   if (payload.sk) {
-    Object.keys(payload.sk).forEach(slot => selectSkill(slot, payload.sk[slot]));
+    Object.keys(payload.sk).forEach(slot => {
+      try { selectSkill(slot, payload.sk[slot]); } catch (e) {}
+    });
   }
 
   if (payload.pt) {
-    Object.keys(payload.pt).forEach(slot => selectPlayerTalent(slot, payload.pt[slot]));
+    Object.keys(payload.pt).forEach(slot => {
+      try { selectPlayerTalent(slot, payload.pt[slot]); } catch (e) {}
+    });
   }
 
-  renderGearStats();
+  try {
+    renderGearStats();
+  } catch (e) {
+    console.warn('Error rendering gear stats:', e);
+  }
 }
 
 export function loadBuildFromUrl() {
@@ -273,8 +262,10 @@ export function loadBuildFromUrl() {
   }
 }
 
-export function openShareModal() {
-  const SHARE_URL = generateShareUrl();
+// is.gd 무료 API 연동 단축 링크 모달
+export async function openShareModal() {
+  const LONG_URL = generateShareUrl();
+  let finalUrl = LONG_URL;
 
   openModal(`
     <div class="title-container share">
@@ -287,12 +278,30 @@ export function openShareModal() {
     </div>
     <div class="content">
       <div class="help">${STRINGS.help.clipboard.copy}</div>
-      <input type="text" id="share-url" value="${SHARE_URL}" readonly>
+      <input type="text" id="share-url" value="단축 링크 생성 중..." readonly>
     </div>
   `, STRINGS.help.share);
+
+  try {
+    const response = await fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(LONG_URL)}`);
+    if (response.ok) {
+      const data = await response.json();
+      if (data.shorturl) {
+        finalUrl = data.shorturl;
+      }
+    }
+  } catch (error) {
+    console.warn('URL 단축 실패, 긴 URL로 대체합니다:', error);
+  }
+
+  const inputEl = document.getElementById('share-url');
+  if (inputEl) {
+    inputEl.value = finalUrl;
+    inputEl.select();
+  }
 }
 
-// 자동 실행 이벤트 바인딩
+// DOM 진입 시 및 URL 변경 시 자동 로드
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadBuildFromUrl);
 } else {
