@@ -4,7 +4,7 @@ import { STRINGS } from './strings.js';
 import { GEAR_QUALITY_ORDER, GEAR_MOD_QUALITY_ORDER, BASE_PLAYER_STAT, BASE_GEAR_STAT, GEAR_SLOT_CONFIG } from './constants.js';
 import { BUILD, STATE } from './state.js';
 import { openModal } from './modal.js';
-import { updateAddressBar } from './share.js';
+import { updateAddressBar } from './share2.js';
 
 // Gear Set bonuses
 const BONUS_SLOTS = [
