@@ -241,14 +241,29 @@ export function loadBuildFromUrl() {
   if (!HASH) return;
 
   try {
-    const decodedBase64 = decodeURIComponent(HASH);
-    const JSON_STRING = LZString.decompressFromBase64(decodedBase64);
+    let JSON_STRING = null;
+
+    // 1차 시도: 신규 Base64 방식 복원
+    try {
+      const decodedBase64 = decodeURIComponent(HASH);
+      JSON_STRING = LZString.decompressFromBase64(decodedBase64);
+    } catch (e) {
+      // Base64 해석 실패 시 무시
+    }
+
+    // 2차 시도: 기존 EncodedURIComponent 방식 복원 (하위 호환성 유지)
+    if (!JSON_STRING) {
+      JSON_STRING = LZString.decompressFromEncodedURIComponent(HASH);
+    }
+
     if (!JSON_STRING) return;
 
     const PAYLOAD = JSON.parse(JSON_STRING);
+
     isLoadingFromUrl = true;
     applyBuildData(PAYLOAD);
     isLoadingFromUrl = false;
+
   } catch (error) {
     console.error('Failed to load build from URL:', error);
     isLoadingFromUrl = false;
