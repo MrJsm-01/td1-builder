@@ -282,11 +282,11 @@ export function openShareModal() {
 
   const inputEl = document.getElementById('share-url');
 
-  // 전역 고유 콜백 명칭 정의
+  // unique callback name 생성
   const cbName = 'isgd_cb_' + Date.now();
 
-  // 3초 타임아웃 안전장치 (실패 시 원본 URL 대입)
-  const timer = setTimeout(() => {
+  // 3초 타임아웃 처리
+  const timeoutId = setTimeout(() => {
     if (inputEl && inputEl.value === '단축 링크 생성 중...') {
       inputEl.value = LONG_URL;
       if (inputEl.select) inputEl.select();
@@ -295,28 +295,28 @@ export function openShareModal() {
   }, 3000);
 
   // JSONP 콜백 등록
-  window[cbName] = function(res) {
-    clearTimeout(timer);
+  window[cbName] = function(data) {
+    clearTimeout(timeoutId);
     if (inputEl) {
-      if (res && res.shorturl) {
-        inputEl.value = res.shorturl;
+      if (data && data.shorturl) {
+        inputEl.value = data.shorturl;
       } else {
         inputEl.value = LONG_URL;
       }
       if (inputEl.select) inputEl.select();
     }
     delete window[cbName];
-    const scriptTag = document.getElementById(cbName);
-    if (scriptTag) scriptTag.remove();
+    const scriptEl = document.getElementById(cbName);
+    if (scriptEl) scriptEl.remove();
   };
 
-  // dynamic <script> 태그 주입으로 CORS 완전 회피
+  // 동적 script 태그 생성으로 CORS 완전 우회
   const script = document.createElement('script');
   script.id = cbName;
   script.src = `https://is.gd/create.php?format=json&callback=${cbName}&url=${encodeURIComponent(LONG_URL)}`;
   
   script.onerror = function() {
-    clearTimeout(timer);
+    clearTimeout(timeoutId);
     if (inputEl) {
       inputEl.value = LONG_URL;
       if (inputEl.select) inputEl.select();
