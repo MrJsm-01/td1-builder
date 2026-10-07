@@ -281,28 +281,26 @@ export async function openShareModal() {
     </div>
   `, STRINGS.help.share);
 
+  const inputEl = document.getElementById('share-url');
+
   try {
-    const response = await fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(LONG_URL)}`);
+    // CORS 회피용 프록시 파이프라인을 통한 is.gd 호출
+    const targetApi = `https://is.gd/create.php?format=json&url=${encodeURIComponent(LONG_URL)}`;
+    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetApi)}`);
+    
     if (response.ok) {
-      const data = await response.json();
+      const wrapperData = await response.json();
+      const data = JSON.parse(wrapperData.contents);
       if (data.shorturl) {
         finalUrl = data.shorturl;
       }
     }
   } catch (error) {
-    console.warn('URL 단축 실패, 긴 URL로 대체합니다:', error);
+    console.warn('URL 단축 API 실패, 긴 원본 URL로 대체합니다:', error);
   }
 
-  const inputEl = document.getElementById('share-url');
   if (inputEl) {
     inputEl.value = finalUrl;
     inputEl.select();
   }
 }
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadBuildFromUrl);
-} else {
-  loadBuildFromUrl();
-}
-window.addEventListener('hashchange', loadBuildFromUrl);
