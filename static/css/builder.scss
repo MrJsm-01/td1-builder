@@ -41,12 +41,12 @@ $base-url: "../img/";
   }
 
   // 2. 고급 (Superior / 보라색) : 튀지 않는 은은한 인게임 보라색 톤다운
-  button.gear[data-quality='superior'] .sprite-container,
-  button.weapon[data-quality='superior'] .sprite-container,
-  button.gear-mod[data-quality='superior'] .sprite-container,
-  .gear[data-quality='superior'] .sprite-container,
-  .weapon[data-quality='superior'] .sprite-container,
-  .gear-mod[data-quality='superior'] .sprite-container {
+  button.gear[data-quality='superior'] ,
+  button.weapon[data-quality='superior'] ,
+  button.gear-mod[data-quality='superior'] ,
+  .gear[data-quality='superior'] ,
+  .weapon[data-quality='superior'] ,
+  .gear-mod[data-quality='superior']  {
     background-color: #6b238f !important;
 
     &::after {
@@ -55,18 +55,18 @@ $base-url: "../img/";
   }
 
   // 3. 세트 (Gear Set / Classy 에메랄드 그린)
-  button.gear[data-quality='classy'] .sprite-container,
-  button.gear[data-quality='classified'] .sprite-container,
-  button.gear[data-quality='gearset'] .sprite-container,
-  button.gear[data-quality='gset'] .sprite-container,
-  button.weapon[data-quality='gearset'] .sprite-container,
-  button.gear-mod[data-quality='gearset'] .sprite-container,
-  .gear[data-quality='classy'] .sprite-container,
-  .gear[data-quality='classified'] .sprite-container,
-  .gear[data-quality='gearset'] .sprite-container,
-  .gear[data-quality='gset'] .sprite-container,
-  .weapon[data-quality='gearset'] .sprite-container,
-  .gear-mod[data-quality='gearset'] .sprite-container {
+  button.gear[data-quality='classy'] ,
+  button.gear[data-quality='classified'] ,
+  button.gear[data-quality='gearset'] ,
+  button.gear[data-quality='gset'] ,
+  button.weapon[data-quality='gearset'] ,
+  button.gear-mod[data-quality='gearset'] ,
+  .gear[data-quality='classy'] ,
+  .gear[data-quality='classified'] ,
+  .gear[data-quality='gearset'] ,
+  .gear[data-quality='gset'] ,
+  .weapon[data-quality='gearset'] ,
+  .gear-mod[data-quality='gearset']  {
     background-color: #00a66c !important;
     position: relative !important;
 
@@ -86,9 +86,42 @@ $base-url: "../img/";
   }
 
   // 4. 아이콘 (.sprite) screen 투과 유지
-  .sprite-container .sprite {
+   .sprite {
     mix-blend-mode: screen !important;
     position: relative !important;
     z-index: 2 !important;
+  }
+}
+/* 방어구 스탯(화기/스태미너/전력) 선택 영역 시각적 대비 강화 */
+.sprite-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.4; /* 선택 안 됨: 어둡고 반투명하게 침전 */
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* 라디오 버튼이 체크된 항목 (:checked) - 강한 흑백 반전 대비 */
+  &:has(input[type="radio"]:checked) {
+    opacity: 1 !important;
+    background-color: #ffffff !important; /* 선명한 Pure White 배경 */
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+    /* 흰색 아이콘을 검은색으로 역반전 */
+    .sprite,
+    div[class*="sprite"] {
+      filter: invert(1) brightness(0) !important;
+    }
   }
 }
