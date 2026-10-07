@@ -7,9 +7,9 @@
 
 $base-url: "../img/";
 
-/* BALANCED TONE FIX FOR SUPERIOR PURPLE & HIGH-END */
+/* 1. 모달 팝업 내 등급별 아이콘 배경 설정 */
 .modal-container {
-  // 1. 특급 (High-End 황금 노란색)
+  // 특급 (High-End 황금 노란색)
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
@@ -40,7 +40,7 @@ $base-url: "../img/";
     }
   }
 
-  // 2. 고급 (Superior / 보라색)
+  // 고급 (Superior 보라색)
   button.gear[data-quality='superior'] .sprite-container,
   button.weapon[data-quality='superior'] .sprite-container,
   button.gear-mod[data-quality='superior'] .sprite-container,
@@ -54,7 +54,7 @@ $base-url: "../img/";
     }
   }
 
-  // 3. 세트 (Gear Set / Classy 에메랄드 그린) - 전체 버튼이 아닌 .sprite-container 아이콘 영역에만 적용
+  // 세트 (Classy/Gearset 에메랄드 그린)
   button.gear[data-quality='classy'] .sprite-container,
   button.gear[data-quality='classified'] .sprite-container,
   button.gear[data-quality='gearset'] .sprite-container,
@@ -85,7 +85,6 @@ $base-url: "../img/";
     }
   }
 
-  // 4. 아이콘 (.sprite) screen 투과 유지
   .sprite {
     mix-blend-mode: screen !important;
     position: relative !important;
@@ -93,97 +92,43 @@ $base-url: "../img/";
   }
 }
 
-/* 방어구 선택창 내 선택된 스탯(화기/스태미너/전력)만 또렷하게 강조 */
-.stats-container {
-  .sprite-container {
-    /* 선택된 스탯 (:checked) 부모만 강조 */
-    &:has(input[type="radio"]:checked) {
-      background-color: rgba(255, 255, 255, 0.3) !important;
-      border: 1px solid #ffffff !important;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+/* 2. 메인 화면 9개 대형 슬롯 카드 경계선 보강 */
+.weapon,
+.gear,
+.slot,
+.weapon-slot,
+.gear-slot {
+  background: rgba(15, 18, 22, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+  padding: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+  transition: border-color 0.2s ease !important;
 
-      .sprite,
-      div[class*="sprite"] {
-        filter: brightness(1.6) contrast(1.2) !important;
-      }
-    }
-  }
-}
-/* ==========================================
-   무기 & 방어구 슬롯 카드 영역 및 경계선 보강 (Visual Border & Cards)
-   ========================================== */
-
-/* 1. 세로 열(Column)간의 확실한 영역 구분을 위한 세로선 추가 */
-.builder-grid, 
-[class*="-grid"],
-.columns-container { // 사용 중인 3열 그리드 컨테이너 클래스에 맞게 지정
-  display: flex;
-  gap: 16px;
-  
-  /* 세로 칸막이 경계선: 무기-방어구 열을 명확하게 분할 */
-  > div, 
-  .column {
-    position: relative;
-    padding: 0 8px;
-
-    &:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 5%;
-      right: -8px;
-      width: 1px;
-      height: 90%;
-      background: linear-gradient(
-        to bottom, 
-        rgba(255, 157, 0, 0.05) 0%, 
-        rgba(255, 157, 0, 0.25) 50%, 
-        rgba(255, 157, 0, 0.05) 100%
-      ); /* 디비전 주황색 느낌의 세로 경계선 */
-      pointer-events: none;
-    }
-  }
-}
-
-/* 2. 무기 및 방어구 각 슬롯을 감싸는 개별 박스(카드) 강화 */
-.weapon-slot, 
-.gear-slot,
-.slot-container { // 슬롯을 감싸는 개별 박스들의 클래스명
-  background: rgba(0, 0, 0, 0.45) !important; /* 조금 더 어두운 검정 배경으로 뭉개짐 방지 */
-  border: 1px solid rgba(255, 255, 255, 0.08) !important; /* 은은한 흰색 테두리 */
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  padding: 12px;
-  margin-bottom: 12px;
-  transition: border-color 0.2s, background-color 0.2s;
-
-  /* 현재 마우스가 올라간(Hover) 슬롯 카드를 확실히 강조 */
   &:hover {
-    background: rgba(0, 0, 0, 0.6) !important;
-    border-color: rgba(255, 157, 0, 0.4) !important; /* 디비전 주황색 호버 테두리 */
-    box-shadow: 0 0 8px rgba(255, 157, 0, 0.15);
+    border-color: rgba(0, 255, 136, 0.5) !important;
   }
 }
 
-/* 3. 선택된 상태의 스탯(화기/스태미너/전력) 시인성 최종 보정 */
+/* 3. 방어구 스탯(화기/스태미너/전력) 선택 시 에메랄드 초록 강조 */
 .stats-container {
   display: inline-flex;
   gap: 8px;
-  margin-top: 8px;
 
   .sprite-container {
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    background-color: rgba(0, 0, 0, 0.7) !important; /* 미선택 배경은 더 어둡게 */
+    background-color: rgba(0, 0, 0, 0.7) !important;
     transition: all 0.15s ease-in-out;
 
-    /* 선택된 스탯: 확실하고 강렬한 테두리와 글로우 */
+    // 라디오 버튼 선택 시 (:checked) 초록색 글로우 적용
     &:has(input[type="radio"]:checked) {
-      background-color: rgba(255, 157, 0, 0.15) !important; /* 주황색 반투명 */
-      border: 1.5px solid #ff9d00 !important;                /* 시그니처 주황 테두리 */
-      box-shadow: 0 0 10px rgba(255, 157, 0, 0.5) !important; /* 강력한 주황 발광 */
+      background-color: rgba(0, 255, 136, 0.15) !important;
+      border: 1.5px solid #00ff88 !important;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.6) !important;
 
       .sprite,
       div[class*="sprite"] {
-        filter: brightness(1.5) drop-shadow(0 0 3px #ff9d00) !important; /* 아이콘을 밝게 부스트 */
+        filter: brightness(1.5) drop-shadow(0 0 4px #00ff88) !important;
       }
     }
   }
