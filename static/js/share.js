@@ -39,25 +39,26 @@ let isLoadingFromUrl = false;
 
 function compactArray(arr) {
   const PAIRS = [];
-  arr.forEach((value, index) => {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    if (value !== null) PAIRS.push([index, value]);
-  });
-
+  if (Array.isArray(arr)) {
+    arr.forEach((value, index) => {
+      if (value !== null && value !== undefined) PAIRS.push([index, value]);
+    });
+  }
   return PAIRS;
 }
 
 function serializeWeaponSlot(slot) {
   const WEAPON_STATE = BUILD[slot];
-  if (WEAPON_STATE === null) return null;
+  if (!WEAPON_STATE) return null;
 
   const MOD_ENTRIES = {};
 
-  Object.keys(WEAPON_STATE.mods).forEach(modSlot => {
-    const PAIRS = compactArray(WEAPON_STATE.mods[modSlot]);
-
-    if (PAIRS.length) MOD_ENTRIES[modSlot] = PAIRS;
-  });
+  if (WEAPON_STATE.mods) {
+    Object.keys(WEAPON_STATE.mods).forEach(modSlot => {
+      const PAIRS = compactArray(WEAPON_STATE.mods[modSlot]);
+      if (PAIRS.length) MOD_ENTRIES[modSlot] = PAIRS;
+    });
+  }
 
   const PAYLOAD = {
     id : WEAPON_STATE.weaponId,
@@ -72,7 +73,7 @@ function serializeWeaponSlot(slot) {
 
 function serializeGearSlot(slot) {
   const GEAR_STATE = BUILD[slot];
-  if (GEAR_STATE === null) return null;
+  if (!GEAR_STATE) return null;
 
   const PAYLOAD = { id: GEAR_STATE.itemId };
 
@@ -86,11 +87,13 @@ function serializeGearSlot(slot) {
   if (MINOR_PAIRS.length) PAYLOAD.mi = MINOR_PAIRS;
 
   const GEAR_MOD_PAIRS = [];
-
-  GEAR_STATE.gearMods.forEach((mod, index) => {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    if (mod.type !== null) GEAR_MOD_PAIRS.push([index, mod.type, mod.bonus]);
-  });
+  if (Array.isArray(GEAR_STATE.gearMods)) {
+    GEAR_STATE.gearMods.forEach((mod, index) => {
+      if (mod && mod.type !== null && mod.type !== undefined) {
+        GEAR_MOD_PAIRS.push([index, mod.type, mod.bonus]);
+      }
+    });
+  }
   if (GEAR_MOD_PAIRS.length) PAYLOAD.gm = GEAR_MOD_PAIRS;
 
   const PERF_PAIRS = compactArray(GEAR_STATE.perfMods);
@@ -120,163 +123,11 @@ function serializeBuild() {
 
   const SKILLS = {};
   SKILL_SLOTS.forEach(slot => {
-    if (BUILD[slot] !== null) SKILLS[slot] = BUILD[slot];
+    if (BUILD[slot] !== null && BUILD[slot] !== undefined) SKILLS[slot] = BUILD[slot];
   });
   if (Object.keys(SKILLS).length) PAYLOAD.sk = SKILLS;
 
   const TALENTS = {};
   PL_TALENT_SLOTS.forEach(slot => {
-    if (BUILD[slot] !== null) TALENTS[slot] = BUILD[slot];
+    if (BUILD[slot] !== null && BUILD[slot] !== undefined) TALENTS[slot] = BUILD[slot];
   });
-  if (Object.keys(TALENTS).length) PAYLOAD.pt = TALENTS;
-
-  const JSON_STRING = JSON.stringify(PAYLOAD);
-
-  return LZString.compressToEncodedURIComponent(JSON_STRING);
-}
-
-function generateShareUrl() {
-  const ENCODED   = serializeBuild();
-  const SHARE_URL = new URL(window.location.href);
-
-  SHARE_URL.hash = ENCODED;
-
-  return SHARE_URL.toString();
-}
-
-export function updateAddressBar() {
-  if (isLoadingFromUrl) return;
-
-  const ENCODED = serializeBuild();
-  history.replaceState(null, '', `#${ENCODED}`);
-}
-
-function applyWeaponSlot(slot, data) {
-  selectWeapon(slot, data.id);
-
-  // eslint-disable-next-line @stylistic/array-bracket-spacing
-  data.t.forEach(([index, talentId]) => {
-    selectWeaponTalent(slot, index, talentId);
-  });
-
-  Object.keys(data.m).forEach(modSlot => {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    data.m[modSlot].forEach(([index, modId]) => {
-      selectWeaponMod(slot, modSlot, index, modId);
-    });
-  });
-
-  if (data.gs) setWeaponScore(slot, data.gs);
-}
-
-function applyGearSlot(slot, data) {
-  selectGear(slot, data.id);
-
-  if (data.s) {
-    const RADIO = document.querySelector(`input[name="${slot}-stat"][value="${data.s}"]`);
-
-    RADIO.checked = true;
-    BUILD[slot].stat = data.s;
-  }
-
-  if (data.t) selectGearTalent(slot, data.t);
-
-  if (data.ma) {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    data.ma.forEach(([index, attrId]) => selectGearAttr(slot, 'major', index, attrId));
-  }
-
-  if (data.mi) {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    data.mi.forEach(([index, attrId]) => selectGearAttr(slot, 'minor', index, attrId));
-  }
-
-  if (data.gm) {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    data.gm.forEach(([index, modId, bonusId]) => {
-      selectGearModType(slot, index, modId);
-      if (bonusId !== null) selectGearModBonus(slot, index, bonusId);
-    });
-  }
-
-  if (data.pm) {
-    // eslint-disable-next-line @stylistic/array-bracket-spacing
-    data.pm.forEach(([index, bonusId]) => selectPerfMod(slot, index, bonusId));
-  }
-}
-
-function applyBuildData(payload) {
-  if (payload.v !== BUILD_VERSION) {
-    openModal(`
-      <div class="title-container error">
-        <div class="icon-container">
-          <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
-            <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
-          </svg>
-        </div>
-        <div class="title">${STRINGS.error.version}</div>
-      </div>
-      <div class="content">
-        <p>The shared build link contains outdated data.</p>
-        <p>The default build has been loaded instead.</p>
-      </div>
-    `, STRINGS.error.version);
-
-    return;
-  }
-
-  if (payload.n !== undefined) {
-    selectLoadoutName(payload.n);
-  }
-
-  if (payload.w) {
-    Object.keys(payload.w).forEach(slot => applyWeaponSlot(slot, payload.w[slot]));
-  }
-
-  if (payload.g) {
-    Object.keys(payload.g).forEach(slot => applyGearSlot(slot, payload.g[slot]));
-  }
-
-  if (payload.sk) {
-    Object.keys(payload.sk).forEach(slot => selectSkill(slot, payload.sk[slot]));
-  }
-
-  if (payload.pt) {
-    Object.keys(payload.pt).forEach(slot => selectPlayerTalent(slot, payload.pt[slot]));
-  }
-
-  renderGearStats();
-}
-
-export function loadBuildFromUrl() {
-  const HASH = window.location.hash.slice(1);
-  if (!HASH) return;
-
-  const JSON_STRING = LZString.decompressFromEncodedURIComponent(HASH);
-  if (!JSON_STRING) return;
-
-  const PAYLOAD = JSON.parse(JSON_STRING);
-
-  isLoadingFromUrl = true;
-  applyBuildData(PAYLOAD);
-  isLoadingFromUrl = false;
-}
-
-export function openShareModal() {
-  const SHARE_URL = generateShareUrl();
-
-  openModal(`
-    <div class="title-container share">
-      <div class="icon-container">
-        <svg viewBox="0 0 24 24" class="icon exclamation" aria-hidden="true">
-          <path d="M11 4h2v11h-2zm2 14v2h-2v-2z"/>
-        </svg>
-      </div>
-      <div class="title">${STRINGS.help.share}</div>
-    </div>
-    <div class="content">
-      <div class="help">${STRINGS.help.clipboard.copy}</div>
-      <input type="text" id="share-url" value="${SHARE_URL}" readonly>
-    </div>
-  `, STRINGS.help.share);
-}
