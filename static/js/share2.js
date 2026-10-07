@@ -281,26 +281,26 @@ export function openShareModal() {
   `, STRINGS.help.share);
 
   const inputEl = document.getElementById('share-url');
-
-  // unique callback name 생성
   const cbName = 'isgd_cb_' + Date.now();
 
-  // 3초 타임아웃 처리
+  // 타임아웃을 10초로 넉넉하게 연장
   const timeoutId = setTimeout(() => {
     if (inputEl && inputEl.value === '단축 링크 생성 중...') {
+      console.warn('is.gd API 응답 시간 초과 (10초): 원본 URL로 대체합니다.');
       inputEl.value = LONG_URL;
       if (inputEl.select) inputEl.select();
     }
     delete window[cbName];
-  }, 3000);
+  }, 10000);
 
-  // JSONP 콜백 등록
+  // JSONP 콜백 함수
   window[cbName] = function(data) {
     clearTimeout(timeoutId);
     if (inputEl) {
       if (data && data.shorturl) {
         inputEl.value = data.shorturl;
       } else {
+        console.warn('is.gd 응답 오류:', data);
         inputEl.value = LONG_URL;
       }
       if (inputEl.select) inputEl.select();
@@ -310,13 +310,14 @@ export function openShareModal() {
     if (scriptEl) scriptEl.remove();
   };
 
-  // 동적 script 태그 생성으로 CORS 완전 우회
+  // JSONP 동적 스크립트 주입
   const script = document.createElement('script');
   script.id = cbName;
   script.src = `https://is.gd/create.php?format=json&callback=${cbName}&url=${encodeURIComponent(LONG_URL)}`;
   
-  script.onerror = function() {
+  script.onerror = function(err) {
     clearTimeout(timeoutId);
+    console.error('is.gd 스크립트 로드 실패:', err);
     if (inputEl) {
       inputEl.value = LONG_URL;
       if (inputEl.select) inputEl.select();
