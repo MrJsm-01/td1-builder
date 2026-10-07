@@ -7,9 +7,9 @@
 
 $base-url: "../img/";
 
-/* REVERT TO BEST STACKING BASE & FINE-TUNED YELLOW */
+/* PERFECT REVERT TO BRIGHT #ffff00 STACKING BASE */
 .modal-container {
-  // 1. 특급 (High-End 황금 노란색) : #ffff00 베이스 중첩 구조 복원
+  // 1. 특급 (High-End) : 순수 옐로우(#ffff00) 2중 중첩 구조
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
@@ -18,7 +18,7 @@ $base-url: "../img/";
   .gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
   .weapon[data-quality='high-end'] .sprite-container {
-    background-color: #ffcc00 !important;
+    background-color: #ffff00 !important;
     position: relative !important;
 
     &::after {
@@ -30,7 +30,7 @@ $base-url: "../img/";
       height: 100% !important;
       background-color: #ffff00 !important;
       mix-blend-mode: screen !important;
-      opacity: 0.9 !important;
+      opacity: 1 !important;
       pointer-events: none !important;
       z-index: 1 !important;
     }
@@ -59,13 +59,13 @@ $base-url: "../img/";
       height: 100% !important;
       background-color: #00ffaa !important;
       mix-blend-mode: screen !important;
-      opacity: 0.5 !important;
+      opacity: 0.7 !important;
       pointer-events: none !important;
       z-index: 1 !important;
     }
   }
 
-  // 3. 아이콘 (.sprite) screen 합성 유지
+  // 3. 아이콘 (.sprite) screen 투과
   .sprite-container .sprite {
     mix-blend-mode: screen !important;
     position: relative !important;
