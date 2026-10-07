@@ -243,15 +243,13 @@ export function loadBuildFromUrl() {
   try {
     let JSON_STRING = null;
 
-    // 1차 시도: 신규 Base64 방식 복원
+    // 1차: Base64 압축 해제 시도
     try {
       const decodedBase64 = decodeURIComponent(HASH);
       JSON_STRING = LZString.decompressFromBase64(decodedBase64);
-    } catch (e) {
-      // Base64 해석 실패 시 무시
-    }
+    } catch (e) {}
 
-    // 2차 시도: 기존 EncodedURIComponent 방식 복원 (하위 호환성 유지)
+    // 2차: 기존 EncodedURI 압축 해제 시도 (하위 호환성)
     if (!JSON_STRING) {
       JSON_STRING = LZString.decompressFromEncodedURIComponent(HASH);
     }
@@ -284,49 +282,13 @@ export function openShareModal() {
     </div>
     <div class="content">
       <div class="help">${STRINGS.help.clipboard.copy}</div>
-      <input type="text" id="share-url" value="단축 링크 생성 중..." readonly>
+      <input type="text" id="share-url" value="${LONG_URL}" readonly>
     </div>
   `, STRINGS.help.share);
 
   const inputEl = document.getElementById('share-url');
-  const cbName = 'td1cb_' + Date.now();
-
-  const timeoutId = setTimeout(() => {
-    if (inputEl && inputEl.value === '단축 링크 생성 중...') {
-      inputEl.value = LONG_URL;
-      if (inputEl.select) inputEl.select();
-    }
-    delete window[cbName];
-  }, 5000);
-
-  window[cbName] = function(data) {
-    clearTimeout(timeoutId);
-    if (inputEl) {
-      if (data && data.shorturl) {
-        inputEl.value = data.shorturl;
-      } else {
-        inputEl.value = LONG_URL;
-      }
-      if (inputEl.select) inputEl.select();
-    }
-    delete window[cbName];
-    const scriptEl = document.getElementById(cbName);
-    if (scriptEl) scriptEl.remove();
-  };
-
-  const script = document.createElement('script');
-  script.id = cbName;
-  script.src = `https://is.gd/create.php?format=json&callback=${cbName}&url=${encodeURIComponent(LONG_URL)}`;
-  
-  script.onerror = function() {
-    clearTimeout(timeoutId);
-    if (inputEl) {
-      inputEl.value = LONG_URL;
-      if (inputEl.select) inputEl.select();
-    }
-    delete window[cbName];
-    script.remove();
-  };
-
-  document.head.appendChild(script);
+  if (inputEl) {
+    inputEl.focus();
+    inputEl.select();
+  }
 }
