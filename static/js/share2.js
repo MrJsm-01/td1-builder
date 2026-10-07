@@ -262,7 +262,6 @@ export function loadBuildFromUrl() {
   }
 }
 
-// is.gd 무료 API 연동 단축 링크 모달
 export async function openShareModal() {
   const LONG_URL = generateShareUrl();
   let finalUrl = LONG_URL;
@@ -301,7 +300,6 @@ export async function openShareModal() {
   }
 }
 
-// DOM 진입 시 및 URL 변경 시 자동 로드
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadBuildFromUrl);
 } else {
