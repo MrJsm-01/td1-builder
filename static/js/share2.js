@@ -262,9 +262,8 @@ export function loadBuildFromUrl() {
   }
 }
 
-export async function openShareModal() {
+export function openShareModal() {
   const LONG_URL = generateShareUrl();
-  let finalUrl = LONG_URL;
 
   openModal(`
     <div class="title-container share">
@@ -283,26 +282,48 @@ export async function openShareModal() {
 
   const inputEl = document.getElementById('share-url');
 
-  try {
-    // CORS 차단을 피하기 위해 allorigins 우회 프록시를 통해 is.gd 호출
-    const targetApi = `https://is.gd/create.php?format=json&url=${encodeURIComponent(LONG_URL)}`;
-    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetApi)}`);
-    
-    if (response.ok) {
-      const wrapperData = await response.json();
-      if (wrapperData.contents) {
-        const data = JSON.parse(wrapperData.contents);
-        if (data.shorturl) {
-          finalUrl = data.shorturl;
-        }
-      }
-    }
-  } catch (error) {
-    console.warn('URL 단축 API 실패, 원본 긴 URL로 대체합니다:', error);
-  }
+  // 전역 고유 콜백 함수명 정의
+  const cbName = 'isgd_callback_' + Date.now();
 
-  if (inputEl) {
-    inputEl.value = finalUrl;
-    inputEl.select();
-  }
+  // 안전장치: 2초 내 응답 없을 시 긴 원본 URL 출력
+  const timer = setTimeout(() => {
+    if (inputEl && inputEl.value === '단축 링크 생성 중...') {
+      inputEl.value = LONG_URL;
+      inputEl.select();
+    }
+    delete window[cbName];
+  }, 2000);
+
+  // JSONP 콜백 함수 핸들러
+  window[cbName] = function(res) {
+    clearTimeout(timer);
+    if (inputEl) {
+      if (res && res.shorturl) {
+        inputEl.value = res.shorturl;
+      } else {
+        inputEl.value = LONG_URL;
+      }
+      inputEl.select();
+    }
+    delete window[cbName];
+    const s = document.getElementById(cbName);
+    if (s) s.remove();
+  };
+
+  // JSONP 스크립트 생성 및 주입
+  const script = document.createElement('script');
+  script.id = cbName;
+  script.src = `https://is.gd/create.php?format=json&callback=${cbName}&url=${encodeURIComponent(LONG_URL)}`;
+  
+  script.onerror = function() {
+    clearTimeout(timer);
+    if (inputEl) {
+      inputEl.value = LONG_URL;
+      inputEl.select();
+    }
+    delete window[cbName];
+    script.remove();
+  };
+
+  document.body.appendChild(script);
 }
