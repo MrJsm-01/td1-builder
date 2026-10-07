@@ -7,17 +7,21 @@
 
 $base-url: "../img/";
 
-/* PERFECT REVERT TO BRIGHT #ffff00 STACKING BASE */
+/* COMPLETE SPECIFICITY & PURPLE (SUPERIOR) FIX */
 .modal-container {
-  // 1. 특급 (High-End) : 순수 옐로우(#ffff00) 2중 중첩 구조
+  // 1. 특급 (High-End 황금 노란색) : pure #ffff00 2중 중첩 복원
   button.gear[data-quality='highend'] .sprite-container,
   button.gear[data-quality='high-end'] .sprite-container,
   button.weapon[data-quality='highend'] .sprite-container,
   button.weapon[data-quality='high-end'] .sprite-container,
+  button.gear-mod[data-quality='highend'] .sprite-container,
+  button.gear-mod[data-quality='high-end'] .sprite-container,
   .gear[data-quality='highend'] .sprite-container,
   .gear[data-quality='high-end'] .sprite-container,
   .weapon[data-quality='highend'] .sprite-container,
-  .weapon[data-quality='high-end'] .sprite-container {
+  .weapon[data-quality='high-end'] .sprite-container,
+  .gear-mod[data-quality='highend'] .sprite-container,
+  .gear-mod[data-quality='high-end'] .sprite-container {
     background-color: #ffff00 !important;
     position: relative !important;
 
@@ -36,17 +40,44 @@ $base-url: "../img/";
     }
   }
 
-  // 2. 세트 (Gear Set / Classy 에메랄드 그린)
+  // 2. 고급 (Superior / 보라색) : 인게임 보라색 적용
+  button.gear[data-quality='superior'] .sprite-container,
+  button.weapon[data-quality='superior'] .sprite-container,
+  button.gear-mod[data-quality='superior'] .sprite-container,
+  .gear[data-quality='superior'] .sprite-container,
+  .weapon[data-quality='superior'] .sprite-container,
+  .gear-mod[data-quality='superior'] .sprite-container {
+    background-color: #8b00ff !important;
+    position: relative !important;
+
+    &::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: #b026ff !important;
+      mix-blend-mode: screen !important;
+      opacity: 0.8 !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
+  }
+
+  // 3. 세트 (Gear Set / Classy 에메랄드 그린)
   button.gear[data-quality='classy'] .sprite-container,
   button.gear[data-quality='classified'] .sprite-container,
   button.gear[data-quality='gearset'] .sprite-container,
   button.gear[data-quality='gset'] .sprite-container,
   button.weapon[data-quality='gearset'] .sprite-container,
+  button.gear-mod[data-quality='gearset'] .sprite-container,
   .gear[data-quality='classy'] .sprite-container,
   .gear[data-quality='classified'] .sprite-container,
   .gear[data-quality='gearset'] .sprite-container,
   .gear[data-quality='gset'] .sprite-container,
-  .weapon[data-quality='gearset'] .sprite-container {
+  .weapon[data-quality='gearset'] .sprite-container,
+  .gear-mod[data-quality='gearset'] .sprite-container {
     background-color: #00a66c !important;
     position: relative !important;
 
@@ -65,7 +96,7 @@ $base-url: "../img/";
     }
   }
 
-  // 3. 아이콘 (.sprite) screen 투과
+  // 4. 아이콘 (.sprite) screen 투과
   .sprite-container .sprite {
     mix-blend-mode: screen !important;
     position: relative !important;
