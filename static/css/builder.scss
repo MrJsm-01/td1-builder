@@ -134,48 +134,60 @@ $base-url: "../img/";
   }
 }
 
-/* 4. 부품 라벨(탄창/조준경/총구/총열 하부) 크기 슬림화 & 등급별 속성 텍스트 컬러 */
+/* 4. 부품 라벨 크기 축소 & 등급별 텍스트 색상 연동 (클래스 정밀 타격) */
+
+/* 탄창, 조준경, 총구, 총열 하부 배경 박스 크기 및 여백 핏팅 */
+.mod .title,
+.mod-title,
 .weapon-mod-label,
-.mod-label,
-.mod-title {
+button.mod .name,
+div[class*="mod"] .title {
   display: inline-block !important;
-  padding: 2px 8px !important;
-  margin-left: 4px !important;
-  font-size: 0.85rem !important;
+  padding: 1px 6px !important;        /* 과도한 여백 제거 */
+  font-size: 0.8rem !important;
   border-radius: 3px !important;
-  background: rgba(0, 0, 0, 0.5) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  vertical-align: middle !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  line-height: 1.2 !important;
 }
 
-// 등급별 '주 속성', '보조 속성' 및 라벨 텍스트 색상 연동
-[data-quality='highend'],
-[data-quality='high-end'] {
-  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
-    color: #ffff00 !important;
-    text-shadow: 0 0 5px rgba(255, 255, 0, 0.3) !important;
-  }
-}
+/* 주 속성 / 보조 속성 / 부품 라벨 - 등급별 텍스트 색상 연동 */
 
-[data-quality='exotic'] {
-  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
-    color: #ff3b30 !important;
-    text-shadow: 0 0 5px rgba(255, 59, 48, 0.3) !important;
-  }
-}
-
+/* (1) 세트 및 복합형 (Gearset / Classy / 에메랄드 그린) */
 [data-quality='classy'],
 [data-quality='classified'],
 [data-quality='gearset'],
 [data-quality='gset'] {
-  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
+  .attr-title, .attr-header, .attribute-type, .major-attribute, .minor-attribute,
+  .mod .title, .mod-title, div[class*="attr"] {
     color: #00ffaa !important;
-    text-shadow: 0 0 5px rgba(0, 255, 170, 0.3) !important;
+    text-shadow: 0 0 4px rgba(0, 255, 170, 0.3) !important;
   }
 }
 
+/* (2) 특급 (High-End / 황금 노랑) */
+[data-quality='highend'],
+[data-quality='high-end'] {
+  .attr-title, .attr-header, .attribute-type, .major-attribute, .minor-attribute,
+  .mod .title, .mod-title, div[class*="attr"] {
+    color: #ffff00 !important;
+    text-shadow: 0 0 4px rgba(255, 255, 0, 0.3) !important;
+  }
+}
+
+/* (3) 특수 (Exotic / 빨간주황) */
+[data-quality='exotic'] {
+  .attr-title, .attr-header, .attribute-type, .major-attribute, .minor-attribute,
+  .mod .title, .mod-title, div[class*="attr"] {
+    color: #ff3b30 !important;
+    text-shadow: 0 0 4px rgba(255, 59, 48, 0.3) !important;
+  }
+}
+
+/* (4) 고급 (Superior / 은은한 보라) */
 [data-quality='superior'] {
-  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
+  .attr-title, .attr-header, .attribute-type, .major-attribute, .minor-attribute,
+  .mod .title, .mod-title, div[class*="attr"] {
     color: #bd70ff !important;
   }
 }
