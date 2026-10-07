@@ -133,3 +133,49 @@ $base-url: "../img/";
     }
   }
 }
+
+/* 4. 부품 라벨(탄창/조준경/총구/총열 하부) 크기 슬림화 & 등급별 속성 텍스트 컬러 */
+.weapon-mod-label,
+.mod-label,
+.mod-title {
+  display: inline-block !important;
+  padding: 2px 8px !important;
+  margin-left: 4px !important;
+  font-size: 0.85rem !important;
+  border-radius: 3px !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  vertical-align: middle !important;
+}
+
+// 등급별 '주 속성', '보조 속성' 및 라벨 텍스트 색상 연동
+[data-quality='highend'],
+[data-quality='high-end'] {
+  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
+    color: #ffff00 !important;
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.3) !important;
+  }
+}
+
+[data-quality='exotic'] {
+  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
+    color: #ff3b30 !important;
+    text-shadow: 0 0 5px rgba(255, 59, 48, 0.3) !important;
+  }
+}
+
+[data-quality='classy'],
+[data-quality='classified'],
+[data-quality='gearset'],
+[data-quality='gset'] {
+  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
+    color: #00ffaa !important;
+    text-shadow: 0 0 5px rgba(0, 255, 170, 0.3) !important;
+  }
+}
+
+[data-quality='superior'] {
+  .attr-title, .attr-header, .weapon-mod-label, .mod-title, .label {
+    color: #bd70ff !important;
+  }
+}
